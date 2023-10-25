@@ -86,6 +86,8 @@ li.dropdown {
 
 #myDIV {
   margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 50px;
   min-height: 2000px;
   display: flex;
   flex-direction: column;
@@ -123,64 +125,6 @@ original code is :position relative, display inline-block*/
     background-color: #46295a;
 }
 */
-
-.google-visualization-table {
-  position: relative; 
-  z-index: 0; 
-  max-width: 100%; 
-  max-height: 100%; 
-  width: 100%; 
-  height: 100%
-}
-
-.bold-green-font {
-  font-weight: bold;
-  color: green;
-}
-
-.bold-font {
-  font-weight: bold;
-}
-
-.right-text {
-  text-align: right;
-}
-
-.large-font {
-  font-size: 15px;
-}
-
-.italic-darkblue-font {
-  font-style: italic;
-  color: darkblue;
-}
-
-.italic-purple-font {
-  font-style: italic;
-  color: purple;
-}
-
-.underline-blue-font {
-  text-decoration: underline;
-  color: blue;
-}
-
-.gold-border {
-  border: 3px solid gold;
-}
-
-.deeppink-border {
-  border: 3px solid deeppink;
-}
-
-.orange-background {
-  background-color: orange;
-}
-
-.orchid-background {
-  background-color: orchid;
-}
-
-.beige-background {
-  background-color: beige;
+table, th, td {
+  border:1px solid black;
 }
