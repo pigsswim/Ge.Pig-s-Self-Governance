@@ -92,15 +92,6 @@ li.dropdown {
   display: block;
 }
 
-#myDIV {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 50px;
-  min-height: 2000px;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
 /*.topnav li a:hover:not(.active) {
     background-color: #000000;
 }*/
@@ -134,14 +125,10 @@ original code is :position relative, display inline-block*/
 }
 */
 
-.health-management-table {
-  display: flex;
-  flex-direction: column;
-}
-
-.health-management-1,
-.health-management-2 {
-  display: flex;
-  flex-direction: row;
+.tableTitle {
+  display:flex;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
   justify-content: space-between;
 }
