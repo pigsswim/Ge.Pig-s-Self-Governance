@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ge's t</title>
     <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
 </head>
@@ -23,30 +23,24 @@
             <!--<li><a href="#about">About</a></li>-->
         </uL>
     </div>
-    <button id="deleteBtn" onclick="deleteRow()">Delete</button>
     <div id="myDIV" class="content">
-        <table id="myTable" style="width:100%">
-            <tr>
-              <th id="Date" onclick="createRow()">Date</th>
-              <th id="Food">Food</th>
-              <th id="Calorie">Calorie</th>
-              <th>Talking Time</th>
-              <th>Exercise Time</th>
-              <th>Learning Hour</th>
-              <th>Mobile Phone Entertainment</th>
-              <th>Health</th>
-            </tr>
-            <tr>
-              <td>Emil</td>
-              <td>Tobias</td>
-              <td>Linus</td>
-            </tr>
-            <tr>
-              <td>16</td>
-              <td>14</td>
-              <td>10</td>
-            </tr>
-          </table>
-    </div>      
+        <div>
+          <button class="addBtn" onclick="addRow()">Add</button>
+          <button class="deleteBtn" onclick="deleteRow()">Delete</button>
+        </div> 
+        <div class="health-management-table" style="width:100%">
+            <div id="health-management" class="health-management-2" >
+              <div><input type="date" id="date"><br></div>
+              <div><input type="text" id="food"><br></div>
+              <div><input type="number" id="calorie"><br></div>
+              <div><input type="number" id="talking"><br></div>
+              <div><input type="number" id="exercise"><br></div>
+              <div><input type="number" id="learning"><br></div>
+              <div><input type="number" id="mobile-trash"><br></div>
+              <div><input type="text" id="health"><br></div>
+            </div>
+            <div id="health-management-week-day"></div>
+         </div>
+     </div>  
 </body>
 </html>
