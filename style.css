@@ -9,6 +9,14 @@ button {
   color: inherit;
   background-color: transparent;font-size: inherit;
 }
+
+.addBtn,
+.deleteBtn {
+  border: solid;
+  color:#005348;
+  background-color: #005348;
+  color: white;
+}
 .topnav ul {
   width: 100%;
   overflow: hidden;
@@ -125,6 +133,15 @@ original code is :position relative, display inline-block*/
     background-color: #46295a;
 }
 */
-table, th, td {
-  border:1px solid black;
+
+.health-management-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.health-management-1,
+.health-management-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
