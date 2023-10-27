@@ -26,6 +26,10 @@ button {
   padding: 0;
 }
 
+.topnav {
+  margin-bottom: 30px;
+}
+
 .topnav li {
   float: left;
   border-right: 1px solid #f5ecd2;
@@ -124,11 +128,32 @@ original code is :position relative, display inline-block*/
     background-color: #46295a;
 }
 */
+#record {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-.tableTitle {
+/*.tableTitle {
   display:flex;
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 20px;
   justify-content: space-between;
+}*/
+
+input {
+  display: block;
+}
+
+.health-management {
+  display: flex;
+  flex-direction: column;
+  margin-left:20px;
+  margin-right:20px;
+}
+
+.health-management-tbl-top {
+  display: flex;
+  flex-direction:row ;
 }
