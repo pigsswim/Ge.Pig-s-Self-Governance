@@ -200,8 +200,6 @@ function render () {
     phoneColumn.appendChild(elementPhone);
     moodColumn.appendChild(elementMood);
     healthColumn.appendChild(elementHealth);
-
-
   });
 }
 
