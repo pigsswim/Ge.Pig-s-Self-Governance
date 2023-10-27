@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ge's t</title>
+    <title>Ge.Pig's Self-Governance</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,41 +13,78 @@
             <li class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">Health Management</button>
                     <div id="myDropdown" class="dropdown-content">
-                      <a href="#">Link 1</a>
-                      <a href="#">Link 2</a>
-                      <a href="#">Link 3</a>
+                      <!--<a href="#">Link 1</a>
+                      <a href="#">Link 2</a>-->
                     </div>
             </li>
             <li><a href="#contact">Cognitive Development</a></li>
             <!--<li><a href="#about">About</a></li>-->
         </uL>
     </div>
-    <div id="health-management">
-      <div>
-       <button onclick="addRow()" class="addBtn">Add</button>
-       <button onclick="deleteRow()"class="deleteBtn">Delete</button>
-       <div class="tableTitle">
-         <div>Date</div>
-         <div>Food</div>
-         <div>Calorie</div>
-         <div>Exercise</div>
-         <div>Study</div>
-         <div>Talking</div>
-         <div>Phone</div>
-         <div>Mood</div>
-         <div>Fitness</div>
-       </div>
-     </div>
-        <input type="date" id="date-picker">
-        <input type="text" id="food">
-        <input type="text", id="calorie">
-        <input type="text", id="exercise">
-        <input type="text", id="study">
-        <input type="text", id="talking">
-        <input type="text", id="phone">
-        <input type="text", id="mood">
-        <input type="text", id="health">
-    </div>
+    <div class="health-management" id="health-management">
+        <div class="health-management-btn">
+        <button onclick="addRow()" class="addBtn">Add</button>
+        <button onclick="deleteRow()"class="deleteBtn">Delete</button>
+        </div>
+        <div id="healht-management-tbl" class="health-management-tbl">
+          <div class="health-management-tbl-top">
+            <div>
+              <form>
+                <label>Date</label>
+                <input type="date" id="date-picker">
+              </form> 
+            </div>
+            <div>
+              <form>
+                <label>Food</label>
+                <input type="text" id="food">
+              </form>
+            </div>
+            <div>
+              <form>
+                <label>Calorie</label>
+                <input type="text", id="calorie">
+              </form>
+            </div>
+            <div>
+              <form>
+                <label>Exercise</label>
+                <input type="text", id="exercise">
+              </form>
+            </div>
+            <div>
+              <form>
+                <label>Study</label>
+                <input type="text", id="study">
+              </form>             
+            </div>
+            <div>
+              <form>
+                <label>Talking</label>
+                <input type="text", id="talking">
+              </form>
+            </div>
+            <div>
+              <Form>
+                <label>Phone</label>
+                <input type="text", id="phone">
+              </Form>
+            </div>
+            <div>
+              <form>
+                <label>Mood</label>
+                <input type="text", id="mood">              
+            </div>
+            <div>
+              <form>
+                <label>Fitness</label>
+                <input type="text", id="health">
+              </form>
+            </div>
+          </div>
+        </div> 
+      </div>    
+    </body>
     <script src="app.js"></script>
 </body>
 </html>
