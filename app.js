@@ -8,7 +8,8 @@
   talking: '500',
   phone:'500',
   mood: '-1',
-  health: '50kg'
+  health: '50kg',
+  id: 'id1'
  }]
  
  function myFunction() {
@@ -42,11 +43,77 @@
   const element = document.createElement('div');
   element.innerText = date + food + calorie + exercise + study + 
   talking + phone + mood + health;
-  element.style.cssText = `
-  color: red;
-  `;
-  document.body.appendChild(element);
+  const records = document.getElementById('health-management');
+  records.appendChild(element);
  };
 
  addRow();
 
+ /*  
+ let records = [{
+  date: '2010-10-10',
+  food: 'ramen',
+  id: 'id1',
+ },{
+  date: '2010-10-10',
+  food: 'ramen',
+  id: 'id1',
+ }]
+
+ function createTodo(title,dueDate) {
+    const id = '' + new date().getTime();
+
+    todos.push ({
+      date: date,
+      food: food,
+      id: id
+    });
+ }
+
+ function removeTodo(idToDelete) {
+  todos = todos.filter (function (todo) {
+    if (todo.id === idToDelete) {
+      return false;
+    } else {
+      return true;
+    }
+  });
+ }
+
+ function addTodo() {
+  const textbox = document.getElementById('todo-title);
+  const title = textbox.value;
+
+  const datePicker = document.getElementById('date-picker);
+  const dueDate = datePicker.value;
+
+  createTodo(title, dueDate); 
+  render ();
+ }
+
+function deleteTodo (event) {
+  const deleteButton = event.target;
+  const idToDelete = deleteButton.id;
+   
+  removeTodo();
+  render();
+}
+
+function render (){
+  document.getElementBy('todo-list').innerHTML = '';
+  todos.forEach (function (todo){
+    const element = document.createElement ('div');
+    element.innerText = todo.title + '' + todo.dueDate;
+
+    const deleteButton = document.createElement ('button');
+    deleteButton.innerText = 'Delete';
+    deleteButton.style = 'margin-left: 12px;';
+    deleteButton.onclick = deleteTodo;
+    deleteButton.id = todo.id;
+    element.appendChild (deleteButton);
+
+    const todoList = document.getElementById ('todo-list');
+    todoList.appendChild(element);
+  })
+
+} */
