@@ -153,7 +153,17 @@ input {
   margin-right:20px;
 }
 
-.health-management-tbl-top {
+.health-management-tbl-columns {
   display: flex;
   flex-direction:row ;
+}
+
+.health-management-tbl-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.health-management-tbl-bottom-item {
+  display: flex;
+  flex-direction: row;
 }
