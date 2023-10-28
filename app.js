@@ -1,5 +1,12 @@
+let records;
 
- let records = [{
+const savedRecords = JSON.parse(localStorage.getItem('records'));
+
+if (Array.isArray(savedRecords)) {
+  records = savedRecords;
+
+} else {
+  records = [{
   dates: 'ramen',
   food: 'ramen',
   calorie:'500',
@@ -10,7 +17,7 @@
   mood: '-1',
   health: '50kg',
   id: 'id1'
- },{
+  },{
   dates: 'ramen',
   food: 'ramen',
   calorie:'500',
@@ -22,6 +29,7 @@
   health: '50kg',
   id: 'id1'
  }];
+}
  
  function myFunction() {
   var x = document.getElementById("health-management");
@@ -32,7 +40,41 @@
   }
 };
 
- function addRow(){
+function createRecord (dates, food, calorie, exercise, study, talking, phone, mood, health) {
+  const id = '' + new Date().getTime();
+
+  records.push ({
+    dates: dates,
+    food: food,
+    calorie: calorie,
+    exercise: exercise,
+    study: study,
+    talking: talking,
+    phone: phone,
+    mood: mood,
+    health: health,
+    id: id,
+  });
+
+  saveRecords();
+}
+  function removeRecord(idToDelete) {
+    records = records.filter (function (record) {
+      if (record.id === idToDelete) {
+        return false;
+      } else {
+        return true;
+      }
+    });
+
+    saveRecords;
+  }
+
+  function saveRecords(){
+    localStorage.setItem('records', JSON.stringify(records));
+  }
+
+ function addRecord(){
   const datesCell = document.getElementById('dates');
   const dates = datesCell.value;
   
@@ -132,6 +174,13 @@ function render (){
   })
 
 } */
+function deleteRecord (event) {
+  const deleteButton = event.target;
+  const idToDelete = deleteButton.id;
+   
+  removeRecord(idToDelete);
+  render();
+}
 
 function render () {
   document.getElementById('dates-column-bottom').innerHTML = '';
@@ -143,6 +192,7 @@ function render () {
   document.getElementById('phone-column-bottom').innerHTML = '';
   document.getElementById('mood-column-bottom').innerHTML = '';
   document.getElementById('health-column-bottom').innerHTML = '';
+  document.getElementById('delete-column').innerHTML = '';
 
   records.forEach(function (record){
     const elementDates = document.createElement('div');
@@ -180,8 +230,14 @@ function render () {
     const elementHealth = document.createElement('div');
     elementHealth.setAttribute('class','health-column-row');
     elementHealth.innerText = record.health;
-
     
+    const deleteButton = document.createElement ('button');
+    deleteButton.innerText = 'Delete';
+    deleteButton.style = 'margin-left: 12px;';
+    deleteButton.onclick = deleteRecord;
+    deleteButton.id = record.id;
+    
+    const deleteColumn = document.getElementById('delete-column');
     const datesColumn = document.getElementById('dates-column-bottom');
     const foodColumn = document.getElementById('food-column-bottom');
     const calorieColumn = document.getElementById('calorie-column-bottom');
@@ -191,6 +247,9 @@ function render () {
     const phoneColumn = document.getElementById('phone-column-bottom');
     const moodColumn = document.getElementById('mood-column-bottom');
     const healthColumn = document.getElementById('health-column-bottom');
+
+    deleteColumn.appendChild (deleteButton);
+
     datesColumn.appendChild(elementDates);
     foodColumn.appendChild(elementFood);
     calorieColumn.appendChild(elementCalorie);
@@ -203,19 +262,3 @@ function render () {
   });
 }
 
-function createRecord (dates, food, calorie, exercise, study, talking, phone, mood, health) {
-  const id = '' + new Date().getTime();
-
-  records.push ({
-    dates: dates,
-    food: food,
-    calorie: calorie,
-    exercise: exercise,
-    study: study,
-    talking: talking,
-    phone: phone,
-    mood: mood,
-    health: health,
-    id: id
-  });
-}
