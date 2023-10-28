@@ -192,7 +192,7 @@ function render () {
   document.getElementById('phone-column-bottom').innerHTML = '';
   document.getElementById('mood-column-bottom').innerHTML = '';
   document.getElementById('health-column-bottom').innerHTML = '';
-  document.getElementById('delete-column').innerHTML = '';
+  document.getElementById('delete-column-bottom').innerHTML = '';
 
   records.forEach(function (record){
     const elementDates = document.createElement('div');
@@ -237,7 +237,7 @@ function render () {
     deleteButton.onclick = deleteRecord;
     deleteButton.id = record.id;
     
-    const deleteColumn = document.getElementById('delete-column');
+    const deleteColumn = document.getElementById('delete-column-bottom');
     const datesColumn = document.getElementById('dates-column-bottom');
     const foodColumn = document.getElementById('food-column-bottom');
     const calorieColumn = document.getElementById('calorie-column-bottom');
