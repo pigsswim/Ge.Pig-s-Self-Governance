@@ -161,8 +161,16 @@ input {
 }
 
 .delete-column {
+  vertical-align: baseline;
+  padding: 0;
+  margin: 0;
+}
+
+.delete-column-bottom {
   display:flex;
   flex-direction: column;
   background: green;
-  position:
+  vertical-align: baseline;
+  padding: 0;
+  margin: 0;
 }
