@@ -156,14 +156,13 @@ input {
 .health-management-tbl-columns {
   display: flex;
   flex-direction:row ;
+  position: relative;
+  background: red;
 }
 
-.health-management-tbl-bottom {
-  display: flex;
+.delete-column {
+  display:flex;
   flex-direction: column;
-}
-
-.health-management-tbl-bottom-item {
-  display: flex;
-  flex-direction: row;
+  background: green;
+  position:
 }
