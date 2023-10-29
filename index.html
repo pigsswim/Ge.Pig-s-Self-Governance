@@ -7,138 +7,147 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="page-top" class="page-top">
     <div class="topnav">
-        <uL>
-            <li style="float:right"><a class="active" href="#home">Home</a></li>
-            <li class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Health Management</button>
-                    <div id="myDropdown" class="dropdown-content">
-                      <!--<a href="#">Link 1</a>
-                      <a href="#">Link 2</a>-->
-                    </div>
-            </li>
-            <li><a href="#contact">Cognitive Development</a></li>
-            <!--<li><a href="#about">About</a></li>-->
-        </uL>
-    </div>
-    <div class="health-management" id="health-management">
-        <div class="health-management-btn">
-        <button onclick="addRecord()" class="addBtn">Add</button>
-        </div>
-        <div id="healht-management-tbl" class="health-management-tbl">
-          <div id="health-management-tbl-columns" class="health-management-tbl-columns">
-
-            <div id="dates-column" class="dates-column">
-              <div class="dates-column-top" id="dates-top">
-                <form>
-                  <label>Date</label>
-                  <input type="date" id="dates">
-                </form> 
-              </div>
-              <div id="dates-column-bottom" class="dates-column-bottom">
-              </div>
+      <div class="topnav-row">
+          <div class="topnav-column" style="float:right" onclick="myHome()"><a class="active" href="#home">Home</a></div>
+          <div class="topnav-column" class="dropdown">
+            <div class="dropdown">
+              <button onclick="myHealthManagement()" class="dropbtn">Health Management</button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <!--<a href="#">Link 1</a>
+                    <a href="#">Link 2</a>-->
+                  </div>
             </div>
-
-            <div id="food-column" class="food-column">
-              <div class="food-column-top" id="food-top">
-                <form>
-                  <label>Food</label>
-                  <input type="text" id="food">
-                </form>
-              </div>
-              <div id="food-column-bottom" class="food-column-bottom">
-              </div>
-            </div>
-
-            <div id="calorie-column" class="calorie-column">
-              <div class="calorie-column-top" id="calorie-top">
-                <form>
-                  <label>Calorie</label>
-                  <input type="text" id="calorie">
-                </form>
-              </div>
-              <div id="calorie-column-bottom" class="calorie-column-bottom">
-              </div>
-            </div>
-
-            <div id="exercise-column" class="exercise-column">
-              <div class="exercise-column-top" id="exercise-top">
-                <form>
-                  <label>Exercise</label>
-                  <input type="text" id="exercise">
-                </form>
-              </div>
-              <div id="exercise-column-bottom" class="exercise-column-bottom">
-              </div>
-            </div>
-
-            <div id="study-column" class="study-column">
-              <div class="study-column-top" id="study-top">
-                <form>
-                  <label>Study</label>
-                  <input type="text" id="study">
-                </form>
-              </div>
-              <div id="study-column-bottom" class="study-column-bottom">
-              </div>
-            </div>
-
-            <div id="talking-column" class="talking-column">
-              <div class="talking-column-top" id="talking-top">
-                <form>
-                  <label>Talking</label>
-                  <input type="text" id="talking">
-                </form>
-              </div>
-              <div id="talking-column-bottom" class="talking-column-bottom">
-              </div>
-            </div>
-
-            <div id="phone-column" class="phone-column">
-              <div class="phone-column-top" id="phone-top">
-                <form>
-                  <label>Phone</label>
-                  <input type="text" id="phone">
-                </form>
-              </div>
-              <div id="phone-column-bottom" class="phone-column-bottom">
-              </div>
-            </div>
-
-            <div id="mood-column" class="mood-column">
-              <div class="mood-column-top" id="mood-top">
-                <form>
-                  <label>Mood</label>
-                  <input type="text" id="mood">
-                </form>
-              </div>
-              <div id="mood-column-bottom" class="mood-column-bottom">
-              </div>
-            </div>
-
-            <div id="health-column" class="health-column">
-              <div class="health-column-top" id="health-top">
-                <form>
-                  <label>Health</label>
-                  <input type="text" id="health">
-                </form>
-              </div>
-              <div id="health-column-bottom" class="health-column-bottom">
-              </div>
-            </div>
-
-            <div id="delete-column" class="delete-column">
-              <div class="delete-column-top" id="delete-top">
-              </div>
-              <div id="delete-column-bottom" class="delete-column-bottom">
-              </div>
-            </div>
-
-
           </div>
-        </div> 
-      </div>    
-    </body>
-    <script src="app.js"></script>
+          <div class="topnav-column"><a href="#contact">Cognitive Development</a></div>
+          <!--<li><a href="#about">About</a></li>-->
+      </div>
+     </div>
+
+  </div>
+
+  <div id="page-bottom" class="page-bottom">
+    <div class="health-management" id="health-management">
+      <div class="health-management-btn">
+      <button onclick="addRecord()" class="addBtn">Add</button>
+      </div>
+      <div id="healht-management-tbl" class="health-management-tbl">
+        <div id="health-management-tbl-columns" class="health-management-tbl-columns">
+
+          <div id="delete-column" class="record-column">
+            <div class="record-column-top" id="delete-top">
+              <form>
+                <label class="col-label"> CELL TO remove</label>
+                <input class="col-input" type="text" id="delete">
+              </form>
+            </div>
+            <div id="delete-column-bottom" class="record-column-bottom">
+            </div>
+          </div>
+
+          <div id="dates-column" class="record-column">
+            <div class="record-column-top" id="dates-top">
+              <form>
+                <label class="col-label">Date</label>
+                <input class="col-input" type="date" id="dates">
+              </form> 
+            </div>
+            <div id="dates-column-bottom" class="record-column-bottom">
+            </div>
+          </div>
+
+          <div id="food-column" class="record-column">
+            <div class="record-column-top" id="food-top">
+              <form>
+                <label class="col-label">Food</label>
+                <input class="col-input" type="text" id="food">
+              </form>
+            </div>
+            <div id="food-column-bottom" class="record-column-bottom">
+            </div>
+          </div>
+
+          <div id="calorie-column" class="record-column">
+            <div class="record-column-top" id="calorie-top">
+              <form>
+                <label class="col-label">Calorie</label>
+                <input class="col-input" type="number" id="calorie" step="100">
+              </form>
+            </div>
+            <div id="calorie-column-bottom" class="record-column-bottom">
+            </div>
+          </div>
+
+          <div id="exercise-column" class="record-column">
+            <div class="record-column-top" id="exercise-top">
+              <form>
+                <label class="col-label">Exercise (minutes)</label>
+                <input class="col-input" type="number" step="10" id="exercise">
+              </form>
+            </div>
+            <div id="exercise-column-bottom" class="record-column-bottom">
+            </div>
+          </div>
+
+          <div id="study-column" class="record-column">
+            <div class="record-column-top" id="study-top">
+              <form>
+                <label class="col-label">Study (hours)</label>
+                <input class="col-input" type="number" step="1"id="study">
+              </form>
+            </div>
+            <div id="study-column-bottom" class="record-column-bottom">
+            </div>
+          </div>
+
+          <div id="talking-column" class="record-column">
+            <div class="record-column-top" id="talking-top">
+              <form>
+                <label class="col-label">Talking (minutes)</label>
+                <input class="col-input" type="number" step="10" id="talking">
+              </form>
+            </div>
+            <div id="talking-column-bottom" class="record-column-bottom">
+            </div>
+          </div>
+
+          <div id="phone-column" class="record-column">
+            <div class="record-column-top" id="phone-top">
+              <form>
+                <label class="col-label">Phone</label>
+                <input class="col-input" type="number" step="10" id="phone">
+              </form>
+            </div>
+            <div id="phone-column-bottom" class="record-column-bottom">
+            </div>
+          </div>
+
+          <div id="mood-column" class="record-column">
+            <div class="record-column-top" id="mood-top">
+              <form>
+                <label class="col-label">Mood</label>
+                <input class="col-input" type="text" id="mood">
+              </form>
+            </div>
+            <div id="mood-column-bottom" class="record-column-bottom">
+            </div>
+          </div>
+
+          <div id="health-column" class="record-column">
+            <div class="record-column-top" id="health-top">
+              <form>
+                <label class="col-label">Health</label>
+                <input class="col-input" type="text" id="health">
+              </form>
+            </div>
+            <div id="health-column-bottom" class="record-column-bottom">
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>    
+  </div>
+<script src="app.js"></script>
 </body>
 </html>
