@@ -1,7 +1,9 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
   min-height: 2000px;
+  box-sizing: border-box;
 }
 
 button {
@@ -17,7 +19,7 @@ button {
   background-color: #005348;
   color: white;
 }
-.topnav ul {
+.topnav .topnav-row {
   width: 100%;
   overflow: hidden;
   background-color: #1d252d;
@@ -30,12 +32,14 @@ button {
   margin-bottom: 30px;
 }
 
-.topnav li {
+.topnav .topnav-column {
   float: left;
   border-right: 1px solid #f5ecd2;
+  display: flex;
+  flex-direction: row;
 }
 
-.topnav li:last-child{
+.topnav .topnav-column:last-child{
     border-right: none;
 }
 
@@ -52,12 +56,12 @@ button {
     background-color: #000000;
 }
 */
-.topnav li a.active {
+.topnav .topnav-column a.active {
   background-color: #005348;
   color: white;
 }
 
-li a, .dropbtn {
+.topnav-column a, .dropbtn {
   display: inline-block;
   color: white;
   text-align: center;
@@ -65,11 +69,11 @@ li a, .dropbtn {
   text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
+.topnav-column a:hover, .dropdown:hover .dropbtn {
   background-color: #46295a;
 }
 
-li.dropdown {
+.topnav-column.dropdown {
   display: inline-block;
 }
 
@@ -128,11 +132,7 @@ original code is :position relative, display inline-block*/
     background-color: #46295a;
 }
 */
-#record {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
+
 
 /*.tableTitle {
   display:flex;
@@ -142,8 +142,19 @@ original code is :position relative, display inline-block*/
   justify-content: space-between;
 }*/
 
-input {
+.col-input,
+.col-label {
   display: block;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.col-input, select, textarea {
+  resize: vertical;
+  line-height: 30px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 16px;;
 }
 
 .health-management {
@@ -151,26 +162,42 @@ input {
   flex-direction: column;
   margin-left:20px;
   margin-right:20px;
+  overflow:auto;
+  height: 400px;
 }
+
+
 
 .health-management-tbl-columns {
   display: flex;
   flex-direction:row ;
-  position: relative;
-  background: red;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background: #005348;
+  color: white;
 }
 
-.delete-column {
-  vertical-align: baseline;
-  padding: 0;
-  margin: 0;
+.record-column {
+  padding-right: 4px;
 }
 
-.delete-column-bottom {
+.record-column-top {
+  display:flex;
+  flex-direction: column;
+  background:pink;
+  height: 80px;
+}
+
+.record-column-bottom {
   display:flex;
   flex-direction: column;
   background: green;
-  vertical-align: baseline;
-  padding: 0;
-  margin: 0;
+  gap: 20px;
 }
+
+.record-column-row {
+  margin: 0;
+  padding: 0;
+  height: 20px;
+} 
+
