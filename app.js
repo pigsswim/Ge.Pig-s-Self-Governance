@@ -30,15 +30,15 @@ if (Array.isArray(savedRecords)) {
   id: 'id1'
  }];
 }
- 
- function myFunction() {
-  var x = document.getElementById("health-management");
+
+ /*function myHealthManagement() {
+  var x = document.getElementById('page-bottom');
   if (x.style.display === "none") {
-    x.style.display = "block";
+    x.style.display = 'block';
   } else {
     x.style.display = "none";
   }
-};
+};*/
 
 function createRecord (dates, food, calorie, exercise, study, talking, phone, mood, health) {
   const id = '' + new Date().getTime();
@@ -196,42 +196,44 @@ function render () {
 
   records.forEach(function (record){
     const elementDates = document.createElement('div');
-    elementDates.setAttribute('class','dates-column-row');
+    elementDates.setAttribute('class','record-column-row');
     elementDates.innerText = record.dates;
 
     const elementFood = document.createElement('div');
-    elementFood.setAttribute('class','food-column-row');
+    elementFood.setAttribute('class','record-column-row');
     elementFood.innerText = record.food;
 
     const elementCalorie = document.createElement('div');
-    elementCalorie.setAttribute('class','calorie-column-row');
+    elementCalorie.setAttribute('class','record-column-row');
     elementCalorie.innerText = record.calorie;
 
     const elementExercise = document.createElement('div');
-    elementExercise.setAttribute('class','exercise-column-row');
+    elementExercise.setAttribute('class','record-column-row');
     elementExercise.innerText = record.exercise;
 
     const elementStudy = document.createElement('div');
-    elementStudy.setAttribute('class','study-column-row');
+    elementStudy.setAttribute('class','record-column-row');
     elementStudy.innerText = record.study;
 
     const elementTalking = document.createElement('div');
-    elementTalking.setAttribute('class','talking-column-row');
+    elementTalking.setAttribute('class','record-column-row');
     elementTalking.innerText = record.talking;
 
     const elementPhone = document.createElement('div');
-    elementPhone.setAttribute('class','phone-column-row');
+    elementPhone.setAttribute('class','record-column-row');
     elementPhone.innerText = record.phone;
 
     const elementMood = document.createElement('div');
-    elementMood .setAttribute('class','mood-column-row');
+    elementMood .setAttribute('class','record-column-row');
     elementMood .innerText = record.mood;
 
     const elementHealth = document.createElement('div');
-    elementHealth.setAttribute('class','health-column-row');
+    elementHealth.setAttribute('class','record-column-row');
     elementHealth.innerText = record.health;
     
     const deleteButton = document.createElement ('button');
+    const deleteColumnRow = document.createElement('div');
+    deleteColumnRow.setAttribute('class','record-column-row');
     deleteButton.innerText = 'Delete';
     deleteButton.style = 'margin-left: 12px;';
     deleteButton.onclick = deleteRecord;
@@ -248,8 +250,9 @@ function render () {
     const moodColumn = document.getElementById('mood-column-bottom');
     const healthColumn = document.getElementById('health-column-bottom');
 
-    deleteColumn.appendChild (deleteButton);
-
+    deleteColumnRow.appendChild(deleteButton);
+    deleteColumn.appendChild(deleteColumnRow);
+    
     datesColumn.appendChild(elementDates);
     foodColumn.appendChild(elementFood);
     calorieColumn.appendChild(elementCalorie);
