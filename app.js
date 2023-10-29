@@ -4,7 +4,6 @@ const savedRecords = JSON.parse(localStorage.getItem('records'));
 
 if (Array.isArray(savedRecords)) {
   records = savedRecords;
-
 } else {
   records = [{
   dates: 'ramen',
@@ -67,7 +66,7 @@ function createRecord (dates, food, calorie, exercise, study, talking, phone, mo
       }
     });
 
-    saveRecords;
+    saveRecords();
   }
 
   function saveRecords(){
