@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background: black;
+  color: white;
+}
+
+.top-section {
+  background-color: pink;
+}
+
+.bottom-section {
+  background-color: lightblue;
+}
