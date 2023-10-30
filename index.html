@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="page-top" class="page-top">
     <div class="topnav">
       <div class="topnav-row">
           <div class="topnav-column" style="float:right" onclick="myHome()"><a class="active" href="#home">Home</a></div>
@@ -15,19 +14,38 @@
             <div class="dropdown">
               <button onclick="myHealthManagement()" class="dropbtn">Health Management</button>
                   <div id="myDropdown" class="dropdown-content">
-                    <!--<a href="#">Link 1</a>
-                    <a href="#">Link 2</a>-->
+                <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
                   </div>
             </div>
           </div>
           <div class="topnav-column"><a href="#contact">Cognitive Development</a></div>
-          <!--<li><a href="#about">About</a></li>-->
       </div>
      </div>
+     <div class="content-body">
+      <div class="ctt-top">
+        <div class="choices">
+          <form>
+            <input type="date">
+            <select> 
+              <option id='food' value="Junk Food">Jund Food</option>
+              <option value="Vegebables">Vegetables</option>
+              <option value="Liquid Only">Liquid Only</option>
+            </select>
+          </form>
+        </div>
+        <div class="createBtn">
+          <button onclick="addFood()">Add</button>
+        </div>
+      </div>
+      <div class="ctt-bottom">
+        CTT-BOTTOM
 
-  </div>
+      </div>
 
-  <div id="page-bottom" class="page-bottom">
+     </div>
+
+  <!--<div id="page-bottom" class="page-bottom">
     <div class="health-management" id="health-management">
       <div class="health-management-btn">
       <button onclick="addRecord()" class="addBtn">Add</button>
@@ -61,7 +79,12 @@
             <div class="record-column-top" id="food-top">
               <form>
                 <label class="col-label">Food</label>
-                <input class="col-input" type="text" id="food">
+                <select class="col-input" id="food">
+                  <option value="Flour"> Junk Fund</option>
+                  <option value="Vegetables"> Vegetables</option>
+                  <option value="Flour-based"> Flour-based</option>
+                  <option value="drinks">Liquid only</option>
+                </select>         
               </form>
             </div>
             <div id="food-column-bottom" class="record-column-bottom">
@@ -72,7 +95,11 @@
             <div class="record-column-top" id="calorie-top">
               <form>
                 <label class="col-label">Calorie</label>
-                <input class="col-input" type="number" id="calorie" step="100">
+                <select class="col-input" id="calorie">
+                  <option value="500 kcal">500</option>
+                  <option value="800 kcal">800</option>
+                  <option value="1000 kcal">1000</option>
+                </select>
               </form>
             </div>
             <div id="calorie-column-bottom" class="record-column-bottom">
@@ -83,7 +110,13 @@
             <div class="record-column-top" id="exercise-top">
               <form>
                 <label class="col-label">Exercise (minutes)</label>
-                <input class="col-input" type="number" step="10" id="exercise">
+                <select class="col-input" id="exercise">
+                  <option value="30">30</option>
+                  <option value="40">40</option>
+                  <option value="50">50</option>
+                  <option value="60">60</option>
+                  <option value="70">70</option>
+                </select>
               </form>
             </div>
             <div id="exercise-column-bottom" class="record-column-bottom">
@@ -94,7 +127,13 @@
             <div class="record-column-top" id="study-top">
               <form>
                 <label class="col-label">Study (hours)</label>
-                <input class="col-input" type="number" step="1"id="study">
+                <select class="col-input" id="study">
+                  <option value="2 hours">2</option>
+                  <option value="3 hours">3</option>
+                  <option value="4 hours">4</option>
+                  <option value="5 hours">5</option>
+                  <option value="6 hours">6</option>
+                </select>
               </form>
             </div>
             <div id="study-column-bottom" class="record-column-bottom">
@@ -147,7 +186,7 @@
         </div>
       </div> 
     </div>    
-  </div>
+  </div>-->
 <script src="app.js"></script>
 </body>
 </html>
