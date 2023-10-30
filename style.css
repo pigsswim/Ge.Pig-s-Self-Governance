@@ -55,6 +55,7 @@ button {
 .topnav li a:hover {
     background-color: #000000;
 }
+
 */
 .topnav .topnav-column a.active {
   background-color: #005348;
@@ -77,6 +78,7 @@ button {
   display: inline-block;
 }
 
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -85,7 +87,7 @@ button {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
-
+/*
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -100,7 +102,7 @@ button {
   display: block;
 }
 
-/*.topnav li a:hover:not(.active) {
+.topnav li a:hover:not(.active) {
     background-color: #000000;
 }*/
 
@@ -131,30 +133,17 @@ original code is :position relative, display inline-block*/
 .dropdown:hover .dropbtn {
     background-color: #46295a;
 }
-*/
-
-
-/*.tableTitle {
-  display:flex;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 20px;
-  justify-content: space-between;
-}*/
 
 .col-input,
 .col-label {
-  display: block;
   margin-top: 6px;
   margin-bottom: 6px;
 }
 
-.col-input, select, textarea {
+.col-input {
   resize: vertical;
   line-height: 30px;
-  padding-left: 8px;
-  padding-right: 8px;
-  font-size: 16px;;
+  font-size: 16px;
 }
 
 .health-management {
@@ -182,7 +171,7 @@ original code is :position relative, display inline-block*/
 }
 
 .record-column-top {
-  display:flex;
+  display: flex;
   flex-direction: column;
   background:pink;
   height: 80px;
@@ -200,4 +189,35 @@ original code is :position relative, display inline-block*/
   padding: 0;
   height: 20px;
 } 
+
+
+*/ 
+
+.content-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: pink;
+}
+
+
+.ctt-top {
+  background-color: lightgrey;
+  display: inline-block;
+  font-size: large;
+}
+
+.choices {
+  display: inline-block;
+}
+
+.createBtn {
+  display: inline-block;
+  border: solid;
+}
+.ctt-bottom {
+  background-color: lightblue;
+}
+
+
 
