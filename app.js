@@ -30,14 +30,14 @@ if (Array.isArray(savedRecords)) {
  }];
 }
 
- /*function myHealthManagement() {
+function myHealthManagement() {
   var x = document.getElementById('page-bottom');
   if (x.style.display === "none") {
     x.style.display = 'block';
   } else {
     x.style.display = "none";
   }
-};*/
+};
 
 function createRecord (dates, food, calorie, exercise, study, talking, phone, mood, health) {
   const id = '' + new Date().getTime();
@@ -264,3 +264,12 @@ function render () {
   });
 }
 
+let food = 'Ramen';
+
+function addFood (){
+  const foodCell = document.getElementById('food');
+  const record = foodCell.value;
+  document.body.appendChild(record)
+}
+
+addFood(food);
