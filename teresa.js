@@ -23,7 +23,10 @@
     progressClm.appendChild(progressRow);    
 }*/
 
-let records = [];
+let records;
+
+const savedRecords = JSON.parse(localStorage.getItem('records'));
+records = savedRecords;
 
 function createRecord (date,content,progress){
     const id = '' + new Date().getTime();
@@ -33,6 +36,7 @@ function createRecord (date,content,progress){
         progress: progress,
         id: id
     });
+    saveRecord();
 }
 
 function removeRecord (idToDelete){
@@ -43,6 +47,11 @@ function removeRecord (idToDelete){
             return true;
         };
     });
+    saveRecord();
+}
+
+function saveRecord (){
+    localStorage.setItem('records',JSON.stringify(records));
 }
 
 function addRecord (){
