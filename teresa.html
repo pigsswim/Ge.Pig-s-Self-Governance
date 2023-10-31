@@ -7,41 +7,66 @@
     <link rel="stylesheet" href="teresa.css"> 
 </head>
 <body>
-    <div id="top-section" class="top-section">
-        <h1>Teresa's Progress</h1>
-    </div>
-    <div id="bottom-section" class="bottom-section">
-        <div id="bottom-column" class="bottom-column">
-            <div id="btm-clm-row" class="btm-clm-row">Date</div>
-            <div id="btm-clm-row" class="btm-clm-row">Content</div>
-            <div id="btm-clm-row" class="btm-clm-row">Status</div>
+    <div class="bg">
+        <div id="top-section" class="top-section">
+            <h1>Teresa's Progress</h1>
         </div>
-        <div id="bottom-column" class="bottom-column">
-            <div id="btm-clm-row" class="btm-clm-row">
-                <input type="date">
+        <div class="middle-section">
+            <div class="addBtn" onclick="addRow()">
+                <button>Add</button>
             </div>
-            <div id="btm-clm-row" class="btm-clm-row">
-                <input type="text">
+            <div class="delBtn" onclick="deleteRow()">
+                <button>Delete</button>
             </div>
-            <div id="btm-clm-row" class="btm-clm-row">
-                <select>
-                    <option value="empty"></option>
-                    <option value="done">Done</option>
-                    <option value="InProgress">InProgress</option>
-                </select>
+            <div class="saveBtn" onclick="saveRow()">
+                <button>Save</button>
             </div>
         </div>
-        <div id="bottom-column" class="bottom-column">
-            <div id="btm-clm-row" class="btm-clm-row"></div>
-            <div id="btm-clm-row" class="btm-clm-row"></div>
-            <div id="btm-clm-row" class="btm-clm-row"></div>
+        <div id="bottom-section" class="bottom-section">
+            <div id="date-column" class="bottom-column">
+                <div id="btm-clm-row" class="btm-clm-row">Date</div>
+                <div id="btm-clm-row" class="btm-clm-row">
+                    <input id="date-picker" type="date">
+                </div>
+                <div id="btm-clm-row" class="btm-clm-row">reserved</div>
+            </div>
+
+            <div id="content-column" class="bottom-column">
+                <div id="btm-clm-row" class="btm-clm-row">Content</div>
+                <div id="btm-clm-row" class="btm-clm-row">
+                    <select id="content-picker">
+                        <option value="unit 1">Unit 1</option>
+                        <option value="unit 1">Unit 2</option>
+                        <option value="unit 1">Unit 3</option>
+                        <option value="unit 1">Unit 4</option>
+                        <option value="unit 1">Unit 5</option>
+                        <option value="unit 1">Unit 6</option>
+                        <option value="unit 1">Unit 7</option>
+                    </select>
+                </div>
+                <div id="btm-clm-row" class="btm-clm-row">reserved</div>
+            </div>
+
+            <div id="status-column" class="bottom-column">
+                <div id="btm-clm-row" class="btm-clm-row">Status</div>
+                <div id="btm-clm-row" class="btm-clm-row">
+                    <select id="status-picker">
+                        <option value="empty"></option>
+                        <option value="done">Done</option>
+                        <option value="InProgress">InProgress</option>
+                    </select>
+                </div>
+                <div id="btm-clm-row" class="btm-clm-row">Reserved</div>
+            </div>
+
+            <div id="breserved-column" class="bottom-column">
+                <div id="btm-clm-row" class="btm-clm-row">x</div>
+                <div id="btm-clm-row" class="btm-clm-row">x</div>
+                <div id="btm-clm-row" class="btm-clm-row">x</div>
+                <div id="btm-clm-row" class="btm-clm-row">reserved</div>
+            </div>
         </div>
-        <div id="bottom-column" class="bottom-column">
-            <div id="btm-clm-row" class="btm-clm-row"></div>
-            <div id="btm-clm-row" class="btm-clm-row"></div>
-            <div id="btm-clm-row" class="btm-clm-row"></div>
-        </div>
-    </div>
+    </div> 
     <script src="teresa.js"></script>
 </body>
 </html>
