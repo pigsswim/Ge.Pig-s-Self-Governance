@@ -12,7 +12,7 @@
             <h1>Teresa's Progress</h1>
         </div>
         <div class="middle-section">
-            <div class="addBtn" onclick="addRow()">
+            <div class="addBtn" onclick="addRecord()">
                 <button>Add</button>
             </div>
             <div class="delBtn" onclick="deleteRow()">
@@ -24,46 +24,61 @@
         </div>
         <div id="bottom-section" class="bottom-section">
             <div id="date-column" class="bottom-column">
-                <div id="btm-clm-row" class="btm-clm-row">Date</div>
-                <div id="btm-clm-row" class="btm-clm-row">
-                    <input id="date-picker" type="date">
+                <div id="btm-clm-row-top" class="btm-clm-row-top">
+                    <div id="btm-clm-row" class="btm-clm-row">Date</div>
+                    <div id="btm-clm-row" class="btm-clm-row">
+                        <input id="date-picker" type="date">
+                    </div>
                 </div>
-                <div id="btm-clm-row" class="btm-clm-row">reserved</div>
+                <div id="date-btm-clm-row-btm" class="btm-clm-row-btm">
+                    <div id="btm-clm-row" class="btm-clm-row">reserved</div>
+                </div>     
             </div>
 
             <div id="content-column" class="bottom-column">
-                <div id="btm-clm-row" class="btm-clm-row">Content</div>
-                <div id="btm-clm-row" class="btm-clm-row">
-                    <select id="content-picker">
-                        <option value="unit 1">Unit 1</option>
-                        <option value="unit 1">Unit 2</option>
-                        <option value="unit 1">Unit 3</option>
-                        <option value="unit 1">Unit 4</option>
-                        <option value="unit 1">Unit 5</option>
-                        <option value="unit 1">Unit 6</option>
-                        <option value="unit 1">Unit 7</option>
-                    </select>
+                <div id="btm-clm-row-top" class="btm-clm-row-top">
+                    <div id="btm-clm-row" class="btm-clm-row">Content</div>
+                    <div id="btm-clm-row" class="btm-clm-row">
+                        <select id="content-picker">
+                            <option value="unit 1">Unit 1</option>
+                            <option value="unit 1">Unit 2</option>
+                            <option value="unit 1">Unit 3</option>
+                            <option value="unit 1">Unit 4</option>
+                            <option value="unit 1">Unit 5</option>
+                            <option value="unit 1">Unit 6</option>
+                            <option value="unit 1">Unit 7</option>
+                        </select>
+                    </div>
                 </div>
-                <div id="btm-clm-row" class="btm-clm-row">reserved</div>
+                <div id="content-btm-clm-row-btm" class="btm-clm-row-btm">
+                    <div id="btm-clm-row" class="btm-clm-row">reserved</div>
+                </div>  
             </div>
 
-            <div id="status-column" class="bottom-column">
-                <div id="btm-clm-row" class="btm-clm-row">Status</div>
-                <div id="btm-clm-row" class="btm-clm-row">
-                    <select id="status-picker">
-                        <option value="empty"></option>
-                        <option value="done">Done</option>
-                        <option value="InProgress">InProgress</option>
-                    </select>
+            <div id="progress-column" class="bottom-column">
+                <div id="btm-clm-row-top" class="btm-clm-row-top">
+                    <div id="btm-clm-row" class="btm-clm-row">Progress</div>
+                    <div id="btm-clm-row" class="btm-clm-row">
+                        <select id="progress-picker">
+                            <option value="empty"></option>
+                            <option value="done">Done</option>
+                            <option value="InProgress">InProgress</option>
+                        </select>
+                    </div>
                 </div>
-                <div id="btm-clm-row" class="btm-clm-row">Reserved</div>
+                <div id="progress-btm-clm-row-btm" class="btm-clm-row-btm">
+                    <div id="btm-clm-row" class="btm-clm-row">reserved</div>
+                </div>  
             </div>
 
-            <div id="breserved-column" class="bottom-column">
-                <div id="btm-clm-row" class="btm-clm-row">x</div>
-                <div id="btm-clm-row" class="btm-clm-row">x</div>
-                <div id="btm-clm-row" class="btm-clm-row">x</div>
-                <div id="btm-clm-row" class="btm-clm-row">reserved</div>
+            <div id="delete-column" class="bottom-column">
+                <div id="btm-clm-row-top" class="btm-clm-row-top">
+                    <div id="btm-clm-row" class="btm-clm-row">Check</div>
+                    <div id="btm-clm-row" class="btm-clm-row"></div>
+                </div>
+                <div id="delete-btm-clm-row-btm" class="btm-clm-row-btm">
+                    <div id="btm-clm-row" class="btm-clm-row">reserved</div>
+                </div> 
             </div>
         </div>
     </div> 
