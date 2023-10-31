@@ -26,7 +26,19 @@
 let records;
 
 const savedRecords = JSON.parse(localStorage.getItem('records'));
-records = savedRecords;
+
+if (Array.isArray(savedRecords)) {
+    records = savedRecords;
+} else {
+    records = [{
+        date: '2010-10-10',
+        content: 'Ramen',
+        progress: 'None',
+        id: 'id1'
+    }]
+}
+
+render();
 
 function createRecord (date,content,progress){
     const id = '' + new Date().getTime();
