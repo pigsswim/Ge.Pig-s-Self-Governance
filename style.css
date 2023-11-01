@@ -107,7 +107,6 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  height: 40%;
 }
 .btm-right-top-top {
   background-color: darkgoldenrod;
