@@ -7,186 +7,99 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="topnav">
-      <div class="topnav-row">
-          <div class="topnav-column" style="float:right" onclick="myHome()"><a class="active" href="#home">Home</a></div>
-          <div class="topnav-column" class="dropdown">
-            <div class="dropdown">
-              <button onclick="myHealthManagement()" class="dropbtn">Health Management</button>
-                  <div id="myDropdown" class="dropdown-content">
-                <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                  </div>
-            </div>
+  <div class="top">
+    <div class="top-clm">Home</div>
+    <div class="top-clm">Money, Eat, Run</div>
+    <div class="top-clm">Study, Mental</div>
+    <div class="top-clm">Health Management</div>
+    <div class="top-clm">Congnitivity Management</div>
+  </div>
+
+  <div class="middle"> 
+    <div class="btn">
+      <button id="add-Button" onclick="addRecord()">Add </button>
+    </div>
+    <div class="btn">
+      <button>Delete</button>
+    </div>
+  </div>
+
+  <div class="btm">
+    <div class="btm-left">
+      <div class="btm-clm-left">
+        <div class="btm-clm-left-top">
+          <div class="btm-clm-left-top-top">Date</div>
+          <div class="btm-clm-left-top-btm">
+            <input id="date-picker" type="date">
           </div>
-          <div class="topnav-column"><a href="#contact">Cognitive Development</a></div>
+        </div>
+        <div id="date-record" class="btm-clm-left-btm">
+          <div class="btm-clm-left-btm-row">Reserved</div>
+        </div>
       </div>
-     </div>
-     <div class="content-body">
-      <div class="ctt-top">
-        <div class="choices">
-          <form>
-            <input type="date">
-            <select> 
-              <option id='food' value="Junk Food">Jund Food</option>
-              <option value="Vegebables">Vegetables</option>
-              <option value="Liquid Only">Liquid Only</option>
+    
+      <div class="btm-clm-left">
+        <div class="btm-clm-left-top">
+          <div class="btm-clm-left-top-top">Money</div>
+          <div class="btm-clm-left-top-btm">
+            <input id="money-picker" type="number">
+          </div>
+        </div>
+        <div id="money-record" class="btm-clm-left-btm">
+          <div class="btm-clm-left-btm-row">Reserved</div>
+        </div>
+      </div>
+
+      <div class="btm-clm-left">
+        <div class="btm-clm-left-top">
+          <div class="btm-clm-left-top-top">Exercise</div>
+          <div class="btm-clm-left-top-btm">
+            <select id="exercise-picker">
+              <optgroup label="Minutes">
+                <option></option>
+                <option value="30 Minutes">30</option>
+                <option value="60 Minutes">60</option>
+                <option value="90 Minutes">90</option>
+              </optgroup>
             </select>
-          </form>
-        </div>
-        <div class="createBtn">
-          <button onclick="addFood()">Add</button>
-        </div>
-      </div>
-      <div class="ctt-bottom">
-        CTT-BOTTOM
-
-      </div>
-
-     </div>
-
-  <!--<div id="page-bottom" class="page-bottom">
-    <div class="health-management" id="health-management">
-      <div class="health-management-btn">
-      <button onclick="addRecord()" class="addBtn">Add</button>
-      </div>
-      <div id="healht-management-tbl" class="health-management-tbl">
-        <div id="health-management-tbl-columns" class="health-management-tbl-columns">
-
-          <div id="delete-column" class="record-column">
-            <div class="record-column-top" id="delete-top">
-              <form>
-                <label class="col-label"> CELL TO remove</label>
-                <input class="col-input" type="text" id="delete">
-              </form>
-            </div>
-            <div id="delete-column-bottom" class="record-column-bottom">
-            </div>
-          </div>
-
-          <div id="dates-column" class="record-column">
-            <div class="record-column-top" id="dates-top">
-              <form>
-                <label class="col-label">Date</label>
-                <input class="col-input" type="date" id="dates">
-              </form> 
-            </div>
-            <div id="dates-column-bottom" class="record-column-bottom">
-            </div>
-          </div>
-
-          <div id="food-column" class="record-column">
-            <div class="record-column-top" id="food-top">
-              <form>
-                <label class="col-label">Food</label>
-                <select class="col-input" id="food">
-                  <option value="Flour"> Junk Fund</option>
-                  <option value="Vegetables"> Vegetables</option>
-                  <option value="Flour-based"> Flour-based</option>
-                  <option value="drinks">Liquid only</option>
-                </select>         
-              </form>
-            </div>
-            <div id="food-column-bottom" class="record-column-bottom">
-            </div>
-          </div>
-
-          <div id="calorie-column" class="record-column">
-            <div class="record-column-top" id="calorie-top">
-              <form>
-                <label class="col-label">Calorie</label>
-                <select class="col-input" id="calorie">
-                  <option value="500 kcal">500</option>
-                  <option value="800 kcal">800</option>
-                  <option value="1000 kcal">1000</option>
-                </select>
-              </form>
-            </div>
-            <div id="calorie-column-bottom" class="record-column-bottom">
-            </div>
-          </div>
-
-          <div id="exercise-column" class="record-column">
-            <div class="record-column-top" id="exercise-top">
-              <form>
-                <label class="col-label">Exercise (minutes)</label>
-                <select class="col-input" id="exercise">
-                  <option value="30">30</option>
-                  <option value="40">40</option>
-                  <option value="50">50</option>
-                  <option value="60">60</option>
-                  <option value="70">70</option>
-                </select>
-              </form>
-            </div>
-            <div id="exercise-column-bottom" class="record-column-bottom">
-            </div>
-          </div>
-
-          <div id="study-column" class="record-column">
-            <div class="record-column-top" id="study-top">
-              <form>
-                <label class="col-label">Study (hours)</label>
-                <select class="col-input" id="study">
-                  <option value="2 hours">2</option>
-                  <option value="3 hours">3</option>
-                  <option value="4 hours">4</option>
-                  <option value="5 hours">5</option>
-                  <option value="6 hours">6</option>
-                </select>
-              </form>
-            </div>
-            <div id="study-column-bottom" class="record-column-bottom">
-            </div>
-          </div>
-
-          <div id="talking-column" class="record-column">
-            <div class="record-column-top" id="talking-top">
-              <form>
-                <label class="col-label">Talking (minutes)</label>
-                <input class="col-input" type="number" step="10" id="talking">
-              </form>
-            </div>
-            <div id="talking-column-bottom" class="record-column-bottom">
-            </div>
-          </div>
-
-          <div id="phone-column" class="record-column">
-            <div class="record-column-top" id="phone-top">
-              <form>
-                <label class="col-label">Phone</label>
-                <input class="col-input" type="number" step="10" id="phone">
-              </form>
-            </div>
-            <div id="phone-column-bottom" class="record-column-bottom">
-            </div>
-          </div>
-
-          <div id="mood-column" class="record-column">
-            <div class="record-column-top" id="mood-top">
-              <form>
-                <label class="col-label">Mood</label>
-                <input class="col-input" type="text" id="mood">
-              </form>
-            </div>
-            <div id="mood-column-bottom" class="record-column-bottom">
-            </div>
-          </div>
-
-          <div id="health-column" class="record-column">
-            <div class="record-column-top" id="health-top">
-              <form>
-                <label class="col-label">Health</label>
-                <input class="col-input" type="text" id="health">
-              </form>
-            </div>
-            <div id="health-column-bottom" class="record-column-bottom">
-            </div>
           </div>
         </div>
-      </div> 
-    </div>    
-  </div>-->
+        <div id="exercise-record" class="btm-clm-left-btm">
+          <div class="btm-clm-left-btm-row">Reserved</div>
+        </div>
+      </div>
+    
+      <div class="btm-clm-left">
+        <div class="btm-clm-left-top">
+          <div class="btm-clm-left-top-top">Food</div>
+          <div class="btm-clm-left-top-btm">
+            <input id="food-picker" type="text">
+          </div>
+        </div>
+        <div id="food-record" class="btm-clm-left-btm">
+          <div class="btm-clm-let-btm-row">Reserved</div>
+        </div>
+      </div>
+    
+      <div class="btm-clm-left">
+        <div class="btm-clm-left-top">
+          <div class="btm-clm-left-top-top">Delete</div>
+          <div class="btm-clm-left-top-btm">Delete</div>
+        </div>
+        <div id="delete-record" class="btm-clm-left-btm">
+          <div class="btm-clm-left-btm-row">Reserved</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="btm-right">
+      <div class="btm-clm-right">
+        <div class="btm-clm-right-top">Label</div>
+        <div class="btm-clm-right-btm"></div>
+      </div>
+    </div>
+
+  </div> 
 <script src="app.js"></script>
 </body>
 </html>
