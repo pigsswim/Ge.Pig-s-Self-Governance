@@ -1,5 +1,8 @@
 
-let records;
+let records = [];
+let moneyCount = 0;
+let exerciseCount = 0;
+let foodCount = 0;
 
 const sortByDate = (records) => 
   records.sort(({date: a}, {date: b}) => a > b ? -1 : a < b ? 1 : 0)
@@ -28,12 +31,9 @@ function createRecord (date,money, exercise, food) {
     food: food,
     id: id 
   });
-  
-  sortByDate(records);
+
   saveRecord();
-}
-
-
+  };
 
 function removeRecord (idToDelete){
   records = records.filter (function(record) {
@@ -45,6 +45,36 @@ function removeRecord (idToDelete){
   });
   saveRecord();
 }
+
+function moneyCounter(money){
+  if (money !== '' && money !== '0'){
+    moneyCount ++;
+  }else {
+    return;
+  };
+}
+
+function exerciseCounter(exercise) {
+  if (Math.floor(exercise) >= 60){
+    exerciseCount ++;
+  }else {
+    return;
+  };
+}
+
+function foodCounter(food) {
+  if (food === 'yes'){
+    foodCount ++;
+  } else if (food === 'no'){
+    return; 
+  }else {
+    foodCount ++;
+  }
+}
+
+//if records.money is not null/ empty, moneyCounter ++, return moneyCounter
+//if records.money is null/empty, moneyCounter is moneyCounter 
+
 
 function saveRecord (){
   localStorage.setItem('records',JSON.stringify(records));
@@ -63,6 +93,9 @@ function addRecord (){
   const foodPicker = document.getElementById('food-picker');
   const food = foodPicker.value;
 
+  moneyCounter(money);
+  exerciseCounter(exercise);
+  foodCounter(food);
   createRecord(date, money, exercise,food);
   render();
 }
@@ -81,6 +114,9 @@ function render() {
   document.getElementById('exercise-record').innerHTML = '';
   document.getElementById('food-record').innerHTML = '';
   document.getElementById('delete-record').innerHTML = '';
+  document.getElementById('money-counter').innerHTML = moneyCount;
+  document.getElementById('exercise-counter').innerHTML = exerciseCount;
+  document.getElementById('food-counter').innerHTML = foodCount;
 
   records.forEach((record) => {
     
@@ -119,7 +155,7 @@ function render() {
     foodRecords.appendChild(foodRow);
     const deleteRecords = document.getElementById('delete-record');
     deleteRecords.appendChild(deleteRow);
-    
-  })
+  });
+  
 }
 
