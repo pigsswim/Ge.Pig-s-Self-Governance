@@ -38,8 +38,9 @@ body {
   width: 120px;
 }
 
-button {
-  height: 80%;
+.add-button,
+.delete-button {
+  height: 100%;
   width: 100%;
   font-size: 20px;
   background-color: blueviolet;
@@ -65,8 +66,8 @@ button:hover {
 .btm-left {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  gap: 20px;
+
+  gap: 8px;
   width: 75%;
 }
 
@@ -74,7 +75,7 @@ button:hover {
   background-color: lightsalmon;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 2px;
 }
 
 .btm-clm-left-top {
@@ -93,13 +94,33 @@ button:hover {
   height: 60px;
 }
 
-
 .btm-right {
   width: 20%;
+  background-color: darksalmon;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-.btm-clm-right {
-  background-color: darksalmon
+.btm-right-top {
+  background: darkorange;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 40%;
+}
+.btm-right-top-top {
+  background-color: darkgoldenrod;
+}
+.btm-right-top-btm {
+  background-color: darkkhaki;
+  display: flex;
+  flex-direction: column;
+}
+
+.btm-right-top-btm-row {
+  display: flex;
+  flex-direction: row;
 }
 
 input,
@@ -109,4 +130,14 @@ select {
   width: 100%;
   padding: 10px;
   font-size: 16px;
+}
+
+.btm-right-middle {
+  background-color:mediumseagreen;
+  height: 30%;
+}
+
+.btm-right-btm {
+  background-color: mediumvioletred;
+  height: 30%;
 }
