@@ -105,7 +105,8 @@ function render() {
     deleteButton.id = record.id;
     deleteButton.onclick = deleteRecord;
     deleteRow.setAttribute('class','btm-clm-left-btm-row');
-    deleteButton.innerText = 'Delete';
+    deleteButton.style = 'color: white; background-color: purple; height: 50%; font-size: 16px; border-radius: 5px; '
+    deleteButton.innerText = 'X';
     deleteRow.appendChild(deleteButton);
 
     const dateRecords = document.getElementById('date-record');
