@@ -8,6 +8,7 @@ const sortByDate = (records) =>
   records.sort(({date: a}, {date: b}) => a > b ? -1 : a < b ? 1 : 0)
 
 const savedRecords = JSON.parse(localStorage.getItem('records'));
+JSON.parse(localStorage.getItem('moneyCount'));
 
 if (Array.isArray(savedRecords)) {
   records = savedRecords;
@@ -17,18 +18,20 @@ if (Array.isArray(savedRecords)) {
     money: 'none',
     exercise: 'none',
     food: 'none',
+    weight: 'none',
   }];
 }
 
 render();
 
-function createRecord (date,money, exercise, food) {
+function createRecord (date,money, exercise,food,weight) {
   const id = '' + new Date().getTime();
   records.push ({
     date: date,
     money: money,
     exercise: exercise,
     food: food,
+    weight: weight,
     id: id 
   });
 
@@ -78,6 +81,9 @@ function foodCounter(food) {
 
 function saveRecord (){
   localStorage.setItem('records',JSON.stringify(records));
+  localStorage.setItem('moneyCount',JSON.stringify(moneyCount));
+  localStorage.setItem('exerciseCount',JSON.stringify(exerciseCount));
+  localStorage.setItem('foodCount',JSON.stringify(foodCount));
 }
 
 function addRecord (){
@@ -93,10 +99,13 @@ function addRecord (){
   const foodPicker = document.getElementById('food-picker');
   const food = foodPicker.value;
 
+  const weightPicker = document.getElementById('weight-picker');
+  const weight = weightPicker.value;
+
   moneyCounter(money);
   exerciseCounter(exercise);
   foodCounter(food);
-  createRecord(date, money, exercise,food);
+  createRecord(date, money, exercise,food,weight);
   render();
 }
 
@@ -114,6 +123,7 @@ function render() {
   document.getElementById('exercise-record').innerHTML = '';
   document.getElementById('food-record').innerHTML = '';
   document.getElementById('delete-record').innerHTML = '';
+  document.getElementById('weight-record').innerHTML = '';
   document.getElementById('money-counter').innerHTML = moneyCount;
   document.getElementById('exercise-counter').innerHTML = exerciseCount;
   document.getElementById('food-counter').innerHTML = foodCount;
@@ -136,6 +146,10 @@ function render() {
     foodRow.setAttribute('class','btm-clm-left-btm-row');
     foodRow.innerText = record.food;
 
+    const weightRow = document.createElement('div');
+    weightRow.setAttribute('class','btm-clm-left-btm-row');
+    weightRow.innerText = record.weight;
+    
     const deleteRow = document.createElement('div');
     const deleteButton = document.createElement('button');
     deleteButton.id = record.id;
@@ -153,6 +167,8 @@ function render() {
     exerciseRecords.appendChild(exerciseRow);
     const foodRecords = document.getElementById('food-record');
     foodRecords.appendChild(foodRow);
+    const weightRecords = document.getElementById('weight-record');
+    weightRecords.appendChild(weightRow);
     const deleteRecords = document.getElementById('delete-record');
     deleteRecords.appendChild(deleteRow);
   });
