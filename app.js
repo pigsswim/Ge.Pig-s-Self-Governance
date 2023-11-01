@@ -1,4 +1,8 @@
+
 let records;
+
+const sortByDate = (records) => 
+  records.sort(({date: a}, {date: b}) => a > b ? -1 : a < b ? 1 : 0)
 
 const savedRecords = JSON.parse(localStorage.getItem('records'));
 
@@ -6,270 +10,115 @@ if (Array.isArray(savedRecords)) {
   records = savedRecords;
 } else {
   records = [{
-  dates: 'ramen',
-  food: 'ramen',
-  calorie:'500',
-  exercise: '500',
-  study: '500',
-  talking: '500',
-  phone:'500',
-  mood: '-1',
-  health: '50kg',
-  id: 'id1'
-  },{
-  dates: 'ramen',
-  food: 'ramen',
-  calorie:'500',
-  exercise: '500',
-  study: '500',
-  talking: '500',
-  phone:'500',
-  mood: '-1',
-  health: '50kg',
-  id: 'id1'
- }];
+    date: 'none',
+    money: 'none',
+    exercise: 'none',
+    food: 'none',
+  }];
 }
 
-function myHealthManagement() {
-  var x = document.getElementById('page-bottom');
-  if (x.style.display === "none") {
-    x.style.display = 'block';
-  } else {
-    x.style.display = "none";
-  }
-};
+render();
 
-function createRecord (dates, food, calorie, exercise, study, talking, phone, mood, health) {
+function createRecord (date,money, exercise, food) {
   const id = '' + new Date().getTime();
-
   records.push ({
-    dates: dates,
-    food: food,
-    calorie: calorie,
+    date: date,
+    money: money,
     exercise: exercise,
-    study: study,
-    talking: talking,
-    phone: phone,
-    mood: mood,
-    health: health,
-    id: id,
+    food: food,
+    id: id 
   });
-
-  saveRecords();
-}
-  function removeRecord(idToDelete) {
-    records = records.filter (function (record) {
-      if (record.id === idToDelete) {
-        return false;
-      } else {
-        return true;
-      }
-    });
-
-    saveRecords();
-  }
-
-  function saveRecords(){
-    localStorage.setItem('records', JSON.stringify(records));
-  }
-
- function addRecord(){
-  const datesCell = document.getElementById('dates');
-  const dates = datesCell.value;
   
-  const foodCell = document.getElementById('food');
-  const food = foodCell.value;
+  sortByDate(records);
+  saveRecord();
+}
 
-  const calorieCell = document.getElementById('calorie');
-  const calorie = calorieCell.value;
 
-  const exerciseCell = document.getElementById('exercise');
-  const exercise = exerciseCell.value;
 
-  const studyCell = document.getElementById('study');
-  const study = studyCell.value;
-
-  const talkingCell = document.getElementById('talking');
-  const talking = talkingCell.value;
-
-  const phoneCell = document.getElementById('phone');
-  const phone = phoneCell.value;
-
-  const moodCell = document.getElementById('mood');
-  const mood = moodCell.value;
-
-  const healthCell = document.getElementById('health');
-  const health = healthCell.value;
-
-  createRecord (dates, food, calorie, exercise, study, talking, phone, mood, health);
-  render();
- };
-
- /*  
- let todos = [{
-  date: '2010-10-10',
-  food: 'ramen',
-  id: 'id1',
- },{
-  date: '2010-10-10',
-  food: 'ramen',
-  id: 'id1',
- }]
-
- function createTodo(title,dueDate) {
-    const id = '' + new date().getTime();
-
-    todos.push ({
-      date: date,
-      food: food,
-      id: id
-    });
- }
-
- function removeTodo(idToDelete) {
-  todos = todos.filter (function (todo) {
-    if (todo.id === idToDelete) {
+function removeRecord (idToDelete){
+  records = records.filter (function(record) {
+    if (record.id === idToDelete) {
       return false;
     } else {
       return true;
-    }
+    };
   });
- }
+  saveRecord();
+}
 
- function addTodo() {
-  const textbox = document.getElementById('todo-title);
-  const title = textbox.value;
+function saveRecord (){
+  localStorage.setItem('records',JSON.stringify(records));
+}
 
-  const datePicker = document.getElementById('date-picker);
-  const dueDate = datePicker.value;
+function addRecord (){
+  const datePicker = document.getElementById('date-picker');
+  const date = datePicker.value;
+  
+  const moneyPicker = document.getElementById('money-picker');
+  const money = moneyPicker.value;
 
-  createTodo(title, dueDate); 
-  render ();
- }
+  const exercisePicker = document.getElementById('exercise-picker');
+  const exercise = exercisePicker.value;
 
-function deleteTodo (event) {
-  const deleteButton = event.target;
-  const idToDelete = deleteButton.id;
-   
-  removeTodo();
+  const foodPicker = document.getElementById('food-picker');
+  const food = foodPicker.value;
+
+  createRecord(date, money, exercise,food);
   render();
 }
 
-function render (){
-  document.getElementBy('todo-list').innerHTML = '';
-  todos.forEach (function (todo){
-    const element = document.createElement ('div');
-    element.innerText = todo.title + '' + todo.dueDate;
-
-    const deleteButton = document.createElement ('button');
-    deleteButton.innerText = 'Delete';
-    deleteButton.style = 'margin-left: 12px;';
-    deleteButton.onclick = deleteTodo;
-    deleteButton.id = todo.id;
-    element.appendChild (deleteButton);
-
-    const todoList = document.getElementById ('todo-list');
-    todoList.appendChild(element);
-  })
-
-} */
 function deleteRecord (event) {
   const deleteButton = event.target;
   const idToDelete = deleteButton.id;
-   
+  
   removeRecord(idToDelete);
   render();
 }
 
-function render () {
-  document.getElementById('dates-column-bottom').innerHTML = '';
-  document.getElementById('food-column-bottom').innerHTML = '';
-  document.getElementById('calorie-column-bottom').innerHTML = '';
-  document.getElementById('exercise-column-bottom').innerHTML = '';
-  document.getElementById('study-column-bottom').innerHTML = '';
-  document.getElementById('talking-column-bottom').innerHTML = '';
-  document.getElementById('phone-column-bottom').innerHTML = '';
-  document.getElementById('mood-column-bottom').innerHTML = '';
-  document.getElementById('health-column-bottom').innerHTML = '';
-  document.getElementById('delete-column-bottom').innerHTML = '';
+function render() {
+  document.getElementById('date-record').innerHTML = '';
+  document.getElementById('money-record').innerHTML = '';
+  document.getElementById('exercise-record').innerHTML = '';
+  document.getElementById('food-record').innerHTML = '';
+  document.getElementById('delete-record').innerHTML = '';
 
-  records.forEach(function (record){
-    const elementDates = document.createElement('div');
-    elementDates.setAttribute('class','record-column-row');
-    elementDates.innerText = record.dates;
-
-    const elementFood = document.createElement('div');
-    elementFood.setAttribute('class','record-column-row');
-    elementFood.innerText = record.food;
-
-    const elementCalorie = document.createElement('div');
-    elementCalorie.setAttribute('class','record-column-row');
-    elementCalorie.innerText = record.calorie;
-
-    const elementExercise = document.createElement('div');
-    elementExercise.setAttribute('class','record-column-row');
-    elementExercise.innerText = record.exercise;
-
-    const elementStudy = document.createElement('div');
-    elementStudy.setAttribute('class','record-column-row');
-    elementStudy.innerText = record.study;
-
-    const elementTalking = document.createElement('div');
-    elementTalking.setAttribute('class','record-column-row');
-    elementTalking.innerText = record.talking;
-
-    const elementPhone = document.createElement('div');
-    elementPhone.setAttribute('class','record-column-row');
-    elementPhone.innerText = record.phone;
-
-    const elementMood = document.createElement('div');
-    elementMood .setAttribute('class','record-column-row');
-    elementMood .innerText = record.mood;
-
-    const elementHealth = document.createElement('div');
-    elementHealth.setAttribute('class','record-column-row');
-    elementHealth.innerText = record.health;
+  records.forEach((record) => {
     
-    const deleteButton = document.createElement ('button');
-    const deleteColumnRow = document.createElement('div');
-    deleteColumnRow.setAttribute('class','record-column-row');
-    deleteButton.innerText = 'Delete';
-    deleteButton.style = 'margin-left: 12px;';
-    deleteButton.onclick = deleteRecord;
+    const dateRow = document.createElement('div');
+    dateRow.setAttribute('class','btm-clm-left-btm-row')
+    dateRow.innerText = record.date;
+    
+    const moneyRow = document.createElement('div');
+    moneyRow.setAttribute('class','btm-clm-left-btm-row');
+    moneyRow.innerText = record.money;
+    
+    const exerciseRow = document.createElement('div');
+    exerciseRow.setAttribute('class','btm-clm-left-btm-row');
+    exerciseRow.innerText = record.exercise;
+    
+    const foodRow = document.createElement('div');
+    foodRow.setAttribute('class','btm-clm-left-btm-row');
+    foodRow.innerText = record.food;
+
+    const deleteRow = document.createElement('div');
+    const deleteButton = document.createElement('button');
     deleteButton.id = record.id;
-    
-    const deleteColumn = document.getElementById('delete-column-bottom');
-    const datesColumn = document.getElementById('dates-column-bottom');
-    const foodColumn = document.getElementById('food-column-bottom');
-    const calorieColumn = document.getElementById('calorie-column-bottom');
-    const exerciseColumn = document.getElementById('exercise-column-bottom');
-    const studyColumn = document.getElementById('study-column-bottom');
-    const talkingColumn = document.getElementById('talking-column-bottom');
-    const phoneColumn = document.getElementById('phone-column-bottom');
-    const moodColumn = document.getElementById('mood-column-bottom');
-    const healthColumn = document.getElementById('health-column-bottom');
+    deleteButton.onclick = deleteRecord;
+    deleteRow.setAttribute('class','btm-clm-left-btm-row');
+    deleteButton.innerText = 'Delete';
+    deleteRow.appendChild(deleteButton);
 
-    deleteColumnRow.appendChild(deleteButton);
-    deleteColumn.appendChild(deleteColumnRow);
+    const dateRecords = document.getElementById('date-record');
+    dateRecords.appendChild(dateRow);
+    const moneyRecords = document.getElementById('money-record');
+    moneyRecords.appendChild(moneyRow);
+    const exerciseRecords = document.getElementById('exercise-record');
+    exerciseRecords.appendChild(exerciseRow);
+    const foodRecords = document.getElementById('food-record');
+    foodRecords.appendChild(foodRow);
+    const deleteRecords = document.getElementById('delete-record');
+    deleteRecords.appendChild(deleteRow);
     
-    datesColumn.appendChild(elementDates);
-    foodColumn.appendChild(elementFood);
-    calorieColumn.appendChild(elementCalorie);
-    exerciseColumn.appendChild(elementExercise);
-    studyColumn.appendChild(elementStudy);
-    talkingColumn.appendChild(elementTalking);
-    phoneColumn.appendChild(elementPhone);
-    moodColumn.appendChild(elementMood);
-    healthColumn.appendChild(elementHealth);
-  });
+  })
 }
 
-let food = 'Ramen';
-
-function addFood (){
-  const foodCell = document.getElementById('food');
-  const record = foodCell.value;
-  document.body.appendChild(record)
-}
-
-addFood(food);
