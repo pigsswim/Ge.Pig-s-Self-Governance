@@ -31,7 +31,25 @@ if (Array.isArray(savedRecords)) {
 
 render();
 
-function createRecord (date,money, exercise,food,weight) {
+function createRecord (date,money,exercise,food,weight) {
+  const moneyArray = [];
+  moneyArray.push(money);
+
+  const exerciseArray = [];
+  exerciseArray.push(exercise);
+
+  const data = [{
+    x:moneyArray,
+    y:exerciseArray,
+    mode:"markers"
+  }];
+
+  const layout = {
+    xaxis: {range: [40, 160], title: "Square Meters"},
+    yaxis: {range: [5, 16], title: "Price in Millions"},  
+    title: "House Prices vs. Size"
+  };
+  
   const id = '' + new Date().getTime();
   records.push ({
     date: date,
@@ -42,6 +60,7 @@ function createRecord (date,money, exercise,food,weight) {
     id: id 
   });
 
+  Plotly.newPlot("plot", data, layout);
   saveRecord();
   };
 
@@ -183,6 +202,7 @@ function render() {
   
 }
 
+
 // try plot 
 
 
@@ -204,9 +224,8 @@ const layout = {
 };
 
 // Display using Plotly
+
 Plotly.newPlot("plot", data, layout);
-
-
 
 
 //For analysis graphics, practice codes go here. 
