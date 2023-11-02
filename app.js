@@ -1,6 +1,10 @@
 
 let records = [];
 let counters = [];
+let moneyArray = [];
+let exerciseArray = [];
+let data = [];
+let layout = {};
 let moneyCount = 0;
 let exerciseCount = 0;
 let foodCount = 0;
@@ -12,13 +16,17 @@ const savedRecords = JSON.parse(localStorage.getItem('records'));
 const savedMoneyCount = JSON.parse(localStorage.getItem('moneyCount'));
 const savedExerciseCount = JSON.parse(localStorage.getItem('exerciseCount'));
 const savedFoodCount = JSON.parse(localStorage.getItem('foodCount'));
+const savedMoneyArray = JSON.parse(localStorage.getItem('moneyArray'));
+const savedExerciseArray = JSON.parse(localStorage.getItem('exerciseArray'));
+const savedData = JSON.parse(localStorage.getItem('data'));
+const savedLayout = JSON.parse(localStorage.getItem('layout'));
 
 if (Array.isArray(savedRecords)) {
   records = savedRecords;
   moneyCount = savedMoneyCount;
   exerciseCount = savedExerciseCount;
   foodCount = savedFoodCount;
-
+ 
 } else {
   records = [{
     date: 'none',
@@ -29,22 +37,17 @@ if (Array.isArray(savedRecords)) {
   }];
 }
 
-render();
-
 function createRecord (date,money,exercise,food,weight) {
-  const moneyArray = [];
   moneyArray.push(money);
-
-  const exerciseArray = [];
   exerciseArray.push(exercise);
 
-  const data = [{
+  data = [{
     x:moneyArray,
     y:exerciseArray,
     mode:"markers"
   }];
 
-  const layout = {
+    layout = {
     xaxis: {range: [0, 100], title: "Macau patacas"},
     yaxis: {range: [0, 90], title: "Exercise in Minutes"},  
     title: "Exercise vs. Money Spent"
@@ -111,6 +114,10 @@ function saveRecord (){
   localStorage.setItem('moneyCount',JSON.stringify(moneyCount));
   localStorage.setItem('exerciseCount',JSON.stringify(exerciseCount));
   localStorage.setItem('foodCount',JSON.stringify(foodCount));
+  localStorage.setItem('moneyArray',JSON.stringify(moneyArray));
+  localStorage.setItem('exerciseArray',JSON.stringify(exerciseArray));
+  localStorage.setItem('data',JSON.stringify(data));
+  localStorage.setItem('layout',JSON.stringify(layout));
 }
 
 function addRecord (){
