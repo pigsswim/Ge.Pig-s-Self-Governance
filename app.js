@@ -1,5 +1,6 @@
 
 let records = [];
+let counters = [];
 let moneyCount = 0;
 let exerciseCount = 0;
 let foodCount = 0;
@@ -8,10 +9,16 @@ const sortByDate = (records) =>
   records.sort(({date: a}, {date: b}) => a > b ? -1 : a < b ? 1 : 0)
 
 const savedRecords = JSON.parse(localStorage.getItem('records'));
-JSON.parse(localStorage.getItem('moneyCount'));
+const savedMoneyCount = JSON.parse(localStorage.getItem('moneyCount'));
+const savedExerciseCount = JSON.parse(localStorage.getItem('exerciseCount'));
+const savedFoodCount = JSON.parse(localStorage.getItem('foodCount'));
 
 if (Array.isArray(savedRecords)) {
   records = savedRecords;
+  moneyCount = savedMoneyCount;
+  exerciseCount = savedExerciseCount;
+  foodCount = savedFoodCount;
+
 } else {
   records = [{
     date: 'none',
@@ -48,6 +55,7 @@ function removeRecord (idToDelete){
   });
   saveRecord();
 }
+
 
 function moneyCounter(money){
   if (money !== '' && money !== '0'){
@@ -175,3 +183,33 @@ function render() {
   
 }
 
+// try plot 
+
+
+const xArray = [50,60,70,80,90,100,110,120,130,140,150];
+const yArray = [7,8,8,9,9,9,10,11,14,14,15];
+
+// Define Data
+const healthData = [{
+  x:xArray,
+  y:yArray,
+  mode:"markers"
+}];
+
+// Define Layout
+const layout = {
+  xaxis: {range: [40, 160], title: "Square Meters"},
+  yaxis: {range: [5, 16], title: "Price in Millions"},  
+  title: "House Prices vs. Size"
+};
+
+// Display using Plotly
+Plotly.newPlot("plot", data, layout);
+
+
+
+
+//For analysis graphics, practice codes go here. 
+
+
+// update mouse pointer coordinates
