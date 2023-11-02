@@ -45,9 +45,9 @@ function createRecord (date,money,exercise,food,weight) {
   }];
 
   const layout = {
-    xaxis: {range: [40, 160], title: "Square Meters"},
-    yaxis: {range: [5, 16], title: "Price in Millions"},  
-    title: "House Prices vs. Size"
+    xaxis: {range: [0, 100], title: "Macau patacas"},
+    yaxis: {range: [0, 90], title: "Exercise in Minutes"},  
+    title: "Exercise vs. Money Spent"
   };
   
   const id = '' + new Date().getTime();
@@ -206,11 +206,8 @@ function render() {
 // try plot 
 
 
-const xArray = [50,60,70,80,90,100,110,120,130,140,150];
-const yArray = [7,8,8,9,9,9,10,11,14,14,15];
-
 // Define Data
-const data = [{
+/*const data = [{
   x:xArray,
   y:yArray,
   mode:"markers"
@@ -226,7 +223,7 @@ const layout = {
 // Display using Plotly
 
 Plotly.newPlot("plot", data, layout);
-
+*/
 
 //For analysis graphics, practice codes go here. 
 
