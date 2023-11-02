@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="teresa.css"> 
+</head>
+<body>
+    <div class="bg">
+        <div id="top-section" class="top-section">
+            <h1>Teresa's Progress</h1>
+        </div>
+        <div class="middle-section">
+            <div class="addBtn" onclick="addRecord()">
+                <button>Add</button>
+            </div>
+            <div class="delBtn" onclick="deleteRow()">
+                <button>Delete</button>
+            </div>
+            <div class="saveBtn" onclick="saveRow()">
+                <button>Save</button>
+            </div>
+        </div>
+        <div id="bottom-section" class="bottom-section">
+            <div id="date-column" class="bottom-column">
+                <div id="btm-clm-row-top" class="btm-clm-row-top">
+                    <div id="btm-clm-row" class="btm-clm-row">Date</div>
+                    <div id="btm-clm-row" class="btm-clm-row">
+                        <input id="date-picker" type="date">
+                    </div>
+                </div>
+                <div id="date-btm-clm-row-btm" class="btm-clm-row-btm">
+                    <div id="btm-clm-row" class="btm-clm-row">reserved</div>
+                </div>     
+            </div>
+
+            <div id="content-column" class="bottom-column">
+                <div id="btm-clm-row-top" class="btm-clm-row-top">
+                    <div id="btm-clm-row" class="btm-clm-row">Concept</div>
+                    <div id="btm-clm-row" class="btm-clm-row">
+                        <select id="content-picker">
+                            <optgroup label="Unit1">
+                                <option value="Unit 1 Ordinal numbers">Ordinal numbers</option>
+                                <option value="Unit 1 Teen numbers">Teen numbers</option>
+                                <option value="Unit 1 More than and Less Than">More than and Less Than</option>
+                                <option value="Unit 1 Grouping (multiply)">Grouping (multiply)</option>
+                                <option value="Unit 1 Sharing (divide)">Sharing (divide)</option>
+                                <option value="Unit 1 Fractions and Decimals">Fractions and Decimals</option>
+                                <option value="Unit 1 Halves">Halves</option>
+                            </optgroup>  
+                              
+                            <optgroup label="Unit2"></optgroup>  
+                            <optgroup label="Unit3"></optgroup>  
+                            <optgroup label="Unit4">
+                                <option value="Unit 4 sorting">Sorting</option>
+                                <option value="Unit 4 Repeating patterns">Repeating patterns</option>
+                                <option value="Unit 4 Creating and describing patterns">Creating and describing patterns</option>
+                            </optgroup>  
+                            <optgroup label="Unit6">
+                                <option value="Unit 6 2D Shapes">2D shapes</option>
+                                <option value="Unit 6 3D Shapes">3D shapes</option>
+                            </optgroup>                 
+                        </select>
+                    </div>
+                </div>
+                <div id="content-btm-clm-row-btm" class="btm-clm-row-btm">
+                    <div id="btm-clm-row" class="btm-clm-row">reserved</div>
+                </div>  
+            </div>
+
+            <div id="progress-column" class="bottom-column">
+                <div id="btm-clm-row-top" class="btm-clm-row-top">
+                    <div id="btm-clm-row" class="btm-clm-row">Progress</div>
+                    <div id="btm-clm-row" class="btm-clm-row">
+                        <select id="progress-picker">
+                            <option value="empty"></option>
+                            <option value="done">Done</option>
+                            <option value="InProgress">InProgress</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="progress-btm-clm-row-btm" class="btm-clm-row-btm">
+                    <div id="btm-clm-row" class="btm-clm-row">reserved</div>
+                </div>  
+            </div>
+
+            <div id="delete-column" class="bottom-column">
+                <div id="btm-clm-row-top" class="btm-clm-row-top">
+                    <div id="btm-clm-row" class="btm-clm-row">Check</div>
+                    <div id="btm-clm-row" class="btm-clm-row"></div>
+                </div>
+                <div id="delete-btm-clm-row-btm" class="btm-clm-row-btm">
+                    <div id="btm-clm-row" class="btm-clm-row">reserved</div>
+                </div> 
+            </div>
+        </div>
+    </div> 
+    <script src="teresa.js"></script>
+</body>
+</html>

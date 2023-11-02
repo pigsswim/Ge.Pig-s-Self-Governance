@@ -1,203 +1,154 @@
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: large;
-  min-height: 2000px;
   box-sizing: border-box;
-}
-
-button {
-  border: none;
-  color: inherit;
-  background-color: transparent;font-size: inherit;
-}
-
-.addBtn,
-.deleteBtn {
-  border: solid;
-  color:#005348;
-  background-color: #005348;
+  background-color:black;
   color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.topnav .topnav-row {
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 5px;
+  background-color: lightcoral;
+  height: 100px;
+  font-size: 30px;
+
+}
+
+.top-clm {
+  background-color: darkslateblue;
+}
+
+
+.middle {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background-color: lightseagreen;
+  height: 50px;
+  padding: 10px;
+}
+
+.btn {
+  background-color: lightsteelblue;
+  width: 120px;
+}
+
+.add-button,
+.delete-button {
+  height: 100%;
   width: 100%;
-  overflow: hidden;
-  background-color: #1d252d;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  font-size: 20px;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  transition: 0.4s;
 }
 
-.topnav {
-  margin-bottom: 30px;
+button:hover {
+  background: pink;
 }
 
-.topnav .topnav-column {
-  float: left;
-  border-right: 1px solid #f5ecd2;
+.btm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 5px;
+  background-color: lightcoral;
+  font-size: 20px;
+}
+
+.btm-left {
+  display: flex;
+  flex-direction: row;
+
+  gap: 8px;
+  width: 75%;
+}
+
+.btm-clm-left {
+  background-color: lightsalmon;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.btm-clm-left-top {
+  background-color: darkolivegreen;
+  height: 120px;
+}
+
+.btm-clm-left-btm {
+  background-color: brown;
+}
+
+.btm-clm-left-btm-row {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  height: 60px;
+}
+
+.btm-right {
+  width: 20%;
+  background-color: darksalmon;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.btm-right-top {
+  background: darkorange;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.btm-right-top-top {
+  background-color: darkgoldenrod;
+}
+.btm-right-top-btm {
+  background-color: darkkhaki;
+  display: flex;
+  flex-direction: column;
+}
+
+.btm-right-top-btm-row {
   display: flex;
   flex-direction: row;
 }
 
-.topnav .topnav-column:last-child{
-    border-right: none;
+input,
+select {
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
 }
 
-/*
-.topnav li a {
-    display: block;
-    padding: 14px 16px;
-    text-align: center;
-    color: white;
-    text-decoration: none; 
+.btm-right-middle {
+  background-color:mediumseagreen;
+  height: 30%;
 }
 
-.topnav li a:hover {
-    background-color: #000000;
-}
-*/
-.topnav .topnav-column a.active {
-  background-color: #005348;
-  color: white;
+.btm-right-btm {
+  background-color: mediumvioletred;
+  height: 30%;
 }
 
-.topnav-column a, .dropbtn {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.topnav-column a:hover, .dropdown:hover .dropbtn {
-  background-color: #46295a;
-}
-
-.topnav-column.dropdown {
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1;}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/*.topnav li a:hover:not(.active) {
-    background-color: #000000;
-}*/
-
-/* Huge problems here with .Dropdown
-original code is :position relative, display inline-block*/
-
-/*.dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-
-.dropdown:hover .dropdown-content {
-    display: block;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #46295a;
-}
-*/
-
-
-/*.tableTitle {
-  display:flex;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 20px;
-  justify-content: space-between;
-}*/
-
-.col-input,
-.col-label {
-  display: block;
-  margin-top: 6px;
-  margin-bottom: 6px;
-}
-
-.col-input, select, textarea {
-  resize: vertical;
-  line-height: 30px;
-  padding-left: 8px;
-  padding-right: 8px;
-  font-size: 16px;;
-}
-
-.health-management {
+.btm1 {
   display: flex;
   flex-direction: column;
-  margin-left:20px;
-  margin-right:20px;
-  overflow:auto;
+}
+
+.plot {
+  background: white; 
+  color: black;
+  width: 400px;
   height: 400px;
 }
-
-
-
-.health-management-tbl-columns {
-  display: flex;
-  flex-direction:row ;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  background: #005348;
-  color: white;
-}
-
-.record-column {
-  padding-right: 4px;
-}
-
-.record-column-top {
-  display:flex;
-  flex-direction: column;
-  background:pink;
-  height: 80px;
-}
-
-.record-column-bottom {
-  display:flex;
-  flex-direction: column;
-  background: green;
-  gap: 20px;
-}
-
-.record-column-row {
-  margin: 0;
-  padding: 0;
-  height: 20px;
-} 
-
