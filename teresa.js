@@ -73,8 +73,7 @@ function removeRecord (idToDelete){
 }
 
 
-//when found the right record, check content. 
-// 1) if content match, reduce count; 2) if content does not match do nothing. 
+//Not clear as to why it works 
 function removeMoneyCounter(idToDelete) {
     records = records.filter (function (record){
         if (record.id === idToDelete) {
