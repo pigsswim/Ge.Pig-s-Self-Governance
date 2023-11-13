@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ge.Pig's Self-Governance</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
     <!--<script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>-->
 </head>
 <body>
   <header>
     <nav class="nav">
       <ul class="top">
-        <li class="top-clm" id="home"><a>Home</a></li>
-        <li class="top-clm" id="health"><a onclick="callHealth()">Health</a></li>
-        <li class="top-clm" id="finance"><a>Finance</a></li>
-        <li class="top-clm" id="cognitivity"><a onclick="callCognitivity()">Cognitivity</a></li>
+        <li class="top-clm" id="home"><a href="home.html">Home</a></li>
+        <li class="top-clm" id="health"><a href="index.html" onclick="callHealth()">Health</a></li>
+        <li class="top-clm" id="finance"><a href="finance.html">Finance</a></li>
+        <li class="top-clm" id="cognitivity"><a href="cognitivity.html" onclick="callCognitivity()">Cognitivity</a></li>
       </ul>
     </nav>
    <!--
@@ -30,148 +31,7 @@
   </header>
   <main id="main">
     
-    <div class="middle"> 
-      <div class="btn">
-        <button id="add-Button" onclick="addRecord()" class="add-button">Add </button>
-      </div>
-      <div class="btn">
-        <button class="delete-button">Delete</button>
-      </div>
-    </div>
   
-    <div class="btm">
-      <div class="btm-left">
-  
-        <div class="btm-clm-left">
-          <div class="btm-clm-left-top">
-            <div class="btm-clm-left-top-top"></div>
-            <div class="btm-clm-left-top-btm"></div>
-          </div>
-          <div id="delete-record" class="btm-clm-left-btm">
-            <div class="btm-clm-left-btm-row">Reserved</div>
-          </div>
-        </div>
-  
-        <div class="btm-clm-left">
-          <div class="btm-clm-left-top">
-            <div class="btm-clm-left-top-top">Date</div>
-            <div class="btm-clm-left-top-btm">
-              <input id="date-picker" type="date">
-            </div>
-          </div>
-          <div id="date-record" class="btm-clm-left-btm">
-            <div class="btm-clm-left-btm-row">Reserved</div>
-          </div>
-        </div>
-      
-        <div class="btm-clm-left">
-          <div class="btm-clm-left-top">
-            <div class="btm-clm-left-top-top">Money</div>
-            <div class="btm-clm-left-top-btm">
-              <input id="money-picker" type="number">
-            </div>
-          </div>
-          <div id="money-record" class="btm-clm-left-btm">
-            <div class="btm-clm-left-btm-row">Reserved</div>
-          </div>
-        </div>
-  
-        <div class="btm-clm-left">
-          <div class="btm-clm-left-top">
-            <div class="btm-clm-left-top-top">Exercise</div>
-            <div class="btm-clm-left-top-btm">
-              <select id="exercise-picker">
-                <optgroup label="Minutes">
-                  <option></option>
-                  <option value="30">30</option>
-                  <option value="60">60</option>
-                  <option value="90">90</option>
-                </optgroup>
-              </select>
-            </div>
-          </div>
-          <div id="exercise-record" class="btm-clm-left-btm">
-            <div class="btm-clm-left-btm-row">Reserved</div>
-          </div>
-        </div>
-      
-        <div class="btm-clm-left">
-          <div class="btm-clm-left-top">
-            <div class="btm-clm-left-top-top">Food</div>
-            <div class="btm-clm-left-top-btm">
-              <select id="food-picker">
-                <option></option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-              </select>
-            </div>
-          </div>
-          <div id="food-record" class="btm-clm-left-btm">
-            <div class="btm-clm-let-btm-row">Reserved</div>
-          </div>
-        </div>
-  
-        <div class="btm-clm-left">
-          <div class="btm-clm-left-top">
-            <div class="btm-clm-left-top-top">Weight</div>
-            <div class="btm-clm-left-top-btm">
-              <input id="weight-picker" type="number">
-            </div>
-          </div>
-          <div id="weight-record" class="btm-clm-left-btm">
-            <div class="btm-clm-let-btm-row">Reserved</div>
-          </div>
-        </div>
-      </div>
-  
-      <div class="btm-right">
-          <div class="btm-right-top">
-            <div class="btm-right-top-top">Statistics</div>
-            <div class="btm-right-top-btm">
-              <div class="btm-right-top-btm-row">
-                <div class="btm-right-top-btm-row-left">Money:</div>
-                <div id="money-counter" class="btm-right-top-btm-row-right">0</div>
-              </div>
-              <div class="btm-right-top-btm-row">
-                <div class="btm-right-top-btm-row-left">Exercise:</div>
-                <div id="exercise-counter" class="btm-right-top-btm-row-right">0</div>
-              </div>
-              <div class="btm-right-top-btm-row">
-                <div class="btm-right-top-btm-row-left">Food:</div>
-                <div id="food-counter" class="btm-right-top-btm-row-right">0</div>
-              </div>
-              <div class="btm-right-top-btm-row">
-                <div class="btm-right-top-btm-row-left"></div>
-                <div class="btm-right-top-btm-row-right"></div>
-              </div>
-            </div>
-          </div>
-  
-          <div class="btm-right-middle">Analysis</div>
-  
-          <div class="btm-right-btm">Suggestions</div>
-        </div>
-      </div>
-  
-    </div> 
-  
-    <div id="plot" class="plot">
-      PLOT
-  
-    </div>
-  
-  
-    <div class="btm1">
-      <div class="btm1-left">
-        <canvas id="myCanvas"class="myCanvas">
-          <h1>Analysis Graphics</h1>>
-        </canvas>
-      </div>
-      <div class="btm1-right">Reserved</div>
-  
-    </div>
-  
-    <button id="clear-button"></button>
 
   </main>
 
