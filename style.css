@@ -5,33 +5,33 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /*background:
-	repeating-linear-gradient(
-		90deg,
-		forestgreen 0,
-		forestgreen 20px,
-		beige 0,
-		beige 25px,
+  background:
+    repeating-linear-gradient(
+        90deg,
+        forestgreen 0,
+        forestgreen 20px,
+        beige 0,
+        beige 25px,
     firebrick,
-		firebrick 35px,
-		gold 0,
-		gold 40px,
-		forestgreen 0,
-		forestgreen 60px
-	),
-	repeating-linear-gradient(
-		forestgreen 0,
-		forestgreen 20px,
-		beige 0,
-		beige 25px,
+        firebrick 35px,
+        gold 0,
+        gold 40px,
+        forestgreen 0,
+        forestgreen 60px
+    ),
+    repeating-linear-gradient(
+        forestgreen 0,
+        forestgreen 20px,
+        beige 0,
+        beige 25px,
     firebrick,
-		firebrick 35px,
-		gold 0,
-		gold 40px,
-		forestgreen 0,
-		forestgreen 60px
-	);
-background-blend-mode: multiply;*/
+        firebrick 35px,
+        gold 0,
+        gold 40px,
+        forestgreen 0,
+        forestgreen 60px
+    );
+background-blend-mode: multiply;
 }
 
 .nav {
@@ -53,6 +53,7 @@ background-blend-mode: multiply;*/
 .top-clm {
   background-color: darkslateblue;
 }
+
 
 
 .middle {
