@@ -63,7 +63,7 @@ function createRecord (date,money,exercise,food,weight) {
     id: id 
   });
 
-  Plotly.newPlot("plot", data, layout);
+  //Plotly.newPlot("plot", data, layout);
   saveRecord();
   };
 
@@ -75,16 +75,32 @@ function removeRecord (idToDelete){
       return true;
     };
   });
+
   saveRecord();
 }
 
 
 function moneyCounter(money){
-  if (money !== '' && money !== '0'){
-    moneyCount ++;
-  }else {
-    return;
-  };
+    if (money !== '' && money !== '0'){
+      moneyCount ++;
+    }else {
+      return;
+    };
+    saveRecord();
+  }
+
+function reduceMoneyCount(idToDelete) {
+  records.forEach ((record) => {
+    if (record.id === idToDelete) {
+      if (record.money !== '' && moneyCount > 0){
+        moneyCount --;
+        console.log(moneyCount);
+      }else {
+        return moneyCount;
+      }
+    }
+  })
+  saveRecord();
 }
 
 function exerciseCounter(exercise) {
@@ -93,16 +109,45 @@ function exerciseCounter(exercise) {
   }else {
     return;
   };
+  saveRecord();
+}
+
+function reduceExerciseCount(idToDelete) {
+  records.forEach((record) => {
+    if (record.id === idToDelete) {
+      if (record.exercise !== '' && exerciseCount > 0 ) {
+        exerciseCount --;
+        console.log(exerciseCount);
+      }else {
+        return exerciseCount;
+      }
+    }
+  })
+  saveRecord();
 }
 
 function foodCounter(food) {
-  if (food === 'yes'){
+  if (food === 'Yes'){
     foodCount ++;
-  } else if (food === 'no'){
+  } else if (food === 'No'){
     return; 
   }else {
-    foodCount ++;
+    return
   }
+  saveRecord();
+}
+
+function reduceFoodCount (idToDelete) {
+  records.forEach((record) => {
+    if(record.id === idToDelete) {
+      if (record.food === 'Yes' && foodCount > 0) {
+        foodCount --;
+      }else {
+        return foodCount;
+      }
+    }
+  })
+  saveRecord();
 }
 
 //if records.money is not null/ empty, moneyCounter ++, return moneyCounter
@@ -147,9 +192,17 @@ function deleteRecord (event) {
   const deleteButton = event.target;
   const idToDelete = deleteButton.id;
   
+  reduceFoodCount(idToDelete);
+  reduceMoneyCount(idToDelete);
+  reduceExerciseCount(idToDelete);
   removeRecord(idToDelete);
   render();
 }
+  
+// if index in array is even number give one color
+// if index in array is odd number give another color;
+// 
+    
 
 function render() {
   document.getElementById('date-record').innerHTML = '';
@@ -167,7 +220,7 @@ function render() {
     const dateRow = document.createElement('div');
     dateRow.setAttribute('class','btm-clm-left-btm-row')
     dateRow.innerText = record.date;
-    
+ 
     const moneyRow = document.createElement('div');
     moneyRow.setAttribute('class','btm-clm-left-btm-row');
     moneyRow.innerText = record.money;
@@ -193,6 +246,22 @@ function render() {
     deleteButton.innerText = 'X';
     deleteRow.appendChild(deleteButton);
 
+    if (records.indexOf(record)%2 === 1) {
+      dateRow.style = 'background-color: lightsalmon';
+      moneyRow.style = 'background-color: lightsalmon';
+      exerciseRow.style = 'background-color: lightsalmon';
+      foodRow.style = 'background-color: lightsalmon';
+      weightRow.style = 'background-color: lightsalmon';
+      deleteRow.style = 'background-color: lightsalmon';
+    }else {
+      dateRow.style = 'background-color: darkolivegreen';
+      moneyRow.style = 'background-color: darkolivegreen';
+      exerciseRow.style = 'background-color: darkolivegreen';
+      foodRow.style = 'background-color: darkolivegreen';
+      weightRow.style = 'background-color: darkolivegreen';
+      deleteRow.style = 'background-color: darkolivegreen';
+    }
+
     const dateRecords = document.getElementById('date-record');
     dateRecords.appendChild(dateRow);
     const moneyRecords = document.getElementById('money-record');
@@ -205,6 +274,7 @@ function render() {
     weightRecords.appendChild(weightRow);
     const deleteRecords = document.getElementById('delete-record');
     deleteRecords.appendChild(deleteRow);
+
   });
   
 }
@@ -236,3 +306,11 @@ Plotly.newPlot("plot", data, layout);
 
 
 // update mouse pointer coordinates
+
+const cognitivity = document.getElementById('cognitivity');
+const health = document.getElementById('health');
+const main = document.getElementById('main');
+
+function callCognitivity() {
+  document.getElementById('main').innerHTML = '';
+}
