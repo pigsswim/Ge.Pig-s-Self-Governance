@@ -24,6 +24,7 @@
 }*/
 
 let records;
+let conceptCount = 0;
 
 const savedRecords = JSON.parse(localStorage.getItem('records'));
 
@@ -62,6 +63,34 @@ function removeRecord (idToDelete){
     saveRecord();
 }
 
+function contentCounter(content) {
+    if (conceptCount >= 0) {
+        if (content !== 'Unit 4 sorting') {
+            conceptCount ++;
+        }else {
+            return;
+        }
+    }
+    console.log(conceptCount)
+    saveRecord();
+}
+
+//find the array, get object, get object property, 
+//if property 
+
+function contentRemover() {  
+    const record = records.slice(-1);
+        if (record[0].content !== 'Unit 4 sorting' && conceptCount > 0 ) {
+            conceptCount --;
+        }else {
+            return
+        }
+        console.log(conceptCount);
+        console.log(record[0].content)
+        console.log(records)
+        console.log(record)
+    }
+
 function saveRecord (){
     localStorage.setItem('records',JSON.stringify(records));
 }
@@ -76,6 +105,7 @@ function addRecord (){
     const progressPicker = document.getElementById('progress-picker');
     const progress = progressPicker.value;
 
+    contentCounter(content);
     createRecord (date, content, progress);
     render();
 }
@@ -85,6 +115,7 @@ function deleteRecord(event) {
     const idToDelete = deleteButton.id;
     
     removeRecord(idToDelete);
+    contentRemover();
     render();
 }
 
@@ -94,6 +125,7 @@ function render (){
     document.getElementById('content-btm-clm-row-btm').innerHTML = '';
     document.getElementById('progress-btm-clm-row-btm').innerHTML = '';
     document.getElementById('delete-btm-clm-row-btm').innerHTML = '';
+    document.getElementById('span').innerHTML = conceptCount;
 
     records.forEach ((record) =>{
         
@@ -128,3 +160,36 @@ function render (){
     })
 }
 
+console.log('ok')
+
+/* records is an array 
+each div is ab object 
+counters are all independent 
+
+*/ 
+
+let julie = [{
+    rita: 'ten',
+    nora: 'five'
+},{
+    alice: 'one',
+    sico: 'two'
+}]
+
+let joel = [{
+    money: 1,
+    food: 2
+},{
+    run: 3,
+    study: 5
+}]
+
+function addJulie (){
+    julie.push({
+        rita: 'ok',
+        nora: 'bad'
+    })
+    console.log(julie)
+}
+addJulie();
+\
