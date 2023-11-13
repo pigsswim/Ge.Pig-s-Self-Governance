@@ -67,6 +67,7 @@ function createRecord (date,money,exercise,food,weight) {
   saveRecord();
   };
 
+  //if id match, get money, exercise, food, weight, reduce counter
 function removeRecord (idToDelete){
   records = records.filter (function(record) {
     if (record.id === idToDelete) {
@@ -101,6 +102,22 @@ function reduceMoneyCount(idToDelete) {
     }
   })
   saveRecord();
+}
+
+//reduce all counters in one function? learn if else 'return true' why?
+function reduceMoneyCounter (idToDelete) {
+  records = records.filter((record) => {
+    if (record.id === idToDelete) {
+      if (record.money !== '' && moneyCount > 0) {
+        moneyCount -- ;
+      }else {
+        return;
+      }
+    }else{
+      return true;
+    }
+  }
+  )
 }
 
 function exerciseCounter(exercise) {
@@ -150,10 +167,6 @@ function reduceFoodCount (idToDelete) {
   saveRecord();
 }
 
-//if records.money is not null/ empty, moneyCounter ++, return moneyCounter
-//if records.money is null/empty, moneyCounter is moneyCounter 
-
-
 function saveRecord (){
   localStorage.setItem('records',JSON.stringify(records));
   localStorage.setItem('moneyCount',JSON.stringify(moneyCount));
@@ -192,9 +205,7 @@ function deleteRecord (event) {
   const deleteButton = event.target;
   const idToDelete = deleteButton.id;
   
-  reduceFoodCount(idToDelete);
-  reduceMoneyCount(idToDelete);
-  reduceExerciseCount(idToDelete);
+
   removeRecord(idToDelete);
   render();
 }

@@ -24,7 +24,6 @@
 }*/
 
 let records;
-let conceptCount = 0;
 
 const savedRecords = JSON.parse(localStorage.getItem('records'));
 
@@ -52,14 +51,40 @@ function createRecord (date,content,progress){
     saveRecord();
 }
 
+function contentCounter (content) {
+    if (content !== 'Unit 4 sorting') {
+        contentCount ++;
+    }else {
+        return;
+    }
+    saveRecord();
+}
+
 function removeRecord (idToDelete){
     records = records.filter (function (record){
         if (record.id === idToDelete) {
-            return false;
-        } else {
+                return false;
+            }else {
+                return true;
+            }
+        })
+    saveRecord();
+}
+
+
+//Not clear as to why it works 
+function removeMoneyCounter(idToDelete) {
+    records = records.filter (function (record){
+        if (record.id === idToDelete) {
+            if (contentCount > 0 && record.content !== 'Unit 4 sorting'){
+                contentCount --;
+            }else {
+                return
+            }
+        }else {
             return true;
-        };
-    });
+        }
+        })
     saveRecord();
 }
 
@@ -105,7 +130,7 @@ function addRecord (){
     const progressPicker = document.getElementById('progress-picker');
     const progress = progressPicker.value;
 
-    contentCounter(content);
+
     createRecord (date, content, progress);
     render();
 }
@@ -114,6 +139,8 @@ function deleteRecord(event) {
     const deleteButton = event.target;
     const idToDelete = deleteButton.id;
     
+    //removeMoneyCounter and removeRecord function can't be switched position
+    removeMoneyCounter(idToDelete);
     removeRecord(idToDelete);
     contentRemover();
     render();
@@ -125,7 +152,6 @@ function render (){
     document.getElementById('content-btm-clm-row-btm').innerHTML = '';
     document.getElementById('progress-btm-clm-row-btm').innerHTML = '';
     document.getElementById('delete-btm-clm-row-btm').innerHTML = '';
-    document.getElementById('span').innerHTML = conceptCount;
 
     records.forEach ((record) =>{
         
@@ -159,37 +185,3 @@ function render (){
         deleteClm.appendChild(deleteRow);
     })
 }
-
-console.log('ok')
-
-/* records is an array 
-each div is ab object 
-counters are all independent 
-
-*/ 
-
-let julie = [{
-    rita: 'ten',
-    nora: 'five'
-},{
-    alice: 'one',
-    sico: 'two'
-}]
-
-let joel = [{
-    money: 1,
-    food: 2
-},{
-    run: 3,
-    study: 5
-}]
-
-function addJulie (){
-    julie.push({
-        rita: 'ok',
-        nora: 'bad'
-    })
-    console.log(julie)
-}
-addJulie();
-\
