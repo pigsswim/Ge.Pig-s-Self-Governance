@@ -328,15 +328,13 @@ function callCognitivity() {
 
 //active page link 
 
-const unorderedList = document.querySelector('ul');
-const links = document.querySelectorAll('a');
-
-for (let i = 0; i < links.length; i++) {
-  links[i].addEventListener('click', function() {
-    const current = document.getElementsByClassName("active");
-    if (current.length > 0) {
-      current[0].className = current[0].className.replace(" active","");
+function setActive() {
+  const links = document.getElementById('top').getElementsByTagName('a');
+  const lists = document.getElementById('top').getElementsByTagName('li');
+  for (i=0; i < links.length; i ++) {
+    if (document.location.href.indexOf(links[i].href) >= 0) {
+      lists[i].className = 'active';
     }
-    this.className += ' active';
-  })
+  }
 }
+window.onload = setActive();
