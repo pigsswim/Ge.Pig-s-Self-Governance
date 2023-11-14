@@ -1,7 +1,7 @@
 body {
   box-sizing: border-box;
   background-color: #f2edd8;
-  color: black;
+  color: white;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -85,12 +85,6 @@ a:link {
   height: 100%;
 
 }
-a.clicked {
-  transition: 1s;
-
-}
-
-
 
 a:visited {
   color: #f2edd8;
@@ -119,11 +113,13 @@ li {
 li:hover {
   background-color: #891515;
   border-radius: 14px;
+  color: #294221;
 }
 
 .active {
   background-color: #891515;
   border-radius: 14px;
+  color: #294221;
 }
 
 .top {
