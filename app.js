@@ -325,3 +325,18 @@ const main = document.getElementById('main');
 function callCognitivity() {
   document.getElementById('main').innerHTML = '';
 }
+
+//active page link 
+
+const unorderedList = document.querySelector('ul');
+const links = document.querySelectorAll('a');
+
+for (let i = 0; i < links.length; i++) {
+  links[i].addEventListener('click', function() {
+    const current = document.getElementsByClassName("active");
+    if (current.length > 0) {
+      current[0].className = current[0].className.replace(" active","");
+    }
+    this.className += ' active';
+  })
+}
