@@ -328,6 +328,7 @@ function callCognitivity() {
 
 //active page link 
 
+
 function setActive() {
   const links = document.getElementById('top').getElementsByTagName('a');
   const lists = document.getElementById('top').getElementsByTagName('li');
@@ -337,4 +338,5 @@ function setActive() {
     }
   }
 }
+
 window.onload = setActive();
