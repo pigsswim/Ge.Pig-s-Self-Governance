@@ -70,6 +70,9 @@ background-size: 10em 10em;
 background-position: 0 0, 5em 5em, 15em 50em;*/
 }
 
+header {
+  padding-bottom: 100px;
+}
 
 .nav {
   position: relative;
