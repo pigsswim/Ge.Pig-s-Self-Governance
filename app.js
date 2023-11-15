@@ -310,3 +310,18 @@ const main = document.getElementById('main');
 function callCognitivity() {
   document.getElementById('main').innerHTML = '';
 }
+
+//active page link 
+
+
+function setActive() {
+  const links = document.getElementById('top').getElementsByTagName('a');
+  const lists = document.getElementById('top').getElementsByTagName('li');
+  for (i=0; i < links.length; i ++) {
+    if (document.location.href.indexOf(links[i].href) >= 0) {
+      lists[i].className = 'active';
+    }
+  }
+}
+
+window.onload = setActive();
