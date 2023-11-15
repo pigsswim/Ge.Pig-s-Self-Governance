@@ -5,77 +5,15 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /* background:
-    repeating-linear-gradient(
-        90deg,
-        #193943 0,
-        #193943 20px,
-        beige 0,
-        beige 25px,
-        #193628,
-        #193628 35px,
-        #195421 0,
-        #195421 40px,
-        #193943 0,
-        #193943 60px
-    ),
-    repeating-linear-gradient(
-        #193943 0,
-        #193943 20px,
-        beige 0,
-        beige 25px,
-        #193628,
-        #193628 35px,
-        #195421 0,
-        #195421 40px,
-        #193943 0,
-        #193943 60px
-    );
-background-blend-mode: multiply;
-
-background:
-	repeating-radial-gradient(
-		circle,
-		transparent,
-		transparent 3em,
-		#193943 1em,
-			transparent 6em,
-    #193943 6.5em
-	),
-	repeating-radial-gradient(
-		ellipse farthest-corner,
-		transparent 1em,
-		#195421 1em,
-		 	transparent 5em,
-    #195421 2em
-	),
-	repeating-radial-gradient(
-		circle,
-		transparent,
-		transparent 3em,
-		#193628 1em,
-			transparent 2em,
-    #193628 4em
-	),
-	repeating-radial-gradient(
-		circle,
-		transparent 3em,
-		#193628 1em,
-			transparent 2em,
-    #193628 4em
-	), white;
-
-background-blend-mode: multiply;
-background-size: 10em 10em;
-background-position: 0 0, 5em 5em, 15em 50em;*/
 }
 
-header {
-  padding-bottom: 100px;
-}
-
-.nav {
-  position: relative;
+nav {
+  position: fixed;
+  top: 0;
+  opacity: 0.9;
+  z-index: 9999;
+  background-color: #f2edd8;
+  width: 100%;
 }
 
 a:link {
@@ -97,8 +35,7 @@ ul {
   list-style-type: none;
   box-sizing: border-box;
   float: none;
-  position: absolute;
-  left: 25%;
+  position: relative;
 }
 
 li {
@@ -125,6 +62,10 @@ li:hover {
   color: #294221;
 }
 
+main {
+   padding-top: 120px;
+
+}
 .top {
   display: flex;
   flex-direction: row;
