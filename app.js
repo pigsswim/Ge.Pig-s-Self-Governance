@@ -28,13 +28,7 @@ if (Array.isArray(savedRecords)) {
   foodCount = savedFoodCount;
  
 } else {
-  records = [{
-    date: 'none',
-    money: 'none',
-    exercise: 'none',
-    food: 'none',
-    weight: 'none',
-  }];
+  records = [];
 }
 
 function createRecord (date,money,exercise,food,weight) {
@@ -303,25 +297,28 @@ Plotly.newPlot("plot", data, layout);
 
 // update mouse pointer coordinates
 
-const cognitivity = document.getElementById('cognitivity');
-const health = document.getElementById('health');
-const main = document.getElementById('main');
-
-function callCognitivity() {
-  document.getElementById('main').innerHTML = '';
-}
-
 //active page link 
 
 
 function setActive() {
-  const links = document.getElementById('top').getElementsByTagName('a');
-  const lists = document.getElementById('top').getElementsByTagName('li');
+  
+  const unorderedList = document.getElementById('top');
+  const lists = unorderedList.getElementsByTagName('li');
+  const links = unorderedList.getElementsByTagName('a')
   for (i=0; i < links.length; i ++) {
-    if (document.location.href.indexOf(links[i].href) >= 0) {
-      lists[i].className = 'active';
-    }
+      if (document.location.href.indexOf(links[i].href) >= 0) {
+        const actives = document.querySelectorAll('.active');
+        actives.forEach((active) =>{
+        active.classList.remove('active');
+  });
+        lists[i].className = 'active';
+
+    } 
   }
 }
 
-window.onload = setActive();
+window.onload = setActive()
+
+
+
+
