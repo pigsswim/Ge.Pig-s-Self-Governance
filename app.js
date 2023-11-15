@@ -104,22 +104,6 @@ function reduceMoneyCount(idToDelete) {
   saveRecord();
 }
 
-//reduce all counters in one function? learn if else 'return true' why?
-function reduceMoneyCounter (idToDelete) {
-  records = records.filter((record) => {
-    if (record.id === idToDelete) {
-      if (record.money !== '' && moneyCount > 0) {
-        moneyCount -- ;
-      }else {
-        return;
-      }
-    }else{
-      return true;
-    }
-  }
-  )
-}
-
 function exerciseCounter(exercise) {
   if (Math.floor(exercise) >= 60){
     exerciseCount ++;
@@ -134,7 +118,6 @@ function reduceExerciseCount(idToDelete) {
     if (record.id === idToDelete) {
       if (record.exercise !== '' && exerciseCount > 0 ) {
         exerciseCount --;
-        console.log(exerciseCount);
       }else {
         return exerciseCount;
       }
@@ -205,7 +188,9 @@ function deleteRecord (event) {
   const deleteButton = event.target;
   const idToDelete = deleteButton.id;
   
-
+  reduceExerciseCount(idToDelete);
+  reduceFoodCount(idToDelete);
+  reduceMoneyCount(idToDelete);
   removeRecord(idToDelete);
   render();
 }
