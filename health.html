@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ge.Pig's Self-Governance</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="app.js"></script>
-    <!--<script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>-->
+    <script defer src="health.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
     <nav class="nav">
@@ -14,7 +14,7 @@
         <li class="top-clm"><a href="./">Home</a></li>
         <li class="top-clm"><a href="./health">Health</a></li>
         <li class="top-clm"><a href="./finance">Finance</a></li>
-        <li class="top-clm"><a href="./cognitivity" onclick="callCognitivity()">Cognitivity</a></li>
+        <li class="top-clm"><a href="./cognitivity">Cognitivity</a></li>
       </ul>
     </nav>
    <!--
@@ -31,11 +31,13 @@
     
     <div class="middle"> 
       <div class="btn">
-        <button id="add-Button" onclick="addRecord()" class="add-button">Add </button>
+        <button id="add-Button" onclick="addRecord()" class="add-button"><span>Add</span> </button>
       </div>
-      <div class="btn">
+      <!--
+        <div class="btn">
         <button class="delete-button">Delete</button>
       </div>
+      -->  
     </div>
   
     <div class="btm">
@@ -154,23 +156,17 @@
   
     </div> 
   
-    <div id="plot" class="plot">
-      PLOT
-  
-    </div>
-  
-  
+
     <div class="btm1">
       <div class="btm1-left">
-        <canvas id="myCanvas"class="myCanvas">
-          <h1>Analysis Graphics</h1>>
+          <h1>Analysis Graphics</h1>
+          <div id="chart_div"></div>
         </canvas>
       </div>
-      <div class="btm1-right">Reserved</div>
-  
     </div>
+
+    
   
-    <button id="clear-button"></button>
 
   </main>
 
