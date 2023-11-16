@@ -1,10 +1,12 @@
+html,
 body {
   box-sizing: border-box;
   background-color: #f2edd8;
   color: white;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 nav {
@@ -17,18 +19,17 @@ nav {
 }
 
 a:link {
-  color: #f2edd8;
+  color: #2a2a2a;
   text-decoration: none;
   float: center;
   text-align: center;
   position: relative;
   width: 100%;
   height: 100%;
-
 }
 
 a:visited {
-  color: #f2edd8;
+  color: #2a2a2a;
 }
 
 ul {
@@ -40,9 +41,12 @@ ul {
 
 li {
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 20px;
+  position: relative;
   /*border: solid 4px #891515;*/
-  background-color: #294221;
+  /*background-color: #294221;*/
+  background-color: white;
+  opacity: 0.95;
   padding-left:20px;
   padding-right: 20px;
   padding-top: 10px;
@@ -53,62 +57,41 @@ li {
 li:hover {
   border-radius: 14px;
   color: #294221;
+  box-shadow: inset 0 5px 35px 0px #891515;
 }
 
 .active {
   background-color: #891515;
   border-radius: 14px;
-  color: #294221;
+  /*color: #294221;*/
+}
+
+.active a {
+  color:#f2edd8;
 }
 
 main {
-   padding-top: 120px;
-
+   margin-top: 120px;
+   height: 100%;
+   width: 100%;
 }
+
 .top {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 5px;
   padding-bottom: 10px;
-  /*background-color: lightcoral;*/
-  /*height: 100px;*/
   font-size: 30px;
 
 }
-
-/*.top-clm {
-  background-color: darkslateblue;
-}*/
-
 
 .middle {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  background-color: lightseagreen;
   height: 50px;
   padding: 10px;
-}
-
-.btn {
-  background-color: lightsteelblue;
-  width: 120px;
-}
-
-.add-button,
-.delete-button {
-  height: 100%;
-  width: 100%;
-  font-size: 20px;
-  background-color: blueviolet;
-  color: white;
-  border: none;
-  transition: 0.4s;
-}
-
-button:hover {
-  background: pink;
 }
 
 .btm {
@@ -117,15 +100,17 @@ button:hover {
   justify-content: space-between;
   flex-wrap: nowrap;
   gap: 5px;
-  background-color: lightcoral;
   font-size: 20px;
 }
 
 .btm-left {
   display: flex;
   flex-direction: row;
-
-  gap: 8px;
+  justify-content: space-between;
+  border: solid 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  gap: 2px;
   width: 75%;
 }
 
@@ -141,15 +126,13 @@ button:hover {
   height: 120px;
 }
 
-.btm-clm-left-btm {
-  background-color: brown;
-}
-
 .btm-clm-left-btm-row {
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 20px;
   height: 60px;
+  text-align: center;
+  justify-content: center;
 }
 
 .btm-right {
@@ -210,3 +193,156 @@ select {
   width: 400px;
   height: 400px;
 }
+
+.btn {
+  width: 120px;
+}
+
+button:hover {
+  background:  pink;
+}
+
+button {
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+  color: white;
+	cursor: pointer;
+	position: relative;
+	border-radius: 60px;
+	line-height: 40px;
+	font-weight: 600;
+	border: 1px solid #731b18;
+	background-image: linear-gradient(-180deg, #d73936 0%, #891515 100%);
+	box-shadow: 0 16px 20px 0 rgba(113, 26, 19, 0.5),
+							0 -4px 20px rgb(84, 4, 4) inset,
+							0 12px 8px rgba(98, 23, 23, 0.4) inset,
+							0 4px 8px 0 rgb(141, 39, 44) inset;
+}
+
+.delete-button {
+  cursor: pointer;
+	position: relative;
+	border-radius: 20px;
+	font-size: 20px;
+	font-weight: 600;
+	border: 1px solid #731b18;
+	background-image: linear-gradient(-180deg, #d73936 0%, #891515 100%);
+	box-shadow: 0 16px 20px 0 rgba(113, 26, 19, 0.5),
+							0 -4px 20px rgb(84, 4, 4) inset,
+							0 12px 8px rgba(98, 23, 23, 0.4) inset,
+							0 4px 8px 0 rgb(141, 39, 44) inset;
+}
+
+button span {
+	color: #f2edd8;
+	background-image: linear-gradient(0deg, #d73936 0%, #f2edd8 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	filter: drop-shadow(0 2px 2px rgb(80, 9, 12));
+}
+
+button::before {
+	content: "";
+	display: block;
+	height: 4px;
+	position: absolute;
+	top: 8px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 50px);
+	background: #ffffff;
+	border-radius: 100%;
+	opacity: 0.6;
+	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+button::after {
+	content: "";
+	display: block;
+	height: 4px;
+	position: absolute;
+	bottom: 12px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 50px);
+	background: #fff;
+	border-radius: 100%;
+	filter: blur(1px);
+	opacity: 0.05;
+	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+.root-button {
+  width: auto;
+  height:auto;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+	cursor: pointer;
+	position: absolute;
+	border-radius: 60px;
+	line-height: 40px;
+	font-weight: 600;
+	border: 1px solid #731b18;
+	background-image: linear-gradient(-180deg, #d73936 0%, #891515 100%);
+	box-shadow: 0 16px 20px 0 rgba(113, 26, 19, 0.5),
+							0 -4px 20px rgb(84, 4, 4) inset,
+							0 12px 8px rgba(98, 23, 23, 0.4) inset,
+							0 4px 8px 0 rgb(141, 39, 44) inset;
+}
+
+.root-button:hover {
+  background:  pink;
+}
+
+.root-button span {
+	color: #f2edd8;
+	background-image: linear-gradient(0deg, #d73936 0%, #f2edd8 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	filter: drop-shadow(0 2px 2px rgb(80, 9, 12));
+}
+
+.root-button::before {
+	content: "";
+	display: block;
+	height: 4px;
+	position: absolute;
+	top: 8px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 50px);
+	background: #ffffff;
+	border-radius: 100%;
+	opacity: 0.6;
+	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+.root-button::after {
+	content: "";
+	display: block;
+	height: 4px;
+	position: absolute;
+	bottom: 12px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 50px);
+	background: #fff;
+	border-radius: 100%;
+	filter: blur(1px);
+	opacity: 0.05;
+	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+.animation-field {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
