@@ -1,0 +1,99 @@
+/* Click-me button*/
+html,
+body {
+  box-sizing: border-box;
+  background-color: #f2edd8;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: green;;
+}
+
+.ball-container {
+  aspect-ratio: 1/ 1;
+  display:flex;
+  padding: 5%;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+
+  .click-me:hover {
+    background:  pink;
+  }
+  
+  .click-me {
+    height: 100px;
+    width: 100px;
+    font-size: 20px;
+    color: white;
+      cursor: pointer;
+      position: relative;
+      border-radius: 60px;
+      font-weight: 600;
+      border: 1px solid #731b18;
+      background-image: linear-gradient(-180deg, #d73936 0%, #891515 100%);
+      box-shadow: 0 16px 20px 0 rgba(113, 26, 19, 0.5),
+                              0 -4px 20px rgb(84, 4, 4) inset,
+                              0 12px 8px rgba(98, 23, 23, 0.4) inset,
+                              0 4px 8px 0 rgb(141, 39, 44) inset;
+  }
+  
+  
+  
+  .click-me span {
+      color: #f2edd8;
+      background-image: linear-gradient(0deg, #d73936 0%, #f2edd8 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      filter: drop-shadow(0 2px 2px rgb(80, 9, 12));
+  }
+  
+  .click-me::before {
+      content: "";
+      display: block;
+      height: 4px;
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 50px);
+      background: #ffffff;
+      border-radius: 100%;
+      opacity: 0.6;
+      background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+  }
+  
+  .click-me::after {
+      content: "";
+      display: block;
+      height: 4px;
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 50px);
+      background: #fff;
+      border-radius: 100%;
+      filter: blur(1px);
+      opacity: 0.05;
+      background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+  }
