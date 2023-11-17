@@ -26,6 +26,8 @@ if (Array.isArray(savedRecords)) {
   records = [];
 }
 
+render();
+
 function createRecord (date,money,exercise,food,weight) {
   
   const id = '' + new Date().getTime();
