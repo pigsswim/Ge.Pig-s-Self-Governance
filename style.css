@@ -93,14 +93,15 @@ main {
   flex-wrap: nowrap;
   gap: 5px;
   font-size: 20px;
+  padding: 10px;
 }
 
 .btm-left {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-columns: 8% 22% 14% 14% 14% 14% auto;
   border-radius: 5px;
   margin-bottom: 10px;
-  width: 75%;
+  width: 80;
   padding: 20px;
   background-color: white;
   opacity: 0.95;
@@ -115,12 +116,14 @@ main {
   height: 80px;
 }
 
-.btm-clm-left-top-del {
+.btm-clm-left-top-del,
+.btm-clm-left-top-rmk {
   background-color: none;
   height: 80px;
 }
 
-.btm-clm-left-top-del-top {
+.btm-clm-left-top-del-top,
+.btm-clm-left-top-top-rmk {
   border-top: none;
 }
 
