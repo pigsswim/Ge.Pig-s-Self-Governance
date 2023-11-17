@@ -68,7 +68,6 @@ function reduceMoneyCount(idToDelete) {
     if (record.id === idToDelete) {
       if (record.money !== '' && moneyCount > 0){
         moneyCount --;
-        console.log(moneyCount);
       }else {
         return moneyCount;
       }
@@ -206,25 +205,26 @@ function render() {
     const deleteButton = document.createElement('button');
     deleteButton.id = record.id;
     deleteButton.setAttribute('class','delete-button');
+    deleteButton.style.textAlign = 'inline-block';
     deleteButton.onclick = deleteRecord;
     deleteRow.setAttribute('class','btm-clm-left-btm-row');
     deleteButton.innerText = 'x';
     deleteRow.appendChild(deleteButton);
 
     if (records.indexOf(record)%2 === 1) {
-      dateRow.style = 'background-color: lightsalmon';
-      moneyRow.style = 'background-color: lightsalmon';
-      exerciseRow.style = 'background-color: lightsalmon';
-      foodRow.style = 'background-color: lightsalmon';
-      weightRow.style = 'background-color: lightsalmon';
-      deleteRow.style = 'background-color: lightsalmon';
+      dateRow.style = 'background-color: #212121';
+      moneyRow.style = 'background-color: #212121';
+      exerciseRow.style = 'background-color: #212121';
+      foodRow.style = 'background-color: #212121';
+      weightRow.style = 'background-color: #212121';
+      deleteRow.style = 'background-color: #212121';
     }else {
-      dateRow.style = 'background-color: darkolivegreen';
-      moneyRow.style = 'background-color: darkolivegreen';
-      exerciseRow.style = 'background-color: darkolivegreen';
-      foodRow.style = 'background-color: darkolivegreen';
-      weightRow.style = 'background-color: darkolivegreen';
-      deleteRow.style = 'background-color: darkolivegreen';
+      dateRow.style = 'background-color: #616161';
+      moneyRow.style = 'background-color: #616161';
+      exerciseRow.style = 'background-color: #616161';
+      foodRow.style = 'background-color: #616161';
+      weightRow.style = 'background-color: #616161';
+      deleteRow.style = 'background-color: #616161';
     }
 
     const dateRecords = document.getElementById('date-record');
