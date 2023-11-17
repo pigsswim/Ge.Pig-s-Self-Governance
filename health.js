@@ -28,7 +28,18 @@ if (Array.isArray(savedRecords)) {
 
 render();
 
-function createRecord (date,money,exercise,food,weight) {
+function createRecord (date,money,exercise,food,weight,remark) {
+
+  //function to generate Remark 
+  if (weight > 45) {
+    remark = 'Fucking Fat Pig!';
+  }else if (weight < 45 && weight > 43) {
+    remark = 'Not fat, but needs LOTS of exercise.';
+  }else if (weight < 43 && weight > 40) {
+    remark = 'Not fat, is healthy, exercise everyday.';
+  }else if (weight < 40) {
+    remark = 'Congratulations, you are about to see Jesus.';
+  }
   
   const id = '' + new Date().getTime();
   records.push ({
@@ -37,6 +48,7 @@ function createRecord (date,money,exercise,food,weight) {
     exercise: exercise,
     food: food,
     weight: weight,
+    remark: remark,
     id: id 
   });
   saveRecord();
@@ -147,10 +159,12 @@ function addRecord (){
   const weightPicker = document.getElementById('weight-picker');
   const weight = weightPicker.value;
 
+  const remark = 0;
+
   moneyCounter(money);
   exerciseCounter(exercise);
   foodCounter(food);
-  createRecord(date, money, exercise,food,weight);
+  createRecord(date, money, exercise,food,weight,remark);
   render();
 }
 
@@ -177,11 +191,22 @@ function render() {
   document.getElementById('food-record').innerHTML = '';
   document.getElementById('delete-record').innerHTML = '';
   document.getElementById('weight-record').innerHTML = '';
+  document.getElementById('remark-record').innerHTML = '';
   document.getElementById('money-counter').innerHTML = moneyCount;
   document.getElementById('exercise-counter').innerHTML = exerciseCount;
   document.getElementById('food-counter').innerHTML = foodCount;
 
   records.forEach((record) => {
+
+    const deleteRow = document.createElement('div');
+    const deleteButton = document.createElement('button');
+    deleteButton.id = record.id;
+    deleteButton.setAttribute('class','delete-button');
+    deleteButton.style.textAlign = 'inline-block';
+    deleteButton.onclick = deleteRecord;
+    deleteRow.setAttribute('class','btm-clm-left-btm-row');
+    deleteButton.innerText = 'x';
+    deleteRow.appendChild(deleteButton);
     
     const dateRow = document.createElement('div');
     dateRow.setAttribute('class','btm-clm-left-btm-row')
@@ -203,15 +228,9 @@ function render() {
     weightRow.setAttribute('class','btm-clm-left-btm-row');
     weightRow.innerText = record.weight;
     
-    const deleteRow = document.createElement('div');
-    const deleteButton = document.createElement('button');
-    deleteButton.id = record.id;
-    deleteButton.setAttribute('class','delete-button');
-    deleteButton.style.textAlign = 'inline-block';
-    deleteButton.onclick = deleteRecord;
-    deleteRow.setAttribute('class','btm-clm-left-btm-row');
-    deleteButton.innerText = 'x';
-    deleteRow.appendChild(deleteButton);
+    const remarkRow = document.createElement('div');
+    remarkRow.setAttribute('class','btm-clm-left-btm-row');
+    remarkRow.innerText = record.remark;
 
     if (records.indexOf(record)%2 === 1) {
       dateRow.style = 'background-color: #212121';
@@ -220,6 +239,7 @@ function render() {
       foodRow.style = 'background-color: #212121';
       weightRow.style = 'background-color: #212121';
       deleteRow.style = 'background-color: #212121';
+      remarkRow.style = 'background-color: #212121';
     }else {
       dateRow.style = 'background-color: #616161';
       moneyRow.style = 'background-color: #616161';
@@ -227,8 +247,11 @@ function render() {
       foodRow.style = 'background-color: #616161';
       weightRow.style = 'background-color: #616161';
       deleteRow.style = 'background-color: #616161';
+      remarkRow.style = 'background-color: #616161';
     }
 
+    const deleteRecords = document.getElementById('delete-record');
+    deleteRecords.appendChild(deleteRow);
     const dateRecords = document.getElementById('date-record');
     dateRecords.appendChild(dateRow);
     const moneyRecords = document.getElementById('money-record');
@@ -239,9 +262,8 @@ function render() {
     foodRecords.appendChild(foodRow);
     const weightRecords = document.getElementById('weight-record');
     weightRecords.appendChild(weightRow);
-    const deleteRecords = document.getElementById('delete-record');
-    deleteRecords.appendChild(deleteRow);
-
+    const remarkRecords = document.getElementById('remark-record');
+    remarkRecords.appendChild(remarkRow);
   });
   
 }
