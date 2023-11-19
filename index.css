@@ -32,30 +32,47 @@ body {
   justify-content: center;
 }
 
-
+.cognitivity-button:hover,
+.finance-button:hover,
+.health-button:hover,
+.home-button:hover,
   .click-me:hover {
     background:  pink;
   }
-  
+
+  .cognitivity-link,
+  .finance-link,
+  .health-link,
+  .home-link {
+    text-decoration: none;
+    color: #f2edd8;
+  }
+
+  .cognitivity-button,
+  .finance-button,
+  .health-button,
+  .home-button,
   .click-me {
     height: 100px;
     width: 100px;
     font-size: 20px;
     color: white;
-      cursor: pointer;
-      position: relative;
-      border-radius: 60px;
-      font-weight: 600;
-      border: 1px solid #731b18;
-      background-image: linear-gradient(-180deg, #d73936 0%, #891515 100%);
-      box-shadow: 0 16px 20px 0 rgba(113, 26, 19, 0.5),
-                              0 -4px 20px rgb(84, 4, 4) inset,
-                              0 12px 8px rgba(98, 23, 23, 0.4) inset,
-                              0 4px 8px 0 rgb(141, 39, 44) inset;
+    cursor: pointer;
+    position: relative;
+    border-radius: 60px;
+    font-weight: 600;
+    border: 1px solid #731b18;
+    background-image: linear-gradient(-180deg, #d73936 0%, #891515 100%);
+    box-shadow: 0 16px 20px 0 rgba(113, 26, 19, 0.5),
+                0 -4px 20px rgb(84, 4, 4) inset,
+                0 12px 8px rgba(98, 23, 23, 0.4) inset,
+                0 4px 8px 0 rgb(141, 39, 44) inset;
   }
   
-  
-  
+  .cognitivity-button span,
+  .finance-button span,
+  .health-button span,
+  .home-button span,
   .click-me span {
       color: #f2edd8;
       background-image: linear-gradient(0deg, #d73936 0%, #f2edd8 100%);
@@ -63,7 +80,11 @@ body {
       background-clip: text;
       filter: drop-shadow(0 2px 2px rgb(80, 9, 12));
   }
-  
+
+  .cognitivity-button::before,
+  .finance-button::before,
+  .health-button::before,
+  .home-button::before,
   .click-me::before {
       content: "";
       display: block;
@@ -78,7 +99,11 @@ body {
       opacity: 0.6;
       background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
   }
-  
+ 
+  .cognitivity-button::after,
+  .finance-button::after,
+  .health-button::after,
+  .home-button::after,
   .click-me::after {
       content: "";
       display: block;
