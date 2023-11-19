@@ -3,10 +3,6 @@ let colors= [];
 const clickMe = document.getElementById('click-me');
 clickMe.addEventListener('click',render);
 
-function mouseOver() {
-     document.getElementById('home-button').style.background = 'pink';
-}
-
 function render() {
 
     document.getElementById('ball-container2').innerHTML = '';
@@ -24,7 +20,6 @@ function render() {
     homeLink.href = 'home.html';
     homeLink.id ='home-link';
     homeLink.setAttribute('class','home-link');
-    homeLink.addEventListener('mouseover',mouseOver);
 
     const healthButton = document.createElement('button');
     healthButton.id = 'health-button';
@@ -41,7 +36,7 @@ function render() {
     financeButton.setAttribute('class','finance-button');
     const financeLink = document.createElement('a');
     financeButton.appendChild(financeLink);
-    financeLink.innerText = 'finance';
+    financeLink.innerText = 'Finance';
     financeLink.href = 'finance.html';
     financeLink.id ='finance-link';
     financeLink.setAttribute('class','finance-link');
@@ -51,7 +46,7 @@ function render() {
     cognitivityButton.setAttribute('class','cognitivity-button');
     const cognitivityLink = document.createElement('a');
     cognitivityButton.appendChild(cognitivityLink);
-    cognitivityLink.innerText = 'cognitivity';
+    cognitivityLink.innerText = 'Cognitivity';
     cognitivityLink.href = 'cognitivity.html';
     cognitivityLink.id ='cognitivity-link';
     cognitivityLink.setAttribute('class','cognitivity-link');
