@@ -1,3 +1,4 @@
+
 //health 
 google.charts.load('current', {'packages':['line','corechart']});
 google.charts.setOnLoadCallback(drawChart);
@@ -7,6 +8,10 @@ let counters = [];
 let moneyCount = 0;
 let exerciseCount = 0;
 let foodCount = 0;
+let days = 30;
+let moneySpent = 0;
+let weightGoal = 41;
+let weightTolose = 7;
 
 const sortByDate = (records) => 
   records.sort(({date: a}, {date: b}) => a > b ? -1 : a < b ? 1 : 0)
@@ -67,6 +72,39 @@ function removeRecord (idToDelete){
   saveRecord();
 }
 
+function daysCounter () {
+  if (days >= 0 ) {
+    days = 30 - records.length;
+    return days;
+  }
+}
+
+function moneyAccumulator(money) {
+    const dailyMoney = Number.parseInt(money);
+    moneySpent += dailyMoney;
+  }
+
+function moneyDeaccumulator(idToDelete) {
+  records.forEach((record) => {
+    if (record.id === idToDelete && moneySpent > 0) {
+      money = Number.parseInt(record.money)
+      moneySpent -= money
+    }
+  })
+}
+
+function weightTracker(weight) {
+    weight = Number.parseFloat(weight);
+    weightTolose = weight - weightGoal;
+    return weightTolose;
+  }
+
+function weightToLose() {
+  records.forEach((record) => {
+    weight = Number.parseFloat(record.weight);
+    weightGoal = weight + weightGoal;
+  })
+}
 
 function moneyCounter(money){
     if (money !== '' && money !== '0'){
@@ -165,6 +203,9 @@ function addRecord (){
   exerciseCounter(exercise);
   foodCounter(food);
   createRecord(date, money, exercise,food,weight,remark);
+  daysCounter();
+  moneyAccumulator(money);
+  weightTracker(weight);
   render();
 }
 
@@ -172,10 +213,12 @@ function deleteRecord (event) {
   const deleteButton = event.target;
   const idToDelete = deleteButton.id;
   
+  moneyDeaccumulator(idToDelete);
   reduceExerciseCount(idToDelete);
   reduceFoodCount(idToDelete);
   reduceMoneyCount(idToDelete);
   removeRecord(idToDelete);
+  daysCounter();
   render();
 }
   
@@ -250,6 +293,12 @@ function render() {
       remarkRow.style = 'background-color: #616161';
     }
 
+    const daysLeft = document.getElementById('days-left');
+    daysLeft.innerText = days;
+    const moneyUsed = document.getElementById('money-spent');
+    moneyUsed.innerText = moneySpent;
+    const weightToLose = document.getElementById('weight-tolose');
+    weightToLose.innerText = weightTolose;
     const deleteRecords = document.getElementById('delete-record');
     deleteRecords.appendChild(deleteRow);
     const dateRecords = document.getElementById('date-record');
@@ -340,3 +389,4 @@ function drawChart() {
 
     drawMaterialChart();
   };
+
