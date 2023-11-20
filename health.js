@@ -32,11 +32,11 @@ function createRecord (date,money,exercise,food,weight,remark) {
 
   //function to generate Remark 
   if (weight > 45) {
-    remark = 'Fucking Fat Pig!';
+    remark = 'Fat Pig!';
   }else if (weight < 45 && weight > 43) {
     remark = 'Not fat, but needs LOTS of exercise.';
   }else if (weight < 43 && weight > 40) {
-    remark = 'Not fat, is healthy, exercise everyday.';
+    remark = 'Healthy, not fat, exercise everyday.';
   }else if (weight < 40) {
     remark = 'Congratulations, you are about to see Jesus.';
   }
