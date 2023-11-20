@@ -1,7 +1,8 @@
 
-let colors= [];
 const clickMe = document.getElementById('click-me');
 clickMe.addEventListener('click',render);
+let buttons = [];
+let i = 0;
 
 function render() {
 
@@ -50,7 +51,7 @@ function render() {
     cognitivityLink.href = 'cognitivity.html';
     cognitivityLink.id ='cognitivity-link';
     cognitivityLink.setAttribute('class','cognitivity-link');
-    
+
     const ballContainer2 = document.getElementById('ball-container2');
     ballContainer2.appendChild(homeButton);
 
@@ -62,4 +63,6 @@ function render() {
 
     const ballContainer8 = document.getElementById('ball-container8');
     ballContainer8.appendChild(cognitivityButton);
-}
+};
+//animate button
+
