@@ -31,11 +31,15 @@ a:visited {
   color: #2a2a2a;
 }
 
+ul,
+li {
+  display: inline-block;
+  box-sizing: border-box;
+
+}
 ul {
   list-style-type: none;
-  display: inline-block;
   text-align: center;
-  box-sizing: border-box;
   float: none;
   position: relative;
   gap: 5px;
@@ -44,8 +48,6 @@ ul {
   }
 
 li {
-  display: inline-block;
-  box-sizing: border-box;
   border-radius: 20px;
   position: relative;
   background-color: white;
@@ -66,7 +68,6 @@ li:hover {
 .active {
   background-color: #891515;
   border-radius: 14px;
-  /*color: #294221;*/
 }
 
 .active a {
@@ -150,16 +151,12 @@ main {
 
 .btm-clm-left {
   gap: 2px;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
-.btm-clm-left-top {
-  height: 80px;
-}
-
+.btm-clm-left-top,
 .btm-clm-left-top-del,
 .btm-clm-left-top-rmk {
-  background-color: none;
   height: 80px;
 }
 
@@ -194,18 +191,16 @@ main {
   padding: 10px;
   width: 20%;
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  border-radius: 5px;
 }
 
+.btm-right,
 .btm-right-top {
   display: flex;
   flex-direction: column;
   gap: 5px;
   border-radius: 5px;
 }
+
 .btm-right-top-top {
   font-size: 24px;
   background-color: #212121;
@@ -215,7 +210,7 @@ main {
 }
 .btm-right-top-btm {
   background-color: #616161;
-  font-size: 2;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
@@ -248,6 +243,7 @@ select {
   background-color: #c6ba73;
 }
 
+.btm-right-top-top,
 .btm-right-middle,
 .btm-right-btm {
   opacity: 0.95;
@@ -257,7 +253,6 @@ select {
   padding-right: 20px;
   padding-top: 6px;
   padding-bottom: 6px;
-
 }
 
 .btm1 {
