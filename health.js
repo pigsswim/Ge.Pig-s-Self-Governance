@@ -12,8 +12,6 @@ let days = 30;
 let moneySpent = 0;
 let weightTolose = 0;
 
-window.localStorage.clear();
-
 const sortByDate = (records) => 
   records.sort(({date: a}, {date: b}) => a > b ? -1 : a < b ? 1 : 0)
 
@@ -130,15 +128,16 @@ function weightToLose(idToDelete) {
     if (record.id === idToDelete) {
       if (record.weight == 0 || record.weight == null) {
         return weightTolose; // = ((Number(record.weight))*10 -410)/10;
-
+      }else {
+        console.log(records.length)
+      }
+      }
         // find the previous weight
-        console.log(records[records.indexOf(record)-1].weight);
+        //console.log(records[records.indexOf(record)-1].weight);
 
         //return weightTolose;
-      }
-    }
-  })
-}
+    })
+  };
 
 function moneyCounter(money){
     if (money !== '' && money !== '0'){
@@ -303,11 +302,11 @@ function render() {
  
     const moneyRow = document.createElement('div');
     moneyRow.setAttribute('class','btm-clm-left-btm-row');
-    moneyRow.innerText = record.money;
+    moneyRow.innerText = '$'+record.money;
     
     const exerciseRow = document.createElement('div');
     exerciseRow.setAttribute('class','btm-clm-left-btm-row');
-    exerciseRow.innerText = record.exercise;
+    exerciseRow.innerText = record.exercise + ' mins';
     
     const foodRow = document.createElement('div');
     foodRow.setAttribute('class','btm-clm-left-btm-row');
@@ -315,7 +314,7 @@ function render() {
 
     const weightRow = document.createElement('div');
     weightRow.setAttribute('class','btm-clm-left-btm-row');
-    weightRow.innerText = record.weight;
+    weightRow.innerText = record.weight + ' kg';
     
     const remarkRow = document.createElement('div');
     remarkRow.setAttribute('class','btm-clm-left-btm-row');
@@ -342,9 +341,9 @@ function render() {
     const daysLeft = document.getElementById('days-left');
     daysLeft.innerText = days;
     const moneyUsed = document.getElementById('money-spent');
-    moneyUsed.innerText = moneySpent;
+    moneyUsed.innerText = '$'+ moneySpent;
     const weightToLose = document.getElementById('weight-tolose');
-    weightToLose.innerText = weightTolose;
+    weightToLose.innerText = weightTolose + ' kg';
     const deleteRecords = document.getElementById('delete-record');
     deleteRecords.appendChild(deleteRow);
     const dateRecords = document.getElementById('date-record');
