@@ -13,6 +13,8 @@ let days = 30;
 let moneySpent = 0;
 let weightTolose = 0;
 
+window.localStorage.clear();
+
 const sortByDate = (records) => 
   records.sort(({date: a}, {date: b}) => a > b ? -1 : a < b ? 1 : 0)
 
