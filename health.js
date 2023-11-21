@@ -1,4 +1,5 @@
 
+
 //health 
 google.charts.load('current', {'packages':['line','corechart']});
 google.charts.setOnLoadCallback(drawChart);
@@ -10,8 +11,7 @@ let exerciseCount = 0;
 let foodCount = 0;
 let days = 30;
 let moneySpent = 0;
-let weightGoal = 41;
-let weightTolose = 7;
+let weightTolose = 0;
 
 const sortByDate = (records) => 
   records.sort(({date: a}, {date: b}) => a > b ? -1 : a < b ? 1 : 0)
@@ -20,12 +20,18 @@ const savedRecords = JSON.parse(localStorage.getItem('records'));
 const savedMoneyCount = JSON.parse(localStorage.getItem('moneyCount'));
 const savedExerciseCount = JSON.parse(localStorage.getItem('exerciseCount'));
 const savedFoodCount = JSON.parse(localStorage.getItem('foodCount'));
+const savedDays = JSON.parse(localStorage.getItem('days'));
+const savedMoneySpent = JSON.parse(localStorage.getItem('moneySpent'));
+const savedWeightTolose = JSON.parse(localStorage.getItem('weightTolose'));
 
 if (Array.isArray(savedRecords)) {
   records = savedRecords;
   moneyCount = savedMoneyCount;
   exerciseCount = savedExerciseCount;
   foodCount = savedFoodCount;
+  days = savedDays;
+  moneySpent = savedMoneySpent;
+  weightTolose = savedWeightTolose;
  
 } else {
   records = [];
@@ -73,37 +79,37 @@ function removeRecord (idToDelete){
 }
 
 function daysCounter () {
-  if (days >= 0 ) {
+  if (days >=0 ) {
     days = 30 - records.length;
     return days;
   }
 }
 
 function moneyAccumulator(money) {
-    const dailyMoney = Number.parseInt(money);
+    const dailyMoney = Number(money);
     moneySpent += dailyMoney;
   }
 
 function moneyDeaccumulator(idToDelete) {
   records.forEach((record) => {
     if (record.id === idToDelete && moneySpent > 0) {
-      money = Number.parseInt(record.money)
-      moneySpent -= money
+      moneySpent -= Number(record.money);
     }
   })
 }
 
 function weightTracker(weight) {
-    weight = Number.parseFloat(weight);
-    weightTolose = weight - weightGoal;
+    const dailyWeight = Number(weight)*10;
+    let goalWeight = 410;
+    weightTolose = (dailyWeight - goalWeight)/10;
     return weightTolose;
   }
 
 function weightToLose() {
-  records.forEach((record) => {
-    weight = Number.parseFloat(record.weight);
-    weightGoal = weight + weightGoal;
-  })
+  const lastWeight = records.slice(-1);
+  console.log(lastWeight);
+  weightTolose = ((Number(lastWeight[0].weight))*10 - 410)/10;
+  return weightTolose;
 }
 
 function moneyCounter(money){
@@ -179,6 +185,9 @@ function saveRecord (){
   localStorage.setItem('moneyCount',JSON.stringify(moneyCount));
   localStorage.setItem('exerciseCount',JSON.stringify(exerciseCount));
   localStorage.setItem('foodCount',JSON.stringify(foodCount));
+  localStorage.setItem('days',JSON.stringify(days));
+  localStorage.setItem('moneySpent',JSON.stringify(moneySpent));
+  localStorage.setItem('weightTolose',JSON.stringify(weightTolose));
 }
 
 function addRecord (){
@@ -214,12 +223,14 @@ function deleteRecord (event) {
   const idToDelete = deleteButton.id;
   
   moneyDeaccumulator(idToDelete);
+  daysCounter();
+  weightToLose(idToDelete);
   reduceExerciseCount(idToDelete);
   reduceFoodCount(idToDelete);
   reduceMoneyCount(idToDelete);
   removeRecord(idToDelete);
-  daysCounter();
   render();
+  
 }
   
 // if index in array is even number give one color
