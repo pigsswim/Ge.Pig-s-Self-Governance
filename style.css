@@ -204,18 +204,21 @@ main {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  border-radius: 5px;
 }
 .btm-right-top-top {
   font-size: 24px;
   background-color: #212121;
   text-align: center;
   opacity: 0.95;
+  border-radius: 5px;
 }
 .btm-right-top-btm {
   background-color: #616161;
   font-size: 2;
   display: flex;
   flex-direction: column;
+  border-radius: 5px;
 }
 
 .btm-right-top-btm-row {
@@ -237,11 +240,13 @@ select {
   background-color:#294221;
   opacity: 0.95;
   height: 30%;
+  border-radius: 5px;
 }
 
 .btm-right-btm {
   background-color: #c6ba73;
   height: 30%;
+  border-radius: 5px;
 }
 
 .btm1 {
