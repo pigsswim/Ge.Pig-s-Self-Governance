@@ -1,5 +1,4 @@
 
-
 //health 
 google.charts.load('current', {'packages':['line','corechart']});
 google.charts.setOnLoadCallback(drawChart);
@@ -12,6 +11,8 @@ let foodCount = 0;
 let days = 30;
 let moneySpent = 0;
 let weightTolose = 0;
+
+window.localStorage.clear();
 
 const sortByDate = (records) => 
   records.sort(({date: a}, {date: b}) => a > b ? -1 : a < b ? 1 : 0)
@@ -83,6 +84,7 @@ function daysCounter () {
     days = 30 - records.length;
     return days;
   }
+  saveRecord();
 }
 
 function moneyAccumulator(money) {
@@ -96,20 +98,24 @@ function moneyDeaccumulator(idToDelete) {
       moneySpent -= Number(record.money);
     }
   })
+  saveRecord();
 }
 
 function weightTracker(weight) {
-    const dailyWeight = Number(weight)*10;
-    let goalWeight = 410;
-    weightTolose = (dailyWeight - goalWeight)/10;
+  //not working
+  if (weight == 0 || weight =='') {
     return weightTolose;
+  }else {
+    weightTolose = ((Number(weight))*10 -410)/10;
   }
+  saveRecord();
+}
 
 function weightToLose() {
   const lastWeight = records.slice(-1);
-  console.log(lastWeight);
   weightTolose = ((Number(lastWeight[0].weight))*10 - 410)/10;
-  return weightTolose;
+  saveRecord();
+
 }
 
 function moneyCounter(money){
@@ -208,13 +214,13 @@ function addRecord (){
 
   const remark = 0;
 
+  daysCounter();
+  moneyAccumulator(money);
+  weightTracker(weight);
   moneyCounter(money);
   exerciseCounter(exercise);
   foodCounter(food);
   createRecord(date, money, exercise,food,weight,remark);
-  daysCounter();
-  moneyAccumulator(money);
-  weightTracker(weight);
   render();
 }
 
@@ -400,4 +406,3 @@ function drawChart() {
 
     drawMaterialChart();
   };
-
