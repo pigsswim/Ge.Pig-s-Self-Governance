@@ -224,6 +224,9 @@ main {
 .btm-right-top-btm-row {
   display: flex;
   flex-direction: row;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 6px;
 }
 
 input,
@@ -238,15 +241,21 @@ select {
 
 .btm-right-middle {
   background-color:#294221;
-  opacity: 0.95;
-  height: 30%;
-  border-radius: 5px;
 }
 
 .btm-right-btm {
   background-color: #c6ba73;
+}
+
+.btm-right-middle,
+.btm-right-btm {
+  opacity: 0.95;
   height: 30%;
   border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 6px;
+
 }
 
 .btm1 {
