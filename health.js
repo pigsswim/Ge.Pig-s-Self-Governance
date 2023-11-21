@@ -80,16 +80,28 @@ function removeRecord (idToDelete){
 }
 
 function daysCounter () {
-  if (days >=0 ) {
-    days = 30 - records.length;
+  if (days > 0 ) {
+    days -= 1
     return days;
   }
   saveRecord();
 }
 
+function daysIncrease (idToDelete) {
+  records.forEach((record) => {
+    if (record.id === idToDelete){
+      days += 1;
+    }
+  })
+
+  saveRecord();
+  };
+
 function moneyAccumulator(money) {
     const dailyMoney = Number(money);
     moneySpent += dailyMoney;
+
+    saveRecord();
   }
 
 function moneyDeaccumulator(idToDelete) {
@@ -103,7 +115,7 @@ function moneyDeaccumulator(idToDelete) {
 
 function weightTracker(weight) {
   //not working
-  if (weight == 0 || weight =='') {
+  if (weight == 0 || weight == '') {
     return weightTolose;
   }else {
     weightTolose = ((Number(weight))*10 -410)/10;
@@ -111,11 +123,21 @@ function weightTracker(weight) {
   saveRecord();
 }
 
-function weightToLose() {
-  const lastWeight = records.slice(-1);
-  weightTolose = ((Number(lastWeight[0].weight))*10 - 410)/10;
-  saveRecord();
 
+//get the weieght of the last index that the weight is no 0 or null
+function weightToLose(idToDelete) {
+  records.forEach((record) => {
+    if (record.id === idToDelete) {
+      if (record.weight == 0 || record.weight == null) {
+        return weightTolose; // = ((Number(record.weight))*10 -410)/10;
+
+        // find the previous weight
+        console.log(records[records.indexOf(record)-1].weight);
+
+        //return weightTolose;
+      }
+    }
+  })
 }
 
 function moneyCounter(money){
@@ -214,13 +236,14 @@ function addRecord (){
 
   const remark = 0;
 
-  daysCounter();
+  
   moneyAccumulator(money);
   weightTracker(weight);
   moneyCounter(money);
   exerciseCounter(exercise);
   foodCounter(food);
   createRecord(date, money, exercise,food,weight,remark);
+  daysCounter();
   render();
 }
 
@@ -228,15 +251,21 @@ function deleteRecord (event) {
   const deleteButton = event.target;
   const idToDelete = deleteButton.id;
   
+  daysIncrease(idToDelete);
   moneyDeaccumulator(idToDelete);
-  daysCounter();
   weightToLose(idToDelete);
   reduceExerciseCount(idToDelete);
   reduceFoodCount(idToDelete);
   reduceMoneyCount(idToDelete);
-  removeRecord(idToDelete);
+
+  //render before remove data;
   render();
-  
+
+  //remove data, 
+  removeRecord(idToDelete);
+
+  //render to show left record
+  render();
 }
   
 // if index in array is even number give one color
