@@ -121,23 +121,29 @@ function weightTracker(weight) {
   saveRecord();
 }
 
-
-//get the weieght of the last index that the weight is no 0 or null
 function weightToLose(idToDelete) {
   records.forEach((record) => {
     if (record.id === idToDelete) {
-      if (record.weight == 0 || record.weight == null) {
-        return weightTolose; // = ((Number(record.weight))*10 -410)/10;
+      if(record.weight == 0 || record.weight == '' ) {
+        console.log(typeof record.weight)
+        return 
+      }else if (records.lastIndexOf(record) !== record) {
+        return 
       }else {
-        console.log(records.length)
+        let  dailyWeightRecord = [];
+        for (i=records.length-2; i>=0;i--) {
+          if (records[i].weight == 0 || record.weight == null) {
+            i--;
+          }else if (records[i].weight !== '0' && records[i].weight !== null){
+            dailyWeightRecord.push(records[i].weight);
+            weightTolose =  ((Number(dailyWeightRecord[0]))*10 -410)/10;
+            console.log(dailyWeightRecord)
+            console.log(weightTolose);
+          }
+        }
+      }     
+      }})
       }
-      }
-        // find the previous weight
-        //console.log(records[records.indexOf(record)-1].weight);
-
-        //return weightTolose;
-    })
-  };
 
 function moneyCounter(money){
     if (money !== '' && money !== '0'){
