@@ -383,9 +383,9 @@ function drawChart() {
     var chartDiv = document.getElementById('chart_div');
   
     var data = new google.visualization.DataTable();
-    data.addColumn('date', 'Month');
-    data.addColumn('number', "Average Temperature");
-    data.addColumn('number', "Average Hours of Daylight");
+    data.addColumn('date', 'Day');
+    data.addColumn('number', "Average Weight");
+    data.addColumn('number', "Average Expenditure");
 
     var d = new Date();
   
