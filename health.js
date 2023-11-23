@@ -12,6 +12,9 @@ let days = 30;
 let moneySpent = 0;
 let weightTolose = 0;
 
+
+window.localStorage.clear();
+
 const sortByDate = (records) => 
   records.sort(({date: a}, {date: b}) => a > b ? -1 : a < b ? 1 : 0)
 
@@ -386,20 +389,15 @@ function drawChart() {
     data.addColumn('date', 'Day');
     data.addColumn('number', "Average Weight");
     data.addColumn('number', "Average Expenditure");
-
-    var d = new Date();
   
-    data.addRows([
-      [new Date(2023, 0),  -.5,  5.7],
-      [new Date(2023, 1),   .4,  8.7],
-      [new Date(2023, 2),   .5,   12],
-      [new Date(2023, 3),  2.9, 15.3],
-      [new Date(2023, 4),  6.3, 18.6],
-    ]);
-
-    data.addRows([
-        [d, 6,8]
-    ])
+    records.forEach((record) => {
+      const recordYear = Number(record.date.substr(0,4));
+      const recordMonth = (Number(record.date.substr(5,2))-1);
+      const recordDay = (Number(record.date.substr(8,2)))
+      data.addRows([
+        [new Date(recordYear,recordMonth,recordDay),  Number(record.weight),  Number(record.money)]
+      ]);
+    })
   
     var materialOptions = {
       chart: {
