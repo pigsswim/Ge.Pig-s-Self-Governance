@@ -260,15 +260,12 @@ select {
   flex-direction: column;
 }
 
-.plot {
-  background: white; 
-  color: black;
-  width: 400px;
-  height: 400px;
-}
-
 .btn {
   width: 120px;
+}
+
+.btn1 {
+  width: 200px;
 }
 
 button:hover {
