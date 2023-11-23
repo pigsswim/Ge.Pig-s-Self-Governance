@@ -1,7 +1,4 @@
 
-//health 
-google.charts.load('current', {'packages':['line','corechart']});
-google.charts.setOnLoadCallback(drawChart);
 
 let records = [];
 let counters = [];
@@ -15,9 +12,6 @@ let weightTolose = 0;
 
 window.localStorage.clear();
 
-const sortByDate = (records) => 
-  records.sort(({date: a}, {date: b}) => a > b ? -1 : a < b ? 1 : 0)
-
 const savedRecords = JSON.parse(localStorage.getItem('records'));
 const savedMoneyCount = JSON.parse(localStorage.getItem('moneyCount'));
 const savedExerciseCount = JSON.parse(localStorage.getItem('exerciseCount'));
@@ -25,6 +19,22 @@ const savedFoodCount = JSON.parse(localStorage.getItem('foodCount'));
 const savedDays = JSON.parse(localStorage.getItem('days'));
 const savedMoneySpent = JSON.parse(localStorage.getItem('moneySpent'));
 const savedWeightTolose = JSON.parse(localStorage.getItem('weightTolose'));
+
+function setGoal (goalDay,currentWeight, goalWeight) {
+  days = goalDay;
+  weightTolose = goalWeight - currentWeight;
+}
+
+
+function addGoal () {
+  const setButton = document.getElementById('set-button');
+  const setGoalDay = document.createElement('input');
+  setGoalDay.type = 'number';
+  console.log(setGoalDay)
+  setButton.onclick = window.prompt(setGoalDay)
+}
+
+addGoal();
 
 if (Array.isArray(savedRecords)) {
   records = savedRecords;
@@ -381,48 +391,3 @@ function setActive() {
 window.onload = setActive()
 
 // graph 
-function drawChart() {
-
-    var chartDiv = document.getElementById('chart_div');
-  
-    var data = new google.visualization.DataTable();
-    data.addColumn('date', 'Day');
-    data.addColumn('number', "Average Weight");
-    data.addColumn('number', "Average Expenditure");
-  
-    records.forEach((record) => {
-      const recordYear = Number(record.date.substr(0,4));
-      const recordMonth = (Number(record.date.substr(5,2))-1);
-      const recordDay = (Number(record.date.substr(8,2)))
-      data.addRows([
-        [new Date(recordYear,recordMonth,recordDay),  Number(record.weight),  Number(record.money)]
-      ]);
-    })
-  
-    var materialOptions = {
-      chart: {
-        title: 'Expenditure and Weight Change Throughout a Month'
-      },
-      width: 900,
-      height: 500,
-      series: {
-        // Gives each series an axis name that matches the Y-axis below.
-        0: {axis: 'Weight'},
-        1: {axis: 'Money'}
-      },
-      axes: {
-        // Adds labels to each axis; they don't have to match the axis names.
-        y: {
-          Weight: {label: 'Weight'},
-          Money: {label: 'Money'}
-        }
-      }
-    };
-  
-    function drawMaterialChart() {
-      var materialChart = new google.charts.Line(chartDiv);
-      materialChart.draw(data, materialOptions);
-    }
-
-    drawMaterialChart();
-  };
