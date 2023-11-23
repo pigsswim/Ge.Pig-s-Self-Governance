@@ -112,7 +112,6 @@ function moneyDeaccumulator(idToDelete) {
 }
 
 function weightTracker(weight) {
-  //not working
   if (weight == 0 || weight == '') {
     return weightTolose;
   }else {
@@ -121,23 +120,25 @@ function weightTracker(weight) {
   saveRecord();
 }
 
-
 //get the weieght of the last index that the weight is no 0 or null
 function weightToLose(idToDelete) {
   records.forEach((record) => {
     if (record.id === idToDelete) {
-      if (record.weight == 0 || record.weight == null) {
-        return weightTolose; // = ((Number(record.weight))*10 -410)/10;
-      }else {
-        console.log(records.length)
-      }
-      }
-        // find the previous weight
-        //console.log(records[records.indexOf(record)-1].weight);
+      if (record.weight == 0 || record.weight == null)  {
+        return weightTolose;
+      } else if (records.length === 1) {
+        weightTolose = 0;
+      } else {
+          let weightHistory = [];
+          for (i=0;i<records.length;i++) {
+            if (Number(records[i].weight) > 0 && i !== records.indexOf(record)) {
+              weightHistory.push(Number(records[i].weight));
+              weightHistory.reverse();
+              weightTolose = ((weightHistory[0])*10 -410)/10;
+           } 
+          };
+    }}})}
 
-        //return weightTolose;
-    })
-  };
 
 function moneyCounter(money){
     if (money !== '' && money !== '0'){
@@ -259,17 +260,10 @@ function deleteRecord (event) {
 
   //render before remove data;
   render();
-
-  //remove data, 
   removeRecord(idToDelete);
-
-  //render to show left record
   render();
 }
   
-// if index in array is even number give one color
-// if index in array is odd number give another color;
-// 
     
 
 function render() {
