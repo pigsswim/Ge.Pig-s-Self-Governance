@@ -1,7 +1,4 @@
 
-//health 
-google.charts.load('current', {'packages':['line','corechart']});
-google.charts.setOnLoadCallback(drawChart);
 
 let records = [];
 let counters = [];
@@ -12,8 +9,8 @@ let days = 30;
 let moneySpent = 0;
 let weightTolose = 0;
 
-const sortByDate = (records) => 
-  records.sort(({date: a}, {date: b}) => a > b ? -1 : a < b ? 1 : 0)
+
+window.localStorage.clear();
 
 const savedRecords = JSON.parse(localStorage.getItem('records'));
 const savedMoneyCount = JSON.parse(localStorage.getItem('moneyCount'));
@@ -22,6 +19,22 @@ const savedFoodCount = JSON.parse(localStorage.getItem('foodCount'));
 const savedDays = JSON.parse(localStorage.getItem('days'));
 const savedMoneySpent = JSON.parse(localStorage.getItem('moneySpent'));
 const savedWeightTolose = JSON.parse(localStorage.getItem('weightTolose'));
+
+function setGoal (goalDay,currentWeight, goalWeight) {
+  days = goalDay;
+  weightTolose = goalWeight - currentWeight;
+}
+
+
+function addGoal () {
+  const setButton = document.getElementById('set-button');
+  const setGoalDay = document.createElement('input');
+  setGoalDay.type = 'number';
+  console.log(setGoalDay)
+  setButton.onclick = window.prompt(setGoalDay)
+}
+
+addGoal();
 
 if (Array.isArray(savedRecords)) {
   records = savedRecords;
@@ -112,7 +125,6 @@ function moneyDeaccumulator(idToDelete) {
 }
 
 function weightTracker(weight) {
-  //not working
   if (weight == 0 || weight == '') {
     return weightTolose;
   }else {
@@ -121,29 +133,25 @@ function weightTracker(weight) {
   saveRecord();
 }
 
+//get the weieght of the last index that the weight is no 0 or null
 function weightToLose(idToDelete) {
   records.forEach((record) => {
     if (record.id === idToDelete) {
-      if(record.weight == 0 || record.weight == '' ) {
-        console.log(typeof record.weight)
-        return 
-      }else if (records.lastIndexOf(record) !== record) {
-        return 
-      }else {
-        let  dailyWeightRecord = [];
-        for (i=records.length-2; i>=0;i--) {
-          if (records[i].weight == 0 || record.weight == null) {
-            i--;
-          }else if (records[i].weight !== '0' && records[i].weight !== null){
-            dailyWeightRecord.push(records[i].weight);
-            weightTolose =  ((Number(dailyWeightRecord[0]))*10 -410)/10;
-            console.log(dailyWeightRecord)
-            console.log(weightTolose);
-          }
-        }
-      }     
-      }})
-      }
+      if (record.weight == 0 || record.weight == null)  {
+        return weightTolose;
+      } else if (records.length === 1) {
+        weightTolose = 0;
+      } else {
+          let weightHistory = [];
+          for (i=0;i<records.length;i++) {
+            if (Number(records[i].weight) > 0 && i !== records.indexOf(record)) {
+              weightHistory.push(Number(records[i].weight));
+              weightHistory.reverse();
+              weightTolose = ((weightHistory[0])*10 -410)/10;
+           } 
+          };
+    }}})}
+
 
 function moneyCounter(money){
     if (money !== '' && money !== '0'){
@@ -265,17 +273,10 @@ function deleteRecord (event) {
 
   //render before remove data;
   render();
-
-  //remove data, 
   removeRecord(idToDelete);
-
-  //render to show left record
   render();
 }
   
-// if index in array is even number give one color
-// if index in array is odd number give another color;
-// 
     
 
 function render() {
@@ -390,53 +391,3 @@ function setActive() {
 window.onload = setActive()
 
 // graph 
-function drawChart() {
-
-    var chartDiv = document.getElementById('chart_div');
-  
-    var data = new google.visualization.DataTable();
-    data.addColumn('date', 'Month');
-    data.addColumn('number', "Average Temperature");
-    data.addColumn('number', "Average Hours of Daylight");
-
-    var d = new Date();
-  
-    data.addRows([
-      [new Date(2023, 0),  -.5,  5.7],
-      [new Date(2023, 1),   .4,  8.7],
-      [new Date(2023, 2),   .5,   12],
-      [new Date(2023, 3),  2.9, 15.3],
-      [new Date(2023, 4),  6.3, 18.6],
-    ]);
-
-    data.addRows([
-        [d, 6,8]
-    ])
-  
-    var materialOptions = {
-      chart: {
-        title: 'Expenditure and Weight Change Throughout a Month'
-      },
-      width: 900,
-      height: 500,
-      series: {
-        // Gives each series an axis name that matches the Y-axis below.
-        0: {axis: 'Weight'},
-        1: {axis: 'Money'}
-      },
-      axes: {
-        // Adds labels to each axis; they don't have to match the axis names.
-        y: {
-          Weight: {label: 'Weight'},
-          Money: {label: 'Money'}
-        }
-      }
-    };
-  
-    function drawMaterialChart() {
-      var materialChart = new google.charts.Line(chartDiv);
-      materialChart.draw(data, materialOptions);
-    }
-
-    drawMaterialChart();
-  };
