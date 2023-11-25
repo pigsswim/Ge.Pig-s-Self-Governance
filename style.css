@@ -261,11 +261,7 @@ select {
 }
 
 .btn {
-  width: 120px;
-}
-
-.btn1 {
-  width: 200px;
+  width: 100px;
 }
 
 button:hover {
