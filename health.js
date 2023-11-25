@@ -9,7 +9,6 @@ let days = 30;
 let moneySpent = 0;
 let weightTolose = 0;
 
-
 window.localStorage.clear();
 
 const savedRecords = JSON.parse(localStorage.getItem('records'));
@@ -20,21 +19,6 @@ const savedDays = JSON.parse(localStorage.getItem('days'));
 const savedMoneySpent = JSON.parse(localStorage.getItem('moneySpent'));
 const savedWeightTolose = JSON.parse(localStorage.getItem('weightTolose'));
 
-function setGoal (goalDay,currentWeight, goalWeight) {
-  days = goalDay;
-  weightTolose = goalWeight - currentWeight;
-}
-
-
-function addGoal () {
-  const setButton = document.getElementById('set-button');
-  const setGoalDay = document.createElement('input');
-  setGoalDay.type = 'number';
-  console.log(setGoalDay)
-  setButton.onclick = window.prompt(setGoalDay)
-}
-
-addGoal();
 
 if (Array.isArray(savedRecords)) {
   records = savedRecords;
@@ -368,7 +352,6 @@ function render() {
   });
   
 }
-
 //entire page 
 
 function setActive() {
