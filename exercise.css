@@ -1,0 +1,57 @@
+
+#grid {
+    display: grid;
+    grid-template-rows: 50% 10% 40%;
+    background-color: blue;
+    width: 100%;
+    height: 300px;
+    animation-name: train;
+    animation-duration: 2s;
+  }
+  
+  @keyframes train {
+    from { width: 0px;}
+    to {width: 100%;}
+  }
+  
+  #gridTop {
+    background-color: green;
+    display: grid;
+    grid-template-columns: 17% 17% 32% 17% 17%;
+    place-items: center;
+    width: 100%;
+  }
+  
+  #box1,
+  #box2,
+  #box4,
+  #box5 {
+    width: 60%;
+    height: 60%;
+    background-color: white;
+    opacity: 0.5;
+  }
+  
+  #box3 {
+    width: 75%;
+    height: 100%;
+    background-color: grey;
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  #gridMiddle {
+    background-color: yellow;
+    width: 100%;
+    height: 5px;
+  }
+  
+  #gridBottom {
+    background-color:blue;
+    width: 100%;
+  }
+  
