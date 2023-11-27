@@ -5,19 +5,64 @@ let i = 0;
 let curtain = document.getElementById('curtain');
 let screen = document.getElementById('screen');
 let title = document.createElement('h1');
+const grid = document.createElement('div');
+grid.className = 'grid';
 let screenHeight = screen.offsetHeight;
 let screenWidth = screen.offsetWidth;
 
+
+
 function intro () {
   screen.onload = setTimeout(typeTitle,1500);
-
-  render();
+  curtain.appendChild(title);
   setTimeout(curtainUp, 5000);
 }
 
 intro();
 
-screen.onended()
+function drawGrid() {
+  
+
+  const gridTop= document.createElement('div');
+  gridTop.className = 'gridTop';
+
+  const box1 = document.createElement('div');
+  box1.className = 'box1';
+  const box2 = document.createElement('div');
+  box2.className = 'box2';
+  const box3 = document.createElement('div');
+  box3.className = 'box3';
+  const box3Picture = document.createElement('img');
+  box3Picture.src = 'demo.jpg';
+  box3.appendChild(box3Picture);
+  
+  const box4 = document.createElement('div');
+  box4.className = 'box4';
+  const box5 = document.createElement('div');
+  box5.className = 'box5';
+
+  gridTop.appendChild(box1);
+  gridTop.appendChild(box2);
+  gridTop.appendChild(box3);
+  gridTop.appendChild(box4);
+  gridTop.appendChild(box5);
+
+  const gridMiddle = document.createElement('div');
+  gridMiddle.className = 'gridMiddle';
+
+  const gridBottom = document.createElement('div');
+  gridBottom.className = 'gridBottom';
+
+  grid.appendChild(gridTop);
+  grid.appendChild(gridMiddle);
+  grid.appendChild(gridBottom);
+
+  curtain.appendChild(grid);
+}
+
+setTimeout(drawGrid,10000)
+
+
 
 function typeTitle () {
   let a = 'The Story of I-Have-No-Idea-Who';
@@ -36,16 +81,12 @@ function frame() {
   curtain.innerHTML = '';
   curtain.style.height = '100%';
   curtain.style.backgroundColor = 'black';
-  if (pos == screenHeight) {
+  if (pos == 500) {
     clearInterval(id);
   }else {
     pos ++;
     screen.style.height = pos + 'px';
   }
-}
-
-function render() {
-  curtain.appendChild(title);
 }
 
 
@@ -76,6 +117,8 @@ function drawLine () {
   screen.appendChild(line);
 }*/
 
+
+/*
 
 let colors= [];
 
@@ -143,3 +186,13 @@ function renderButtons() {
     const ballContainer8 = document.getElementById('ball-container8');
     ballContainer8.appendChild(cognitivityButton);
 }
+
+function timeLine () {
+  let timeLineBox = document.createElement('div');
+  timeLineBox.setAttribute('class', 'time-line');
+  timeLineBox.id = 'time-line';
+  console.log(timeLineBox)
+
+}
+
+timeLine();*/
