@@ -9,8 +9,6 @@ let days = 30;
 let moneySpent = 0;
 let weightTolose = 0;
 
-window.localStorage.clear();
-
 const savedRecords = JSON.parse(localStorage.getItem('records'));
 const savedMoneyCount = JSON.parse(localStorage.getItem('moneyCount'));
 const savedExerciseCount = JSON.parse(localStorage.getItem('exerciseCount'));
