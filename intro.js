@@ -32,31 +32,7 @@ function renderBackground() {
 
 setTimeout(renderBackground,speed*10);
 
-
-function firstLine() {
-  if (timer == 150) {
-    clearInterval(firstLine);
-  }else {
-    timer ++;
-    let line = 'ok' +`${timer}`;
-    console.log(line);
-    c.beginPath();
-    c.lineWidth = '0.5';
-    c.strokeStyle = 'white';
-    c.moveTo(0,20);
-    c.lineTo(timer,20);
-    c.stroke();
-
-  }
-  setTimeout(firstLine, 5);
+function goHome() {
+  location.href = 'home.html';
 }
-
-setTimeout(firstLine,speed*11)
-
-
-
-
-
-
-
-
+setTimeout(goHome,speed*11);
