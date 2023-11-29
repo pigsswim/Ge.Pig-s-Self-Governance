@@ -1,3 +1,11 @@
+//home page href 
+const healthSection = document.getElementById('home-section-two');
+const educationSection = document.getElementById('home-section-three');
+const financeSection = document.getElementById('home-section-four');
+healthSection.style.opacity = '0';
+educationSection.style.opacity = '0';
+financeSection.style.opacity = '0';
+
 
 function setActive() {
   
@@ -11,84 +19,47 @@ function setActive() {
         active.classList.remove('active');
   });
         lists[i].className = 'active';
-
     } 
   }
 }
 
 window.onload = setActive()
-
-
-//home page 
-
-function makeEaseOut(timing) {
-  return function (timeFraction) {
-    return 1 - timing(1 - timeFraction);
-  }
+// hide nav bar
+function hideNav () {
+  const nav = document.getElementById('nav');
+  nav.style.display = 'none';
 }
 
-//difficult  learn more
+hideNav();
 
-function bounce(timeFraction) {
-  for (let a = 0, b = 1; 1; a += b, b /= 2) {
-    if (timeFraction >= (7 - 4 * a) / 11) {
-      return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
-    }
-  }
+//hide unneeded sections
+function hideHomeSection () {
+ 
 }
 
-function quad(timeFraction) {
-  return Math.pow(timeFraction,2);
+function showHealthSection () {
+  healthSection.style.opacity = "1";
 }
 
-function animateButton() {
-  let rootButton = document.getElementById('root-button');
-  let field = document.getElementById('main');
-  let height = field.clientHeight - rootButton.clientHeight;
-  let width = 500;
+setTimeout(showHealthSection, 6000);
 
-  animate({
-    duration: 4000,
-    timing: makeEaseOut(bounce),
-    draw(progress) {
-      rootButton.style.top = height * progress + 'px';
-    }
-  });
-
-  animate ({
-    duration: 4000,
-    timing:makeEaseOut(quad),
-    draw: function(progress) {
-      rootButton.style.left = width * progress + 'px';
-    }
-  })
-};
-
-function animate({timing, draw, duration}) {
-
-  let start = performance.now();
-
-  requestAnimationFrame(function animate(time) {
-    // timeFraction goes from 0 to 1
-    let timeFraction = (time - start) / duration;
-    if (timeFraction > 1) timeFraction = 1;
-
-    // calculate the current animation state
-    let progress = timing(timeFraction)
-
-    draw(progress); // draw it
-
-    if (timeFraction < 1) {
-      requestAnimationFrame(animate);
-    }
-
-  });
+function scrollScreen () {
+  window.scrollBy(0,548);
 }
 
-// generate colorful balls 
+setTimeout(scrollScreen,5000)
 
-const colors = [];
-for (let i=0; i<10; i++) {
-  const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-  colors.push(randomColor);
-}
+
+// homepage one section in the middle 
+// render audio 
+//render caption 
+//render nav describe website about what 
+// render HTML empty, prepare for next section 
+
+
+
+
+//center time line  
+//line show up from side and remain until finish 
+
+
