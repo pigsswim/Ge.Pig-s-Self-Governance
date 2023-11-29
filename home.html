@@ -4,26 +4,337 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ge.Pig's Self-Governance</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
     <script defer src="home.js"></script>
 </head>
 <body>
     <nav class="nav" id="nav">
-      <ul id="top">
-        <li class="top-clm" id="home"><a href="./">Home</a></li>
-        <li class="top-clm" id="health"><a href="./health.html">Health</a></li>
-        <li class="top-clm" id="finance"><a href="./finance.html">Finance</a></li>
-        <li class="top-clm" id="cognitivity"><a href="./cognitivity.html" onclick="callCognitivity()">Cognitivity</a></li>
-      </ul>
+      <div class="nav-content">
+        <ul id="top">
+          <li class="top-clm" id="home"><a href="./">Home</a></li>
+          <li class="top-clm" id="health"><a href="./health.html">Health</a></li>
+          <li class="top-clm" id="finance"><a href="./finance.html">Finance</a></li>
+          <li class="top-clm" id="cognitivity"><a href="./cognitivity.html" onclick="callCognitivity()">Cognitivity</a></li>
+        </ul>
+      </div>
+        
+      
     </nav>
+    
 
-  <main id="main">
-    <div id="animation-field" class="animation-field">
-      <button id="root-button" class="root-button" onclick="animateButton()">
-        <span id="root-button-span" class="root-button-span">YEAH</span>
-      </button> 
+  <main id="main" class="main">
+
+    <div id="section-wrapper" class="section-wrapper">
+
+      <!--top  only give one big background-->
+      <section class="home-section" id="home-section-one">
+        <div class="video-title-container" id="video-title-container">
+          <header class="section-header" id="section-header">
+            <h1 id="welcome">Welcome</h1>
+            <div class="section-header-copy-container">
+              <p1 id="i-dont-know">I don't know</p1>
+            </div>
+          </header>
+        </div>
+        
+        <div class="video-container">
+          <div class="video-content-container">
+            <video src="mov_bbb.mp4" src="mov_bbb.ogg" controls>
+            </video>
+            
+          </div>
+          <div class="video-clear"></div>
+          <div class="video-control-container"><button class="video-control-button"></button></div>
+        </div>
+      </section>
+
+      <section class="home-section" id="home-section-two"> 
+
+        <div class="sec-title-container">
+          <div class="title-wrapper" id="healthButtonWrrapper">
+            <div class="title-button-wrapper">
+              <button id="health" class="health-button">
+                <span class="health-button-span">Health</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec-content-container">
+          <div class="content-wrapper">
+            <div class="module-wrapper">
+              <div class="module-content">
+                <div class="unit-wrapper">
+                  <a class="unit-link"></a>
+                  <div class="unit-image-wrapper">
+                    <div class="unit">
+                      <div class="unit-image">
+                        <img>yes
+                      </div>
+                    </div>
+                  </div>
+                  <div class="unit-copy-wrapper">
+                    <div class="unit-title">ok</div>
+                    <div class='unit-desc'>No</div>
+                  </div>
+                </div>
+              </div>    
+            </div>   
+          </div>
+
+          <div class="content-wrapper">
+            <div class="list-wrapper">
+              <div class="module-content">
+                <div class="unit-wrapper">
+                  <a class="unit-link"></a>
+                  <div class="unit-image-wrapper">
+                    <div class="unit">
+                      <div class="unit-image">
+                        <img>yes
+                      </div>
+                    </div>
+                  </div>
+                  <div class="unit-copy-wrapper">
+                    <div class="unit-title">ok</div>
+                    <div class='unit-desc'>No</div>
+                  </div>
+                </div>
+              </div>    
+            </div>
+          </div>
+
+          <div class="content-wrapper">
+            <div class="list-wrapper">
+              <div class="module-content">
+                <div class="unit-wrapper">
+                  <a class="unit-link"></a>
+                  <div class="unit-image-wrapper">
+                    <div class="unit">
+                      <div class="unit-image">
+                        <img>yes
+                      </div>
+                    </div>
+                  </div>
+                  <div class="unit-copy-wrapper">
+                    <div class="unit-title">ok</div>
+                    <div class='unit-desc'>No</div>
+                  </div>
+                </div>
+              </div>    
+            </div>
+          </div>
+
+          <div class="content-wrapper">
+            <div class="list-wrapper">
+              <div class="module-content">
+                <div class="unit-wrapper">
+                  <a class="unit-link"></a>
+                  <div class="unit-image-wrapper">
+                    <div class="unit">
+                      <div class="unit-image">
+                        <img>yes
+                      </div>
+                    </div>
+                  </div>
+                  <div class="unit-copy-wrapper">
+                    <div class="unit-title">ok</div>
+                    <div class='unit-desc'>No</div>
+                  </div>
+                </div>
+              </div>    
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="home-section" id="home-section-three">
+
+        <div class="sec-title-container">
+          <div class="title-wrapper" id="healthButtonWrrapper">
+            <div class="title-button-wrapper">
+              <button id="health" class="health-button">
+                <span class="health-button-span">Education</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec-content-container" id="sec-content-education-container">
+          <div class="content-wrapper">
+            <div class="module-wrapper">
+              <div class="module-content">
+                <div class="unit-wrapper">
+                  <a class="unit-link"></a>
+                  <div class="unit-image-wrapper">
+                    <div class="unit">
+                      <div class="unit-image">
+                        <img>yes
+                      </div>
+                    </div>
+                  </div>
+                  <div class="unit-copy-wrapper">
+                    <div class="unit-title">ok</div>
+                    <div class='unit-desc'>No</div>
+                  </div>
+                </div>
+              </div>    
+            </div>   
+           </div> 
+
+            <div class="content-wrapper">
+              <div class="module-wrapper">
+                <div class="module-content">
+                  <div class="unit-wrapper">
+                    <a class="unit-link"></a>
+                    <div class="unit-image-wrapper">
+                      <div class="unit">
+                        <div class="unit-image">
+                          <img>yes
+                        </div>
+                      </div>
+                    </div>
+                    <div class="unit-copy-wrapper">
+                      <div class="unit-title">ok</div>
+                      <div class='unit-desc'>No</div>
+                    </div>
+                  </div>
+                </div>    
+              </div>  
+            </div>  
+        </div>
+      </section>
+
+      <section class="home-section" id="home-section-four">
+
+        <div class="sec-title-container" >
+          <div class="title-wrapper" id="healthButtonWrrapper">
+            <div class="title-button-wrapper">
+              <button id="health" class="health-button">
+                <span class="health-button-span">Finance</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec-content-container" id="sec-content-finance-container">
+          <div class="content-wrapper">
+            <div class="module-wrapper">
+              <div class="module-content">
+                <div class="unit-wrapper">
+                  <a class="unit-link"></a>
+                  <div class="unit-image-wrapper">
+                    <div class="unit">
+                      <div class="unit-image">
+                        <img>yes
+                      </div>
+                    </div>
+                  </div>
+                  <div class="unit-copy-wrapper">
+                    <div class="unit-title">ok</div>
+                    <div class='unit-desc'>No</div>
+                  </div>
+                </div>
+              </div>    
+            </div>   
+          </div>
+
+             <div class="content-wrapper">
+              <div class="module-wrapper">
+                <div class="module-content">
+                  <div class="unit-wrapper">
+                    <a class="unit-link"></a>
+                    <div class="unit-image-wrapper">
+                      <div class="unit">
+                        <div class="unit-image">
+                          <img>yes
+                        </div>
+                      </div>
+                    </div>
+                    <div class="unit-copy-wrapper">
+                      <div class="unit-title">ok</div>
+                      <div class='unit-desc'>No</div>
+                    </div>
+                  </div>
+                </div>    
+              </div>   
+             </div> 
+
+             <div class="content-wrapper">
+              <div class="module-wrapper">
+                <div class="module-content">
+                  <div class="unit-wrapper">
+                    <a class="unit-link"></a>
+                    <div class="unit-image-wrapper">
+                      <div class="unit">
+                        <div class="unit-image">
+                          <img>yes
+                        </div>
+                      </div>
+                    </div>
+                    <div class="unit-copy-wrapper">
+                      <div class="unit-title">ok</div>
+                      <div class='unit-desc'>No</div>
+                    </div>
+                  </div>
+                </div>    
+              </div>   
+             </div> 
+
+             <div class="content-wrapper">
+              <div class="module-wrapper">
+                <div class="module-content">
+                  <div class="unit-wrapper">
+                    <a class="unit-link"></a>
+                    <div class="unit-image-wrapper">
+                      <div class="unit">
+                        <div class="unit-image">
+                          <img>yes
+                        </div>
+                      </div>
+                    </div>
+                    <div class="unit-copy-wrapper">
+                      <div class="unit-title">ok</div>
+                      <div class='unit-desc'>No</div>
+                    </div>
+                  </div>
+                </div>    
+              </div>   
+             </div> 
+
+             <div class="content-wrapper">
+              <div class="module-wrapper">
+                <div class="module-content">
+                  <div class="unit-wrapper">
+                    <a class="unit-link"></a>
+                    <div class="unit-image-wrapper">
+                      <div class="unit">
+                        <div class="unit-image">
+                          <img>yes
+                        </div>
+                      </div>
+                    </div>
+                    <div class="unit-copy-wrapper">
+                      <div class="unit-title">ok</div>
+                      <div class='unit-desc'>No</div>
+                    </div>
+                  </div>
+                </div>    
+              </div>   
+             </div>
+
+        </div>
+
+      </section>
+
     </div>
+   
   </main>
+
+  <footer>
+
+
+  </footer>
 
 
   
