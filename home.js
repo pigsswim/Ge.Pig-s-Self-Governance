@@ -2,9 +2,10 @@
 const healthSection = document.getElementById('home-section-two');
 const educationSection = document.getElementById('home-section-three');
 const financeSection = document.getElementById('home-section-four');
-healthSection.style.opacity = '0';
-educationSection.style.opacity = '0';
-financeSection.style.opacity = '0';
+//healthSection.style.opacity = '0';
+//educationSection.style.opacity = '0';
+//financeSection.style.opacity = '0';
+let pos = 0;
 
 
 function setActive() {
@@ -30,7 +31,7 @@ function hideNav () {
   nav.style.display = 'none';
 }
 
-hideNav();
+//hideNav();
 
 //hide unneeded sections
 function hideHomeSection () {
@@ -39,15 +40,44 @@ function hideHomeSection () {
 
 function showHealthSection () {
   healthSection.style.opacity = "1";
+  healthSection.style.animationName = 'homeSectionAppear';
+  healthSection.style.animationDuration = '2s';
 }
 
-setTimeout(showHealthSection, 6000);
+//setTimeout(showHealthSection, 6000);
 
 function scrollScreen () {
-  window.scrollBy(0,548);
+  if (pos == 1000) {
+    clearInterval(scrollScreen);
+  }else {
+    pos++;
+    window.scrollBy(0,pos/700);
+  }
 }
 
-setTimeout(scrollScreen,5000)
+function scrollToHealth () {
+  setInterval(scrollScreen,1);
+}
+
+//setTimeout(scrollToHealth, 5000);
+
+class Sections {
+  constructor (buttonName, buttonSection) {
+    this.buttonName = buttonName;
+    this.buttonSection = buttonSection;
+  }
+
+  goToSection () {
+    return this.buttonSection;
+  }
+}
+  
+const health = new Sections();
+
+
+
+
+
 
 
 // homepage one section in the middle 
