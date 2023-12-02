@@ -17,7 +17,7 @@ body {
 }
 
 nav {
-  z-index: 9999;
+  z-index: 99;
   width: 100%;
   min-width: 320px;
   height: 48px;
@@ -29,6 +29,7 @@ nav {
   position: fixed;
   left: 0;
   right: 0;
+  background-color: black;;
 }
 
 
@@ -48,7 +49,7 @@ nav {
     padding-inline-start: 22px;
     display: block;
     direction: ltr;
-    max-width: 544px;
+    max-width: 400px;
 }
 
 ul {
@@ -81,7 +82,7 @@ ul {
     text-align: left;
   }
 
- a {
+a {
     color: white;
     align-items: center;
     background-size: auto;
@@ -101,11 +102,15 @@ ul {
     text-wrap: nowrap;
   }
 
+  #nav-item-fishhead {
+    height: 48px;
+  }
+
 nav,
 .nav-content,
 ul,
 li,
-a {
+.nav-link {
     animation-name: navdrop;
     animation-duration: 2s;
 }
@@ -124,7 +129,7 @@ main {
    min-height: 100%;
    -webkit-font-smoothing: antialiased;
    position: relative;
-   padding-top: 44px;
+   padding-top: 48px;
 }
 
 .home-section, 
@@ -142,12 +147,12 @@ main {
 }
 
 #home-section-one {
-    animation-name:homeSectionOneAppear;
+    animation-name:homeSectionAppear;
     animation-duration: 2s;
     background: black;
 }
 
-@keyframes homeSectionOneAppear {
+@keyframes homeSectionAppear {
     from {opacity: 0;}
     to {opacity: 1;}
 }
@@ -178,15 +183,15 @@ main {
 
 video {
     animation-name: videoAppear;
-    animation-duration: 1s;
+    animation-duration: 3s;
 }
 
 @keyframes videoAppear {
-    from {height:0;}
-    to {height:320px;}
+    0% {opacity: 0;}
+    50% {opacity:0;}
+    100% {opacity: 1;}
     
 }
-
 
 .home-section {
     background-color: green;
@@ -197,7 +202,8 @@ video {
     position: relative;
     width: 100%;
     z-index: 42;
-    height: 500px;
+    display: flex;
+    flex-direction: column;
 }
 
 .title-wrapper1 {
@@ -228,10 +234,15 @@ button {
     color: white;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .sec-content-container {
     display: grid;
     column-gap: 12px;
     grid-template-columns: repeat(4,1fr);
+    justify-items: stretch;
     line-height: 25px;
     position: relative;
     column-gap: 12px;
@@ -244,68 +255,105 @@ button {
     padding-right: 56px;
     padding-top: 24px;
     padding-bottom: 24px;
+    height: 100%;
 }
 
+@media screen and (max-width: 1000px) {
+    .sec-content-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
 
+@media screen and (max-width: 500px) {
+    .sec-content-container {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
 
+.module-wrapper,
 .module-content {
-    display: block;
-    height: 500px;
+    height: 100%;
     line-height: 25px;
-    padding-top: 44px;
     position: relative;
     background-color: orange;
 }
 
 .unit-wrapper {
     display: flex;
-    flex-direction: column;;
-    height: 500px;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
     position: relative;
-    text-align: left;
+    text-align: center;
+    background-color: green;
+    z-index: 10;
 }
 
 .unit-link {
     cursor: pointer;
-    height: 490px;
+    display: block;
+    height: 100%;
+    width: 100%;
     left: 0;
+    z-index: 4;
+    position: absolute;
+    padding: 0px;
 }
 
 .unit-image-wrapper {
     display: block;
     position: relative;
     text-align: center;
+    padding-bottom: 100%;
 }
 
 .unit {
     display: block;
     overflow: hidden;
     text-align: center;
+    height: 100%;
+    width: 100%;
 }
 
 .unit-image {
     display: block;
     position: absolute;
     text-align: center;
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
+}
+
+.fishhead {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
 }
 
 .unit-copy-wrapper {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     padding: 30px;
+    z-index:3;
     position: relative;
     text-align: center;
-    z-index: 45;
     background: brown;
 }
 
 .unit-title {
     display: block;
     text-align: center;
+    font-size: 18px;
+}
+
+.unit-desc {
+    display: block;
+    text-align: center;
+    font-size: 14px;
 }
 
 
@@ -375,3 +423,303 @@ button {
     box-sizing: content-box;
     display: flex;
 }
+
+
+#graphics {
+    background-color: black;
+}
+
+#graphics {
+    padding: 40px;
+}
+
+.graphics-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    overflow: hidden;
+    gap: 5px;
+    height: 100%;
+    width: 100%;
+    background: pink;
+}
+
+.graphics-container1,
+.graphics-container2,
+.graphics-container3 {
+    background-color: yellow;
+    display: grid;
+    grid-template-rows: repeat(34,1fr) ;
+}
+
+.graphics-container1 {
+    background-color: blue;
+}
+
+.graphics-container2 {
+    font-size: 20px;
+}
+
+.graphics-container3 {
+    background-color: aqua;
+}
+
+#row1,
+#row2,
+#row3,
+#row4,
+#row5,
+#row6,
+#row7,
+#row8,
+#row9,
+#row10,
+#row11,
+#row12,
+#row13,
+#row14,
+#row15,
+#row16,
+#row17,
+#row18,
+#row19,
+#row20,
+#row21,
+#row22,
+#row23,
+#row24,
+#row25,
+#row26,
+#row27,
+#row28,
+#row29,
+#row30,
+#row31,
+#row32,
+#row33,
+#row34 {
+    width: 100%;
+    background-color: orange;
+    display: grid;
+    grid-template-columns: repeat(34,1fr);
+}
+
+
+#row34 {
+    font-size:20px;
+}
+
+#row28 .item1,
+#row28 .item2,
+#row28 .item3,
+#row28 .item4,
+#row28 .item5,
+#row28 .item6,
+#row29 .item1,
+#row29 .item2,
+#row29 .item3,
+#row29 .item4,
+#row29 .item5,
+#row29 .item6,
+#row30 .item1,
+#row30 .item2,
+#row30 .item3,
+#row30 .item4,
+#row30 .item5,
+#row30 .item6,
+#row31 .item1,
+#row31 .item2,
+#row31 .item3,
+#row31 .item4,
+#row31 .item5,
+#row31 .item6,
+#row32 .item1,
+#row32 .item2,
+#row32 .item3,
+#row32 .item4,
+#row32 .item5,
+#row32 .item6,
+#row33 .item1,
+#row33 .item2,
+#row33 .item3,
+#row33 .item4,
+#row33 .item5,
+#row33 .item6,
+#row34 .item1,
+#row34 .item2,
+#row34 .item3,
+#row34 .item4,
+#row34 .item5,
+#row34 .item6 {
+    background-color: grey;
+    animation-name: year;
+    animation-duration: 4s;
+}
+
+@keyframes year {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+#row27 .item7,
+#row27 .item8,
+#row27 .item9,
+#row27 .item10,
+#row27 .item11,
+#row27 .item12, 
+#row26 .item7,
+#row26 .item8,
+#row26 .item9,
+#row26 .item10,
+#row26 .item11,
+#row26 .item12, 
+#row26 .item7,
+#row26 .item8,
+#row26 .item9,
+#row26 .item10,
+#row26 .item11,
+#row26 .item12, 
+#row25 .item7,
+#row25 .item8,
+#row25 .item9,
+#row25 .item10,
+#row25 .item11,
+#row25 .item12, 
+#row24 .item7,
+#row24 .item8,
+#row24 .item9,
+#row24 .item10,
+#row24 .item11,
+#row24 .item12, 
+#row23 .item7,
+#row23 .item8,
+#row23 .item9,
+#row23 .item10,
+#row23 .item11,
+#row23 .item12,
+#row22 .item7,
+#row22 .item8,
+#row22 .item9,
+#row22 .item10,
+#row22 .item11,
+#row22 .item12
+ {
+    background-color:cadetblue;
+}
+
+#row21 .item13,
+#row21 .item14,
+#row21 .item15,
+#row21 .item16,
+#row21 .item17,
+#row21 .item18,
+#row20 .item13,
+#row20 .item14,
+#row20 .item15,
+#row20 .item16,
+#row20 .item17,
+#row20 .item18,
+#row19 .item13,
+#row19 .item14,
+#row19 .item15,
+#row19 .item16,
+#row19 .item17,
+#row19 .item18,
+#row18 .item13,
+#row18 .item14,
+#row18 .item15,
+#row18 .item16,
+#row18 .item17,
+#row18 .item18,
+#row17 .item13,
+#row17 .item14,
+#row17 .item15,
+#row17 .item16,
+#row17 .item17,
+#row17 .item18,
+#row16 .item13,
+#row16 .item14,
+#row16 .item15,
+#row16 .item16,
+#row16 .item17,
+#row16 .item18 {
+    background-color: aquamarine;
+}
+
+#row15 .item19,
+#row15 .item20,
+#row15 .item21,
+#row15 .item22,
+#row14 .item19,
+#row14 .item20,
+#row14 .item21,
+#row14 .item22,
+#row13 .item19,
+#row13 .item20,
+#row13 .item21,
+#row13 .item22,
+#row12 .item19,
+#row12 .item20,
+#row12 .item21,
+#row12 .item22 {
+    background-color:darkcyan;
+}
+
+#row11 .item23,
+#row11 .item24,
+#row11 .item25,
+#row11 .item26,
+#row10 .item23,
+#row10 .item24,
+#row10 .item25,
+#row10 .item26,
+#row9 .item23,
+#row9 .item24,
+#row9 .item25,
+#row9 .item26,
+#row8 .item23,
+#row8 .item24,
+#row8 .item25,
+#row8 .item26 {
+    background-color: darkolivegreen;
+}
+
+#row7 .item27,
+#row7 .item28,
+#row7 .item29,
+#row7 .item30,
+#row7 .item31,
+#row7 .item32,
+#row6 .item27,
+#row6 .item28,
+#row6 .item29,
+#row6 .item30,
+#row6 .item31,
+#row6 .item32,
+#row5 .item27,
+#row5 .item28,
+#row5 .item29,
+#row5 .item30,
+#row5 .item31,
+#row5 .item32,
+#row4 .item27,
+#row4 .item28,
+#row4 .item29,
+#row4 .item30,
+#row4 .item31,
+#row4 .item32,
+#row3 .item27,
+#row3 .item28,
+#row3 .item29,
+#row3 .item30,
+#row3 .item31,
+#row3 .item32,
+#row2 .item27,
+#row2 .item28,
+#row2 .item29,
+#row2 .item30,
+#row2 .item31,
+#row2 .item32 {
+    background-color:darkslategrey;
+}
+
+
