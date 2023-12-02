@@ -1,7 +1,7 @@
 html,
 body {
   box-sizing: border-box;
-  background-color: #f2edd8;
+  background-color: black/*#f2edd8*/;
   color: white;
   display: flex;
   flex-direction: column;
