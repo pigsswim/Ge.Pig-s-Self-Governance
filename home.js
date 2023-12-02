@@ -61,18 +61,8 @@ function scrollToHealth () {
 
 //setTimeout(scrollToHealth, 5000);
 
-class Sections {
-  constructor (buttonName, buttonSection) {
-    this.buttonName = buttonName;
-    this.buttonSection = buttonSection;
-  }
+//color animation 
 
-  goToSection () {
-    return this.buttonSection;
-  }
-}
-  
-const health = new Sections();
 
 
 
