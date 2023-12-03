@@ -440,13 +440,13 @@ button:hover {
     gap: 5px;
     height: 100%;
     width: 100%;
-    background: pink;
+    /*background: pink;*/
 }
 
 .graphics-container1,
 .graphics-container2,
 .graphics-container3 {
-    background-color: yellow;
+   /* background-color: yellow;*/
     display: grid;
     grid-template-rows: repeat(34,1fr) ;
 }
@@ -498,7 +498,7 @@ button:hover {
 #row33,
 #row34 {
     width: 100%;
-    background-color: orange;
+    /*background-color: orange;*/
     display: grid;
     grid-template-columns: repeat(34,1fr);
 }
@@ -506,6 +506,19 @@ button:hover {
 
 #row34 {
     font-size:20px;
+}
+
+@keyframes appear1998 {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+#row27 .item1,
+#row27 .item2,
+#row27 .item3,
+#row27 .item4 {
+  animation-name: appear1998;
+  animation-duration: 4s;
 }
 
 #row28 .item1,
@@ -550,14 +563,24 @@ button:hover {
 #row34 .item4,
 #row34 .item5,
 #row34 .item6 {
-    background-color: grey;
-    animation-name: year;
-    animation-duration: 4s;
+    /*background-color: white;*/
+    animation-name: appear1998p2;
+    animation-duration: 12s;
+
 }
 
-@keyframes year {
-    from {opacity:0;}
-    to {opacity:1;}
+@keyframes appear1998p2 {
+    0% {opacity: 0}
+    34% {opacity: 0}
+    100% {opacity: 1}
+}
+
+#row21 .item1,
+#row21 .item2,
+#row21 .item3,
+#row21 .item4 {
+  animation-name: appear1998;
+  animation-duration: 4s;
 }
 
 #row27 .item7,
@@ -603,7 +626,7 @@ button:hover {
 #row22 .item11,
 #row22 .item12
  {
-    background-color:cadetblue;
+    /*background-color:#4E7540;*/
 }
 
 #row21 .item13,
@@ -642,7 +665,7 @@ button:hover {
 #row16 .item16,
 #row16 .item17,
 #row16 .item18 {
-    background-color: aquamarine;
+    /*background-color: #D96704;*/
 }
 
 #row15 .item19,
@@ -661,7 +684,7 @@ button:hover {
 #row12 .item20,
 #row12 .item21,
 #row12 .item22 {
-    background-color:darkcyan;
+    /*background-color:#F2A341;*/
 }
 
 #row11 .item23,
@@ -680,7 +703,7 @@ button:hover {
 #row8 .item24,
 #row8 .item25,
 #row8 .item26 {
-    background-color: darkolivegreen;
+   /* background-color: #D93D86;*/
 }
 
 #row7 .item27,
@@ -719,7 +742,20 @@ button:hover {
 #row2 .item30,
 #row2 .item31,
 #row2 .item32 {
-    background-color:darkslategrey;
+   /* background-color:#731D45;*/
 }
 
+canvas {
+    position: absolute;
+    height:100%;
+    width: 100%;
+    background-color: red;
+    opacity: 0.2;
+    border: none;
+    z-index: 0;
+}
 
+.png {
+    width: 100%;
+    height: 100%;
+}
