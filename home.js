@@ -322,4 +322,4 @@ function hideContainer () {
   ctn3.style.opacity = '0';
 }
 
-hideContainer();
+//hideContainer();
