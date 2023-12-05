@@ -130,6 +130,7 @@ main {
    -webkit-font-smoothing: antialiased;
    position: relative;
    padding-top: 48px;
+   z-index: 1;
 }
 
 .home-section, 
@@ -440,7 +441,7 @@ button:hover {
     gap: 5px;
     height: 100%;
     width: 100%;
-    /*background: pink;*/
+    min-width: 650px;
 }
 
 .graphics-container1,
@@ -462,6 +463,7 @@ button:hover {
 .graphics-container3 {
     background-color: aqua;
 }
+
 
 #row1,
 #row2,
@@ -508,18 +510,46 @@ button:hover {
     font-size:20px;
 }
 
-@keyframes appear1998 {
-    from {opacity:0;}
-    to {opacity:1;}
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6,
+.item7,
+.item8,
+.item9,
+.item10,
+.item11,
+.item12,
+.item13,
+.item14,
+.item15,
+.item16,
+.item17,
+.item18,
+.item19,
+.item20,
+.item21,
+.item22,
+.item23,
+.item24,
+.item25,
+.item26,
+.item27,
+.item28,
+.item29,
+.item30,
+.item31,
+.item32,
+.item33,
+.item34 {
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
 
-#row27 .item1,
-#row27 .item2,
-#row27 .item3,
-#row27 .item4 {
-  animation-name: appear1998;
-  animation-duration: 4s;
-}
+
 
 #row28 .item1,
 #row28 .item2,
@@ -747,9 +777,10 @@ button:hover {
 
 canvas {
     position: absolute;
+    box-sizing: border-box;
     height:100%;
     width: 100%;
-    background-color: red;
+
     opacity: 0.2;
     border: none;
     z-index: 0;
@@ -758,6 +789,122 @@ canvas {
 .png {
     width: 100%;
     height: 100%;
+}
+
+#row1 .item1,
+#row1 .item2,
+#row1 .item3,
+#row1 .item5,
+#row1 .item6,
+#row1 .item7,
+#row1 .item8,
+#row1 .item9,
+#row1 .item10,
+#row1 .item11,
+#row1 .item13,
+#row1 .item14,
+#row1 .item15,
+#row1 .item16,
+#row1 .item17,
+#row1 .item18,
+#row1 .item19,
+#row1 .item20,
+#row1 .item21,
+#row1 .item22,
+#row1 .item23 {
+    background-image:linear-gradient(to bottom right, #781714,#002855);
+    border-radius: 6px;
+}
+
+#row2 .item1,
+#row2 .item2,
+#row2 .item3,
+#row2 .item4 {
+    background-image:linear-gradient(to bottom right, #781714,#002855);
+    border-radius: 6px;
+}
+
+#row2 .item1,
+#row2 .item2,
+#row2 .item3,
+#row2 .item4 {
+   /* background-color:#cccccc; */
+}
+
+#row4 .item1,
+#row4 .item2,
+#row4 .item3,
+#row4 .item4,
+#row4 .item5,
+#row4 .item6,
+#row4 .item7,
+#row4 .item9,
+#row4 .item10,
+#row4 .item11,
+#row4 .item12,
+#row4 .item13,
+#row4 .item14,
+#row4 .item15,
+#row4 .item16 {
+    color:#c6ba73;
+    background-color:white;
+    border-radius: 6px;
+}
+
+#row5 .item1,
+#row5 .item2,
+#row5 .item3,
+#row5 .item4,
+#row5 .item5,
+#row5 .item6,
+#row5 .item7,
+#row5 .item8,
+#row5 .item10,
+#row5 .item11,
+#row5 .item12,
+#row5 .item13,
+#row5 .item14,
+#row5 .item15,
+#row5 .item16,
+#row5 .item17,
+#row5 .item18,
+#row5 .item19,
+#row5 .item20 {
+    color:#c6ba73;
+    background-color:white;
+    border-radius: 6px;
+}
+
+#row6 .item1,
+#row6 .item2,
+#row6 .item4,
+#row6 .item5,
+#row6 .item7,
+#row6 .item8,
+#row6 .item10,
+#row6 .item11,
+#row6 .item13,
+#row6 .item14,
+#row6 .item15,
+#row6 .item16,
+#row6 .item18,
+#row6 .item19,
+#row6 .item20,
+#row6 .item21,
+#row6 .item22,
+#row6 .item23,
+#row6 .item24 {
+    color:#c6ba73;
+    background-color:white;
+    border-radius: 6px;
+}
+
+#row7 .item1,
+#row7 .item2,
+#row7 .item3,
+#row7 .item4 {
+   background-color:#c6ba73;
+   border-radius: 6px;
 }
 
 #row8 .item1,
@@ -781,7 +928,52 @@ canvas {
 #row8 .item19,
 #row8 .item20,
 #row8 .item21 {
-    background-color: #781714; 
+    color:#781714;
+    background-color:white;
+    border-radius: 6px;
+}
+
+#row8 .item28,
+#row9 .item28,
+#row10 .item28,
+#row11 .item28,
+#row12 .item28,
+#row13 .item28,
+#row14 .item28,
+#row15 .item28 {
+    background-color:#002855; 
+    border-radius: 6px;
+}
+
+#row8 .item30,
+#row9 .item30,
+#row11 .item30,
+#row12 .item30 {
+    background-color:#002855; 
+    border-radius: 6px;
+}
+
+#row8 .item32,
+#row9 .item32,
+#row10 .item32,
+#row11 .item32,
+#row12 .item32,
+#row13 .item32,
+#row14 .item32,
+#row15 .item32 {
+    background-color:#002855; 
+    border-radius: 6px;
+}
+
+#row8 .item34,
+#row9 .item34,
+#row10 .item34,
+#row11 .item34,
+#row12 .item34, 
+#row13 .item34,
+#row14 .item34 {
+    background-color:#002855; 
+    border-radius: 6px;
 }
 
 #row9 .item1,
@@ -798,8 +990,12 @@ canvas {
 #row9 .item12,
 #row9 .item13,
 #row9 .item14 {
-    background-color: #781714; 
+    color:#781714;
+    background-color:white;
+    border-radius: 6px; 
 }
+
+
 
 #row10 .item1,
 #row10 .item2,
@@ -810,7 +1006,19 @@ canvas {
 #row10 .item7,
 #row10 .item8,
 #row10 .item9 {
-    background-color: #781714; 
+    color:#781714;
+    background-color:white;
+    border-radius: 6px;
+}
+
+
+
+#row11 .item1,
+#row11 .item2,
+#row11 .item3,
+#row11 .item4 {
+    background-color:#781714; 
+    border-radius: 6px;
 }
 
 #row12 .item1,
@@ -826,34 +1034,39 @@ canvas {
 #row12 .item11,
 #row12 .item12,
 #row12 .item13 {
-    background-color: #781714; 
+    color:#d9c3c6;
+    background-color:white;
+    border-radius: 6px;
+}
+
+#row12 .item25,
+#row13 .item25,
+#row14 .item25,
+#row15 .item25,
+#row16 .item25,
+#row17 .item25,
+#row18 .item25 {
+    background-color: #d9c3c6; 
+    border-radius: 6px;
 }
 
 #row12 .item23,
-#row12 .item24,
-#row12 .item25,
-#row12 .item26 {
+#row13 .item23,
+#row14 .item23,
+#row15 .item23 {
     background-color:#d9c3c6; 
+    border-radius: 6px;
 }
 
-#row12 .item28,
-#row12 .item29,
-#row12 .item30,
-#row12 .item31,
-#row12 .item32,
-#row12 .item33,
-#row12 .item34 {
+#row12 .item27,
+#row13 .item27,
+#row14 .item27,
+#row15 .item27,
+#row16 .item27,
+#row17 .item27,
+#row18 .item27 {
     background-color:#d9c3c6; 
-}
-
-#row13 .item31,
-#row13 .item32 {
-    background-color:#d9c3c6; 
-}
-
-#row13 .item31,
-#row13 .item32 {
-    background-color:#d9c3c6; 
+    border-radius: 6px;
 }
 
 #row13 .item1,
@@ -872,22 +1085,27 @@ canvas {
 #row13 .item14,
 #row13 .item15,
 #row13 .item16 {
-    background-color:#781714; 
+    color:#d9c3c6;
+    background-color:white;
+    border-radius: 6px; 
 }
 
-#row13 .item23,
-#row13 .item24,
-#row13 .item25,
-#row13 .item26,
-#row13 .item27,
-#row13 .item28,
-#row13 .item29 {
+#row12 .item29,
+#row13 .item29{
     background-color:#d9c3c6; 
+    border-radius: 6px;
 }
 
+#row12 .item31,
 #row13 .item31,
-#row13 .item32 {
+#row14 .item31,
+#row15 .item31,
+#row16 .item31,
+#row17 .item31,
+#row18 .item31,
+#row19 .item31 {
     background-color:#d9c3c6; 
+    border-radius: 6px;
 }
 
 #row14 .item1,
@@ -896,178 +1114,17 @@ canvas {
 #row14 .item4,
 #row14 .item5,
 #row14 .item6 {
-    background-color:#781714; 
+    color:#d9c3c6;
+    background-color:white;
+    border-radius: 6px;
 }
 
-#row14 .item23,
-#row14 .item24,
-#row14 .item25,
-#row14 .item26,
-#row14 .item27,
-#row14 .item28,
-#row14 .item29,
-#row14 .item30,
-#row14 .item31,
-#row14 .item32,
-#row14 .item33,
-#row14 .item34 {
-    background-color:#d9c3c6; 
-}
-
-
-
-#row17 .item1,
-#row17 .item2,
-#row17 .item3,
-#row17 .item4,
-#row17 .item5,
-#row17 .item6,
-#row17 .item7,
-#row17 .item8,
-#row17 .item9,
-#row17 .item10,
-#row17 .item11 {
-    background-color:#781714; 
-}
-
-#row18 .item1,
-#row18 .item2,
-#row18 .item3,
-#row18 .item4,
-#row18 .item5 {
-    background-color:#294221; 
-}
-
-#row19 .item1,
-#row19 .item2,
-#row19 .item3,
-#row19 .item4,
-#row19 .item5,
-#row19 .item6,
-#row19 .item7 {
-    background-color:#d9c3c6; 
-}
-
-#row20 .item1,
-#row20 .item2,
-#row20 .item3,
-#row20 .item4,
-#row20 .item5,
-#row20 .item6 {
-    background-color:#c6ba73; 
-}
-
-#row21 .item1,
-#row21 .item2,
-#row21 .item3,
-#row21 .item4 {
-    background-color:#212121; 
-}
-
-#row24 .item1,
-#row24 .item2,
-#row24 .item3,
-#row24 .item4,
-#row24 .item5 {
-    background-color:#002855; 
-}
-
-#row25 .item1,
-#row25 .item2,
-#row25 .item3,
-#row25 .item4,
-#row25 .item5 {
-    background-color:#781714; 
-}
-
-#row26 .item1,
-#row26 .item2,
-#row26 .item3,
-#row26 .item4,
-#row26 .item5,
-#row26 .item6 {
-    background-color:#294221; 
-} 
-
-#row27 .item1,
-#row27 .item2,
-#row27 .item3,
-#row27 .item4 {
-    background-color:#d9c3c6; 
-} 
-
-#row22 .item15,
-#row23 .item15,
-#row24 .item15,
-#row25 .item15,
-#row26 .item15 {
-    background-color:#d9c3c6;
-}
-
-
-#row22 .item17,
-#row23 .item17,
-#row24 .item17,
-#row25 .item17 {
-    background-color:#294221;
-}
-
-#row22 .item19,
-#row23 .item19,
-#row24 .item19,
-#row25 .item19,
-#row26 .item19,
-#row27 .item19,
-#row28 .item19 {
-    background-color:#781714;
-}
-
-#row22 .item21,
-#row23 .item21,
-#row24 .item21,
-#row25 .item21,
-#row26 .item21,
-#row27 .item21{
-    background-color:#781714;
-}
-
-#row22 .item23,
-#row23 .item23,
-#row24 .item23,
-#row25 .item23,
-#row26 .item23 {
-    background-color:#781714;
-}
-
-
-#row22 .item25,
-#row23 .item25,
-#row24 .item25,
-#row25 .item25,
-#row26 .item25 {
-    background-color:#781714;
-}
-
-#row22 .item27,
-#row23 .item27,
-#row24 .item27 {
-    background-color:#781714;
-}
-
-#row22 .item29,
-#row23 .item29,
-#row24 .item29,
-#row25 .item29,
-#row26 .item29 {
-    background-color:#781714;
-}
-
-#row22 .item31,
-#row23 .item31,
-#row24 .item31,
-#row25 .item31,
-#row26 .item31 {
-    background-color:#781714;
+#row15 .item1, 
+#row15 .item2, 
+#row15 .item3, 
+#row15 .item4 {
+   background-color:#d9c3c6; 
+   border-radius: 6px;
 }
 
 #row16 .item20,
@@ -1075,6 +1132,7 @@ canvas {
 #row18 .item20,
 #row19 .item20 {
     background-color:#294221;
+    border-radius: 6px;
 }
 
 #row16 .item22,
@@ -1085,6 +1143,7 @@ canvas {
 #row21 .item22,
 #row22 .item22 {
     background-color:#294221;
+    border-radius: 6px;
 }
 
 #row16 .item24,
@@ -1095,6 +1154,7 @@ canvas {
 #row21 .item24,
 #row22 .item24 {
     background-color:#294221;
+    border-radius: 6px;
 }
 
 #row16 .item26,
@@ -1107,12 +1167,14 @@ canvas {
 #row23 .item26,
 #row24 .item26 {
     background-color:#294221;
+    border-radius: 6px;
 }
 
 #row16 .item28,
 #row17 .item28,
 #row18 .item28 {
     background-color:#294221;
+    border-radius: 6px;
 }
 
 #row16 .item30,
@@ -1128,7 +1190,192 @@ canvas {
 #row26 .item30,
 #row27 .item30 {
     background-color:#294221;
+    border-radius: 6px;
 }
 
 
+
+#row17 .item1,
+#row17 .item2,
+#row17 .item3,
+#row17 .item4,
+#row17 .item5,
+#row17 .item6,
+#row17 .item7,
+#row17 .item8,
+#row17 .item9,
+#row17 .item10,
+#row17 .item11 {
+    color:#002855;
+    background-color:white;
+    border-radius: 6px;
+}
+
+#row18 .item1,
+#row18 .item2,
+#row18 .item3,
+#row18 .item4,
+#row18 .item5 {
+    color:#002855;
+    background-color:white;
+    border-radius: 6px;
+}
+
+#row19 .item1,
+#row19 .item2,
+#row19 .item3,
+#row19 .item4,
+#row19 .item5,
+#row19 .item6,
+#row19 .item7 {
+    color:#002855;
+    background-color:white;
+    border-radius: 6px; 
+}
+
+#row20 .item1,
+#row20 .item2,
+#row20 .item3,
+#row20 .item4,
+#row20 .item5,
+#row20 .item6 {
+    color:#002855;
+    background-color:white;
+    border-radius: 6px;
+}
+
+#row21 .item1,
+#row21 .item2,
+#row21 .item3,
+#row21 .item4 {
+    background-color:#002855; 
+    border-radius: 6px;
+}
+
+#row24 .item1,
+#row24 .item2,
+#row24 .item3,
+#row24 .item4,
+#row24 .item5 {
+    color:#294221;
+    background-color:white;
+    border-radius: 6px; 
+}
+
+#row25 .item1,
+#row25 .item2,
+#row25 .item3,
+#row25 .item4,
+#row25 .item5 {
+    color:#294221;
+    background-color:white;
+    border-radius: 6px;
+}
+
+#row26 .item1,
+#row26 .item2,
+#row26 .item3,
+#row26 .item4,
+#row26 .item5,
+#row26 .item6 {
+    color:#294221;
+    background-color:white;
+    border-radius: 6px;
+} 
+
+#row22 .item15,
+#row23 .item15,
+#row24 .item15,
+#row25 .item15,
+#row26 .item15,
+#row27 .item15,
+#row28 .item15 {
+    background-color:#781714;
+    border-radius: 6px;
+}
+
+
+#row22 .item17,
+#row23 .item17,
+#row24 .item17,
+#row25 .item17 {
+    background-color:#781714;
+    border-radius: 6px;
+}
+
+#row22 .item19,
+#row23 .item19,
+#row24 .item19,
+#row25 .item19,
+#row26 .item19,
+#row27 .item19,
+#row28 .item19 {
+    background-color:#781714;
+    border-radius: 6px;
+}
+
+#row22 .item21,
+#row23 .item21,
+#row24 .item21,
+#row25 .item21,
+#row26 .item21,
+#row27 .item21{
+    background-color:#781714;
+    border-radius: 6px;
+}
+
+#row22 .item23,
+#row23 .item23,
+#row24 .item23,
+#row25 .item23,
+#row26 .item23,
+#row27 .item23,
+#row28 .item23  {
+    background-color:#781714;
+    border-radius: 6px;
+}
+
+
+#row22 .item25,
+#row23 .item25,
+#row24 .item25,
+#row25 .item25,
+#row26 .item25,
+#row27 .item25,
+#row28 .item25,
+#row29 .item25 {
+    background-color:#781714;
+    border-radius: 6px;
+}
+
+#row22 .item27,
+#row23 .item27,
+#row24 .item27 {
+    background-color:#781714;
+    border-radius: 6px;
+}
+
+#row22 .item29,
+#row23 .item29,
+#row24 .item29,
+#row25 .item29,
+#row26 .item29 {
+    background-color:#781714;
+    border-radius: 6px;
+}
+
+#row27 .item1,
+#row27 .item2,
+#row27 .item3,
+#row27 .item4 {
+    animation-name: appear1998;
+    animation-duration: 4s;
+    background-color:#294221;
+    border-radius: 6px;
+} 
+
+@keyframes appear1998 {
+    from {opacity:0;}
+    to {opacity:1;}
+}
 
