@@ -1246,6 +1246,23 @@ canvas {
     border-radius: 6px;
 }
 
+
+
+#row22 .item17 p,
+#row23 .item17 p,
+#row24 .item17 p,
+#row25 .item17 p{
+    animation-name: d-fontColor;
+    animation-duration: 560s;
+}
+
+@keyframes d-fontColor {
+    0% {opacity: 0;color:black;}
+    2% {opacity: 0;color:black;}
+    3% {opacity: 1;color:white;}
+    100% {opacity: 1;color:white;}
+}
+
 #row22 .item19,
 #row23 .item19,
 #row24 .item19,
@@ -1305,46 +1322,6 @@ canvas {
 #row26 .item29 {
     background-image:linear-gradient(to bottom right,lightgrey,#c6ba73);
     border-radius: 6px;
-}
-
-#row22 .item17 p,
-#row23 .item17 p,
-#row24 .item17 p,
-#row25 .item17 p{
-    animation-name: d-fontColor;
-    animation-duration: 560s;
-}
-
-@keyframes d-fontColor {
-    0% {opacity: 0;color:black;}
-    2% {opacity: 0;color:black;}
-    3% {opacity: 1;color:white;}
-    100% {opacity: 1;color:white;}
-}
-
-#row22 .item17,
-#row23 .item17,
-#row24 .item17,
-#row25 .item17 {
-    animation-name: d_appear;
-    animation-duration: 560s;
-}
-
-@keyframes d_appear {
-    0%{
-        opacity: 0;
-    }
-    3%{
-        opacity:0;
-    }
-
-    4% {
-        opacity:1;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }
 
 #row17 .item18 {
