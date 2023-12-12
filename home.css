@@ -726,7 +726,6 @@ canvas {
     width: 100%;
     opacity:0;
     border:none;
-    z-index: 0;
 }
 
 .png {
@@ -1217,8 +1216,8 @@ canvas {
 
 @keyframes d_appear6 {
     0% {opacity: 0;}
-    7% {opacity: 0;}
-    8% {opacity:1;}
+    6% {opacity: 0;}
+    7% {opacity:1;}
     100% {opacity: 1;}
 }
 
@@ -1228,11 +1227,12 @@ canvas {
 #row24 .item12,
 #row24 .item7,
 #row23 .item8,
-#row22 .item9,
 #row23 .item7,
-#row22 .item8 {
+#row22 .item9,
+#row22 .item8,
+#row22 .item7 {
     animation-name: d_appear6;
-    animation-duration: 560s;
+    animation-duration: 300s;
 }
 
 #row22 .item29,
@@ -1250,8 +1250,8 @@ canvas {
 }
 @keyframes d_appear7 {
     0% {opacity: 0;}
-    8% {opacity: 0;}
-    9% {opacity:1;}
+    6% {opacity: 0;}
+    7% {opacity:1;}
     100% {opacity: 1;}
 }
 
@@ -1627,18 +1627,18 @@ canvas {
 
 #row27 .item12 {
     animation-name: d_slideFromRight11 ;
-    animation-duration: 560s;
+    animation-duration: 300s;
 }
 
 @keyframes d_slideFromRight11 {
     0%{
         transform: translateX(80vw);
     }
-    4%{
+    6%{
         transform: translateX(80vw);
     }
 
-    5% {
+    7% {
         transform: translateY(0);
     }
 
@@ -1650,18 +1650,18 @@ canvas {
 
 #row26 .item12 {
     animation-name: d_slideFromBottom1;
-    animation-duration: 560s;
+    animation-duration: 300s;
 }
 
 @keyframes d_slideFromBottom1 {
     0%{
         transform: translateY(-80vw);
     }
-    4%{
+    6%{
         transform: translateY(-80vw);
     }
 
-    5% {
+    7% {
         transform: translateY(0);
     }
 
@@ -1673,18 +1673,18 @@ canvas {
 
 #row27 .item11 {
     animation-name: d_slideFromBottom;
-    animation-duration: 560s;
+    animation-duration: 300s;
 }
 
 @keyframes d_slideFromBottom {
     0%{
         transform: translateY(80vw);
     }
-    4%{
+    6%{
         transform: translateY(80vw);
     }
 
-    5% {
+    7% {
         transform: translateY(0);
     }
 
@@ -1704,17 +1704,22 @@ canvas {
     background-image:linear-gradient(to bottom right,lightgrey,#c6ba73);
     border-radius: 6px;
     animation-name: d_appear3;
-    animation-duration: 560s;
+    animation-duration: 300s;
 }
 
-#row22 .item17, 
+#row22 .item17,
 #row23 .item17,
 #row24 .item17,
 #row25 .item17 {
     background-image:linear-gradient(to bottom right,lightgrey,#c6ba73);
     border-radius: 6px;
-    animation-name: d_appear2;
-    animation-duration: 560s;
+    animation-name: test17;
+    animation-duration: 300s;
+}
+
+@keyframes test17 {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 #row22 .item19,
@@ -1727,15 +1732,9 @@ canvas {
     background-image:linear-gradient(to bottom right,lightgrey,#c6ba73);
     border-radius: 6px;
     animation-name: d_appear2;
-    animation-duration: 560s;
+    animation-duration: 300s;
 }
 
-@keyframes d_appear2 {
-    0% {opacity: 0;}
-    2% {opacity: 0;}
-    3% {opacity: 1;}
-    100% {opacity: 1;}
-}
 
 #row22 .item21,
 #row23 .item21,
@@ -1745,15 +1744,8 @@ canvas {
 #row27 .item21{
     background-image:linear-gradient(to bottom right,lightgrey,#c6ba73);
     border-radius: 6px;
-    animation-name: d_appear4;
-    animation-duration: 560s;
-}
-
-@keyframes d_appear4 {
-    0% {opacity: 0;}
-    4% {opacity: 0;}
-    5% {opacity: 1;}
-    100% {opacity: 1;}
+    /*animation-name: d_appear4;
+    animation-duration: 300s;*/
 }
 
 #row22 .item23,
@@ -1766,9 +1758,22 @@ canvas {
     background-image:linear-gradient(to bottom right,lightgrey,#c6ba73);
     border-radius: 6px;
     animation-name: d_appear2;
-    animation-duration: 560s;
+    animation-duration: 300s;
 }
 
+@keyframes d_appear2 {
+    0% {opacity: 0;}
+    4% {opacity: 0;}
+    5% {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+@keyframes d_appear4 {
+    0% {opacity: 0;}
+    6% {opacity: 0;}
+    7% {opacity: 1;}
+    100% {opacity: 1;}
+}
 
 #row22 .item25,
 #row23 .item25,
@@ -1781,13 +1786,13 @@ canvas {
     background-image:linear-gradient(to bottom right,lightgrey,#c6ba73);
     border-radius: 6px;
     animation-name: d_appear3;
-    animation-duration: 560s;
+    animation-duration: 300s;
 }
 
 @keyframes d_appear3 {
     0% {opacity: 0;}
-    4% {opacity: 0;}
-    5% {opacity:1;}
+    6% {opacity: 0;}
+    7% {opacity:1;}
     100% {opacity: 1;}
 }
 
@@ -1818,18 +1823,18 @@ canvas {
 
 #row17 .item18 {
     animation-name: d_slideFromRight10;
-    animation-duration: 560s;
+    animation-duration: 300s;
 }
 
 @keyframes d_slideFromRight10 {
     0%{
         transform: translateY(480vw);
     }
-    2%{
+    4%{
         transform: translateY(480vw);
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -1841,18 +1846,18 @@ canvas {
 
 #row18 .item17 {
     animation-name: d_slideFromRight9;
-    animation-duration: 560s;
+    animation-duration: 300s;
 }
 
 @keyframes d_slideFromRight9 {
     0%{
         transform: translateY(440vw);
     }
-    2%{
+    4%{
         transform: translateY(440vw);
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -1864,18 +1869,18 @@ canvas {
 
 #row19 .item16 {
     animation-name: d_slideFromRight8;
-    animation-duration: 560s;
+    animation-duration: 300s;
 }
 
 @keyframes d_slideFromRight8 {
     0%{
         transform: translateY(400vw);
     }
-    2%{
+    4%{
         transform: translateY(400vw);
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -1895,18 +1900,18 @@ canvas {
 
 #row20 .item15 {
     animation-name: d_slideFromRight7;
-    animation-duration: 560s;
+    animation-duration: 300s;
 }
 
 @keyframes d_slideFromRight7 {
     0%{
         transform: translateY(360vw);
     }
-    2%{
+    4%{
         transform: translateY(360vw);
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -1918,18 +1923,18 @@ canvas {
 
 #row21 .item14 {
     animation-name: d_slideFromRight6;
-    animation-duration: 560s;
+    animation-duration: 300s;
 }
 
 @keyframes d_slideFromRight6 {
     0%{
         transform: translateY(320vw);
     }
-    2%{
+    4%{
         transform: translateY(320vw);
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -1941,18 +1946,18 @@ canvas {
 
 #row23 .item12 {
     animation-name: d_slideFromRight5;
-    animation-duration: 560s;
+    animation-duration: 300s;
 }
 
 @keyframes d_slideFromRight5 {
     0%{
         transform: translateY(280vw);
     }
-    2%{
+    4%{
         transform: translateY(280vw);
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -1964,7 +1969,7 @@ canvas {
 
 #row24 .item11 {
     animation-name: d_slideFromRight4;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -1972,11 +1977,11 @@ canvas {
     0%{
         transform: translateY(240vw);
     }
-    2%{
+    4%{
         transform: translateY(240vw);
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -1988,7 +1993,7 @@ canvas {
 
 #row25 .item10 {
     animation-name: d_slideFromRight3;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -1996,11 +2001,11 @@ canvas {
     0%{
         transform: translateY(200vw);
     }
-    2%{
+    4%{
         transform: translateY(200vw);
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -2012,18 +2017,18 @@ canvas {
 
 #row26 .item9 {
     animation-name: d_slideFromRight2;
-    animation-duration: 560s;
+    animation-duration: 300s;
 }
 
 @keyframes d_slideFromRight2 {
     0%{
         transform: translateY(160vw);
     }
-    2%{
+    4%{
         transform: translateY(160vw);
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -2035,18 +2040,18 @@ canvas {
 
 #row27 .item8 {
     animation-name: d_slideFromRight;
-    animation-duration: 560s;
+    animation-duration: 300s;
 }
 
 @keyframes d_slideFromRight {
     0%{
         transform: translateY(120vw);
     }
-    2%{
+    4%{
         transform: translateY(120vw);
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -2061,7 +2066,7 @@ canvas {
 #row24 .item17,
 #row25 .item17 {
     animation-name: fontColor;
-    animation-duration:560s;
+    animation-duration:300s;
 
 }
 
@@ -2073,18 +2078,18 @@ canvas {
 
 #row26 .item7 {
     animation-name: d_slideFromTop;
-    animation-duration: 560s;
+    animation-duration: 300s;
 }
 
 @keyframes d_slideFromTop {
     0%{
         transform: translateY(-80vw);
     }
-    2%{
+    4%{
         transform: translateY(-80vw);
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -2095,7 +2100,7 @@ canvas {
 
 #row25 .item8 {
     animation-name: d_slideFromTop1;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -2104,12 +2109,12 @@ canvas {
         transform: translateY(-120vw);
 
     }
-    2%{
+    4%{
         transform: translateY(-120vw);
 
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -2120,7 +2125,7 @@ canvas {
 
 #row24 .item9 {
     animation-name: d_slideFromTop2;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -2129,12 +2134,12 @@ canvas {
         transform: translateY(-160vw);
 
     }
-    2%{
+    4%{
         transform: translateY(-160vw);
 
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -2145,7 +2150,7 @@ canvas {
 
 #row23 .item10 {
     animation-name: d_slideFromTop3;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -2154,12 +2159,12 @@ canvas {
         transform: translateY(-200vw);
 
     }
-    2%{
+    4%{
         transform: translateY(-200vw);
 
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -2170,7 +2175,7 @@ canvas {
 
 #row22 .item11 {
     animation-name: d_slideFromTop4;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -2179,12 +2184,12 @@ canvas {
         transform: translateY(-240vw);
 
     }
-    2%{
+    4%{
         transform: translateY(-240vw);
 
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -2195,7 +2200,7 @@ canvas {
 
 #row20 .item13 {
     animation-name: d_slideFromTop5;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -2204,12 +2209,12 @@ canvas {
         transform: translateY(-280vw);
 
     }
-    2%{
+    4%{
         transform: translateY(-280vw);
 
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -2220,7 +2225,7 @@ canvas {
 
 #row19 .item14 {
     animation-name: d_slideFromTop6;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -2229,12 +2234,12 @@ canvas {
         transform: translateY(-320vw);
 
     }
-    2%{
+    4%{
         transform: translateY(-320vw);
 
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -2245,7 +2250,7 @@ canvas {
 
 #row18 .item15 {
     animation-name: d_slideFromTop7;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -2254,12 +2259,12 @@ canvas {
         transform: translateY(-360vw);
 
     }
-    2%{
+    4%{
         transform: translateY(-360vw);
 
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -2270,7 +2275,7 @@ canvas {
 
 #row17 .item16 {
     animation-name: d_slideFromTop8;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -2279,12 +2284,12 @@ canvas {
         transform: translateY(-400vw);
 
     }
-    2%{
+    4%{
         transform: translateY(-400vw);
 
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -2295,7 +2300,7 @@ canvas {
 
 #row16 .item17 {
     animation-name: d_slideFromTop9;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -2304,12 +2309,12 @@ canvas {
         transform: translateY(-440vw);
 
     }
-    2%{
+    4%{
         transform: translateY(-440vw);
 
     }
 
-    3% {
+    5% {
         transform: translateY(0);
     }
 
@@ -2321,7 +2326,7 @@ canvas {
 
 #row17 .item17 {
     animation-name: d_slideFromLeft9;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -2330,12 +2335,12 @@ canvas {
         transform: translateX(-400vw);
 
     }
-    2%{
+    4%{
         transform: translateX(-400vw);
 
     }
 
-    3% {
+    5% {
         transform: translateX(0);
     }
 
@@ -2346,7 +2351,7 @@ canvas {
 
 #row18 .item16 {
     animation-name: d_slideFromLeft8;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -2355,12 +2360,12 @@ canvas {
         transform: translateX(-360vw);
 
     }
-    2%{
+    4%{
         transform: translateX(-360vw);
 
     }
 
-    3% {
+    5% {
         transform: translateX(0);
     }
 
@@ -2371,7 +2376,7 @@ canvas {
 
 #row19 .item15 {
     animation-name: d_slideFromLeft7;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -2380,12 +2385,12 @@ canvas {
         transform: translateX(-320vw);
 
     }
-    2%{
+    4%{
         transform: translateX(-320vw);
 
     }
 
-    3% {
+    5% {
         transform: translateX(0);
     }
 
@@ -2396,7 +2401,7 @@ canvas {
 
 #row20 .item14 {
     animation-name: d_slideFromLeft6;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -2405,12 +2410,12 @@ canvas {
         transform: translateX(-280vw);
 
     }
-    2%{
+    4%{
         transform: translateX(-280vw);
 
     }
 
-    3% {
+    5% {
         transform: translateX(0);
     }
 
@@ -2421,7 +2426,7 @@ canvas {
 
 #row21 .item13 {
     animation-name: d_slideFromLeft5;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -2430,12 +2435,12 @@ canvas {
         transform: translateX(-240vw);
 
     }
-    2%{
+    4%{
         transform: translateX(-240vw);
 
     }
 
-    3% {
+    5% {
         transform: translateX(0);
     }
 
@@ -2446,7 +2451,7 @@ canvas {
 
 #row23 .item11 {
     animation-name: d_slideFromLeft4;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -2455,12 +2460,12 @@ canvas {
         transform: translateX(-200vw);
 
     }
-    2%{
+    4%{
         transform: translateX(-200vw);
 
     }
 
-    3% {
+    5% {
         transform: translateX(0);
     }
 
@@ -2471,7 +2476,7 @@ canvas {
 
 #row24 .item10 {
     animation-name: d_slideFromLeft3;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -2480,12 +2485,12 @@ canvas {
         transform: translateX(-160vw);
 
     }
-    2%{
+    4%{
         transform: translateX(-160vw);
 
     }
 
-    3% {
+    5% {
         transform: translateX(0);
     }
 
@@ -2496,7 +2501,7 @@ canvas {
 
 #row25 .item9 {
     animation-name: d_slideFromLeft2;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -2505,12 +2510,12 @@ canvas {
         transform: translateX(-120vw);
 
     }
-    2%{
+    4%{
         transform: translateX(-120vw);
 
     }
 
-    3% {
+    5% {
         transform: translateX(0);
     }
 
@@ -2521,7 +2526,7 @@ canvas {
 
 #row26 .item8 {
     animation-name: d_slideFromLeft1;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -2530,12 +2535,12 @@ canvas {
         transform: translateX(-80vw);
 
     }
-    2%{
+    4%{
         transform: translateX(-80vw);
 
     }
 
-    3% {
+    5% {
         transform: translateX(0);
     }
 
@@ -2546,7 +2551,7 @@ canvas {
 
 #row27 .item7 {
     animation-name: d_slideFromLeft;
-    animation-duration: 560s;
+    animation-duration: 300s;
 
 }
 
@@ -2555,12 +2560,12 @@ canvas {
         transform: translateX(-40vw);
 
     }
-    2%{
+    4%{
         transform: translateX(-40vw);
 
     }
 
-    3% {
+    5% {
         transform: translateX(0);
     }
 
@@ -2575,7 +2580,7 @@ canvas {
 #row25 .item4,
 #row25 .item5 {
     animation-name: c_scale;
-    animation-duration: 1000s;
+    animation-duration: 300s;
 }
 
 @keyframes c_scale {
@@ -2583,11 +2588,11 @@ canvas {
         transform: scale3d(0,0,1);
     }
 
-    1%{
+    3%{
         transform: scale3d(0,0,1);
     }
 
-    2% {
+    4% {
         transform: scale3d(1,1,1);
     }
 
@@ -2602,7 +2607,7 @@ canvas {
 #row27 .item3,
 #row27 .item4 {
     animation-name: a_appear1;
-    animation-duration: 560s;
+    animation-duration: 300s;
     background-color:#294221;
     border-radius: 6px;
 } 
@@ -2652,7 +2657,7 @@ canvas {
     /*background-color: white;*/
     animation-name: a_appear;
     animation-name: b_rotate;
-    animation-duration: 560s;
+    animation-duration: 300s;
 }
 
 @keyframes a_appear {
