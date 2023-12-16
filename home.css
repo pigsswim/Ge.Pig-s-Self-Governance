@@ -467,6 +467,7 @@ button:hover {
 
 .graphics-container2 {
     font-size: 20px;
+    color: black;
 }
 
 .graphics-container3 {
@@ -758,6 +759,7 @@ canvas {
 #row1 .item23 {
     background-image:linear-gradient(to bottom right, lightgrey,#781714,#002855);
     border-radius: 6px;
+    color:white;
 }
 
 #row2 .item1,
@@ -765,7 +767,7 @@ canvas {
 #row2 .item3,
 #row2 .item4 {
     background-image:linear-gradient(to bottom right, lightgrey,#781714,#002855);
-    border-radius: 6px;
+    border-radius: 6px;color:white;
 }
 
 #row2 .item1,
@@ -887,6 +889,7 @@ canvas {
 #row15 .item28 {
     background-image:linear-gradient(to bottom right,#d9c3c6,#002855); 
     border-radius: 6px;
+    color:white;
 }
 
 #row8 .item30,
@@ -895,6 +898,7 @@ canvas {
 #row12 .item30 {
     background-image:linear-gradient(to bottom right,#d9c3c6,#002855);
     border-radius: 6px;
+    color:white;
 }
 
 #row8 .item32,
@@ -907,6 +911,7 @@ canvas {
 #row15 .item32 {
     background-image:linear-gradient(to bottom right,#d9c3c6,#002855); 
     border-radius: 6px;
+    color:white;
 }
 
 #row8 .item34,
@@ -918,6 +923,7 @@ canvas {
 #row14 .item34 {
     background-image:linear-gradient(to bottom right,#d9c3c6,#002855);
     border-radius: 6px;
+    color:white;
 }
 
 #row9 .item1,
@@ -992,6 +998,7 @@ canvas {
 #row18 .item25 {
     background-image: linear-gradient(to bottom right,#d9c3c6,#781714); 
     border-radius: 6px;
+    color:white;
 }
 
 #row12 .item23,
@@ -1000,6 +1007,7 @@ canvas {
 #row15 .item23 {
     background-image: linear-gradient(to bottom right,#d9c3c6,#781714);
     border-radius: 6px;
+    color:white;
 }
 
 #row12 .item27,
@@ -1011,12 +1019,14 @@ canvas {
 #row18 .item27 {
     background-image: linear-gradient(to bottom right,#d9c3c6,#781714);
     border-radius: 6px;
+    color:white;
 }
 
 #row12 .item29,
 #row13 .item29{
     background-image: linear-gradient(to bottom right,#d9c3c6,#781714); 
     border-radius: 6px;
+    color:white;
 }
 
 #row12 .item31,
@@ -1029,6 +1039,7 @@ canvas {
 #row19 .item31 {
     background-image: linear-gradient(to bottom right,#d9c3c6,#781714); 
     border-radius: 6px;
+    color:white;
 }
 
 #row13 .item1,
@@ -1077,6 +1088,7 @@ canvas {
 #row19 .item20 {
     background-image: linear-gradient(to bottom right,lightgrey,#294221);
     border-radius: 6px;
+    color:white;
 }
 
 #row16 .item22,
@@ -1088,6 +1100,7 @@ canvas {
 #row22 .item22 {
     background-image: linear-gradient(to bottom right,lightgrey,#294221);
     border-radius: 6px;
+    color:white;
 }
 
 #row16 .item24,
@@ -1099,6 +1112,7 @@ canvas {
 #row22 .item24 {
     background-image: linear-gradient(to bottom right,lightgrey,#294221);
     border-radius: 6px;
+    color:white;
 }
 
 #row16 .item26,
@@ -1112,6 +1126,7 @@ canvas {
 #row24 .item26 {
     background-image: linear-gradient(to bottom right,lightgrey,#294221);
     border-radius: 6px;
+    color:white;
 }
 
 #row16 .item28,
@@ -1119,6 +1134,7 @@ canvas {
 #row18 .item28 {
     background-image: linear-gradient(to bottom right,lightgrey,#294221);
     border-radius: 6px;
+    color:white;
 }
 
 #row16 .item30,
@@ -1135,6 +1151,7 @@ canvas {
 #row27 .item30 {
     background-image: linear-gradient(to bottom right,lightgrey,#294221);
     border-radius: 6px;
+    color:white;
 }
 
 
@@ -1389,6 +1406,7 @@ canvas {
 #row14 .item34 {
     animation-name: d_appear34;
     animation-duration:300s;
+    color:white;
 }
 
 @keyframes d_appear34 {
@@ -1725,6 +1743,7 @@ canvas {
 #row24 .item26 {
     animation-name: d_appear14;
     animation-duration:300s;
+    color:white;
 }
 
 @keyframes d_appear14 {
@@ -1787,6 +1806,7 @@ canvas {
     color: white;
     animation-name: d_appear12;
     animation-duration:300s;
+    color:white;
 }
 
 #row24 .item1, 
@@ -2020,6 +2040,7 @@ canvas {
     border-radius: 6px;
     animation-name: d_appear3;
     animation-duration: 300s;
+    color:white;
 }
 
 #row22 .item17,
@@ -2030,6 +2051,7 @@ canvas {
     border-radius: 6px;
     animation-name: test17;
     animation-duration: 300s;
+    color:white;
 }
 
 @keyframes test17 {
@@ -2048,6 +2070,7 @@ canvas {
     border-radius: 6px;
     animation-name: d_appear2;
     animation-duration: 300s;
+    color:white;
 }
 
 
@@ -2059,6 +2082,7 @@ canvas {
 #row27 .item21{
     background-image:linear-gradient(to bottom right,lightgrey,#c6ba73);
     border-radius: 6px;
+    color:white;
     /*animation-name: d_appear4;
     animation-duration: 300s;*/
 }
@@ -2078,6 +2102,7 @@ canvas {
     border-radius: 6px;
     animation-name: d_appear2;
     animation-duration: 300s;
+    color:white;
 }
 
 @keyframes d_appear2 {
@@ -2106,6 +2131,7 @@ canvas {
     border-radius: 6px;
     animation-name: d_appear3;
     animation-duration: 300s;
+    color:white;
 }
 
 @keyframes d_appear3 {
@@ -2920,6 +2946,7 @@ canvas {
     animation-duration: 300s;
     background-color:#294221;
     border-radius: 6px;
+    color:white;
 } 
 
 @keyframes a_appear1 {
