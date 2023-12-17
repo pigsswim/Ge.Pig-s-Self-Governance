@@ -138,9 +138,9 @@ function start() {
         stars = [],
         shootingStars = [],
         layers = [
-            { speed: 0.015, scale: 0.2, count: 320 },
-            { speed: 0.03, scale: 0.5, count: 50 },
-            { speed: 0.05, scale: 0.75, count: 30 }
+            { speed: 0.1, scale: 0.2, count: 320 },
+            { speed: 0.1, scale: 0.5, count: 50 },
+            { speed: 0.1, scale: 0.75, count: 30 }
         ],
         starsAngle = 145,
         shootingStarSpeed = {
@@ -246,7 +246,7 @@ function start() {
     }
 
     function drawStar(star) {
-        context.fillStyle = "rgb(255, 221, 157)";
+        context.fillStyle = "rgb(244,244,244)";
         context.beginPath();
         context.arc(star.x, star.y, star.radius, 0, Math.PI * 2, false);
         context.fill();
