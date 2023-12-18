@@ -888,7 +888,7 @@ canvas {
 #row13 .item28,
 #row14 .item28,
 #row15 .item28 {
-    background-image:linear-gradient(to bottom right,lightgrey,#001833,#000c19,#545655); 
+    background-image:linear-gradient(to bottom right,white,#001833,#000c19,#545655); 
     border-radius: 6px;
     color:white;
 }
@@ -897,7 +897,7 @@ canvas {
 #row9 .item30,
 #row11 .item30,
 #row12 .item30 {
-    background-image:linear-gradient(to bottom right,lightgrey,#001833,#000c19,#545655);
+    background-image:linear-gradient(to bottom right,white,#001833,#000c19,#545655);
     border-radius: 6px;
     color:white;
 }
@@ -910,7 +910,7 @@ canvas {
 #row13 .item32,
 #row14 .item32,
 #row15 .item32 {
-    background-image:linear-gradient(to bottom right,lightgrey,#001833,#000c19,#545655); 
+    background-image:linear-gradient(to bottom right,white,#001833,#000c19,#545655); 
     border-radius: 6px;
     color:white;
 }
@@ -922,7 +922,7 @@ canvas {
 #row12 .item34, 
 #row13 .item34,
 #row14 .item34 {
-    background-image:linear-gradient(to bottom right,lightgrey,#001833,#000c19,#545655);
+    background-image:linear-gradient(to bottom right,white,#001833,#000c19,#545655);
     border-radius: 6px;
     color:white;
 }
@@ -996,7 +996,7 @@ canvas {
 #row16 .item25,
 #row17 .item25,
 #row18 .item25 {
-    background-image: linear-gradient(to bottom right,lightgrey,#610000,#490000,#7c807d); 
+    background-image: linear-gradient(to bottom right,white,#610000,#490000,#7c807d); 
     border-radius: 6px;
     color:white;
 }
@@ -1005,7 +1005,7 @@ canvas {
 #row13 .item23,
 #row14 .item23,
 #row15 .item23 {
-    background-image: linear-gradient(to bottom right,lightgrey,#610000,#490000,#7c807d);
+    background-image: linear-gradient(to bottom right,white,#610000,#490000,#7c807d);
     border-radius: 6px;
     color:white;
 }
@@ -1017,14 +1017,14 @@ canvas {
 #row16 .item27,
 #row17 .item27,
 #row18 .item27 {
-    background-image: linear-gradient(to bottom right,lightgrey,#610000,#490000,#7c807d);
+    background-image: linear-gradient(to bottom right,white,#610000,#490000,#7c807d);
     border-radius: 6px;
     color:white;
 }
 
 #row12 .item29,
 #row13 .item29{
-    background-image: linear-gradient(to bottom right,lightgrey,#610000,#490000,#7c807d); 
+    background-image: linear-gradient(to bottom right,white,#610000,#490000,#7c807d); 
     border-radius: 6px;
     color:white;
 }
@@ -1037,7 +1037,7 @@ canvas {
 #row17 .item31,
 #row18 .item31,
 #row19 .item31 {
-    background-image: linear-gradient(to bottom right,lightgrey,#610000,#490000,#7c807d); 
+    background-image: linear-gradient(to bottom right,white,#610000,#490000,#7c807d); 
     border-radius: 6px;
     color:white;
 }
@@ -1089,7 +1089,7 @@ canvas {
 #row20 .item20,
 #row21 .item20,
 #row22 .item20 {
-    background-image: linear-gradient(to bottom right,lightgrey,#003000,#001800,#545655);
+    background-image: linear-gradient(to bottom right,white,#003000,#001800,#545655);
     border-radius: 6px;
     color:white;
 }
@@ -1101,7 +1101,7 @@ canvas {
 #row20 .item22,
 #row21 .item22,
 #row22 .item22 {
-    background-image: linear-gradient(to bottom right,lightgrey,#003000,#001800,#545655);
+    background-image: linear-gradient(to bottom right,white,#003000,#001800,#545655);
     border-radius: 6px;
     color:white;
 }
@@ -1115,7 +1115,7 @@ canvas {
 #row22 .item24,
 #row23 .item24,
 #row24 .item24 {
-    background-image: linear-gradient(to bottom right,lightgrey,#003000,#001800,#545655);
+    background-image: linear-gradient(to bottom right,white,#003000,#001800,#545655);
     border-radius: 6px;
     color:white;
 }
@@ -1142,7 +1142,7 @@ canvas {
 #row21 .item28,
 #row22 .item28,
 #row23 .item28 {
-    background-image: linear-gradient(to bottom right,lightgrey,#003000,#001800,#545655);
+    background-image: linear-gradient(to bottom right,white,#003000,#001800,#545655);
     border-radius: 6px;
     color:white;
 }
@@ -1159,7 +1159,7 @@ canvas {
 #row25 .item30,
 #row26 .item30,
 #row27 .item30 {
-    background-image: linear-gradient(to bottom right,lightgrey,#003000,#001800,#545655);
+    background-image: linear-gradient(to bottom right,white,#003000,#001800,#545655);
     border-radius: 6px;
     color:white;
 }
@@ -1171,7 +1171,7 @@ canvas {
 #row20 .item32,
 #row21 .item32,
 #row22 .item32 {
-    background-image: linear-gradient(to bottom right,lightgrey,#003000,#001800,#545655);
+    background-image: linear-gradient(to bottom right,white,#003000,#001800,#545655);
     border-radius: 6px;
     color:white;
 }
@@ -1436,15 +1436,15 @@ canvas {
 #row5 .item18,
 #row5 .item19,
 #row5 .item20,
-#row7 .item29,
+
 #row7 .item28,
 #row6 .item29 ,
-#row6 .item30,
+
 #row5 .item30,
-#row5 .item31,
+
 #row4 .item30,
 #row4 .item31,
-#row4 .item32,
+
 #row3 .item31,
 #row3 .item32,
 #row2 .item32 {
@@ -1551,34 +1551,36 @@ canvas {
 #row8 .item20,
 #row8 .item21
 {
-    animation-name:d_appear36;
-    animation-duration:300s;
+    animation-name:z_appear;
+    animation-duration:360s;
 }
 
-@keyframes d_appear36 {
+@keyframes z_appear {
+    0% {opacity: 0;}
+    37% {opacity: 0;}
+    38% {opacity:1;}
+    100% {opacity: 1;}
+}
+
+#row8 .item30,
+#row9 .item30,
+#row11 .item23,
+#row22 .item22 {
+    animation-name: y_appear;
+    animation-duration:360s;
+}
+@keyframes y_appear {
     0% {opacity: 0;}
     36% {opacity: 0;}
     37% {opacity:1;}
     100% {opacity: 1;}
 }
 
-#row11 .item23,
-#row10 .item24 
- {
-    animation-name: d_appear35;
-    animation-duration:300s;
-}
-@keyframes d_appear35 {
-    0% {opacity: 0;}
-    35% {opacity: 0;}
-    36% {opacity:1;}
-    100% {opacity: 1;}
-}
-
+#row10 .item26,
 #row11 .item25,
 #row8 .item34,
 #row9 .item34,
-#row10 .iem34,
+#row10 .item34,
 #row11 .item34,
 #row12 .item34,
 #row13 .item34,
@@ -1756,9 +1758,29 @@ canvas {
     100% {opacity: 1;}
 }
 
+#row17 .item1,
+#row17 .item2,
+#row17 .item3,
+#row17 .item4,
+#row17 .item5,
+#row17 .item6,
+#row17 .item7,
+#row17 .item8,
+#row17 .item9,
+#row17 .item10,
+#row17 .item11,
+#row18 .item1,
+#row18 .item2,
+#row18 .item3,
+#row18 .item4,
+#row18 .item5,
 #row21 .item16,
 #row20 .item17,
-#row19 .item18 {
+#row19 .item18,
+#row7 .item29,
+#row6 .item30,
+#row5 .item31,
+#row4 .item32 {
     animation-name: r_appear;
     animation-duration: 360s;
 }
@@ -1918,8 +1940,19 @@ canvas {
 #row26 .item11 {
     color: white;
     animation-name: j_appear;
-    animation-duration:300s;
+    animation-duration:360s;
     color:white;
+}
+
+#row20 .item17,
+#row12 .item22,
+#row11 .item23,
+#row10 .item24,
+#row4 .item30,
+#row3 .item31,
+#row2 .item32 {
+    animation-name: j_appear;
+    animation-duration:360s;
 }
 
 #row24 .item1, 
@@ -1947,7 +1980,11 @@ canvas {
 #row26 .item10,
 #row25 .item11,
 #row24 .item12,
-#row22 .item7 {
+#row22 .item7,
+#row21 .item17,
+#row14 .item22,
+#row20 .item18,
+#row15 .item21 {
     animation-name: i_scale2;
     animation-duration:360s;
 }
@@ -2036,7 +2073,8 @@ canvas {
 #row23 .item8,
 #row22 .item9,
 #row23 .item7,
-#row22 .item8 {
+#row22 .item8,
+#row15 .item22 {
     animation-name: f_appear;
     animation-duration: 360s;
 }
@@ -2621,6 +2659,56 @@ canvas {
     }
     4%{
         transform: translateY(-400vw);
+
+    }
+
+    5% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+#row12 .item20 {
+    animation-name: d_slideFromTop11;
+    animation-duration: 360s;
+}
+
+@keyframes d_slideFromTop11 {
+    0%{
+        transform: translateY(-520vw);
+
+    }
+    4%{
+        transform: translateY(-520vw);
+
+    }
+
+    5% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#row13 .item19 {
+    animation-name: d_slideFromTop10;
+    animation-duration: 360s;
+}
+
+@keyframes d_slideFromTop10 {
+    0%{
+        transform: translateY(-480vw);
+
+    }
+    4%{
+        transform: translateY(-480vw);
 
     }
 
