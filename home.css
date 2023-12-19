@@ -467,12 +467,12 @@ button:hover {
 
 .graphics-container2 {
     font-size: 20px;
-    color: black;
+    color: white;
 }
 
 .graphics-container3 {
     background-color: aqua;
-    opacity:0;
+    opacity:1;
 }
 
 canvas {
@@ -764,10 +764,18 @@ canvas {
 #row2 .item1,
 #row2 .item2,
 #row2 .item3,
-#row2 .item4 {
-    background-image:linear-gradient(to bottom right,white,#fbf5b7,#bf953f,#e8e8e8);
+#row2 .item4,
+#row2 .item5,
+#row2 .item6,
+#row2 .item7,
+#row2 .item8,
+#row2 .item9,
+#row2 .item10,
+#row2 .item11{
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
     border-radius: 6px;
-    color:black;
+    color:white;
     text-shadow: 2px 2px 4px #241e03;
 }
 
@@ -979,9 +987,11 @@ canvas {
 
 #row12 .item1,
 #row12 .item2,
+#row12 .item3,
 #row12 .item4,
 #row12 .item5,
 #row12 .item6,
+#row12 .item7,
 #row12 .item8,
 #row12 .item9,
 #row12 .item10,
@@ -1056,9 +1066,11 @@ canvas {
 #row13 .item2,
 #row13 .item3,
 #row13 .item4,
+#row13 .item5,
 #row13 .item6,
 #row13 .item7,
 #row13 .item8,
+#row13 .item9,
 #row13 .item10,
 #row13 .item11,
 #row13 .item12,
@@ -1240,6 +1252,7 @@ canvas {
     0% {opacity: 0;}
     51% {opacity: 0;}
     52% {opacity:1;}
+    53% {opacity:0.4;}
     100% {opacity: 1;}
 }
 
@@ -1247,7 +1260,14 @@ canvas {
 #row2 .item1,
 #row2 .item2,
 #row2 .item3,
-#row2 .item4 {
+#row2 .item4,
+#row2 .item5,
+#row2 .item6,
+#row2 .item7,
+#row2 .item8,
+#row2 .item9,
+#row2 .item10,
+#row2 .item11 {
     animation-name: af_appear;
     animation-duration:360s;
 }
@@ -1256,6 +1276,8 @@ canvas {
     0% {opacity: 0;}
     50% {opacity: 0;}
     51% {opacity:1;}
+    52% {opacity: 1;}
+    53% {opacity:0.4;}
     100% {opacity: 1;}
 }
 
@@ -1293,9 +1315,11 @@ canvas {
 }
 
 @keyframes ae_appear {
-    0% {opacity: 1;}
-    48% {opacity: 1;}
+    0% {opacity: 0;}
+    48% {opacity: 0;}
     49% {opacity:1;}
+    51% {opacity: 0.4;}
+    51% {opacity: 0.4;}
     100% {opacity: 1;}
 }
 
@@ -1323,6 +1347,7 @@ canvas {
 #row2 .item28,
 #row2 .item29,
 #row2 .item30,
+#row11 .item26,
 #row3 .item27,
 #row3 .item28,
 #row3 .item29,
@@ -1345,6 +1370,8 @@ canvas {
     0% {opacity: 0;}
     46% {opacity: 0;}
     47% {opacity:1;}
+    50% {opacity: 0.4;}
+    51% {opacity: 0.4;}
     100% {opacity: 1;}
 }
 
@@ -1374,15 +1401,11 @@ canvas {
 #row5 .item18,
 #row5 .item19,
 #row5 .item20,
-#row7 .item29,
 #row7 .item28,
 #row6 .item29 ,
-#row6 .item30,
 #row5 .item30,
-#row5 .item31,
 #row4 .item30,
 #row4 .item31,
-#row4 .item32,
 #row3 .item31,
 #row3 .item32,
 #row2 .item32,
@@ -1396,6 +1419,8 @@ canvas {
     0% {opacity: 0;}
     43% {opacity: 0;}
     44% {opacity:1;}
+    47% {opacity: 0.4;}
+    51% {opacity: 0.4;}
     100% {opacity: 1;}
 }
 
@@ -1417,6 +1442,8 @@ canvas {
     0% {opacity: 0;}
     41% {opacity: 0;}
     42% {opacity:1;}
+    45% {opacity: 0.4;}
+    51% {opacity: 0.4;}
     100% {opacity: 1;}
 }
 
@@ -1425,7 +1452,7 @@ canvas {
 #row7 .item2,
 #row7 .item3,
 #row7 .item4,
-#row11 .item26 {
+#row8 .item25 {
     color:white;
     animation-name: aa_appear;
     animation-duration: 360s;
@@ -1440,14 +1467,38 @@ canvas {
     0% {opacity: 0;}
     40% {opacity: 0;}
     41% {opacity:1;}
+    43% {opacity: 0.4;}
+    51% {opacity: 0.4;}
     100% {opacity: 1;}
 }
 
+#row7 .item30,
+#row6 .item31,
+#row5 .item32,
+#row7 .item32,
+#row11 .item25,
+#row10 .item26 {
+    animation-name: z_appear1;
+    animation-duration: 360s;
+
+}
+
+@keyframes z_appear1 {
+    0% {opacity: 0;}
+    37% {opacity: 0;}
+    38% {opacity:1;}
+    41% {opacity: 0.4;}
+    42% {opacity:1;}
+    45% {opacity: 0.4;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
 
 #row11 .item24,
 #row10 .item25,
 #row9 .item25,
-#row9 .item26,
 #row8 .item26,
 #row7 .item27,
 #row6 .item28,
@@ -1473,12 +1524,7 @@ canvas {
 #row8 .item19,
 #row8 .item20,
 #row8 .item21,
-#row7 .item30,
-#row6 .item31,
-#row5 .item32,
-#row7 .item32,
 #row10 .item25,
-#row10 .item26,
 #row7 .item28,
 #row6 .item29,
 #row5 .item30,
@@ -1492,10 +1538,11 @@ canvas {
     0% {opacity: 0;}
     37% {opacity: 0;}
     38% {opacity:1;}
+    41% {opacity: 0.4;}
+    51% {opacity: 0.4;}
     100% {opacity: 1;}
 }
 
-#row11 .item25,
 #row8 .item34,
 #row9 .item34,
 #row10 .item34,
@@ -1503,7 +1550,7 @@ canvas {
 #row12 .item34,
 #row13 .item34,
 #row14 .item34 {
-    animation-name: x_appear;
+    animation-name: w_appear;
     animation-duration:360s;
     color:white;
 }
@@ -1512,6 +1559,8 @@ canvas {
     0% {opacity: 0;}
     35% {opacity: 0;}
     36% {opacity:1;}
+    39% {opacity: 0.4;}
+    51% {opacity: 0.4;}
     100% {opacity: 1;}
 }
 
@@ -1563,6 +1612,8 @@ canvas {
     0% {opacity: 0;}
     33% {opacity: 0;}
     34% {opacity:1;}
+    37% {opacity: 0.4;}
+    51% {opacity: 0.4;}
     100% {opacity: 1;}
 }
 
@@ -1583,6 +1634,81 @@ canvas {
     0% {opacity: 0;}
     27% {opacity: 0;}
     28% {opacity:1;}
+    31% {opacity: 0.4;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+
+#row12 .item19 {
+    animation-name:va_appear1;
+    animation-duration:360s;
+}
+
+@keyframes va_appear1 {
+    0% {opacity: 0;scale:0;}
+    24% {opacity: 0;scale:0;}
+    25% {opacity:1;scale:0;transform: translate(-100px,-100px);}
+    26% {opacity:1;scale:1;transform: translate(0,0);}
+    31% {opacity: 0.4;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+
+#row15 .item19 {
+    animation-name:va_appear2;
+    animation-duration:360s;
+}
+
+@keyframes va_appear2 {
+    0% {opacity: 0;scale:0;}
+    24% {opacity: 0;scale:0;}
+    25% {opacity:1;scale:0;transform: translate(100px,-100px);}
+    26% {opacity:1;scale:1;transform: translate(0,0);}
+    31% {opacity: 0.4;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+
+#row14 .item20 {
+    animation-name:va_appear3;
+    animation-duration:360s;
+}
+@keyframes va_appear3 {
+    0% {opacity: 0;scale:0;}
+    24% {opacity: 0;scale:0;}
+    25% {opacity:1;scale:0;transform: translate(-100px,100px);}
+    26% {opacity:1;scale:1;transform: translate(0,0);}
+    31% {opacity: 0.4;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+
+#row14 .item21 {
+    animation-name:va_appear4;
+    animation-duration:360s;
+}
+@keyframes va_appear4 {
+    0% {opacity: 0;scale:0;}
+    24% {opacity: 0;scale:0;}
+    25% {opacity:1;scale:0;transform: translate(100px,100px);}
+    26% {opacity:1;scale:1;transform: translate(0,0);}
+    31% {opacity: 0.4;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+
+#row13 .item21 {
+    animation-name:va_appear5;
+    animation-duration:360s;
+}
+
+@keyframes va_appear5 {
+    0% {opacity: 0;scale:0;}
+    24% {opacity: 0;scale:0;}
+    25% {opacity:1;scale:0;transform: translate(100px,100px);}
+    26% {opacity:1;scale:1;transform: translate(0,0);}
+    31% {opacity: 0.4;}
+    51% {opacity: 0.4;}
     100% {opacity: 1;}
 }
 
@@ -1595,17 +1721,13 @@ canvas {
 #row12 .item4,
 #row12 .item5,
 #row12 .item6,
+#row12 .item7,
 #row12 .item8,
 #row12 .item9,
 #row12 .item10,
 #row12 .item11,
 #row12 .item12,
-#row12 .item19,
 #row12 .item13,
-#row15 .item19,
-#row14 .item20,
-#row14 .item21,
-#row13 .item21,
 #row12 .item23,
 #row13 .item23,
 #row14 .item23,
@@ -1632,6 +1754,8 @@ canvas {
     0% {opacity: 0;}
     25% {opacity: 0;}
     26% {opacity:1;}
+    31% {opacity: 0.4;}
+    51% {opacity: 0.4;}
     100% {opacity: 1;}
 }
 
@@ -1641,6 +1765,65 @@ canvas {
 #row15 .item4 {
     color:white;
     text-shadow: 2px 2px 4px #222222;
+}
+
+#row16 .item18 {
+    animation-name: tb_appear;
+    animation-duration:360s;
+}
+
+@keyframes tb_appear {
+    0% {opacity: 0;}
+    23% {opacity: 0;transform:rotate(180deg);scale:0;}
+    24% {opacity:1;transform:translate(0,0);transform:rotate(0);scale:1;}
+    27% {opacity: 0.4;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+
+#row14 .item19 {
+    animation-name: ta_appear1;
+    animation-duration:360s;
+}
+
+@keyframes ta_appear1 {
+    0% {opacity: 0;}
+    23% {opacity: 0;scale:2;transform:translate(-40px,-40px);}
+    24% {opacity: 1;scale:2;transform:translate(-40px,-40px);}
+    25% {opacity:1;scale:1;transform: translate(0,0);}
+    27% {opacity: 0.4;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+
+#row15 .item20 {
+    animation-name: ta_appear2;
+    animation-duration:360s;
+}
+
+@keyframes ta_appear2 {
+    0% {opacity: 0;}
+    23% {opacity: 0;scale:2;transform:translate(0px,-50px);}
+    24% {opacity: 1;scale:2;transform:translate(0px,-50px);}
+    25% {opacity:1;scale:1;transform: translate(0,0);}
+    27% {opacity: 0.4;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+
+#row13 .item22 {
+    animation-name: ta_appear3;
+    animation-duration:360s;
+}
+
+@keyframes ta_appear3 {
+    0% {opacity: 0;}
+    23% {opacity: 0;scale:2;transform:translate(35px,-32px);}
+    24% {opacity: 1;scale:2;transform:translate(35px,-32px);}
+    25% {opacity:1;scale:1;transform: translate(0,0);}
+    27% {opacity: 0.4;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
 }
 
 #row15 .item1, 
@@ -1653,7 +1836,6 @@ canvas {
 #row14 .item4,
 #row14 .item5,
 #row14 .item6,
-#row14 .item19,
 #row13 .item1, 
 #row13 .item2,
 #row13 .item3,
@@ -1669,11 +1851,7 @@ canvas {
 #row13 .item13,
 #row13 .item14,
 #row13 .item15, 
-#row13 .item16,
-#row13 .item22,
-#row15 .item20,
-#row13 .item22,
-#row16 .item18 {
+#row13 .item16 {
     animation-name: t_appear;
     animation-duration:360s;
 }
@@ -1682,21 +1860,39 @@ canvas {
     0% {opacity: 0;}
     23% {opacity: 0;}
     24% {opacity:1;}
+    27% {opacity: 0.4;}
+    51% {opacity: 0.4;}
     100% {opacity: 1;}
-}
-
-#row16 .item18 {
-    animation-name: s_appear;
-    animation-duration: 360s;
 }
 
 @keyframes s_appear {
     0% {opacity: 0;}
     22% {opacity: 0;}
     23% {opacity:1;}
+    26% {opacity: 0.4;}
+    51% {opacity: 0.4;}
     100% {opacity: 1;}
 }
 
+#row21 .item16,
+#row19 .item18,
+#row9 .item26,
+#row7 .item29,
+#row6 .item30,
+#row5 .item31,
+#row4 .item32 {
+    animation-name:ra_appear;
+    animation-duration:360s;
+}
+
+@keyframes ra_appear {
+    0% {opacity: 0;}
+    21% {opacity: 0;scale:0;transform:translate(200px,-200px);}
+    22% {opacity:1;scale:1;transform:translateX(0);}
+    25% {opacity:0.4;}
+    51% {opacity:0.4;}
+    100% {opacity:1;}
+}
 
 #row18 .item1,
 #row18 .item2,
@@ -1711,8 +1907,6 @@ canvas {
     text-shadow: 2px 2px 4px #060e1d;
 }
 
-#row21 .item16,
-#row19 .item18,
 #row17 .item1,
 #row17 .item2,
 #row17 .item3,
@@ -1733,6 +1927,8 @@ canvas {
     0% {opacity: 0;}
     21% {opacity: 0;}
     22% {opacity:1;}
+    25% {opacity: 0.4;}
+    51% {opacity: 0.4;}
     100% {opacity: 1;}
 }
 
@@ -1744,8 +1940,10 @@ canvas {
 
 @keyframes n1_appear {
     0% {opacity: 0;}
-    18% {opacity: 0;}
-    19% {opacity:1;}
+    18% {opacity: 0;transform:skew(-50deg,-50deg);}
+    19% {opacity:1;transform:skew(0,0);}
+    22% {opacity:0.4;}
+    51% {opacity:0.4;}
     100% {opacity: 1;}
 }
 
@@ -1774,8 +1972,10 @@ canvas {
 
 @keyframes n_appear {
     0% {opacity: 0;}
-    16% {opacity: 0;}
-    17% {opacity:1;}
+    16% {opacity: 0;transform:skew(50deg,50deg);}
+    17% {opacity:1;transform:skew(0,0);}
+    20% {opacity:0.4;}
+    51% {opacity:0.4;}
     100% {opacity: 1;}
 }
 
@@ -1803,8 +2003,10 @@ canvas {
 
 @keyframes m_appear {
     0% {opacity: 0;}
-    15% {opacity: 0;}
-    16% {opacity:1;}
+    15% {opacity: 0;transform:rotateY(200deg);}
+    16% {opacity:1;transform:rotate(0);}
+    19% {opacity:0.4;}
+    51% {opacity:0.4;}
     100% {opacity: 1;}
 }
 
@@ -1838,8 +2040,10 @@ canvas {
 
 @keyframes l_appear {
     0% {opacity: 0;}
-    14% {opacity: 0;}
-    15% {opacity:1;}
+    14% {opacity: 0;transform:rotateX(200deg);}
+    15% {opacity:1;transform:rotateX(0deg);}
+    18% {opacity:0.4;}
+    51% {opacity:0.4;}
     100% {opacity: 1;}
 }
 
@@ -1873,8 +2077,18 @@ canvas {
 }
 
 #row22 .item12 {
-    animation-name: k_appear;
+    animation-name: k_circle;
     animation-duration:360s;
+}
+
+@keyframes k_circle {
+    0% {opacity: 0;}
+    13% {opacity: 0;transform:rotate(180deg);scale:0;}
+    14% {opacity:1;transform:translate(0,0);transform:rotate(0);scale:1;}
+    17% {opacity:0.4;}
+    51% {opacity:0.4;}
+    100% {opacity: 1;}
+
 }
 
 #row21 .item1,
@@ -1893,6 +2107,8 @@ canvas {
     0% {opacity: 0;}
     13% {opacity: 0;}
     14% {opacity:1;}
+    17% {opacity:0.4;}
+    51% {opacity:0.4;}
     100% {opacity: 1;}
 }
 
@@ -1900,11 +2116,19 @@ canvas {
 #row23 .item29,
 #row24 .item29,
 #row25 .item29,
-#row26 .item29,
-#row26 .item11 {
+#row26 .item29 {
     color: white;
-    animation-name: j_appear;
-    animation-duration:300s;
+    animation-name: ja_dropin;
+    animation-duration:360s;
+}
+
+@keyframes ja_dropin {
+    0% {opacity: 0;}
+    12% {opacity: 0;transform:translate(40vw, 40vw);}
+    13% {opacity:1;transform: translate(0, 0);}
+    16%{opacity:0.4;}
+    51% {opacity:0.4;}
+    100% {opacity: 1;}
 }
 
 #row20 .item17,
@@ -1912,10 +2136,20 @@ canvas {
 #row10 .item24,
 #row3 .item31,
 #row2 .item32,
-#row12 .item22 {
-    animation-name: j_appear;
-    animation-duration:300s;
+#row12 .item22,
+#row26 .item11 {
+    animation-name: j_dropin;
+    animation-duration:360s;
 
+}
+
+@keyframes j_dropin {
+    0% {opacity: 0;}
+    12% {opacity: 0;transform:translate(-40vw, -40vw);}
+    13% {opacity:1;transform: translate(0, 0);}
+    16%{opacity:0.4;}
+    51% {opacity:0.4;}
+    100% {opacity: 1;}
 }
 
 #row24 .item1, 
@@ -1923,18 +2157,43 @@ canvas {
 #row24 .item3,
 #row24 .item4, 
 #row24 .item5 {
-    color:#294221;
-    background-color:white;
+    color:black;
+    background-color:black;
     border-radius: 6px; 
     animation-name: j_appear;
     animation-duration:360s;
     text-shadow: 2px 2px 4px #001400;
+    opacity:0;
 }
 
 @keyframes j_appear {
     0% {opacity: 0;}
     12% {opacity: 0;}
     13% {opacity:1;}
+    16%{opacity:0.4;}
+    51% {opacity:0.4;}
+    100% {opacity: 1;}
+}
+
+
+
+#row22 .item27,
+#row23 .item27,
+#row24 .item27 {
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    border-radius: 6px;
+    animation-name: ia_appear;
+    animation-duration: 360s;
+    color:#f1f5f1;
+}
+
+@keyframes ia_appear {
+    0% {opacity: 0;}
+    9% {opacity: 0;transform: translateX(40vw);}
+    10% {opacity:1;transform: translateX(0);}
+    13%{opacity:0.4;}
+    51% {opacity:0.4;}
     100% {opacity: 1;}
 }
 
@@ -1950,44 +2209,16 @@ canvas {
 #row20 .item18,
 #row15 .item21,
 #row16 .item13 {
-    animation-name: i_scale2;
-    animation-duration:360s;
-}
-
-
-@keyframes i_scale2 {
-    0%{
-        transform: scale3d(0,0,1);
-    }
-
-    9%{
-        transform: scale3d(0,0,1);
-    }
-
-    10% {
-        transform: scale3d(1,1,1);
-    }
-
-    100%{
-        transform: scale3d(1,1,1);
-    }
-}
-
-#row22 .item27,
-#row23 .item27,
-#row24 .item27 {
-    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
-    border-radius: 6px;
     animation-name: i_appear;
-    animation-duration: 360s;
-    color:#f1f5f1;
+    animation-duration:360s;
 }
 
 @keyframes i_appear {
     0% {opacity: 0;}
-    9% {opacity: 0;}
-    10% {opacity:1;}
+    9% {opacity: 0;transform: translateX(-40vw);}
+    10% {opacity:1;transform: translateX(0);}
+    13%{opacity:0.4;}
+    51% {opacity:0.4;}
     100% {opacity: 1;}
 }
 
@@ -2003,9 +2234,17 @@ canvas {
     background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
     radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
     border-radius: 6px;
-    animation-name: g_appear;
+    animation-name: ga_appear;
     animation-duration: 360s;
     color:white;
+}
+@keyframes ga_appear {
+    0% {opacity: 0;}
+    7% {opacity: 0;transform:translateX(40vw);transform: translateY(40vw);}
+    8% {opacity: 1;transform:translateX(0);transform: translateY(0);}
+    11%{opacity:0.4;}
+    51% {opacity:0.4;}
+    100% {opacity: 1;}
 }
 
 #row23 .item9,
@@ -2016,10 +2255,14 @@ canvas {
 
 @keyframes g_appear {
     0% {opacity: 0;}
-    7% {opacity: 0;}
-    8% {opacity: 1;}
+    7% {opacity: 0;transform:translateX(-40vw);transform: translateY(-40vw);}
+    8% {opacity: 1;transform:translateX(0);transform: translateY(0);}
+    11%{opacity:0.4;}
+    51% {opacity:0.4;}
     100% {opacity: 1;}
 }
+
+
 
 #row22 .item21,
 #row23 .item21,
@@ -2031,8 +2274,31 @@ canvas {
                 radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
     border-radius: 6px;
     color:white;
-    animation-name: f_appear;
+    animation-name: fa_appear;
     animation-duration: 360s;
+}
+
+#row22 .item25,
+#row23 .item25,
+#row24 .item25,
+#row25 .item25,
+#row26 .item25,
+#row27 .item25 {
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    border-radius: 6px;
+    animation-name: fa_appear;
+    animation-duration: 360s;
+    color:white;
+}
+
+@keyframes fa_appear {
+    0% {opacity: 0;}
+    6% {opacity: 0;transform:translateX(-40vw);transform: translateY(-40vw);}
+    7% {opacity: 1;transform:translateX(0);transform: translateY(0);}
+    10%{opacity:0.4;}
+    51% {opacity:0.4;}
+    100% {opacity: 1;}
 }
 
 #row25 .item7,
@@ -2047,25 +2313,12 @@ canvas {
     animation-duration: 360s;
 }
 
-
-#row22 .item25,
-#row23 .item25,
-#row24 .item25,
-#row25 .item25,
-#row26 .item25,
-#row27 .item25 {
-    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
-    border-radius: 6px;
-    animation-name: f_appear;
-    animation-duration: 360s;
-    color:white;
-}
-
 @keyframes f_appear {
     0% {opacity: 0;}
-    6% {opacity: 0;}
-    7% {opacity: 1;}
+    6% {opacity: 0;transform:translateX(40vw);transform: translateY(40vw);}
+    7% {opacity: 1;transform:translateX(0);transform: translateY(0);}
+    10%{opacity:0.4;}
+    51% {opacity:0.4;}
     100% {opacity: 1;}
 }
 
@@ -2084,7 +2337,11 @@ canvas {
 
     6% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    9%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2107,7 +2364,11 @@ canvas {
 
     6% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    9%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2130,7 +2391,11 @@ canvas {
 
     6% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    9%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2166,8 +2431,10 @@ canvas {
 
 @keyframes d_appear {
     0% {opacity: 0;}
-    4% {opacity: 0;}
-    5% {opacity:1;}
+    4% {opacity: 0;transform: translateX(40vw);}
+    5% {opacity:1;transform: translateX(0);transform: translateY(0);}
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
     100% {opacity: 1;}
 }
 
@@ -2198,7 +2465,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2221,7 +2492,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2244,7 +2519,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2267,7 +2546,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2290,7 +2573,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2313,7 +2600,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2337,7 +2628,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2361,7 +2656,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2384,7 +2683,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2407,18 +2710,16 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
         opacity: 1;
     }
-}
-
-@keyframes fontColor {
-    0% {color:none;}
-    2% {color: white;}
-    100% {color:white;}
 }
 
 #row26 .item7 {
@@ -2436,7 +2737,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2461,7 +2766,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2486,7 +2795,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2511,7 +2824,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2536,7 +2853,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2561,7 +2882,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2586,7 +2911,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2611,7 +2940,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2636,7 +2969,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2661,7 +2998,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2687,7 +3028,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2712,7 +3057,11 @@ canvas {
 
     5% {
         transform: translateY(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateY(0);
@@ -2739,7 +3088,11 @@ canvas {
 
     5% {
         transform: translateX(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateX(0);
@@ -2764,7 +3117,11 @@ canvas {
 
     5% {
         transform: translateX(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateX(0);
@@ -2789,7 +3146,11 @@ canvas {
 
     5% {
         transform: translateX(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateX(0);
@@ -2814,7 +3175,11 @@ canvas {
 
     5% {
         transform: translateX(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateX(0);
@@ -2839,7 +3204,11 @@ canvas {
 
     5% {
         transform: translateX(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateX(0);
@@ -2864,7 +3233,11 @@ canvas {
 
     5% {
         transform: translateX(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateX(0);
@@ -2889,7 +3262,11 @@ canvas {
 
     5% {
         transform: translateX(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateX(0);
@@ -2914,7 +3291,11 @@ canvas {
 
     5% {
         transform: translateX(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateX(0);
@@ -2939,7 +3320,11 @@ canvas {
 
     5% {
         transform: translateX(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateX(0);
@@ -2964,7 +3349,11 @@ canvas {
 
     5% {
         transform: translateX(0);
+        opacity:1;
     }
+
+    8%{opacity:0.4;}
+    51% {opacity:0.4;}
 
     100% {
         transform: translateX(0);
@@ -2986,19 +3375,21 @@ canvas {
 
 @keyframes c_scale {
     0%{
-        transform: scale3d(0,0,1);
+        opacity:0;
     }
 
     3%{
-        transform: scale3d(0,0,1);
+        opacity:0;
     }
 
     4% {
-        transform: scale3d(1,1,1);
+        opacity:1;
     }
 
+    7%{opacity:0.4;}
+    51% {opacity:0.4;}
+
     100%{
-        transform: scale3d(1,1,1);
         opacity:1;
     }
 }
@@ -3055,6 +3446,8 @@ canvas {
     0% {opacity: 0; transform:rotate(0deg);}
     1% {opacity: 0;transform:rotate(0deg);}
     2% {opacity: 1;transform:rotate(360deg);}
+    5%{opacity:0.4;}
+    51% {opacity:0.4;}
     100% {opacity: 1;transform:rotate(360deg);}
 }
 
@@ -3087,5 +3480,7 @@ canvas {
 @keyframes a_appear {
     0% {opacity:0;}
     1% {opacity:1;}
+    4% {opacity:0.4;}
+    51% {opacity:0.4;}
     100% {opacity: 1;}
 }
