@@ -894,8 +894,8 @@ canvas {
 #row13 .item28,
 #row14 .item28,
 #row15 .item28 {
-    background: radial-gradient(ellipse farthest-corner at right bottom, #3668ff 0%, #153688 8%, #081d40 30%, #0a182f 40%, transparent 80%),
-    radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #8aabff 8%, #5b6f9b 25%, #192b45 62.5%, #0f3789 100%);
+    background: radial-gradient(ellipse farthest-corner at right bottom, #9ba0af3f 0%, #4e576b7a 8%, #10151f83 30%, #1318217d 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #dee8ffb8 8%, #7b7f869e 25%, #22252884 62.5%, #7b7f8684 100%);
     border-radius: 6px;
     color:white;
 }
@@ -904,8 +904,8 @@ canvas {
 #row9 .item30,
 #row11 .item30,
 #row12 .item30 {
-    background: radial-gradient(ellipse farthest-corner at right bottom, #3668ff 0%, #153688 8%, #081d40 30%, #0a182f 40%, transparent 80%),
-    radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #8aabff 8%, #5b6f9b 25%, #192b45 62.5%, #0f3789 100%);
+    background: radial-gradient(ellipse farthest-corner at right bottom, #9ba0af3f 0%, #4e576b7a 8%, #10151f83 30%, #1318217d 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #dee8ffb8 8%, #7b7f869e 25%, #22252884 62.5%, #7b7f8684 100%);
     border-radius: 6px;
     color:#f1f5f1;
 }
@@ -917,8 +917,8 @@ canvas {
 #row13 .item32,
 #row14 .item32,
 #row15 .item32 {
-    background: radial-gradient(ellipse farthest-corner at right bottom, #3668ff 0%, #153688 8%, #081d40 30%, #0a182f 40%, transparent 80%),
-    radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #8aabff 8%, #5b6f9b 25%, #192b45 62.5%, #0f3789 100%);
+    background: radial-gradient(ellipse farthest-corner at right bottom, #9ba0af3f 0%, #4e576b7a 8%, #10151f83 30%, #1318217d 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #dee8ffb8 8%, #7b7f869e 25%, #22252884 62.5%, #7b7f8684 100%);
     border-radius: 6px;
     color:#f1f5f1;
     text-shadow: -1px 0 #081d40, 0 1px #081d40, 1px 0 #081d40, 0 -1px #081d40;
@@ -931,8 +931,8 @@ canvas {
 #row12 .item34, 
 #row13 .item34,
 #row14 .item34 {
-    background: radial-gradient(ellipse farthest-corner at right bottom, #3668ff 0%, #153688 8%, #081d40 30%, #0a182f 40%, transparent 80%),
-    radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #8aabff 8%, #5b6f9b 25%, #192b45 62.5%, #0f3789 100%);
+    background: radial-gradient(ellipse farthest-corner at right bottom, #9ba0af3f 0%, #4e576b7a 8%, #10151f83 30%, #1318217d 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #dee8ffb8 8%, #7b7f869e 25%, #22252884 62.5%, #7b7f8684 100%);
     border-radius: 6px;
     color:#f1f5f1;
 }
@@ -998,10 +998,10 @@ canvas {
 #row12 .item11,
 #row12 .item12,
 #row12 .item13 {
-    color:#d9c3c6;
+    color:#444444;
     background-color:white;
     border-radius: 6px;
-    text-shadow: 2px 2px 4px #3a0606;
+    text-shadow: 2px 2px 4px #111111;
 }
 
 #row12 .item25,
@@ -1078,10 +1078,10 @@ canvas {
 #row13 .item14,
 #row13 .item15,
 #row13 .item16 {
-    color:#d9c3c6;
+    color:#444444;
     background-color:white;
-    border-radius: 6px; 
-    text-shadow: 2px 2px 4px #3a0606;
+    border-radius: 6px;
+    text-shadow: 2px 2px 4px #111111;
 }
 
 #row14 .item1,
@@ -1090,19 +1090,19 @@ canvas {
 #row14 .item4,
 #row14 .item5,
 #row14 .item6 {
-    color:#d9c3c6;
+    color:#444444;
     background-color:white;
     border-radius: 6px;
-    text-shadow: 2px 2px 4px #3a0606;
+    text-shadow: 2px 2px 4px #111111;
 }
 
 #row15 .item1, 
 #row15 .item2, 
 #row15 .item3, 
 #row15 .item4 {
-   background-color:#d9c3c6; 
+   background-color:#444444; 
    border-radius: 6px;
-   text-shadow: 2px 2px 4px #111111;
+   text-shadow: 2px 2px 4px black;
 }
 
 #row16 .item20,
@@ -1225,10 +1225,14 @@ canvas {
 #row17 .item9,
 #row17 .item10,
 #row17 .item11 {
-    color:#002855;
+    /*color:#002855;
     background-color:white;
     border-radius: 6px;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #000000;*/
+    color:#888888;
+    background-color:white;
+    border-radius: 6px;
+    text-shadow:2px 2px 4px #222222;
 }
 
 /* animation begins */
@@ -1899,12 +1903,12 @@ canvas {
 #row18 .item3,
 #row18 .item4,
 #row18 .item5 {
-    color:#002855;
+    color:#888888;
     background-color:white;
     border-radius: 6px;
     animation-name: r_appear;
     animation-duration:360s;
-    text-shadow: 2px 2px 4px #060e1d;
+    text-shadow: 2px 2px 4px #222222;
 }
 
 #row17 .item1,
@@ -1920,7 +1924,7 @@ canvas {
 #row17 .item11 {
     animation-name: r_appear;
     animation-duration: 360s;
-    text-shadow: 2px 2px 4px #060e1d;
+    /*text-shadow: 2px 2px 4px #060e1d;*/
 }
 
 @keyframes r_appear {
@@ -2054,12 +2058,12 @@ canvas {
 #row19 .item5,
 #row19 .item6,
 #row19 .item7 {
-    color:#002855;
+    color:#888888;
     background-color:white;
     border-radius: 6px; 
     animation-name: k_appear;
     animation-duration:360s;
-    text-shadow: 2px 2px 4px #060e1d;
+    text-shadow: 2px 2px 4px #222222;
 }
 
 #row20 .item1,
@@ -2068,12 +2072,12 @@ canvas {
 #row20 .item4,
 #row20 .item5,
 #row20 .item6 {
-    color:#002855;
+    color:#888888;
     background-color:white;
     border-radius: 6px;
     animation-name: k_appear;
     animation-duration:360s;
-    text-shadow: 2px 2px 4px #060e1d;
+    text-shadow: 2px 2px 4px #222222;
 }
 
 #row22 .item12 {
@@ -2095,7 +2099,7 @@ canvas {
 #row21 .item2,
 #row21 .item3,
 #row21 .item4 {
-    background-color:#002855; 
+    background-color:#888888; 
     color:white;
     border-radius: 6px;
     animation-name: k_appear;
@@ -2240,9 +2244,9 @@ canvas {
 }
 @keyframes ga_appear {
     0% {opacity: 0;}
-    7% {opacity: 0;transform:translateX(40vw);transform: translateY(40vw);}
-    8% {opacity: 1;transform:translateX(0);transform: translateY(0);}
-    11%{opacity:0.4;}
+    6% {opacity: 0;transform:translateX(40vw);transform: translateY(40vw);}
+    7% {opacity: 1;transform:translateX(0);transform: translateY(0);}
+    10%{opacity:0.4;}
     51% {opacity:0.4;}
     100% {opacity: 1;}
 }
@@ -2255,9 +2259,9 @@ canvas {
 
 @keyframes g_appear {
     0% {opacity: 0;}
-    7% {opacity: 0;transform:translateX(-40vw);transform: translateY(-40vw);}
-    8% {opacity: 1;transform:translateX(0);transform: translateY(0);}
-    11%{opacity:0.4;}
+    6% {opacity: 0;transform:translateX(-40vw);transform: translateY(-40vw);}
+    7% {opacity: 1;transform:translateX(0);transform: translateY(0);}
+    10%{opacity:0.4;}
     51% {opacity:0.4;}
     100% {opacity: 1;}
 }
@@ -2294,9 +2298,9 @@ canvas {
 
 @keyframes fa_appear {
     0% {opacity: 0;}
-    6% {opacity: 0;transform:translateX(-40vw);transform: translateY(-40vw);}
-    7% {opacity: 1;transform:translateX(0);transform: translateY(0);}
-    10%{opacity:0.4;}
+    7% {opacity: 0;transform:translateX(-40vw);transform: translateY(-40vw);}
+    8% {opacity: 1;transform:translateX(0);transform: translateY(0);}
+    11%{opacity:0.4;}
     51% {opacity:0.4;}
     100% {opacity: 1;}
 }
@@ -2315,9 +2319,9 @@ canvas {
 
 @keyframes f_appear {
     0% {opacity: 0;}
-    6% {opacity: 0;transform:translateX(40vw);transform: translateY(40vw);}
-    7% {opacity: 1;transform:translateX(0);transform: translateY(0);}
-    10%{opacity:0.4;}
+    7% {opacity: 0;transform:translateX(40vw);transform: translateY(40vw);}
+    8% {opacity: 1;transform:translateX(0);transform: translateY(0);}
+    11%{opacity:0.4;}
     51% {opacity:0.4;}
     100% {opacity: 1;}
 }
