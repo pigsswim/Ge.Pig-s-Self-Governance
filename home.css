@@ -808,17 +808,18 @@ canvas {
 #row5 .item6,
 #row5 .item7,
 #row5 .item8,
+#row5 .item9,
 #row5 .item10,
 #row5 .item11,
-#row5 .item12,
 #row5 .item13,
 #row5 .item14,
-#row5 .item15,
 #row5 .item16,
 #row5 .item17,
-#row5 .item18,
 #row5 .item19,
-#row5 .item20 {
+#row5 .item20,
+#row5 .item21,
+#row5 .item22,
+#row5 .item23 {
     color:#cdbc47;
     background-color:white;
     border-radius: 6px;
@@ -827,23 +828,23 @@ canvas {
 
 #row6 .item1,
 #row6 .item2,
+#row6 .item3,
 #row6 .item4,
 #row6 .item5,
 #row6 .item7,
 #row6 .item8,
+#row6 .item9,
 #row6 .item10,
 #row6 .item11,
+#row6 .item12,
 #row6 .item13,
 #row6 .item14,
 #row6 .item15,
-#row6 .item16,
+#row6 .item17,
 #row6 .item18,
 #row6 .item19,
 #row6 .item20,
-#row6 .item21,
-#row6 .item22,
-#row6 .item23,
-#row6 .item24 {
+#row6 .item21 {
     color:#cdbc47;
     background-color:white;
     border-radius: 6px;
@@ -1248,18 +1249,17 @@ canvas {
 #row1 .item9,
 #row1 .item10,
 #row1 .item11 {
-    animation-name: ag_appear;
+    animation-name: ah_appear;
     animation-duration:360s;
 }
 
-@keyframes ag_appear {
+@keyframes ah_appear {
     0% {opacity: 0;}
-    51% {opacity: 0;}
-    52% {opacity:1;}
-    53% {opacity:0.4;}
+    52% {opacity: 0;}
+    53% {opacity:1;}
+    54% {opacity:0.4;}
     100% {opacity: 1;}
 }
-
  
 #row2 .item1,
 #row2 .item2,
@@ -1272,29 +1272,53 @@ canvas {
 #row2 .item9,
 #row2 .item10,
 #row2 .item11 {
-    animation-name: af_appear;
+    animation-name: ag_appear;
     animation-duration:360s;
 }
 
-@keyframes af_appear {
+@keyframes ag_appear {
     0% {opacity: 0;}
-    50% {opacity: 0;}
-    51% {opacity:1;}
-    52% {opacity: 1;}
+    51% {opacity: 0;}
+    52% {opacity:1;}
     53% {opacity:0.4;}
     100% {opacity: 1;}
 }
 
+#row8 .item24,
+#row8 .item23,
+#row9 .item23,
+#row21 .item18 {
+    animation-name: ae_appear1;
+    animation-duration:360s;
+}
+
+@keyframes ae_appear1 {
+    0% {opacity: 0;}
+    48% {opacity: 0;transform:translate(-200px,-200px);scale:0}
+    49% {opacity:1;transform: translate(0,0);scale:1;}
+    50% {opacity: 1;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
 
 #row2 .item31,
 #row3 .item30,
 #row4 .item29,
 #row5 .item28,
-#row6 .item27,
-#row8 .item24,
-#row8 .item23,
-#row9 .item23,
-#row21 .item18,
+#row6 .item27 {
+    animation-name: ae_appear2;
+    animation-duration:360s;
+}
+
+@keyframes ae_appear2 {
+    0% {opacity: 0;}
+    48% {opacity: 0;transform: translate(200px,200px);scale:0;}
+    49% {opacity:1;transform: translate(0,0);scale:1;}
+    50% {opacity: 1;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+
 #row16 .item30,
 #row17 .item30,
 #row18 .item30,
@@ -1322,7 +1346,7 @@ canvas {
     0% {opacity: 0;}
     48% {opacity: 0;}
     49% {opacity:1;}
-    51% {opacity: 0.4;}
+    50% {opacity: 1;}
     51% {opacity: 0.4;}
     100% {opacity: 1;}
 }
@@ -1374,7 +1398,7 @@ canvas {
     0% {opacity: 0;}
     46% {opacity: 0;}
     47% {opacity:1;}
-    50% {opacity: 0.4;}
+    50% {opacity: 1;}
     51% {opacity: 0.4;}
     100% {opacity: 1;}
 }
@@ -1394,6 +1418,7 @@ canvas {
 #row5 .item6,
 #row5 .item7,
 #row5 .item8,
+#row5 .item9,
 #row5 .item10,
 #row5 .item11,
 #row5 .item12,
@@ -1405,48 +1430,68 @@ canvas {
 #row5 .item18,
 #row5 .item19,
 #row5 .item20,
+#row5 .item21,
+#row5 .item22,
+#row5 .item23,
 #row7 .item28,
-#row6 .item29 ,
+#row6 .item29,
 #row5 .item30,
-#row4 .item30,
 #row4 .item31,
-#row3 .item31,
 #row3 .item32,
-#row2 .item32,
 #row8 .item30,
-#row9 .item30 {
+#row9 .item30,
+#row7 .item31,
+#row6 .item32 {
     animation-name: ac_appear;
     animation-duration:360s;
 }
 
+@keyframes af_appear {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    51% {opacity:1;}
+    52% {opacity: 1;}
+    53% {opacity:0.4;}
+    100% {opacity: 1;}
+}
 @keyframes ac_appear {
     0% {opacity: 0;}
     43% {opacity: 0;}
     44% {opacity:1;}
-    47% {opacity: 0.4;}
+    50% {opacity: 1;}
     51% {opacity: 0.4;}
     100% {opacity: 1;}
 }
 
 #row6 .item1,
 #row6 .item2,
+#row6 .item3,
 #row6 .item4,
 #row6 .item5,
 #row6 .item7,
 #row6 .item8,
+#row6 .item9,
 #row6 .item10,
 #row6 .item11,
-#row7 .item31,
-#row6 .item32 {
+#row6 .item12,
+#row6 .item13,
+#row6 .item14,
+#row6 .item15,
+#row6 .item17,
+#row6 .item18,
+#row6 .item19,
+#row6 .item20,
+#row6 .item21 {
     animation-name:ab_appear;
     animation-duration:360s;
+    
 }
 
 @keyframes ab_appear {
     0% {opacity: 0;}
     41% {opacity: 0;}
     42% {opacity:1;}
-    45% {opacity: 0.4;}
+    50% {opacity: 1;}
     51% {opacity: 0.4;}
     100% {opacity: 1;}
 }
@@ -1481,7 +1526,12 @@ canvas {
 #row5 .item32,
 #row7 .item32,
 #row11 .item25,
-#row10 .item26 {
+#row10 .item26,
+#row7 .item28,
+#row6 .item29,
+#row5 .item30,
+#row4 .item31,
+#row3 .item32 {
     animation-name: z_appear1;
     animation-duration: 360s;
 
@@ -1500,13 +1550,33 @@ canvas {
     100% {opacity: 1;}
 }
 
+#row7 .item27,
+#row6 .item28,
+#row5 .item29 {
+    animation-name: za_appear;
+    animation-duration: 360s;
+}
+
+
+
+
+@keyframes za_appear {
+    0% {opacity: 0;}
+    37% {opacity: 0;}
+    38% {opacity:1;}
+    41% {opacity: 0.4;}
+    42% {opacity: 1;}
+    45% {opacity: 0.4;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+
 #row11 .item24,
 #row10 .item25,
 #row9 .item25,
 #row8 .item26,
-#row7 .item27,
-#row6 .item28,
-#row5 .item29,
 #row8 .item1,
 #row8 .item2,
 #row8 .item3,
@@ -1528,12 +1598,7 @@ canvas {
 #row8 .item19,
 #row8 .item20,
 #row8 .item21,
-#row10 .item25,
-#row7 .item28,
-#row6 .item29,
-#row5 .item30,
-#row4 .item31,
-#row3 .item32 {
+#row10 .item25 {
     animation-name:z_appear;
     animation-duration:360s;
 }
@@ -1614,9 +1679,9 @@ canvas {
 
 @keyframes w_appear {
     0% {opacity: 0;}
-    33% {opacity: 0;}
-    34% {opacity:1;}
-    37% {opacity: 0.4;}
+    34% {opacity: 0;}
+    35% {opacity:1;}
+    38% {opacity: 0.4;}
     51% {opacity: 0.4;}
     100% {opacity: 1;}
 }
@@ -1878,13 +1943,29 @@ canvas {
     100% {opacity: 1;}
 }
 
-#row21 .item16,
-#row19 .item18,
-#row9 .item26,
 #row7 .item29,
 #row6 .item30,
 #row5 .item31,
 #row4 .item32 {
+    animation-name:raa_appear;
+    animation-duration:360s;
+}
+
+@keyframes raa_appear {
+    0% {opacity: 0;}
+    21% {opacity: 0;scale:0;transform:translate(200px,-200px);}
+    22% {opacity:1;scale:1;transform:translateX(0);}
+    25% {opacity:0.4;}
+    41% {opacity: 0.4;}
+    42% {opacity:1;}
+    45% {opacity: 0.4;}
+    51% {opacity:0.4;}
+    100% {opacity:1;}
+}
+    
+#row21 .item16,
+#row19 .item18,
+#row9 .item26 {
     animation-name:ra_appear;
     animation-duration:360s;
 }
@@ -2122,11 +2203,11 @@ canvas {
 #row25 .item29,
 #row26 .item29 {
     color: white;
-    animation-name: ja_dropin;
+    animation-name: jb_dropin;
     animation-duration:360s;
 }
 
-@keyframes ja_dropin {
+@keyframes jb_dropin {
     0% {opacity: 0;}
     12% {opacity: 0;transform:translate(40vw, 40vw);}
     13% {opacity:1;transform: translate(0, 0);}
@@ -2135,11 +2216,29 @@ canvas {
     100% {opacity: 1;}
 }
 
+#row4 .item30,
+#row3 .item31,
+#row2 .item32 {
+    animation-name:ja_dropin;
+    animation-duration: 360s;
+}
+
+@keyframes ja_dropin {
+    0% {opacity: 0;}
+    12% {opacity: 0;transform:translate(-40vw, -40vw);}
+    13% {opacity:1;transform: translate(0, 0);}
+    16%{opacity:0.4;}
+    41% {opacity: 0.4;}
+    42% {opacity:1;}
+    45% {opacity: 0.4;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+
+}
+
 #row20 .item17,
 #row11 .item23,
 #row10 .item24,
-#row3 .item31,
-#row2 .item32,
 #row12 .item22,
 #row26 .item11 {
     animation-name: j_dropin;
@@ -2319,8 +2418,8 @@ canvas {
 
 @keyframes f_appear {
     0% {opacity: 0;}
-    7% {opacity: 0;transform:translateX(40vw);transform: translateY(40vw);}
-    8% {opacity: 1;transform:translateX(0);transform: translateY(0);}
+    6% {opacity: 0;transform:translateX(40vw);transform: translateY(40vw);}
+    7% {opacity: 1;transform:translateX(0);transform: translateY(0);}
     11%{opacity:0.4;}
     51% {opacity:0.4;}
     100% {opacity: 1;}
