@@ -462,7 +462,7 @@ button:hover {
 
 .graphics-container1 {
     background-color: blue;
-    opacity:1;
+    opacity:0;
 }
 
 .graphics-container2 {
@@ -472,7 +472,7 @@ button:hover {
 
 .graphics-container3 {
     background-color: aqua;
-    opacity:1;
+    opacity:0;
 }
 
 canvas {
@@ -480,7 +480,7 @@ canvas {
     box-sizing: border-box;
     height:100%;
     width: 100%;
-    opacity:0;
+    opacity:1;
     border:none;
 }
 
@@ -1245,8 +1245,7 @@ canvas {
 #row1 .item7,
 #row1 .item8,
 #row1 .item9,
-#row1 .item10,
-#row1 .item11 {
+#row1 .item10 {
     animation-name: ah_appear;
     animation-duration:360s;
 }
@@ -1979,7 +1978,7 @@ canvas {
     21% {opacity: 0;scale:0;transform:translate(200px,-200px);}
     22% {opacity:1;scale:1;transform:translateX(0);}
     25% {opacity:0.4;}
-    37% {opacity: 0;}
+    37% {opacity: 0.4;}
     38% {opacity:1;}
     41% {opacity: 0.4;}
     42% {opacity:1;}
