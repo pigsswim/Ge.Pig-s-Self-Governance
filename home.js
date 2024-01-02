@@ -34,9 +34,11 @@ function hideNav () {
 //hideNav();
 
 //hide unneeded sections
-function hideHomeSection () {
- 
+function hideGraphics () {
+    const graphics = document.getElementById('graphics');
+    graphics.innerHTML = '';
 }
+setTimeout(hideGraphics,360000);
 
 function showHealthSection () {
   healthSection.style.opacity = "1";
