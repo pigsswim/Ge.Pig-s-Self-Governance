@@ -902,9 +902,7 @@ canvas {
 }
 
 #row8 .item30,
-#row9 .item30,
-#row11 .item30,
-#row12 .item30 {
+#row9 .item30 {
     background: radial-gradient(ellipse farthest-corner at right bottom, #9ba0af3f 0%, #4e576b7a 8%, #10151f83 30%, #1318217d 40%, transparent 80%),
     radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #dee8ffb8 8%, #7b7f869e 25%, #22252884 62.5%, #7b7f8684 100%);
     border-radius: 6px;
@@ -1367,19 +1365,11 @@ canvas {
 #row4 .item14,
 #row4 .item15,
 #row4 .item16,
-#row6 .item13,
-#row6 .item14,
-#row6 .item15,
-#row6 .item16,
 #row2 .item27,
 #row2 .item28,
-#row2 .item29,
 #row2 .item30,
-#row11 .item26,
 #row3 .item27,
-#row3 .item28,
 #row3 .item29,
-#row4 .item27,
 #row4 .item28,
 #row5 .item27,
 #row8 .item28,
@@ -1403,13 +1393,19 @@ canvas {
     100% {opacity: 1;}
 }
 
-#row6 .item18,
-#row6 .item19,
-#row6 .item20,
-#row6 .item21,
-#row6 .item22,
-#row6 .item23,
-#row6 .item24,
+#row11 .item26 {
+    animation-name: aca_appear;
+    animation-duration: 360s;
+}
+@keyframes aca_appear {
+    0% {opacity: 0;}
+    43% {opacity: 0;}
+    44% {opacity:0.4;}
+    50% {opacity: 0.4;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+
 #row5 .item1,
 #row5 .item2,
 #row5 .item3,
@@ -1433,27 +1429,16 @@ canvas {
 #row5 .item21,
 #row5 .item22,
 #row5 .item23,
-#row7 .item28,
-#row6 .item29,
-#row5 .item30,
-#row4 .item31,
-#row3 .item32,
-#row8 .item30,
-#row9 .item30,
+#row4 .item27,
+#row3 .item28,
+#row2 .item29,
+#row2 .item28,
 #row7 .item31,
 #row6 .item32 {
     animation-name: ac_appear;
     animation-duration:360s;
 }
 
-@keyframes af_appear {
-    0% {opacity: 0;}
-    50% {opacity: 0;}
-    51% {opacity:1;}
-    52% {opacity: 1;}
-    53% {opacity:0.4;}
-    100% {opacity: 1;}
-}
 @keyframes ac_appear {
     0% {opacity: 0;}
     43% {opacity: 0;}
@@ -1496,7 +1481,6 @@ canvas {
     100% {opacity: 1;}
 }
 
-
 #row7 .item1,
 #row7 .item2,
 #row7 .item3,
@@ -1505,11 +1489,6 @@ canvas {
     color:white;
     animation-name: aa_appear;
     animation-duration: 360s;
-}
-
-#row8 .item25 {
-    animation-name: aa_appear;
-    animation-duration:360s;
 }
 
 @keyframes aa_appear {
@@ -1521,12 +1500,40 @@ canvas {
     100% {opacity: 1;}
 }
 
+#row8 .item25 {
+    animation-name: aaa_appear;
+    animation-duration:360s;
+}
+
+@keyframes aaa_appear {
+    0% {opacity: 0;}
+    40% {opacity: 0;opacity: 0;transform:rotate(180deg);scale:0;}
+    41% {opacity:1;transform:translate(0,0);transform:rotate(0);scale:1;}
+    43% {opacity: 0.4;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+
+#row11 .item25,
+#row10 .item26 {
+    animation-name: za_appear1;
+    animation-duration: 360s;
+
+}
+
+@keyframes za_appear1 {
+    0% {opacity: 0;}
+    37% {opacity: 0;}
+    38% {opacity:1;}
+    41% {opacity: 0.4;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+
 #row7 .item30,
 #row6 .item31,
 #row5 .item32,
 #row7 .item32,
-#row11 .item25,
-#row10 .item26,
 #row7 .item28,
 #row6 .item29,
 #row5 .item30,
@@ -1543,40 +1550,11 @@ canvas {
     38% {opacity:1;}
     41% {opacity: 0.4;}
     42% {opacity:1;}
-    45% {opacity: 0.4;}
-    51% {opacity: 0.4;}
-    100% {opacity: 1;}
-    51% {opacity: 0.4;}
-    100% {opacity: 1;}
-}
-
-#row7 .item27,
-#row6 .item28,
-#row5 .item29 {
-    animation-name: za_appear;
-    animation-duration: 360s;
-}
-
-
-
-
-@keyframes za_appear {
-    0% {opacity: 0;}
-    37% {opacity: 0;}
-    38% {opacity:1;}
-    41% {opacity: 0.4;}
-    42% {opacity: 1;}
-    45% {opacity: 0.4;}
-    51% {opacity: 0.4;}
-    100% {opacity: 1;}
+    50% {opacity: 1;}
     51% {opacity: 0.4;}
     100% {opacity: 1;}
 }
 
-#row11 .item24,
-#row10 .item25,
-#row9 .item25,
-#row8 .item26,
 #row8 .item1,
 #row8 .item2,
 #row8 .item3,
@@ -1598,7 +1576,13 @@ canvas {
 #row8 .item19,
 #row8 .item20,
 #row8 .item21,
-#row10 .item25 {
+#row10 .item25,
+#row11 .item24,
+#row9 .item25,
+#row8 .item26,
+#row7 .item27,
+#row6 .item28,
+#row5 .item29 {
     animation-name:z_appear;
     animation-duration:360s;
 }
@@ -1640,6 +1624,35 @@ canvas {
     color:white;
 }
 
+#row12 .item21 {
+    animation-name:wa_appear;
+    animation-duration: 360s;
+}
+
+@keyframes wa_appear {
+    0% {opacity: 0;}
+    34% {opacity: 0;transform:rotate(180deg);scale:0;}
+    35% {opacity:1;transform:translate(0,0);transform:rotate(0);scale:1;}
+    38% {opacity: 0.4;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+
+#row10 .item23,
+#row9 .item24 {
+    animation-name: wb_appear;
+    animation-duration: 360s;
+}
+
+@keyframes wb_appear {
+    0% {opacity: 0;}
+    34% {opacity: 0;transform:rotateX(1800deg);scale:5;transform:translateY(-100px);}
+    35% {opacity:1;transform:translate(0,0);transform:rotate(0);scale:1;}
+    38% {opacity: 0.4;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+
 #row11 .item1,
 #row11 .item2,
 #row11 .item3,
@@ -1667,11 +1680,8 @@ canvas {
 #row9 .item12,
 #row9 .item13,
 #row9 .item14,
-#row10 .item23,
-#row9 .item24,
-#row11 .item30,
-#row12 .item30,
-#row12 .item21 {
+#row8 .item30,
+#row9 .item30 {
     animation-name: w_appear;
     animation-duration:360s;
 
@@ -1686,7 +1696,20 @@ canvas {
     100% {opacity: 1;}
 }
 
-#row13 .item20,
+#row13 .item20 {
+    animation-name:v1a_appear;
+    animation-duration: 360s;
+}
+
+@keyframes v1a_appear{
+    0% {opacity: 0;}
+    27% {opacity: 0;scale:100;}
+    28% {opacity:1;scale:1;}
+    31% {opacity: 0.4;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+
 #row12 .item31,
 #row13 .item31,
 #row14 .item31,
@@ -1956,16 +1979,36 @@ canvas {
     21% {opacity: 0;scale:0;transform:translate(200px,-200px);}
     22% {opacity:1;scale:1;transform:translateX(0);}
     25% {opacity:0.4;}
+    37% {opacity: 0;}
+    38% {opacity:1;}
     41% {opacity: 0.4;}
     42% {opacity:1;}
-    45% {opacity: 0.4;}
+    50% {opacity: 1;}
     51% {opacity:0.4;}
     100% {opacity:1;}
 }
-    
-#row21 .item16,
-#row19 .item18,
+  
 #row9 .item26 {
+    animation-name: rab_appear;
+    animation-duration: 360s;
+}
+
+@keyframes rab_appear {
+    0% {opacity: 0;}
+    21% {opacity: 0;scale:0;transform:translate(200px,-200px);}
+    22% {opacity:1;scale:1;transform:translateX(0);}
+    25% {opacity:0.4;}
+    37% {opacity: 0.4;}
+    38% {opacity:1;}
+    41% {opacity: 0.4;}
+    51% {opacity: 0.4;}
+    100% {opacity: 1;}
+    51% {opacity:0.4;}
+    100% {opacity:1;}
+}
+
+#row21 .item16,
+#row19 .item18 {
     animation-name:ra_appear;
     animation-duration:360s;
 }
@@ -2173,7 +2216,6 @@ canvas {
     17% {opacity:0.4;}
     51% {opacity:0.4;}
     100% {opacity: 1;}
-
 }
 
 #row21 .item1,
