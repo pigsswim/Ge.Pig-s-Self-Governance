@@ -4,7 +4,6 @@ const secOne = document.getElementById('home-section-one');
 const secTwo = document.getElementById('home-section-two');
 const secThree = document.getElementById('home-section-three');
 const secFour = document.getElementById('home-section-four');
-
 let pos = 0;
 
 //hide page, show movie 
@@ -92,9 +91,9 @@ function start() {
         stars = [],
         shootingStars = [],
         layers = [
-            { speed: 0.1, scale: 0.2, count: 320 },
-            { speed: 0.1, scale: 0.5, count: 50 },
-            { speed: 0.1, scale: 0.75, count: 30 }
+            { speed: 0.12, scale: 0.2, count: 640 },
+            { speed: 0.12, scale: 0.5, count: 100 },
+            { speed: 0.12, scale: 0.75, count: 60 }
         ],
         starsAngle = 145,
         shootingStarSpeed = {
@@ -267,6 +266,7 @@ function start() {
 
 }
 
+window.addEventListener('resize',start);
 //hide movie, show page
 
 function hideMovie() {
