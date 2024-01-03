@@ -449,7 +449,10 @@ button:hover {
     gap: 5px;
     height: 100%;
     width: 100%;
-    min-width: 650px;
+    min-width: 1015px;
+    min-height:870px;
+    max-width: 1700px;
+    max-height:1350px;
 }
 
 .graphics-container1,
@@ -467,7 +470,7 @@ button:hover {
 
 .graphics-container2 {
     font-size: 20px;
-    color: white;
+    color: black;
 }
 
 .graphics-container3 {
@@ -2472,10 +2475,10 @@ canvas {
 
 @keyframes e_slideFromRight11 {
     0%{
-        transform: translateX(80vw);
+        transform: translateX(120vw);
     }
     5%{
-        transform: translateX(80vw);
+        transform: translateX(120vw);
     }
 
     6% {
@@ -2499,10 +2502,10 @@ canvas {
 
 @keyframes e_slideFromBottom1 {
     0%{
-        transform: translateY(-80vw);
+        transform: translateY(-200vw);
     }
     5%{
-        transform: translateY(-80vw);
+        transform: translateY(-200vw);
     }
 
     6% {
@@ -2526,10 +2529,10 @@ canvas {
 
 @keyframes e_slideFromBottom {
     0%{
-        transform: translateY(80vw);
+        transform: translateY(120vw);
     }
     5%{
-        transform: translateY(80vw);
+        transform: translateY(120vw);
     }
 
     6% {
@@ -2872,10 +2875,10 @@ canvas {
 
 @keyframes d_slideFromTop {
     0%{
-        transform: translateY(-80vw);
+        transform: translateY(-160vw);
     }
     4%{
-        transform: translateY(-80vw);
+        transform: translateY(-160vw);
     }
 
     5% {
@@ -2899,11 +2902,11 @@ canvas {
 
 @keyframes d_slideFromTop1 {
     0%{
-        transform: translateY(-120vw);
+        transform: translateY(-200vw);
 
     }
     4%{
-        transform: translateY(-120vw);
+        transform: translateY(-200vw);
 
     }
 
@@ -2928,11 +2931,11 @@ canvas {
 
 @keyframes d_slideFromTop2 {
     0%{
-        transform: translateY(-160vw);
+        transform: translateY(-240vw);
 
     }
     4%{
-        transform: translateY(-160vw);
+        transform: translateY(-240vw);
 
     }
 
@@ -2957,11 +2960,11 @@ canvas {
 
 @keyframes d_slideFromTop3 {
     0%{
-        transform: translateY(-200vw);
+        transform: translateY(-280vw);
 
     }
     4%{
-        transform: translateY(-200vw);
+        transform: translateY(-280vw);
 
     }
 
@@ -2986,11 +2989,11 @@ canvas {
 
 @keyframes d_slideFromTop4 {
     0%{
-        transform: translateY(-240vw);
+        transform: translateY(-320vw);
 
     }
     4%{
-        transform: translateY(-240vw);
+        transform: translateY(-320vw);
 
     }
 
@@ -3015,11 +3018,11 @@ canvas {
 
 @keyframes d_slideFromTop5 {
     0%{
-        transform: translateY(-280vw);
+        transform: translateY(-360vw);
 
     }
     4%{
-        transform: translateY(-280vw);
+        transform: translateY(-360vw);
 
     }
 
@@ -3044,11 +3047,11 @@ canvas {
 
 @keyframes d_slideFromTop6 {
     0%{
-        transform: translateY(-320vw);
+        transform: translateY(-400vw);
 
     }
     4%{
-        transform: translateY(-320vw);
+        transform: translateY(-400vw);
 
     }
 
@@ -3073,11 +3076,11 @@ canvas {
 
 @keyframes d_slideFromTop7 {
     0%{
-        transform: translateY(-360vw);
+        transform: translateY(-440vw);
 
     }
     4%{
-        transform: translateY(-360vw);
+        transform: translateY(-440vw);
 
     }
 
@@ -3102,11 +3105,11 @@ canvas {
 
 @keyframes d_slideFromTop8 {
     0%{
-        transform: translateY(-400vw);
+        transform: translateY(-480vw);
 
     }
     4%{
-        transform: translateY(-400vw);
+        transform: translateY(-480vw);
 
     }
 
@@ -3131,11 +3134,11 @@ canvas {
 
 @keyframes d_slideFromTop9 {
     0%{
-        transform: translateY(-440vw);
+        transform: translateY(-520vw);
 
     }
     4%{
-        transform: translateY(-440vw);
+        transform: translateY(-520vw);
 
     }
 
@@ -3161,11 +3164,11 @@ canvas {
 
 @keyframes d_slideFromTop10 {
     0%{
-        transform: translateY(-480vw);
+        transform: translateY(-560vw);
 
     }
     4%{
-        transform: translateY(-480vw);
+        transform: translateY(-560vw);
 
     }
 
@@ -3190,11 +3193,11 @@ canvas {
 
 @keyframes d_slideFromTop11 {
     0%{
-        transform: translateY(-520vw);
+        transform: translateY(-600vw);
 
     }
     4%{
-        transform: translateY(-520vw);
+        transform: translateY(-600vw);
 
     }
 
@@ -3221,11 +3224,11 @@ canvas {
 
 @keyframes d_slideFromLeft9 {
     0%{
-        transform: translateX(-400vw);
+        transform: translateX(-480vw);
 
     }
     4%{
-        transform: translateX(-400vw);
+        transform: translateX(-480vw);
 
     }
 
@@ -3250,11 +3253,11 @@ canvas {
 
 @keyframes d_slideFromLeft8 {
     0%{
-        transform: translateX(-360vw);
+        transform: translateX(-440vw);
 
     }
     4%{
-        transform: translateX(-360vw);
+        transform: translateX(-440vw);
 
     }
 
@@ -3279,11 +3282,11 @@ canvas {
 
 @keyframes d_slideFromLeft7 {
     0%{
-        transform: translateX(-320vw);
+        transform: translateX(-400vw);
 
     }
     4%{
-        transform: translateX(-320vw);
+        transform: translateX(-400vw);
 
     }
 
@@ -3308,11 +3311,11 @@ canvas {
 
 @keyframes d_slideFromLeft6 {
     0%{
-        transform: translateX(-280vw);
+        transform: translateX(-360vw);
 
     }
     4%{
-        transform: translateX(-280vw);
+        transform: translateX(-360vw);
 
     }
 
@@ -3337,11 +3340,11 @@ canvas {
 
 @keyframes d_slideFromLeft5 {
     0%{
-        transform: translateX(-240vw);
+        transform: translateX(-320vw);
 
     }
     4%{
-        transform: translateX(-240vw);
+        transform: translateX(-320vw);
 
     }
 
@@ -3366,11 +3369,11 @@ canvas {
 
 @keyframes d_slideFromLeft4 {
     0%{
-        transform: translateX(-200vw);
+        transform: translateX(-280vw);
 
     }
     4%{
-        transform: translateX(-200vw);
+        transform: translateX(-280vw);
 
     }
 
@@ -3395,11 +3398,11 @@ canvas {
 
 @keyframes d_slideFromLeft3 {
     0%{
-        transform: translateX(-160vw);
+        transform: translateX(-240vw);
 
     }
     4%{
-        transform: translateX(-160vw);
+        transform: translateX(-240vw);
 
     }
 
@@ -3424,11 +3427,11 @@ canvas {
 
 @keyframes d_slideFromLeft2 {
     0%{
-        transform: translateX(-120vw);
+        transform: translateX(-200vw);
 
     }
     4%{
-        transform: translateX(-120vw);
+        transform: translateX(-200vw);
 
     }
 
@@ -3453,11 +3456,11 @@ canvas {
 
 @keyframes d_slideFromLeft1 {
     0%{
-        transform: translateX(-80vw);
+        transform: translateX(-160vw);
 
     }
     4%{
-        transform: translateX(-80vw);
+        transform: translateX(-160vw);
 
     }
 
@@ -3482,11 +3485,11 @@ canvas {
 
 @keyframes d_slideFromLeft {
     0%{
-        transform: translateX(-40vw);
+        transform: translateX(-120vw);
 
     }
     4%{
-        transform: translateX(-40vw);
+        transform: translateX(-120vw);
 
     }
 
