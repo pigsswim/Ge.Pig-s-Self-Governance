@@ -374,25 +374,32 @@ button:hover {
     grid-template-columns: repeat(5,1fr);
 }
 
-.video-title-container {
+.video-container {
+    height: auto;
+    justify-content: center;
+    min-height:324px;
+    min-width:576px;
     width: 100%;
-    margin-inline-end: 50px;
-    margin-inline-start: 50px;
-    max-width: 1680px;
-    display: block;
-    background-color: brown;
+    display: flex;
 }
 
-.video-container {
-    height: 500px;
+.video-content-container {
+    position: relative;
     justify-content: center;
+    height: auto;
     margin-left: 50px;
     margin-right: 50px;
-    height: 320px;
+    min-height:324px;
+    min-width:576px;
     max-height: 1260px;
     max-width: 1920px;
     width: 100%;
     display: flex;
+}
+
+video {
+    width: 100%;
+    height:auto;
 }
 
 .section-header {
@@ -411,35 +418,9 @@ button:hover {
     line-height: 32px;
 }
 
-
-.video-content-container {
-    display: flex;
-    position: relative;
-}
-
-.video-clear {
-    position: absolute;
-}
-
-.video-control-container {
-    position: absolute;
-    display: flex;
-    text-align: left;
-}
-
-.video-control-button {
-    position: sticky;
-    box-sizing: content-box;
-    display: flex;
-}
-
-
-#graphics {
-    background-color: black;
-}
-
 #graphics {
     padding: 40px;
+    background-color: black;
 }
 
 .graphics-wrapper {
