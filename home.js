@@ -1,71 +1,23 @@
 //home page href 
-const healthSection = document.getElementById('home-section-two');
-const educationSection = document.getElementById('home-section-three');
-const financeSection = document.getElementById('home-section-four');
-//healthSection.style.opacity = '0';
-//educationSection.style.opacity = '0';
-//financeSection.style.opacity = '0';
+const one = document.getElementById('nav');
+const secOne = document.getElementById('home-section-one');
+const secTwo = document.getElementById('home-section-two');
+const secThree = document.getElementById('home-section-three');
+const secFour = document.getElementById('home-section-four');
+
 let pos = 0;
 
+//hide page, show movie 
 
-function setActive() {
-  
-  const unorderedList = document.getElementById('top');
-  const lists = unorderedList.getElementsByTagName('li');
-  const links = unorderedList.getElementsByTagName('a')
-  for (i=0; i < links.length; i ++) {
-      if (document.location.href.indexOf(links[i].href) >= 0) {
-        const actives = document.querySelectorAll('.active');
-        actives.forEach((active) =>{
-        active.classList.remove('active');
-  });
-        lists[i].className = 'active';
-    } 
-  }
+function showMovie() {
+    one.style.display='none';
+    secOne.style.display ='none';
+    secTwo.style.display = 'none';
+    secThree.style.display = 'none';
+    secFour.style.display = 'none';
 }
 
-window.onload = setActive()
-// hide nav bar
-function hideNav () {
-  const nav = document.getElementById('nav');
-  nav.style.display = 'none';
-}
-
-//hideNav();
-
-//hide unneeded sections
-function hideGraphics () {
-    const graphics = document.getElementById('graphics');
-    graphics.innerHTML = '';
-}
-setTimeout(hideGraphics,360000);
-
-function showHealthSection () {
-  healthSection.style.opacity = "1";
-  healthSection.style.animationName = 'homeSectionAppear';
-  healthSection.style.animationDuration = '2s';
-}
-
-//setTimeout(showHealthSection, 6000);
-
-function scrollScreen () {
-  if (pos == 1000) {
-    clearInterval(scrollScreen);
-  }else {
-    pos++;
-    window.scrollBy(0,pos/700);
-  }
-}
-
-function scrollToHealth () {
-  setInterval(scrollScreen,1);
-}
-
-//setTimeout(scrollToHealth, 5000);
-
-//color animation 
-
-
+showMovie();
 
 "use strict";
 window.onload = function() {
@@ -149,7 +101,7 @@ function start() {
             min: 15,
             max: 20
         },
-        shootingStarOpacityDelta = 0.01,
+        shootingStarOpacityDelta = 0,
         trailLengthDelta = 0.01,
         shootingStarEmittingInterval = 2000,
         shootingStarLifeTime = 500,
@@ -315,13 +267,32 @@ function start() {
 
 }
 
-//hide left and right
+//hide movie, show page
 
-function hideContainer () {
-  const ctn2  = document.getElementById('container1');
-  const ctn3  = document.getElementById('container3');
-  ctn2.style.opacity = '0';
-  ctn3.style.opacity = '0';
+function hideMovie() {
+    const graphics = document.getElementById('graphics');
+    graphics.style.display = 'none';
+    one.style.display='block';
+    secOne.style.display ='block';
+    secTwo.style.display = 'block';
+    secThree.style.display = 'block';
+    secFour.style.display = 'block';
 }
 
-//hideContainer();
+setTimeout(hideMovie, 300000);
+
+function scrollScreen () {
+    if (pos == 1000) {
+      clearInterval(scrollScreen);
+    }else {
+      pos++;
+      window.scrollBy(0,pos/700);
+    }
+  }
+  
+  function scrollToHealth () {
+    setInterval(scrollScreen,1);
+  }
+  
+  //setTimeout(scrollToHealth, 5000);
+  
