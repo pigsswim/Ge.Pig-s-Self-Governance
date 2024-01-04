@@ -18,12 +18,12 @@ function intro () {
 intro();
 
 function typeTitle () {
-  let a = 'The Story of I-Have-No-Idea-Who';
+  let a = '谁谁谁的故事';
   if (i<a.length){
     title.innerHTML += a.charAt(i);
     i++;
   }
-  setTimeout(typeTitle, 60);
+  setTimeout(typeTitle, 200);
 }
 
 function renderBackground() {
@@ -33,6 +33,6 @@ function renderBackground() {
 setTimeout(renderBackground,speed*10);
 
 function goHome() {
-  location.href = 'home.html';
+  location.href = '/Cantonese/home/index.html';
 }
 setTimeout(goHome,speed*11);
