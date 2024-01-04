@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ge.Pig's Self-Governance</title>
-    <link rel="stylesheet" href="health.css">
+    <link rel="stylesheet" href="style.css">
     <script defer src="app.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
-  <header>
-    <nav class="nav">
-      <ul class="top" id="top">
-        <li class="top-clm" id="home"><a href="./">Home</a></li>
-        <li class="top-clm" id="health"><a href="./health">Health</a></li>
-        <li class="top-clm" id="finance"><a href="./finance">Finance</a></li>
-        <li class="top-clm" id="cognitivity"><a href="./cognitivity" onclick="callCognitivity()">Cognitivity</a></li>
-      </ul>
+    <nav class="nav" id="nav">
+      <div class="nav-content">
+        <ul id="top">
+          <li class="top-clm" id="home"><img class="nav-link" id="nav-item-fishhead"src="/image/fishheadcat.png"></li>
+          <li class="top-clm" id="home"><a class="nav-link" href="/English/home/./">Home</a></li>
+          <li class="top-clm" id="health"><a class="nav-link" href="/English/health/./">Health</a></li>
+          <li class="top-clm" id="finance"><a class="nav-link" href="/English/finance/./">Finance</a></li>
+          <li class="top-clm" id="cognitivity"><a class="nav-link" href="/English/cognitivity/./">Cognitivity</a></li>
+        </ul>
+      </div>
     </nav>
+    
+    <div><audio controls hidden autoplay><source src="narrative.mp3" type="audio/ogg"></audio></div>
+    <div><audio controls hidden autoplay loop><source src="music.mp3" type="audio/ogg"></audio></div>
    <!--
     <div class="top">
       <div class="top-clm">Home</div>
@@ -26,9 +31,7 @@
       <div class="top-clm">Health Management</div>
       <div class="top-clm">Congnitivity Management</div>
     </div>
-   --> 
-   
-  </header>
+   -->
   <main id="main">
     
   
