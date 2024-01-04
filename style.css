@@ -1,0 +1,48 @@
+/* Click-me button*/
+html,
+body {
+  box-sizing: border-box;
+  background-color: #f2edd8;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.overlay {
+  height: 0%;
+  width:100%;
+  position: fixed;
+  z-index:99;
+  left:0;
+  top:0;
+  background-color:black;
+  background-color:rgba(0,0,0,0.9);
+  overflow-y:hidden;
+  transition:0.5s;
+}
+
+.overlay-content {
+  position:relative;
+  top:25%;
+  width:100%;
+  text-align:center;
+  margin-top:30px;
+}
+
+.overlay a {
+  padding:8px;
+  text-decoration:none;
+  font-size:36px;color:#818181;
+  display:block;
+  transition:0.3s;
+}
+.overlay a:hover, .overlay a:focus {
+  color:#f1f1f1;
+}
+
+@media screen and (max-height:450px) {
+  .overlay a {font-size:20px;}
+  .overlay {overflow-y:auto;}
+}

@@ -1,6 +1,13 @@
 const clickMe = document.getElementById('click-me');
 clickMe.onclick = render;
 
+function openNav () {
+    document.getElementById('nav').style.height='100%';
+}
+
+window.addEventListener('load',openNav());
+
+/*
 function render() {
 
     document.getElementById('ball-container2').innerHTML = '';
@@ -60,3 +67,4 @@ function render() {
     const ballContainer8 = document.getElementById('ball-container8');
     ballContainer8.appendChild(cognitivityButton);
 }
+*/
