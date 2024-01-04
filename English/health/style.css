@@ -437,12 +437,12 @@ button {
 	border-radius: 60px;
 	line-height: 40px;
 	font-weight: 600;
-	border: 1px solid #731b18;
-	background-image: linear-gradient(-180deg, #d73936 0%, #891515 100%);
-	box-shadow: 0 16px 20px 0 rgba(113, 26, 19, 0.5),
+	border: 1px solid #5b120fec;
+	background-image: linear-gradient(-180deg, #a22826 0%, #891515da 100%);
+	box-shadow: 
 							0 -4px 20px rgb(84, 4, 4) inset,
 							0 12px 8px rgba(98, 23, 23, 0.4) inset,
-							0 4px 8px 0 rgb(141, 39, 44) inset;
+							0 4px 8px 0 rgba(141, 39, 44, 0.897) inset;
 }
 
 button span {
@@ -598,15 +598,131 @@ button::after {
 	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
 }
 
-.animation-field {
+
+button {
   height: 100%;
   width: 100%;
-  position: relative;
-  display:flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 20px;
+  font-size: 20px;
+  color: white;
+	cursor: pointer;
+	position: relative;
+	border-radius: 60px;
+	line-height: 40px;
+	font-weight: 600;
+	border: 1px solid #5b120fec;
+	background-image: linear-gradient(-180deg, #a22826 0%, #891515da 100%);
+	box-shadow: 
+							0 -4px 20px rgb(84, 4, 4) inset,
+							0 12px 8px rgba(98, 23, 23, 0.4) inset,
+							0 4px 8px 0 rgba(141, 39, 44, 0.897) inset;
 }
 
+button span {
+	color: #f2edd8;
+	background-image: linear-gradient(0deg, #d73936 0%, #f2edd8 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	filter: drop-shadow(0 2px 2px rgb(80, 9, 12));
+}
 
+button::before {
+	content: "";
+	display: block;
+	height: 4px;
+	position: absolute;
+	top: 8px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 50px);
+	background: #ffffff;
+	border-radius: 100%;
+	opacity: 0.6;
+	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+button::after {
+	content: "";
+	display: block;
+	height: 4px;
+	position: absolute;
+	bottom: 12px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 50px);
+	background: #fff;
+	border-radius: 100%;
+	filter: blur(1px);
+	opacity: 0.05;
+	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+.delete-button {
+  cursor: pointer;
+	position: relative;
+	border-radius: 20px;
+	font-size: 20px;
+	font-weight: 600;
+	border: 1px solid #621714;
+	background-image: linear-gradient(-180deg, #be1c1a 0%, #8b0909 100%);
+	box-shadow: 0 16px 20px 0 rgba(112, 19, 13, 0.5),
+							0 -4px 20px rgb(51, 1, 1) inset,
+							0 12px 8px rgba(96, 18, 18, 0.4) inset,
+							0 4px 8px 0 rgb(133, 29, 34) inset;
+}
+
+.delete-button span {
+	color: #f2edd8;
+	background-image: linear-gradient(0deg, #d73936 0%, #f2edd8 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	filter: drop-shadow(0 2px 2px rgb(80, 9, 12));
+}
+
+.delete-button::before {
+	content: "";
+	display: block;
+	height: 4px;
+	position: absolute;
+	top: 8px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 32px);
+	background: #ffffff;
+	border-radius: 100%;
+	opacity: 0.8;
+	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+.delete-button::after {
+	content: "";
+	display: block;
+	height: 4px;
+	position: absolute;
+	bottom: 12px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 50px);
+	background: #fff;
+	border-radius: 100%;
+	filter: blur(1px);
+	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+.goal-button {
+    width: auto;
+    height:auto;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 60px;
+    line-height: 40px;
+    font-weight: 600;
+    border: 1px solid #55110f;
+    background-image: linear-gradient(-180deg, #d73936 0%, #891515 100%);
+    box-shadow:
+                0 -4px 20px rgb(84, 4, 4) inset,
+                0 12px 8px rgba(98, 23, 23, 0.4) inset,
+                0 4px 8px 0 rgb(141, 39, 44) inset;
+  }

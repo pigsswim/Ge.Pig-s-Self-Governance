@@ -372,3 +372,19 @@ function setActive() {
 window.onload = setActive()
 
 // graph 
+
+//set goals
+
+function setGoal() {
+  const goal = document.getElementById('goal-button');
+  goal.addEventListener('click', () => {
+    const setGoal = document.createElement('div');
+    const goals = document.createElement('form');
+    const goalDay = document.createElement('label');
+    const dayNumber = document.createElement('input');
+    goals.value = goalDay + dayNumber;
+    setGoal.value = goals;
+    document.body.appendChild(setGoal);
+  })
+
+}
