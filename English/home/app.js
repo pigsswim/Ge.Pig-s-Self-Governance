@@ -1,22 +1,8 @@
 //home page href 
 const one = document.getElementById('nav');
-const secOne = document.getElementById('home-section-one');
-const secTwo = document.getElementById('home-section-two');
-const secThree = document.getElementById('home-section-three');
-const secFour = document.getElementById('home-section-four');
 let pos = 0;
 
 //hide page, show movie 
-
-function showMovie() {
-    one.style.display='none';
-    secOne.style.display ='none';
-    secTwo.style.display = 'none';
-    secThree.style.display = 'none';
-    secFour.style.display = 'none';
-}
-
-showMovie();
 
 "use strict";
 window.onload = function() {
@@ -268,18 +254,6 @@ function start() {
 
 window.addEventListener('resize',start);
 //hide movie, show page
-
-function hideMovie() {
-    const graphics = document.getElementById('graphics');
-    graphics.style.display = 'none';
-    one.style.display='block';
-    secOne.style.display ='block';
-    secTwo.style.display = 'block';
-    secThree.style.display = 'block';
-    secFour.style.display = 'block';
-}
-
-setTimeout(hideMovie, 300000);
 
 function scrollScreen () {
     if (pos == 1000) {
