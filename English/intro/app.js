@@ -33,6 +33,6 @@ function renderBackground() {
 setTimeout(renderBackground,speed*10);
 
 function goHome() {
-  location.href = 'about/./';
+  location.href = '../about/./';
 }
 setTimeout(goHome,speed*11);
