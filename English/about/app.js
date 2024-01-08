@@ -260,7 +260,7 @@ window.addEventListener('resize',start);
 //Go to homepage
 function goHome() {
     
-    location.href = '/English/home/./';
+    location.href = '../home/./';
   }
 
   setTimeout(goHome,speed*300);
