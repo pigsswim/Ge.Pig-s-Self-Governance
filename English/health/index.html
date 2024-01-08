@@ -32,18 +32,28 @@
         <button id="add-Button" onclick="addRecord()" class="add-button"><span>Add</span> </button>
       </div>
       <div class="middle-middle">
-        <div>Days left: <span id="days-left">30</span></div>
+        <div id="goal-day">Days left: <span id="days-left">0</span></div>
       </div>
       <div  class='middle-right'>
         <div>Money spent: <span id="money-spent">0</span></div>
-        
       </div class='btn1'>
       <div  class='middle-right-right'>
         <div>Weight to lose: <span id="weight-tolose">0</span></div>
         
       </div>
-      <div class="btn">
-        <button id="goal-Button" onclick="setGoal()" class="goal-button"><span>Set Goals</span> </button>
+      <div class="dropdown">
+        <button id="goal-Button" onclick="dropdown()" class="goal-button"><span>Set Goals</span> </button>
+        <div id='dropdown' class="dropdown-content">
+          <form>
+            <label class="dropdownlabel">What's your current weight(kg)?</label>
+            <input class="dropdowninput" type="number" id="current-weight">
+            <label class="dropdownlabel">What's your goal weight(kg)?</label>
+            <input class="dropdowninput" type="number" id="goal-weight">
+            <label class="dropdownlabel">How many days do you need?</label>
+            <input class="dropdowninput"  type="number" id="goal-days">
+
+          </form>
+        </div>
       </div>
       <!--
         <div class="btn">
