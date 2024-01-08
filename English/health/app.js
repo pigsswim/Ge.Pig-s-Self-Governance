@@ -5,9 +5,10 @@ let counters = [];
 let moneyCount = 0;
 let exerciseCount = 0;
 let foodCount = 0;
-let days = 30;
+let days = 0;
 let moneySpent = 0;
 let weightTolose = 0;
+let goalWeight = 0;
 
 const savedRecords = JSON.parse(localStorage.getItem('records'));
 const savedMoneyCount = JSON.parse(localStorage.getItem('moneyCount'));
@@ -16,6 +17,25 @@ const savedFoodCount = JSON.parse(localStorage.getItem('foodCount'));
 const savedDays = JSON.parse(localStorage.getItem('days'));
 const savedMoneySpent = JSON.parse(localStorage.getItem('moneySpent'));
 const savedWeightTolose = JSON.parse(localStorage.getItem('weightTolose'));
+
+function dropdown () {
+    const dropdown = document.getElementById('dropdown');
+    dropdown.classList.toggle('show'); 
+    setGoal();
+}
+
+function setGoal() {
+    const goalDays = document.getElementById('goal-days');
+    const goalweight = document.getElementById('goal-weight');
+    const currentWeight = document.getElementById('current-weight');
+    const dayLeft = document.getElementById('days-left');
+    const weightToLose = document.getElementById('weight-tolose');
+    dayLeft.innerHTML = goalDays.value - 0;
+    days = goalDays.value;
+    weightToLose.innerHTML = currentWeight.value - goalweight.value;
+    weightTolose = currentWeight.value - goalweight.value;
+    goalWeight = goalweight.value;
+}
 
 
 if (Array.isArray(savedRecords)) {
@@ -81,6 +101,7 @@ function daysCounter () {
 }
 
 function daysIncrease (idToDelete) {
+  console.log(days)
   records.forEach((record) => {
     if (record.id === idToDelete){
       days += 1;
@@ -110,7 +131,7 @@ function weightTracker(weight) {
   if (weight == 0 || weight == '') {
     return weightTolose;
   }else {
-    weightTolose = ((Number(weight))*10 -410)/10;
+    weightTolose = ((Number(weight))*10 - goalWeight*10)/10;
   }
   saveRecord();
 }
@@ -129,7 +150,7 @@ function weightToLose(idToDelete) {
             if (Number(records[i].weight) > 0 && i !== records.indexOf(record)) {
               weightHistory.push(Number(records[i].weight));
               weightHistory.reverse();
-              weightTolose = ((weightHistory[0])*10 -410)/10;
+              weightTolose = ((weightHistory[0])*10 -goalWeight*10)/10;
            } 
           };
     }}})}
@@ -375,16 +396,3 @@ window.onload = setActive()
 
 //set goals
 
-function setGoal() {
-  const goal = document.getElementById('goal-button');
-  goal.addEventListener('click', () => {
-    const setGoal = document.createElement('div');
-    const goals = document.createElement('form');
-    const goalDay = document.createElement('label');
-    const dayNumber = document.createElement('input');
-    goals.value = goalDay + dayNumber;
-    setGoal.value = goals;
-    document.body.appendChild(setGoal);
-  })
-
-}
