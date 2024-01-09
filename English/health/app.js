@@ -18,25 +18,45 @@ const savedDays = JSON.parse(localStorage.getItem('days'));
 const savedMoneySpent = JSON.parse(localStorage.getItem('moneySpent'));
 const savedWeightTolose = JSON.parse(localStorage.getItem('weightTolose'));
 
-function dropdown () {
-    const dropdown = document.getElementById('dropdown');
-    dropdown.classList.toggle('show'); 
-    setGoal();
-}
-
-function setGoal() {
-    const goalDays = document.getElementById('goal-days');
+function currentWeight() {
+    
+    const weightToLose = document.getElementById('weight-tolose');
+   
     const goalweight = document.getElementById('goal-weight');
     const currentWeight = document.getElementById('current-weight');
-    const dayLeft = document.getElementById('days-left');
-    const weightToLose = document.getElementById('weight-tolose');
-    dayLeft.innerHTML = goalDays.value - 0;
-    days = goalDays.value;
+    
     weightToLose.innerHTML = currentWeight.value - goalweight.value;
+    days = goalDays.value;
     weightTolose = currentWeight.value - goalweight.value;
-    goalWeight = goalweight.value;
+    goalWeight = goalweight.value;   
 }
 
+clearField();
+
+function goalDay () {
+  const dayLeft = document.getElementById('days-left');
+  const goalDays = document.getElementById('goal-days');
+  dayLeft.innerHTML = goalDays.value - 0;
+  goalDays.value = '';
+}
+
+function clearField () {
+    
+    const goalweight = document.getElementById('goal-weight');
+    goalweight.value = '';
+    const currentWeight = document.getElementById('current-weight');
+    currentWeight.value = '';
+}
+
+function dropdown() {
+  const dropdown = document.getElementById('dropdown-content');
+  if (dropdown.style.display === 'none') {
+    dropdown.style.display = 'block';
+  }else {
+    dropdown.style.display = 'none';
+  }
+    
+}
 
 if (Array.isArray(savedRecords)) {
   records = savedRecords;

@@ -43,14 +43,24 @@
       </div>
       <div class="dropdown">
         <button id="goal-Button" onclick="dropdown()" class="goal-button"><span>Set Goals</span> </button>
-        <div id='dropdown' class="dropdown-content">
+        <div id='dropdown-content' class="dropdown-content">
           <form>
             <label class="dropdownlabel">What's your current weight(kg)?</label>
-            <input class="dropdowninput" type="number" id="current-weight">
+            <div class="setgoal">
+              <input class="dropdowninput" type="number" id="current-weight">
+              <button class="setbutton" onclick = 'currentWeight()'><span>set</span></button>
+            </div >
             <label class="dropdownlabel">What's your goal weight(kg)?</label>
-            <input class="dropdowninput" type="number" id="goal-weight">
+            <div class="setgoal">
+              <input class="dropdowninput" type="number" id="goal-weight">
+              <button class="setbutton" onclick = 'goalWeight()'><span>set</span></button>
+            </div>
             <label class="dropdownlabel">How many days do you need?</label>
-            <input class="dropdowninput"  type="number" id="goal-days">
+            <div class="setgoal">
+              <input class="dropdowninput"  type="number" id="goal-days">
+              <button class="setbutton" onclick = 'goalDay()'><span>set</span></button>
+            </div>
+            
 
           </form>
         </div>
