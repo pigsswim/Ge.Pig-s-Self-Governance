@@ -18,7 +18,7 @@ function intro () {
 intro();
 
 function typeTitle () {
-  let a = 'Die gechichte die wer ich habe keine idee';
+  let a = 'Die Geschichte von Wer Ich keine Ahnung.';
   if (i<a.length){
     title.innerHTML += a.charAt(i);
     i++;

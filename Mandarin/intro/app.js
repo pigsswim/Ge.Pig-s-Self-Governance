@@ -18,7 +18,7 @@ function intro () {
 intro();
 
 function typeTitle () {
-  let a = 'The Story of I-Have-No-Idea-Who';
+  let a = '我的故事，没有标签。';
   if (i<a.length){
     title.innerHTML += a.charAt(i);
     i++;
