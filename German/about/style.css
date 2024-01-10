@@ -3491,7 +3491,8 @@ canvas {
 #row25 .item2,
 #row25 .item3,
 #row25 .item4,
-#row25 .item5 {
+#row25 .item5,
+#row25 .item6 {
     animation-name: c_scale;
     animation-duration: 360s;
     color:#294221;
