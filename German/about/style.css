@@ -740,7 +740,6 @@ canvas {
     radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #dee8ffb8 8%, #7b7f869e 25%, #22252884 62.5%, #7b7f8684 100%);
     border-radius: 6px;
     color:#f1f5f1;
-    text-shadow: -1px 0 #081d40, 0 1px #081d40, 1px 0 #081d40, 0 -1px #081d40;
 }
 
 #row8 .item34,
@@ -763,7 +762,6 @@ canvas {
 #row9 .item4,
 #row9 .item5,
 #row9 .item6,
-#row9 .item7,
 #row9 .item8,
 #row9 .item9,
 #row9 .item10,
@@ -809,11 +807,9 @@ canvas {
 
 #row12 .item1,
 #row12 .item2,
-#row12 .item3,
 #row12 .item4,
 #row12 .item5,
 #row12 .item6,
-#row12 .item7,
 #row12 .item8,
 #row12 .item9,
 #row12 .item10,
@@ -898,7 +894,6 @@ canvas {
 #row13 .item6,
 #row13 .item7,
 #row13 .item8,
-#row13 .item9,
 #row13 .item10,
 #row13 .item11,
 #row13 .item12,
@@ -946,7 +941,6 @@ canvas {
     radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #b0d7b7 8%, #51885d 25%, #0d2c14 62.5%, #040e07 100%);
     border-radius: 6px;
     color:#f1f5f1;
-    text-shadow: -1px 0 #0d2c14, 0 1px #0d2c14, 1px 0 #0d2c14, 0 -1px #0d2c14;
 }
 
 #row16 .item22,
@@ -961,7 +955,6 @@ canvas {
     radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #b0d7b7 8%, #51885d 25%, #0d2c14 62.5%, #040e07 100%);
     border-radius: 6px;
     color:#f1f5f1;
-    text-shadow: -1px 0 #0d2c14, 0 1px #0d2c14, 1px 0 #0d2c14, 0 -1px #0d2c14;
 }
 
 #row16 .item24,
@@ -977,7 +970,6 @@ canvas {
     radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #b0d7b7 8%, #51885d 25%, #0d2c14 62.5%, #040e07 100%);
     border-radius: 6px;
     color:#f1f5f1;
-    text-shadow: -1px 0 #0d2c14, 0 1px #0d2c14, 1px 0 #0d2c14, 0 -1px #0d2c14;
 }
 
 #row16 .item26,
@@ -994,7 +986,6 @@ canvas {
     radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #b0d7b7 8%, #51885d 25%, #0d2c14 62.5%, #040e07 100%);
     border-radius: 6px;
     color:#f1f5f1;
-    text-shadow: -1px 0 #0d2c14, 0 1px #0d2c14, 1px 0 #0d2c14, 0 -1px #0d2c14;
 }
 
 #row16 .item28,
@@ -1008,7 +999,6 @@ canvas {
     radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #b0d7b7 8%, #51885d 25%, #0d2c14 62.5%, #040e07 100%);
     border-radius: 6px;
     color:#f1f5f1;
-    text-shadow: -1px 0 #0d2c14, 0 1px #0d2c14, 1px 0 #0d2c14, 0 -1px #0d2c14;
 }
 
 #row16 .item30,
@@ -1040,7 +1030,6 @@ canvas {
     radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #b0d7b7 8%, #51885d 25%, #0d2c14 62.5%, #040e07 100%);
     border-radius: 6px;
     color:#f1f5f1;
-    text-shadow: -1px 0 #0d2c14, 0 1px #0d2c14, 1px 0 #0d2c14, 0 -1px #0d2c14;
 }
 
 
@@ -1492,7 +1481,6 @@ canvas {
 #row9 .item4,
 #row9 .item5,
 #row9 .item6,
-#row9 .item7,
 #row9 .item8,
 #row9 .item9,
 #row9 .item10,
@@ -1631,11 +1619,9 @@ canvas {
 #row13 .item19,
 #row12 .item1,
 #row12 .item2,
-#row12 .item3,
 #row12 .item4,
 #row12 .item5,
 #row12 .item6,
-#row12 .item7,
 #row12 .item8,
 #row12 .item9,
 #row12 .item10,
@@ -1763,7 +1749,6 @@ canvas {
 #row13 .item6,
 #row13 .item7,
 #row13 .item8,
-#row13 .item9,
 #row13 .item10,
 #row13 .item11, 
 #row13 .item12,
@@ -2010,7 +1995,6 @@ canvas {
 #row19 .item5,
 #row19 .item6,
 #row19 .item7,
-#row19 .item8,
 #row19 .item9,
 #row19 .item10,
 #row19 .item11 {
@@ -2436,7 +2420,6 @@ canvas {
                 radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
     border-radius: 6px;
     color:white;
-    text-shadow: 1px 1px 4px #222222;
 }
 
 #row17 .item18 {
