@@ -558,168 +558,6 @@ canvas {
     align-content: center;
 }
 
-#row27 .item7,
-#row27 .item8,
-#row27 .item9,
-#row27 .item10,
-#row27 .item11,
-#row27 .item12, 
-#row26 .item7,
-#row26 .item8,
-#row26 .item9,
-#row26 .item10,
-#row26 .item11,
-#row26 .item12, 
-#row26 .item7,
-#row26 .item8,
-#row26 .item9,
-#row26 .item10,
-#row26 .item11,
-#row26 .item12, 
-#row25 .item7,
-#row25 .item8,
-#row25 .item9,
-#row25 .item10,
-#row25 .item11,
-#row25 .item12, 
-#row24 .item7,
-#row24 .item8,
-#row24 .item9,
-#row24 .item10,
-#row24 .item11,
-#row24 .item12, 
-#row23 .item7,
-#row23 .item8,
-#row23 .item9,
-#row23 .item10,
-#row23 .item11,
-#row23 .item12,
-#row22 .item7,
-#row22 .item8,
-#row22 .item9,
-#row22 .item10,
-#row22 .item11,
-#row22 .item12
- {
-    /*background-color:#4E7540;*/
-}
-
-#row21 .item13,
-#row21 .item14,
-#row21 .item15,
-#row21 .item16,
-#row21 .item17,
-#row21 .item18,
-#row20 .item13,
-#row20 .item14,
-#row20 .item15,
-#row20 .item16,
-#row20 .item17,
-#row20 .item18,
-#row19 .item13,
-#row19 .item14,
-#row19 .item15,
-#row19 .item16,
-#row19 .item17,
-#row19 .item18,
-#row18 .item13,
-#row18 .item14,
-#row18 .item15,
-#row18 .item16,
-#row18 .item17,
-#row18 .item18,
-#row17 .item13,
-#row17 .item14,
-#row17 .item15,
-#row17 .item16,
-#row17 .item17,
-#row17 .item18,
-#row16 .item13,
-#row16 .item14,
-#row16 .item15,
-#row16 .item16,
-#row16 .item17,
-#row16 .item18 {
-    /*background-color: #D96704;*/
-}
-
-#row15 .item19,
-#row15 .item20,
-#row15 .item21,
-#row15 .item22,
-#row14 .item19,
-#row14 .item20,
-#row14 .item21,
-#row14 .item22,
-#row13 .item19,
-#row13 .item20,
-#row13 .item21,
-#row13 .item22,
-#row12 .item19,
-#row12 .item20,
-#row12 .item21,
-#row12 .item22 {
-    /*background-color:#F2A341;*/
-}
-
-#row11 .item23,
-#row11 .item24,
-#row11 .item25,
-#row11 .item26,
-#row10 .item23,
-#row10 .item24,
-#row10 .item25,
-#row10 .item26,
-#row9 .item23,
-#row9 .item24,
-#row9 .item25,
-#row9 .item26,
-#row8 .item23,
-#row8 .item24,
-#row8 .item25,
-#row8 .item26 {
-   /* background-color: #D93D86;*/
-}
-
-#row7 .item27,
-#row7 .item28,
-#row7 .item29,
-#row7 .item30,
-#row7 .item31,
-#row7 .item32,
-#row6 .item27,
-#row6 .item28,
-#row6 .item29,
-#row6 .item30,
-#row6 .item31,
-#row6 .item32,
-#row5 .item27,
-#row5 .item28,
-#row5 .item29,
-#row5 .item30,
-#row5 .item31,
-#row5 .item32,
-#row4 .item27,
-#row4 .item28,
-#row4 .item29,
-#row4 .item30,
-#row4 .item31,
-#row4 .item32,
-#row3 .item27,
-#row3 .item28,
-#row3 .item29,
-#row3 .item30,
-#row3 .item31,
-#row3 .item32,
-#row2 .item27,
-#row2 .item28,
-#row2 .item29,
-#row2 .item30,
-#row2 .item31,
-#row2 .item32 {
-   /* background-color:#731D45;*/
-}
-
 #row1 .item1,
 #row1 .item2,
 #row1 .item3,
@@ -770,14 +608,15 @@ canvas {
 #row4 .item5,
 #row4 .item6,
 #row4 .item7,
+#row4 .item8,
 #row4 .item9,
-#row4 .item10,
 #row4 .item11,
 #row4 .item12,
 #row4 .item13,
 #row4 .item14,
 #row4 .item15,
-#row4 .item16 {
+#row4 .item16,
+#row4 .item17 {
     color:#cdbc47;
     background-color:white;
     border-radius: 6px;
@@ -794,11 +633,11 @@ canvas {
 #row5 .item8,
 #row5 .item9,
 #row5 .item10,
-#row5 .item11,
+#row5 .item12,
 #row5 .item13,
-#row5 .item14,
+#row5 .item15,
 #row5 .item16,
-#row5 .item17,
+#row5 .item18,
 #row5 .item19,
 #row5 .item20,
 #row5 .item21,
@@ -815,8 +654,8 @@ canvas {
 #row6 .item3,
 #row6 .item4,
 #row6 .item5,
+#row6 .item6,
 #row6 .item7,
-#row6 .item8,
 #row6 .item9,
 #row6 .item10,
 #row6 .item11,
@@ -824,11 +663,15 @@ canvas {
 #row6 .item13,
 #row6 .item14,
 #row6 .item15,
-#row6 .item17,
+#row6 .item16,
 #row6 .item18,
 #row6 .item19,
 #row6 .item20,
-#row6 .item21 {
+#row6 .item21,
+#row6 .item22,
+#row6 .item23,
+#row6 .item24,
+#row6 .item25 {
     color:#cdbc47;
     background-color:white;
     border-radius: 6px;
@@ -855,7 +698,6 @@ canvas {
 #row8 .item9,
 #row8 .item10,
 #row8 .item11,
-#row8 .item12,
 #row8 .item13,
 #row8 .item14,
 #row8 .item15,
@@ -863,8 +705,7 @@ canvas {
 #row8 .item17,
 #row8 .item18,
 #row8 .item19,
-#row8 .item20,
-#row8 .item21 {
+#row8 .item20 {
     color:#781714;
     background-color:white;
     border-radius: 6px;
@@ -928,12 +769,7 @@ canvas {
 #row9 .item6,
 #row9 .item7,
 #row9 .item8,
-#row9 .item9,
-#row9 .item10,
-#row9 .item11,
-#row9 .item12,
-#row9 .item13,
-#row9 .item14 {
+#row9 .item9 {
     color:#781714;
     background-color:white;
     border-radius: 6px; 
@@ -1003,7 +839,11 @@ canvas {
 #row12 .item23,
 #row13 .item23,
 #row14 .item23,
-#row15 .item23 {
+#row15 .item23,
+#row16 .item23,
+#row17 .item23,
+#row18 .item23,
+#row19 .item23 {
     background: radial-gradient(ellipse farthest-corner at right bottom, #ffa5a5 0%, #9e2f2f 8%, #561212 30%, #3e1212 40%, transparent 80%),
     radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #edb6b6 8%, #b45555 25%, #3d1212 62.5%, #3d1212 100%);
     border-radius: 6px;
@@ -1056,11 +896,7 @@ canvas {
 #row13 .item9,
 #row13 .item10,
 #row13 .item11,
-#row13 .item12,
-#row13 .item13,
-#row13 .item14,
-#row13 .item15,
-#row13 .item16 {
+#row13 .item12 {
     color:#444444;
     background-color:white;
     border-radius: 6px;
@@ -1108,7 +944,8 @@ canvas {
 #row19 .item22,
 #row20 .item22,
 #row21 .item22,
-#row22 .item22 {
+#row22 .item22,
+#row23 .item22 {
     background: radial-gradient(ellipse farthest-corner at right bottom, #d9ffc8 0%, #28683d 8%, #092d14 30%, #082210 40%, transparent 80%),
     radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #b0d7b7 8%, #51885d 25%, #0d2c14 62.5%, #040e07 100%);
     border-radius: 6px;
@@ -1188,7 +1025,8 @@ canvas {
 #row19 .item32,
 #row20 .item32,
 #row21 .item32,
-#row22 .item32 {
+#row22 .item32,
+#row23 .item32 {
     background: radial-gradient(ellipse farthest-corner at right bottom, #d9ffc8 0%, #28683d 8%, #092d14 30%, #082210 40%, transparent 80%),
     radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #b0d7b7 8%, #51885d 25%, #0d2c14 62.5%, #040e07 100%);
     border-radius: 6px;
@@ -1341,13 +1179,13 @@ canvas {
 #row4 .item7,
 #row4 .item8,
 #row4 .item9,
-#row4 .item10,
 #row4 .item11,
 #row4 .item12,
 #row4 .item13,
 #row4 .item14,
 #row4 .item15,
 #row4 .item16,
+#row4 .item17,
 #row2 .item27,
 #row2 .item28,
 #row2 .item30,
@@ -1399,13 +1237,10 @@ canvas {
 #row5 .item8,
 #row5 .item9,
 #row5 .item10,
-#row5 .item11,
 #row5 .item12,
 #row5 .item13,
-#row5 .item14,
 #row5 .item15,
 #row5 .item16,
-#row5 .item17,
 #row5 .item18,
 #row5 .item19,
 #row5 .item20,
@@ -1436,8 +1271,8 @@ canvas {
 #row6 .item3,
 #row6 .item4,
 #row6 .item5,
+#row6 .item6,
 #row6 .item7,
-#row6 .item8,
 #row6 .item9,
 #row6 .item10,
 #row6 .item11,
@@ -1445,11 +1280,15 @@ canvas {
 #row6 .item13,
 #row6 .item14,
 #row6 .item15,
-#row6 .item17,
+#row6 .item16,
 #row6 .item18,
 #row6 .item19,
 #row6 .item20,
-#row6 .item21 {
+#row6 .item21,
+#row6 .item22,
+#row6 .item23,
+#row6 .item24,
+#row6 .item25 {
     animation-name:ab_appear;
     animation-duration:360s;
     
@@ -1549,7 +1388,6 @@ canvas {
 #row8 .item9,
 #row8 .item10,
 #row8 .item11,
-#row8 .item12,
 #row8 .item13,
 #row8 .item14,
 #row8 .item15,
@@ -1558,7 +1396,6 @@ canvas {
 #row8 .item18,
 #row8 .item19,
 #row8 .item20,
-#row8 .item21,
 #row10 .item25,
 #row11 .item24,
 #row9 .item25,
@@ -1658,11 +1495,6 @@ canvas {
 #row9 .item7,
 #row9 .item8,
 #row9 .item9,
-#row9 .item10,
-#row9 .item11,
-#row9 .item12,
-#row9 .item13,
-#row9 .item14,
 #row8 .item30,
 #row9 .item30 {
     animation-name: w_appear;
@@ -1807,6 +1639,10 @@ canvas {
 #row13 .item23,
 #row14 .item23,
 #row15 .item23,
+#row16 .item23,
+#row17 .item23,
+#row18 .item23,
+#row19 .item23,
 #row12 .item25,
 #row13 .item25,
 #row14 .item25,
@@ -1911,22 +1747,18 @@ canvas {
 #row14 .item4,
 #row14 .item5,
 #row14 .item6,
-#row13 .item1, 
+#row13 .item1,
 #row13 .item2,
 #row13 .item3,
 #row13 .item4,
-#row13 .item5, 
+#row13 .item5,
 #row13 .item6,
 #row13 .item7,
 #row13 .item8,
 #row13 .item9,
 #row13 .item10,
-#row13 .item11, 
-#row13 .item12,
-#row13 .item13,
-#row13 .item14,
-#row13 .item15, 
-#row13 .item16 {
+#row13 .item11,
+#row13 .item12 {
     animation-name: t_appear;
     animation-duration:360s;
 }
@@ -2009,7 +1841,8 @@ canvas {
 #row18 .item2,
 #row18 .item3,
 #row18 .item4,
-#row18 .item5 {
+#row18 .item5,
+#row18 .item6 {
     color:#888888;
     background-color:white;
     border-radius: 6px;
@@ -2073,6 +1906,7 @@ canvas {
 #row20 .item32,
 #row21 .item32,
 #row22 .item32,
+#row23 .item32,
 #row17 .item14,
 #row16 .item15,
 #row17 .item15,
@@ -2105,6 +1939,7 @@ canvas {
 #row20 .item22,
 #row21 .item22,
 #row22 .item22,
+#row23 .item22,
 #row17 .item13,
 #row16 .item14 {
     animation-name: m_appear;
@@ -2396,7 +2231,9 @@ canvas {
 #row24 .item21,
 #row25 .item21,
 #row26 .item21,
-#row27 .item21{
+#row27 .item21,
+#row28 .item21,
+#row29 .item21 {
     background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
                 radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
     border-radius: 6px;
@@ -2410,7 +2247,10 @@ canvas {
 #row24 .item25,
 #row25 .item25,
 #row26 .item25,
-#row27 .item25 {
+#row27 .item25,
+#row28 .item25,
+#row29 .item25,
+#row30 .item25 {
     background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
     radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
     border-radius: 6px;
@@ -2534,6 +2374,12 @@ canvas {
 #row23 .item17,
 #row24 .item17,
 #row25 .item17,
+#row26 .item17,
+#row27 .item17,
+#row28 .item17,
+#row29 .item17,
+#row30 .item17,
+#row31 .item17,
 #row22 .item19,
 #row23 .item19,
 #row24 .item19,
