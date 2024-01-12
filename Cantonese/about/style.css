@@ -589,11 +589,7 @@ canvas {
 #row2 .item4,
 #row2 .item5,
 #row2 .item6,
-#row2 .item7,
-#row2 .item8,
-#row2 .item9,
-#row2 .item10,
-#row2 .item11{
+#row2 .item7 {
     background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
                 radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
     border-radius: 6px;
@@ -644,7 +640,6 @@ canvas {
 #row6 .item4,
 #row6 .item6,
 #row6 .item7,
-#row6 .item8,
 #row6 .item9,
 #row6 .item10 {
     color:#cdbc47;
@@ -664,25 +659,8 @@ canvas {
 
 #row8 .item1,
 #row8 .item2,
-#row8 .item3,
 #row8 .item4,
-#row8 .item5,
-#row8 .item6,
-#row8 .item7,
-#row8 .item8,
-#row8 .item9,
-#row8 .item10,
-#row8 .item11,
-#row8 .item12,
-#row8 .item13,
-#row8 .item14,
-#row8 .item15,
-#row8 .item16,
-#row8 .item17,
-#row8 .item18,
-#row8 .item19,
-#row8 .item20,
-#row8 .item21 {
+#row8 .item5 {
     color:#781714;
     background-color:white;
     border-radius: 6px;
@@ -731,16 +709,7 @@ canvas {
 #row9 .item2,
 #row9 .item3,
 #row9 .item4,
-#row9 .item5,
-#row9 .item6,
-#row9 .item7,
-#row9 .item8,
-#row9 .item9,
-#row9 .item10,
-#row9 .item11,
-#row9 .item12,
-#row9 .item13,
-#row9 .item14 {
+#row9 .item5 {
     color:#781714;
     background-color:white;
     border-radius: 6px; 
@@ -754,10 +723,7 @@ canvas {
 #row10 .item3,
 #row10 .item4,
 #row10 .item5,
-#row10 .item6,
-#row10 .item7,
-#row10 .item8,
-#row10 .item9 {
+#row10 .item6 {
     color:#781714;
     background-color:white;
     border-radius: 6px;
@@ -784,10 +750,7 @@ canvas {
 #row12 .item7,
 #row12 .item8,
 #row12 .item9,
-#row12 .item10,
-#row12 .item11,
-#row12 .item12,
-#row12 .item13 {
+#row12 .item10 {
     color:#444444;
     background-color:white;
     border-radius: 6px;
@@ -852,18 +815,7 @@ canvas {
 #row13 .item2,
 #row13 .item3,
 #row13 .item4,
-#row13 .item5,
-#row13 .item6,
-#row13 .item7,
-#row13 .item8,
-#row13 .item9,
-#row13 .item10,
-#row13 .item11,
-#row13 .item12,
-#row13 .item13,
-#row13 .item14,
-#row13 .item15,
-#row13 .item16 {
+#row13 .item5 {
     color:#444444;
     background-color:white;
     border-radius: 6px;
@@ -958,14 +910,7 @@ canvas {
 #row17 .item1,
 #row17 .item2,
 #row17 .item3,
-#row17 .item4,
-#row17 .item5,
-#row17 .item6,
-#row17 .item7,
-#row17 .item8,
-#row17 .item9,
-#row17 .item10,
-#row17 .item11 {
+#row17 .item4 {
     /*color:#002855;
     background-color:white;
     border-radius: 6px;

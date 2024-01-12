@@ -692,7 +692,6 @@ canvas {
 #row8 .item8,
 #row8 .item9,
 #row8 .item10,
-#row8 .item11,
 #row8 .item12,
 #row8 .item13,
 #row8 .item14,
@@ -712,11 +711,7 @@ canvas {
 #row8 .item28,
 #row9 .item28,
 #row10 .item28,
-#row11 .item28,
-#row12 .item28,
-#row13 .item28,
-#row14 .item28,
-#row15 .item28 {
+#row11 .item28 {
     background: radial-gradient(ellipse farthest-corner at right bottom, #9ba0af3f 0%, #4e576b7a 8%, #10151f83 30%, #1318217d 40%, transparent 80%),
     radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #dee8ffb8 8%, #7b7f869e 25%, #22252884 62.5%, #7b7f8684 100%);
     border-radius: 6px;
@@ -832,8 +827,7 @@ canvas {
 #row17 .item25,
 #row18 .item25,
 #row19 .item25,
-#row20 .item25,
-#row21 .item25 {
+#row20 .item25 {
     background: radial-gradient(ellipse farthest-corner at right bottom, #ffa5a5 0%, #9e2f2f 8%, #561212 30%, #3e1212 40%, transparent 80%),
     radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #edb6b6 8%, #b45555 25%, #3d1212 62.5%, #3d1212 100%);
     border-radius: 6px;
@@ -935,8 +929,7 @@ canvas {
 #row18 .item20,
 #row19 .item20,
 #row20 .item20,
-#row21 .item20,
-#row22 .item20 {
+#row21 .item20 {
     background: radial-gradient(ellipse farthest-corner at right bottom, #d9ffc8 0%, #28683d 8%, #092d14 30%, #082210 40%, transparent 80%),
     radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #b0d7b7 8%, #51885d 25%, #0d2c14 62.5%, #040e07 100%);
     border-radius: 6px;
@@ -962,10 +955,7 @@ canvas {
 #row18 .item24,
 #row19 .item24,
 #row20 .item24,
-#row21 .item24,
-#row22 .item24,
-#row23 .item24,
-#row24 .item24 {
+#row21 .item24 {
     background: radial-gradient(ellipse farthest-corner at right bottom, #d9ffc8 0%, #28683d 8%, #092d14 30%, #082210 40%, transparent 80%),
     radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #b0d7b7 8%, #51885d 25%, #0d2c14 62.5%, #040e07 100%);
     border-radius: 6px;
