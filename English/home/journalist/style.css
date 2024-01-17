@@ -45,6 +45,10 @@ i {
     transition: transform 0.5s;
 }
 
+.book-title {
+    color:#212121;
+}
+
 .paper {
     height: 100%;
     width: 100%;
@@ -90,16 +94,17 @@ i {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap:6px;
 }
 
 .back-content {
-    transform: rotateY(180deg)
+    transform: rotateY(180deg);
 }
 
 /* Paper Flipped */
 .flipped .front,
 .flipped .back {
-    transform: rotateY(-180deg)
+    transform: rotateY(-180deg);
 }
 
 /* Paper Z-index */
