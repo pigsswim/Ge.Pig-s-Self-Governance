@@ -117,15 +117,131 @@ i {
 
 /* Paper Z-index */
 #p1 {
-    z-index: 3;
+    z-index: 32;
 }
 
 #p2 {
-    z-index: 2;
+    z-index: 31;
 }
 
 #p3 {
-    z-index: 1;
+    z-index:30;
+}
+
+#p4 {
+    z-index: 29;
+}
+
+#p5 {
+    z-index:28;
+}
+
+#p6 {
+    z-index:27;
+}
+
+#p7 {
+    z-index: 26;
+}
+
+#p8 {
+    z-index:25;
+}
+
+#p9 {
+    z-index:24;
+}
+
+#p10 {
+    z-index:23;
+}
+
+#p11 {
+    z-index: 22;
+}
+
+#p12 {
+    z-index: 21;
+}
+
+#p13 {
+    z-index:20;
+}
+
+#p14 {
+    z-index: 19;
+}
+
+#p15 {
+    z-index:18;
+}
+
+#p16 {
+    z-index:17;
+}
+
+#p17 {
+    z-index: 16;
+}
+
+#p18 {
+    z-index:15;
+}
+
+#p19 {
+    z-index:14;
+}
+
+#p20 {
+    z-index: 13;
+}
+
+#p21 {
+    z-index:12;
+}
+
+#p22 {
+    z-index: 11;
+}
+
+#p23 {
+    z-index:10;
+}
+
+#p24 {
+    z-index:9;
+}
+
+#p25 {
+    z-index: 8;
+}
+
+#p26 {
+    z-index:7;
+}
+
+#p27 {
+    z-index:6;
+}
+
+#p28 {
+    z-index:5;
+}
+
+#p29 {
+    z-index:4;
+}
+
+#p30 {
+    z-index:3;
+}
+
+#p31 {
+    z-index:2;
+}
+
+#p32 {
+    z-index:1;
 }
 
 /* Customization */
@@ -144,17 +260,71 @@ i {
 
 #b1,
 #f2,
-#b2 {
+#b2,
+#f3,
+#b3,
+#f4,
+#b4,
+#f5,
+#b5,
+#f6,
+#b6,
+#f7,
+#b7,
+#f8,
+#b8,
+#f9,
+#b9,
+#f10,
+#b10,
+#f11,
+#b11,
+#f12,
+#b12,
+#f13,
+#b13,
+#f14,
+#b14,
+#f15,
+#b15,
+#f16,
+#b16,
+#f17,
+#b17,
+#f18,
+#b18,
+#f19,
+#b19,
+#f20,
+#b20,
+#f21,
+#b21,
+#f22,
+#b22,
+#f23,
+#b23,
+#f24,
+#b24,
+#f25,
+#b25,
+#f26,
+#b26,
+#f27,
+#b27,
+#f28,
+#b28,
+#f29,
+#b29,
+#f30,
+#b30,
+#f31,
+#b31,
+#f32,
+#b32 {
     padding: 20px;
     text-align: center;
     font-size: 1.2em;
     justify-content: space-around;
-}
-
-#b1 p,
-#f2 p,
-#b2 p {
-    margin-bottom: 20px;
 }
 
 img {
