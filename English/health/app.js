@@ -5,10 +5,10 @@ let counters = [];
 let moneyCount = 0;
 let exerciseCount = 0;
 let foodCount = 0;
-let days = 0;
+let days;
 let moneySpent = 0;
-let weightTolose = 0;
-let goalWeight = 0;
+let weightTolose;
+let goalWeight;
 
 const savedRecords = JSON.parse(localStorage.getItem('records'));
 const savedMoneyCount = JSON.parse(localStorage.getItem('moneyCount'));
@@ -17,46 +17,8 @@ const savedFoodCount = JSON.parse(localStorage.getItem('foodCount'));
 const savedDays = JSON.parse(localStorage.getItem('days'));
 const savedMoneySpent = JSON.parse(localStorage.getItem('moneySpent'));
 const savedWeightTolose = JSON.parse(localStorage.getItem('weightTolose'));
-
-function currentWeight() {
-    
-    const weightToLose = document.getElementById('weight-tolose');
-   
-    const goalweight = document.getElementById('goal-weight');
-    const currentWeight = document.getElementById('current-weight');
-    
-    weightToLose.innerHTML = currentWeight.value - goalweight.value;
-    days = goalDays.value;
-    weightTolose = currentWeight.value - goalweight.value;
-    goalWeight = goalweight.value;   
-}
-
-clearField();
-
-function goalDay () {
-  const dayLeft = document.getElementById('days-left');
-  const goalDays = document.getElementById('goal-days');
-  dayLeft.innerHTML = goalDays.value - 0;
-  goalDays.value = '';
-}
-
-function clearField () {
-    
-    const goalweight = document.getElementById('goal-weight');
-    goalweight.value = '';
-    const currentWeight = document.getElementById('current-weight');
-    currentWeight.value = '';
-}
-
-function dropdown() {
-  const dropdown = document.getElementById('dropdown-content');
-  if (dropdown.style.display === 'none') {
-    dropdown.style.display = 'block';
-  }else {
-    dropdown.style.display = 'none';
-  }
-    
-}
+const setBtn = document.getElementById('setbtn');
+  setBtn.addEventListener('click',setGoal);
 
 if (Array.isArray(savedRecords)) {
   records = savedRecords;
@@ -72,6 +34,27 @@ if (Array.isArray(savedRecords)) {
 }
 
 render();
+
+function setGoal () {
+  const currentWeight = document.getElementById('current-weight');
+  const goalweight = document.getElementById('goal-weight');
+  const goalDays = document.getElementById('goal-days');
+  if (currentWeight.value == '' || currentWeight.value == 0) {
+    return;
+  } else if (goalweight.value == ''|| goalweight.value == 0) {
+    return;
+  } else if (goalDays.value == '' || goalDays.value == 0) {
+    return;
+  }else {
+    weightTolose = currentWeight.value - goalweight.value;
+    days = goalDays.value;
+    goalWeight = goalweight.value;
+    console.log(weightTolose);
+    console.log(days);
+  }
+
+  renderGoal();
+}
 
 function createRecord (date,money,exercise,food,weight,remark) {
 
@@ -416,3 +399,41 @@ window.onload = setActive()
 
 //set goals
 
+function dropdown() {
+  const dropdown = document.getElementById('dropdown-content');
+  if (dropdown.style.display === 'none') {
+    dropdown.style.display = 'block';
+  }else {
+    dropdown.style.display = 'none';
+  }
+    
+}
+
+function renderGoal() {
+  const daysLeft = document.getElementById('days-left');
+  const weightToLose = document.getElementById('weight-tolose');
+  daysLeft.innerHTML = days;
+  weightToLose.innerHTML = weightTolose;
+  const currentWeight = document.getElementById('current-weight');
+  const goalWeight = document.getElementById('goal-weight');
+  const goalDays = document.getElementById('goal-days');
+  currentWeight.value = '';
+  goalWeight.value = '';
+  goalDays.value = '';
+  records = [];
+  counters = [];
+  moneyCount = 0;
+  exerciseCount = 0;
+  foodCount = 0;
+  moneySpent = 0;
+  document.getElementById('date-record').innerHTML = '';
+  document.getElementById('money-record').innerHTML = '';
+  document.getElementById('exercise-record').innerHTML = '';
+  document.getElementById('food-record').innerHTML = '';
+  document.getElementById('delete-record').innerHTML = '';
+  document.getElementById('weight-record').innerHTML = '';
+  document.getElementById('remark-record').innerHTML = '';
+  document.getElementById('money-counter').innerHTML = moneyCount;
+  document.getElementById('exercise-counter').innerHTML = exerciseCount;
+  document.getElementById('food-counter').innerHTML = foodCount;
+}

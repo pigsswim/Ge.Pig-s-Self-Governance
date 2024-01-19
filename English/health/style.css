@@ -13,7 +13,7 @@ body {
   line-height: 1.47059;
   font-weight: 400;
   letter-spacing: -0.022em;
-  color: rgb(29,29,31);
+  color: black;
 }
 
 p {
@@ -240,7 +240,7 @@ main {
 }
 
 .middle-right-right {
-  background-color: #212121;
+  background-color: #616161;
 }
  
 .middle-middle,
@@ -252,7 +252,7 @@ main {
   font-size: 20px;
   font-weight: 600;
   border-radius: 5px;
-  opacity: 0.95;
+  color:black;
 }
 
 #days-left,
@@ -347,9 +347,9 @@ main {
 
 .btm-right-top-top {
   font-size: 24px;
-  background-color: #212121;
+  background-color: black;
+  color:white;
   text-align: center;
-  opacity: 0.95;
   border-radius: 5px;
 }
 .btm-right-top-btm {
@@ -408,8 +408,33 @@ select {
   width: 100px;
 }
 
+button {
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+	cursor: pointer;
+	position: relative;
+	border-radius: 60px;
+	line-height: 40px;
+	font-weight: 600;
+	border: 1px solid #5b120fec;
+	background-image: linear-gradient(-180deg, #a22826 0%, #891515da 100%);
+	box-shadow: 
+							0 -4px 20px rgb(84, 4, 4) inset,
+							0 12px 8px rgba(98, 23, 23, 0.4) inset,
+							0 4px 8px 0 rgba(141, 39, 44, 0.897) inset;
+}
+
 button:hover {
   background:  pink;
+}
+
+button span {
+	color: black;
+	background-image: linear-gradient(0deg, #d73936 0%, #f2edd8 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	filter: drop-shadow(0 2px 2px rgb(80, 9, 12));
 }
 
 button::before {
@@ -557,65 +582,45 @@ button::after {
 	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
 }
 
-
-button {
-  height: 100%;
-  width: 100%;
+.set-button {
+  height: auto;
+  width: auto;
   font-size: 20px;
-  color: white;
+  color: #212121;
 	cursor: pointer;
 	position: relative;
-	border-radius: 60px;
+	border-radius: 16px;
 	line-height: 40px;
 	font-weight: 600;
 	border: 1px solid #5b120fec;
 	background-image: linear-gradient(-180deg, #a22826 0%, #891515da 100%);
 	box-shadow: 
-							0 -4px 20px rgb(84, 4, 4) inset,
-							0 12px 8px rgba(98, 23, 23, 0.4) inset,
-							0 4px 8px 0 rgba(141, 39, 44, 0.897) inset;
+							0 -4px 8px rgb(84, 4, 4) inset,
+							0 12px 4px rgba(98, 23, 23, 0.4) inset,
+							0 4px 4px 0 rgba(141, 39, 44, 0.897) inset;
 }
 
-
-.setbutton {
-  height: 100%;
-  width: 90%;
-  font-size: 16px;
-  color: white;
-	cursor: pointer;
-	position: relative;
-	border-radius: 8px;
-	line-height: 10px;
-	font-weight: 600;
-	border: 1px solid #5b120fec;
-	background-image: linear-gradient(-180deg, #a22826 0%, #891515da 100%);
-	box-shadow: 
-							0 -4px 20px rgb(84, 4, 4) inset,
-							0 12px 8px rgba(98, 23, 23, 0.4) inset,
-							0 4px 8px 0 rgba(141, 39, 44, 0.897) inset;
-}
-
-.setbutton::before {
+.set-button::before {
 	content: "";
 	display: block;
-	height: 2px;
+	height: 3px;
 	position: absolute;
-	top: 1px;
+	top: 5px;
 	left: 50%;
 	transform: translateX(-50%);
-	width: calc(100% - 26px);
+	width: calc(100% - 24px);
 	background: #ffffff;
 	border-radius: 100%;
 	opacity: 0.8;
 	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
 }
 
-.setbutton::after {
+.set-button::after {
 	content: "";
 	display: block;
-	height: 2px;
+	height: 4px;
 	position: absolute;
-	bottom: 2px;
+	bottom: 12px;
 	left: 50%;
 	transform: translateX(-50%);
 	width: calc(100% - 50px);
@@ -625,12 +630,35 @@ button {
 	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
 }
 
-button span {
-	color: #f2edd8;
-	background-image: linear-gradient(0deg, #d73936 0%, #f2edd8 100%);
+.add-button {
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+  color:white;
+	cursor: pointer;
+	position: relative;
+	border-radius: 60px;
+	line-height: 40px;
+	font-weight: 600;
+	border: 1px solid black;
+	background-image: linear-gradient(-180deg, #292929 0%, #1f1f1fda 100%);
+	box-shadow: 
+							0 -4px 20px rgb(31, 31, 31) inset,
+							0 12px 8px rgba(25, 25, 25, 0.4) inset,
+							0 4px 8px 0 rgba(26, 26, 26, 0.897) inset;
+}
+
+.add-button:hover {
+  background-color:#818181;
+  border: 1px solid white;
+}
+
+.add-button span {
+  color: white;
+	background-image: linear-gradient(0deg, #727272 0%, #cccccc 100%);
 	-webkit-background-clip: text;
 	background-clip: text;
-	filter: drop-shadow(0 2px 2px rgb(80, 9, 12));
+	filter: drop-shadow(0 2px 2px rgb(94, 94, 94));
 }
 
 .add-button::before {
@@ -719,7 +747,7 @@ button span {
 
 .goal-button {
   height: 100%;
-  width: auto;
+  width: 120%;
   font-size: 20px;
   color: white;
 	cursor: pointer;
@@ -727,14 +755,57 @@ button span {
 	border-radius: 60px;
 	line-height: 40px;
 	font-weight: 600;
-	border: 1px solid #5b120fec;
-	background-image: linear-gradient(-180deg, #a22826 0%, #891515da 100%);
+	border: 1px solid black;
+	background-image: linear-gradient(-180deg, #292929 0%, #1f1f1fda 100%);
 	box-shadow: 
-							0 -4px 20px rgb(84, 4, 4) inset,
-							0 12px 8px rgba(98, 23, 23, 0.4) inset,
-							0 4px 8px 0 rgba(141, 39, 44, 0.897) inset;
+							0 -4px 20px rgb(31, 31, 31) inset,
+							0 12px 8px rgba(25, 25, 25, 0.4) inset,
+							0 4px 8px 0 rgba(26, 26, 26, 0.897) inset;
 }
 
+.goal-button:hover {
+  background: #818181;
+  border: 1px solid white;
+}
+
+.goal-button span {
+	color: white;
+	background-image: linear-gradient(0deg, #727272 0%, #cccccc 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	filter: drop-shadow(0 2px 2px rgb(94, 94, 94));
+}
+
+.goal-button::before {
+	content: "";
+	display: block;
+	height: 4px;
+	position: absolute;
+	top: 8px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 50px);
+  background: #ffffff;
+	border-radius: 100%;
+	opacity: 0.6;
+	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+.goal-button::after {
+	content: "";
+	display: block;
+	height: 4px;
+	position: absolute;
+	bottom: 12px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 50px);
+	background: #fff;
+	border-radius: 100%;
+	filter: blur(1px);
+	opacity: 0.05;
+	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
 
 .dropdown {
   position:relative;
@@ -755,14 +826,14 @@ button span {
 #dropdown-content {
   display:none;
   position:absolute;
-  bottom:-16px;;
-  left:108px;
+  bottom:-100px;
+  left:140px;
   overflow:auto;
-  width:210px;
   z-index:100000;
   color:white;
   opacity:0.95;
   width: 240px;
+  height: 200px;
 }
 
 .form {
