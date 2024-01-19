@@ -33,7 +33,7 @@ button:hover i {
 }
 
 i {
-    color: #731b18;
+    color: #294221;
     font-size: 4em;
 }
 
@@ -46,7 +46,8 @@ i {
 }
 
 .book-title {
-    color:#212121;
+    color:#6a6a6a;
+    text-shadow: 2px 2px 4px #111111;
 }
 
 .paper {
@@ -73,7 +74,7 @@ i {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: #731b18;
     transform-origin: left;
     transition: transform 0.5s;
 }
@@ -84,6 +85,10 @@ i {
 
 .back {
     z-index: 0;
+}
+
+.content {
+    color: #c6ba73;
 }
 
 .front-content{
@@ -252,8 +257,8 @@ i {
 }
 
 .cover-img {
-    width: 200px;
-    height: 270px;
+    width: 60%;
+    height:60%;
     object-fit: cover;
     border-radius: 30px;
 }
