@@ -46,7 +46,7 @@ function setGoal () {
   } else if (goalDays.value == '' || goalDays.value == 0) {
     return;
   }else {
-    weightTolose = currentWeight.value - goalweight.value;
+    weightTolose = ((Number(currentWeight.value))*100 - (Number(goalweight.value))*100)/100;
     days = goalDays.value;
     goalWeight = goalweight.value;
     console.log(weightTolose);
@@ -96,23 +96,30 @@ function removeRecord (idToDelete){
 }
 
 function daysCounter () {
-  if (days > 0 ) {
+  if (days == undefined) {
+    days = 0;
+    return;
+  }else if (days > 0 ) {
     days -= 1
     return days;
   }
+
   saveRecord();
 }
 
 function daysIncrease (idToDelete) {
-  console.log(days)
-  records.forEach((record) => {
-    if (record.id === idToDelete){
-      days += 1;
-    }
-  })
+  if (days == 0 ) {
+    console.log(days)
+  }else {
+    records.forEach((record) => {
+      if (record.id === idToDelete){
+          days += 1;
+        }
+      })
+  }
 
-  saveRecord();
-  };
+    saveRecord();
+  }
 
 function moneyAccumulator(money) {
     const dailyMoney = Number(money);
@@ -131,7 +138,11 @@ function moneyDeaccumulator(idToDelete) {
 }
 
 function weightTracker(weight) {
-  if (weight == 0 || weight == '') {
+  if (weightTolose == undefined) {
+    weightTolose = 0;
+    return;
+  }
+  else if (weight == 0 || weight == '') {
     return weightTolose;
   }else {
     weightTolose = ((Number(weight))*10 - goalWeight*10)/10;
