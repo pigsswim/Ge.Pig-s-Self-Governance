@@ -312,12 +312,14 @@ function render() {
 
     const deleteRow = document.createElement('div');
     const deleteButton = document.createElement('button');
+    const deleteSpan = document.createElement('span')
+    deleteSpan.innerText = 'x';
+    deleteButton.appendChild(deleteSpan)
     deleteButton.id = record.id;
     deleteButton.setAttribute('class','delete-button');
     deleteButton.style.textAlign = 'inline-block';
     deleteButton.onclick = deleteRecord;
     deleteRow.setAttribute('class','btm-clm-left-btm-row');
-    deleteButton.innerText = 'x';
     deleteRow.appendChild(deleteButton);
     
     const dateRow = document.createElement('div');

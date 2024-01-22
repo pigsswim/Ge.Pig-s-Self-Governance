@@ -590,6 +590,9 @@ button::after {
   min-width: 50px;
 }
 
+.delete-button span {
+  font-size:26px;
+}
 .delete-button,
 .set-button {
   height: auto;
