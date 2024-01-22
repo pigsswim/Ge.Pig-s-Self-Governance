@@ -55,7 +55,6 @@ nav {
     padding-inline-start: 22px;
     display: block;
     direction: ltr;
-    max-width: 400px;
 }
 
 ul {
@@ -224,8 +223,8 @@ main {
 }
 
 .middle {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
   gap: 20px;
   height: 50px;
   padding: 10px;

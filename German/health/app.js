@@ -49,8 +49,6 @@ function setGoal () {
     weightTolose = ((Number(currentWeight.value))*100 - (Number(goalweight.value))*100)/100;
     days = goalDays.value;
     goalWeight = goalweight.value;
-    console.log(weightTolose);
-    console.log(days);
   }
 
   renderGoal();

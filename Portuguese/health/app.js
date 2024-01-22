@@ -49,8 +49,6 @@ function setGoal () {
     weightTolose = ((Number(currentWeight.value))*100 - (Number(goalweight.value))*100)/100;
     days = goalDays.value;
     goalWeight = goalweight.value;
-    console.log(weightTolose);
-    console.log(days);
   }
 
   renderGoal();
@@ -388,25 +386,6 @@ function render() {
   
 }
 //entire page 
-
-function setActive() {
-  
-  const unorderedList = document.getElementById('top');
-  const lists = unorderedList.getElementsByTagName('li');
-  const links = unorderedList.getElementsByTagName('a')
-  for (i=0; i < links.length; i ++) {
-      if (document.location.href.indexOf(links[i].href) >= 0) {
-        const actives = document.querySelectorAll('.active');
-        actives.forEach((active) =>{
-        active.classList.remove('active');
-  });
-        lists[i].className = 'active';
-
-    } 
-  }
-}
-
-window.onload = setActive()
 
 // graph 
 
