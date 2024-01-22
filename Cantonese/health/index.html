@@ -13,10 +13,10 @@
     <div class="nav-content">
       <ul id="top">
         <li class="top-clm"><a class="nav-link" href="../home/./"><img class="nav-link" id="nav-item-fishhead"src="../../image/fishheadcat.png"></a></li>
-          <li class="top-clm" id="health"><a class="nav-link" href="../health/./">Health</a></li>
-          <li class="top-clm" id="finance"><a class="nav-link" href="../finance/./">Finance</a></li>
-          <li class="top-clm" id="cognitivity"><a class="nav-link" href="../cognitivity/./">Cognitivity</a></li>
-          <li class="top-clm"><a aria-disabled="true"></a></li>
+        <li class="top-clm" id="health"><a class="nav-link" href="../health/./">健康</a></li>
+        <li class="top-clm" id="finance"><a class="nav-link" href="../finance/./">經濟</a></li>
+        <li class="top-clm" id="cognitivity"><a class="nav-link" href="../cognitivity/./">教育</a></li>
+        <li class="top-clm"><a aria-disabled="true"></a></li>
           <li class="top-clm"><a  aria-disabled="true"></a></li>
           <li class="top-clm"><a  aria-disabled="true"></a></li>
           <li class="top-clm"><a  aria-disabled="true"></a></li>
@@ -30,11 +30,11 @@
           <li class="top-clm"><a  aria-disabled="true"></a></li>
           <li class="top-clm"><a  aria-disabled="true"></a></li>
           <li class="top-clm"><a  aria-disabled="true"></a></li>
-          <li class="top-clm" ><a class="nav-link" href="../../German/health/./"style="font-size:14px;">German</a></li>
-          <li class="top-clm"><a class="nav-link" href="../../Sichuanese/health/./" style="font-size:14px;">Sichuanese</a></li>
-          <li class="top-clm"><a class="nav-link" href="../../Portuguese/health/./" style="font-size:14px;">Portuguese</a></li>
-          <li class="top-clm"><a class="nav-link" href="../../Mandarin/health/./" style="font-size:14px;">Mandarin</a></li>
-          <li class="top-clm"><a class="nav-link" href="../../Cantonese/health/./" style="font-size:14px;">Cantonese</a></li>
+          <li class="top-clm" ><a id="language" class="nav-link" href="../../German/health/./"style="font-size:14px;">德文</a></li>
+          <li class="top-clm"><a id="language" class="nav-link" href="../../English/health/./" style="font-size:14px;">英文</a></li>
+          <li class="top-clm"><a id="portuguese" class="nav-link" href="../../Portuguese/health/./" style="font-size:14px;">葡萄牙文</a></li>
+          <li class="top-clm"><a id="mandarin" class="nav-link" href="../../Mandarin/health/./" style="font-size:14px;">普通話</a></li>
+          <li class="top-clm"><a id="sichuanese" class="nav-link" href="../../Sichuanese/health/./" style="font-size:14px;">四川話</a></li>
       </ul>
     </div>
   </nav>
@@ -47,38 +47,38 @@
     <div class="middle"> 
 
       <div class="btn">
-        <button id="add-Button" onclick="addRecord()" class="add-button"><span>+ New</span> </button>
+        <button id="add-Button" onclick="addRecord()" class="add-button"><span>+ 新紀錄</span> </button>
       </div>
       <div class="middle-middle">
-        <div id="goal-day">Days left: <span id="days-left">0</span></div>
+        <div id="goal-day">剩餘天數： <span id="days-left">0</span></div>
       </div>
       <div  class='middle-right'>
-        <div>Money spent: <span id="money-spent">0</span></div>
+        <div>支出： <span id="money-spent">0</span></div>
       </div class='btn1'>
       <div  class='middle-right-right'>
-        <div>Weight to lose: <span id="weight-tolose">0</span></div>
+        <div>還要減(kg): <span id="weight-tolose">0</span></div>
         
       </div>
       <div class="dropdown">
-        <button id="goal-Button" onclick="dropdown()" class="goal-button"><span>Set Goals</span> </button>
+        <button id="goal-Button" onclick="dropdown()" class="goal-button"><span>定個目標</span> </button>
         <div id='dropdown-content' class="dropdown-content">
           <form>
-            <label class="dropdownlabel">What's your current weight(kg)?</label>
+            <label class="dropdownlabel">你現實的體重是多少公斤？</label>
             <div class="setgoal">
               <input class="dropdowninput" type="number" id="current-weight">
             </div >
-            <label class="dropdownlabel">What's your goal weight(kg)?</label>
+            <label class="dropdownlabel">你理想的體重是多少公斤？</label>
             <div class="setgoal">
               <input class="dropdowninput" type="number" id="goal-weight">
             </div>
-            <label class="dropdownlabel">How many days do you need?</label>
+            <label class="dropdownlabel">你需要多少天來實現理想？</label>
             <div class="setgoal">
               <input class="dropdowninput"  type="number" id="goal-days">
             </div>
           </form>
-          <div class="dropdowninput">
+          <div class="dropdowninput" id="setunit">
             <div class="dropdownset">
-              <button id="setbtn" class="set-button"><span>set</span></button>
+              <button id="setbtn" class="set-button"><span>確定目標</span></button>
             </div>
           </div>
         </div>
@@ -105,7 +105,7 @@
   
         <div class="btm-clm-left">
           <div class="btm-clm-left-top">
-            <div class="btm-clm-left-top-top">Date</div>
+            <div class="btm-clm-left-top-top"><span>日期</span></div>
             <div class="btm-clm-left-top-btm">
               <input id="date-picker" type="date">
             </div>
@@ -117,7 +117,7 @@
       
         <div class="btm-clm-left">
           <div class="btm-clm-left-top">
-            <div class="btm-clm-left-top-top">Money</div>
+            <div class="btm-clm-left-top-top"><span>支出</span></div>
             <div class="btm-clm-left-top-btm">
               <input id="money-picker" type="number">
             </div>
@@ -129,7 +129,7 @@
   
         <div class="btm-clm-left">
           <div class="btm-clm-left-top">
-            <div class="btm-clm-left-top-top">Exercise</div>
+            <div class="btm-clm-left-top-top"><span>鍛鍊</span></div>
             <div class="btm-clm-left-top-btm">
               <select id="exercise-picker">
                 <optgroup label="Minutes">
@@ -148,12 +148,12 @@
       
         <div class="btm-clm-left">
           <div class="btm-clm-left-top">
-            <div class="btm-clm-left-top-top">Food</div>
+            <div class="btm-clm-left-top-top"><span>食物攝取</span></div>
             <div class="btm-clm-left-top-btm">
               <select id="food-picker">
                 <option></option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
+                <option value="Yes">有</option>
+                <option value="No">無</option>
               </select>
             </div>
           </div>
@@ -164,7 +164,7 @@
   
         <div class="btm-clm-left">
           <div class="btm-clm-left-top">
-            <div class="btm-clm-left-top-top">Weight</div>
+            <div class="btm-clm-left-top-top"><span></span>體重</div>
             <div class="btm-clm-left-top-btm">
               <input id="weight-picker" type="number">
             </div>
@@ -191,18 +191,18 @@
   
       <div class="btm-right">
           <div class="btm-right-top">
-            <div class="btm-right-top-top">Statistics</div>
+            <div class="btm-right-top-top">數據（天）</div>
             <div class="btm-right-top-btm">
               <div class="btm-right-top-btm-row">
-                <div class="btm-right-top-btm-row-left">Money: <span id="money-counter">0</span></div>
+                <div class="btm-right-top-btm-row-left">使過錢：<span id="money-counter">0</span></div>
                 <div  class="btm-right-top-btm-row-right"></div>
               </div>
               <div class="btm-right-top-btm-row">
-                <div class="btm-right-top-btm-row-left">Exercise: <span id="exercise-counter">0</span></div>
+                <div class="btm-right-top-btm-row-left">鍛過鍊： <span id="exercise-counter">0</span></div>
                 <div class="btm-right-top-btm-row-right"></div>
               </div>
               <div class="btm-right-top-btm-row">
-                <div class="btm-right-top-btm-row-left">Food: <span id="food-counter">0</span></div>
+                <div class="btm-right-top-btm-row-left">吃過飯： <span id="food-counter">0</span></div>
                 <div  class="btm-right-top-btm-row-right"></div>
               </div>
               <div class="btm-right-top-btm-row">
@@ -212,9 +212,9 @@
             </div>
           </div>
   
-          <div class="btm-right-middle">Analysis:</div>
+          <div class="btm-right-middle">分析：</div>
   
-          <div class="btm-right-btm">Suggestions:</div>
+          <div class="btm-right-btm">建議：</div>
         </div>
       </div>
   

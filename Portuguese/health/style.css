@@ -112,26 +112,7 @@ a {
     height: 48px;
   }
 
-  #portuguese {
-    min-width: 60px;
-  }
-
-  #mandarin {
-    min-width: 42px;
-  }
-
-#language {
-  min-width: 28px;
-}
-
-#home,
-#health,
-#finance,
-#cognitivity {
-  min-width: 54px;
-}
-
-nav,
+  nav,
 .nav-content,
 ul,
 li,
@@ -870,7 +851,7 @@ button::after {
   display:none;
   position:absolute;
   bottom:-100px;
-  left:140px;
+  left:180px;
   overflow:auto;
   z-index:100000;
   color:white;
