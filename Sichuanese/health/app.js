@@ -109,7 +109,7 @@ function daysCounter () {
 
 function daysIncrease (idToDelete) {
   if (days == 0 ) {
-    console.log(days)
+    return;
   }else {
     records.forEach((record) => {
       if (record.id === idToDelete){

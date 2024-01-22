@@ -275,13 +275,14 @@ main {
 }
 
 .btm {
-  display: flex;
-  flex-direction: row;
+  display:grid;
+  grid-template-columns: 50% 50%;
   justify-content: space-between;
   flex-wrap: nowrap;
   gap: 5px;
   font-size: 20px;
   padding: 10px;
+  min-width: 2200px;
 }
 
 .btm-left {
@@ -316,8 +317,15 @@ main {
   background-color: white;
   color: #2a2a2a;
   text-align: center;
-  font-size: 24px;
+  justify-content: center;
+  font-size: 22px;
   border: 1px solid rgba(0,0,0,0.6);
+  min-height: 26px;
+  padding-top: 4px;
+}
+
+.btm-clm-left-top-top span {
+  text-align: center;
 }
 
 .btm-clm-left-btm-row {

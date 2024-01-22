@@ -29,7 +29,7 @@
     <div class="middle"> 
 
       <div class="btn">
-        <button id="add-Button" onclick="addRecord()" class="add-button"><span>添加</span> </button>
+        <button id="add-Button" onclick="addRecord()" class="add-button"><span>添加记录</span> </button>
       </div>
       <div class="middle-middle">
         <div id="goal-day">剩余天数: <span id="days-left">0</span></div>
@@ -38,22 +38,22 @@
         <div>支出: <span id="money-spent">0</span></div>
       </div class='btn1'>
       <div  class='middle-right-right'>
-        <div>尚需减少体重: <span id="weight-tolose">0</span></div>
+        <div>还要减(kg): <span id="weight-tolose">0</span></div>
         
       </div>
       <div class="dropdown">
-        <button id="goal-Button" onclick="dropdown()" class="goal-button"><span>设置健康目标</span> </button>
+        <button id="goal-Button" onclick="dropdown()" class="goal-button"><span>定个目标</span> </button>
         <div id='dropdown-content' class="dropdown-content">
           <form>
-            <label class="dropdownlabel">你当前的体重是多少千克？</label>
+            <label class="dropdownlabel">你现实的体重是多少千克？</label>
             <div class="setgoal">
               <input class="dropdowninput" type="number" id="current-weight">
             </div >
-            <label class="dropdownlabel">你的目标体重是多少千克？</label>
+            <label class="dropdownlabel">你理想的体重是多少千克？</label>
             <div class="setgoal">
               <input class="dropdowninput" type="number" id="goal-weight">
             </div>
-            <label class="dropdownlabel">你需要多少天来完成目标？</label>
+            <label class="dropdownlabel">你需要多少天来实现理想？</label>
             <div class="setgoal">
               <input class="dropdowninput"  type="number" id="goal-days">
             </div>
@@ -87,7 +87,7 @@
   
         <div class="btm-clm-left">
           <div class="btm-clm-left-top">
-            <div class="btm-clm-left-top-top">日期</div>
+            <div class="btm-clm-left-top-top"><span>日期</span></div>
             <div class="btm-clm-left-top-btm">
               <input id="date-picker" type="date">
             </div>
@@ -99,7 +99,7 @@
       
         <div class="btm-clm-left">
           <div class="btm-clm-left-top">
-            <div class="btm-clm-left-top-top">支出</div>
+            <div class="btm-clm-left-top-top"><span>支出</span></div>
             <div class="btm-clm-left-top-btm">
               <input id="money-picker" type="number">
             </div>
@@ -111,7 +111,7 @@
   
         <div class="btm-clm-left">
           <div class="btm-clm-left-top">
-            <div class="btm-clm-left-top-top">锻炼</div>
+            <div class="btm-clm-left-top-top"><span>锻炼</span></div>
             <div class="btm-clm-left-top-btm">
               <select id="exercise-picker">
                 <optgroup label="Minutes">
@@ -130,7 +130,7 @@
       
         <div class="btm-clm-left">
           <div class="btm-clm-left-top">
-            <div class="btm-clm-left-top-top">食物摄取</div>
+            <div class="btm-clm-left-top-top"><span>食物摄取</span></div>
             <div class="btm-clm-left-top-btm">
               <select id="food-picker">
                 <option></option>
@@ -146,7 +146,7 @@
   
         <div class="btm-clm-left">
           <div class="btm-clm-left-top">
-            <div class="btm-clm-left-top-top">体重</div>
+            <div class="btm-clm-left-top-top"><span>体重</span></div>
             <div class="btm-clm-left-top-btm">
               <input id="weight-picker" type="number">
             </div>
@@ -176,15 +176,15 @@
             <div class="btm-right-top-top">数据（天）</div>
             <div class="btm-right-top-btm">
               <div class="btm-right-top-btm-row">
-                <div class="btm-right-top-btm-row-left">有花钱: <span id="money-counter">0</span></div>
+                <div class="btm-right-top-btm-row-left">花钱了: <span id="money-counter">0</span></div>
                 <div  class="btm-right-top-btm-row-right"></div>
               </div>
               <div class="btm-right-top-btm-row">
-                <div class="btm-right-top-btm-row-left">有锻炼: <span id="exercise-counter">0</span></div>
+                <div class="btm-right-top-btm-row-left">锻炼了: <span id="exercise-counter">0</span></div>
                 <div class="btm-right-top-btm-row-right"></div>
               </div>
               <div class="btm-right-top-btm-row">
-                <div class="btm-right-top-btm-row-left">有吃东西: <span id="food-counter">0</span></div>
+                <div class="btm-right-top-btm-row-left">吃饭了: <span id="food-counter">0</span></div>
                 <div  class="btm-right-top-btm-row-right"></div>
               </div>
               <div class="btm-right-top-btm-row">
