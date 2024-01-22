@@ -471,13 +471,14 @@ button::after {
 	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
 }
 
+/*
 .delete-button {
   cursor: pointer;
 	position: relative;
 	border-radius: 20px;
 	font-size: 20px;
 	font-weight: 600;
-	border: 1px solid #621714;
+	border: 1px solid #5b120fec;
 	background-image: linear-gradient(-180deg, #be1c1a 0%, #8b0909 100%);
 	box-shadow: 0 16px 20px 0 rgba(112, 19, 13, 0.5),
 							0 -4px 20px rgb(51, 1, 1) inset,
@@ -485,7 +486,7 @@ button::after {
 							0 4px 8px 0 rgb(133, 29, 34) inset;
 }
 
-.delete-button span {
+/*.delete-button span {
 	background-image: linear-gradient(0deg, #d73936 0%, #f2edd8 100%);
 	-webkit-background-clip: text;
 	background-clip: text;
@@ -520,7 +521,7 @@ button::after {
 	border-radius: 100%;
 	filter: blur(1px);
 	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
-}
+}*/
 
 .root-button {
   width: auto;
@@ -584,6 +585,12 @@ button::after {
 	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
 }
 
+.delete-button {
+  min-height:50px;
+  min-width: 50px;
+}
+
+.delete-button,
 .set-button {
   height: auto;
   width: auto;
@@ -602,6 +609,7 @@ button::after {
 							0 4px 4px 0 rgba(141, 39, 44, 0.897) inset;
 }
 
+.delete-button::before,
 .set-button::before {
 	content: "";
 	display: block;
@@ -617,6 +625,7 @@ button::after {
 	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
 }
 
+.delete-button::after,
 .set-button::after {
 	content: "";
 	display: block;
@@ -652,8 +661,7 @@ button::after {
 }
 
 .add-button:hover {
-  background-color:#818181;
-  border: 1px solid rgba(255,255,255,0.4);
+  background-color:rgba(255,255,255,0.7);
 }
 
 .add-button span {
@@ -694,7 +702,7 @@ button::after {
 	opacity: 0.05;
 	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
 }
-
+/*
 .delete-button {
   cursor: pointer;
 	position: relative;
@@ -747,7 +755,7 @@ button::after {
 	filter: blur(1px);
 	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
 }
-
+*/
 
 .goal-button {
   height: 100%;
@@ -769,8 +777,7 @@ button::after {
 }
 
 .goal-button:hover {
-  background: #818181;
-  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.7);
 }
 
 .goal-button span {
