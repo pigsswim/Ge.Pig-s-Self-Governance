@@ -37,7 +37,6 @@ const paper31 = document.querySelector('#p31')
 const paper32 = document.querySelector('#p32')
 const paper33 = document.querySelector('#p33')
 
-
 // Event listeners
 prevBtn.addEventListener("click", goPrevious);
 nextBtn.addEventListener("click", goNext);
@@ -346,4 +345,17 @@ function goPrevious() {
 
         currentState--;
     }
+}
+
+//enlarge images 
+
+function enlarge () {
+    images.style.transform = 'scale(2)';
+    images.style.transition = "transform 0.25s ease";
+    
+}
+
+function resetImg () {
+    images.style.transform = 'scale(1)';
+    images.style.transition = "transform 0.25s ease";
 }

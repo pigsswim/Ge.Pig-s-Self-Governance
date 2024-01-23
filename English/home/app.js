@@ -270,3 +270,4 @@ function scrollScreen () {
   
   //setTimeout(scrollToHealth, 5000);
   
+  //change mode 
