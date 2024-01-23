@@ -130,11 +130,13 @@ li,
 }
 
 main {
-  padding-top: 500px;
+  height:400px;
+  width: 420px;
+  padding-top: 300px;
+  padding-left: 50%;
 }
 
+/* the size goes with the main's size
 .clstrm_outer {
-  max-width: 200px;
-  max-height: 200px;
 }
 
