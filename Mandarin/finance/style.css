@@ -239,4 +239,10 @@ h1 {
   position:absolute;
   line-height: 2;
   left: 20%;
+  animation: slide 2s;
+}
+
+@keyframes slide {
+  0% {transform:translateX(-200%);}
+  100% {transform:translateX(0); }
 }
