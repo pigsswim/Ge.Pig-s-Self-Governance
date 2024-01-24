@@ -60,11 +60,11 @@ function createRecord (date,money,exercise,food,weight,remark) {
   if (weight > 45) {
     remark = 'Fat Pig!';
   }else if (weight < 45 && weight > 43) {
-    remark = 'Not fat, but needs LOTS of exercise.';
+    remark = '不胖，仲要鍛鍊好長時間。';
   }else if (weight < 43 && weight > 40) {
-    remark = 'Healthy, not fat, exercise everyday.';
+    remark = '健康，不肥，每日都需要鍛鍊。';
   }else if (weight < 40) {
-    remark = 'Congratulations, you are about to see Jesus.';
+    remark = '恭喜你，你馬上可以去見上帝了。';
   }
   
   const id = '' + new Date().getTime();
@@ -447,4 +447,28 @@ function renderGoal() {
   document.getElementById('money-counter').innerHTML = moneyCount;
   document.getElementById('exercise-counter').innerHTML = exerciseCount;
   document.getElementById('food-counter').innerHTML = foodCount;
+}
+
+function dayTheme () {
+  document.body.style.backgroundColor ='white';
+  const dropdown = document.getElementById('dropdown-content');
+  dropdown.style.color = 'black';
+  const goalWeight = document.getElementById('goal-weight');
+  goalWeight.style.border = '1px solid black';
+  const currentWeight = document.getElementById('current-weight');
+  currentWeight.style.border = '1px solid black';
+  const goalDays = document.getElementById('goal-days');
+  goalDays.style.border = '1px solid black';
+}
+
+function nightTheme() {
+  document.body.style.backgroundColor ='black';
+  const dropdown = document.getElementById('dropdown-content');
+  dropdown.style.color = 'white';
+  const goalWeight = document.getElementById('goal-weight');
+  goalWeight.style.border = '1px solid black';
+  const currentWeight = document.getElementById('current-weight');
+  currentWeight.style.border = '1px solid black';
+  const goalDays = document.getElementById('goal-days');
+  goalDays.style.border = '1px solid black';
 }

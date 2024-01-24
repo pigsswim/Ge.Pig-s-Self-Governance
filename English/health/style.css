@@ -9,13 +9,12 @@ body {
   margin: 0px;
   padding: 0px;
   display: block;
-  min-width: 320px;
+ /* min-width: 320px;*/
   line-height: 1.47059;
   font-weight: 400;
   letter-spacing: -0.022em;
   color: black;
 }
-
 p {
     height:100%;
     width:100;
@@ -130,7 +129,6 @@ main {
    font-size: 16px;
    font-weight: 400;
    line-height: 19.2px;
-   min-height: 100%;
    -webkit-font-smoothing: antialiased;
    position: relative;
    padding-top: 100px;
@@ -146,7 +144,6 @@ main {
     overflow: hidden;
     position: relative;
     text-align: center;
-    background-color: green;
     z-index: 10;
 }
 
@@ -200,7 +197,6 @@ main {
     z-index:3;
     position: relative;
     text-align: center;
-    background: brown;
 }
 
 .unit-title {
@@ -215,16 +211,10 @@ main {
     font-size: 14px;
 }
 
-
-
-main {
-   height: 100%;
-   width: 100%;
-}
-
 .middle {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
+  max-width: fit-content;
   gap: 20px;
   height: 50px;
   padding: 10px;
@@ -254,6 +244,9 @@ main {
   border-radius: 5px;
   color:black;
   min-width: 120px;
+  max-width: fit-content;
+  min-width: max-content;
+  max-height: fit-content;
 }
 
 #days-left,
@@ -275,18 +268,18 @@ main {
 
 .btm {
   display:grid;
-  grid-template-columns: 50% 50%;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  grid-template-columns: auto auto;
+  overflow: hidden;
   gap: 5px;
   font-size: 20px;
   padding: 10px;
-  min-width: 2200px;
+  min-width: max-content;
 }
 
 .btm-left {
   display: grid;
   grid-template-columns: 80px 22% 14% 14% 14% 14% auto;
+  min-width: max-content;
   border-radius: 5px;
   margin-bottom: 10px;
   padding: 20px;
@@ -345,6 +338,8 @@ main {
   padding: 10px;
   width: 20%;
   background-color: white;
+  display: flex;
+  min-width: max-content;
 }
 
 .btm-right,
@@ -416,6 +411,88 @@ select {
 
 .btn {
   width: 100px;
+}
+
+.title-button-wrapper {
+  cursor: pointer;
+  line-height: 36px;
+  height: 60px;
+}
+
+#day,
+#night {
+  height: 100%;
+  width: 100%;
+	cursor: pointer;
+	position: unset;
+	border-radius: unset;
+	line-height: unset;
+	font-weight:unset;
+	border: unset;
+	background-image: none;
+	box-shadow:none;
+}
+
+#day:hover,
+#night:hover {
+  background: none;
+}
+
+#day span,
+#night span {
+	color: none;
+	background-image: unset;
+	-webkit-background-clip: unset;
+	background-clip: unset;
+	filter: unset;
+}
+
+#day::before,
+#night::before {
+	content: unset;
+	display: unset;
+	height: unset;
+	position: unset;
+	top: unset;
+	left:unset;
+	transform: unset;
+	width: unset;
+	background:unset;
+	border-radius: unset;
+	opacity: unset;
+	background-image: unset;
+}
+
+#day::after,
+#night::after {
+	content: unset;
+	display: unset;
+	height: unset;
+	position: unset;
+	bottom: unset;
+	left: unset;
+	transform: unset;
+	width: unset;
+	background: unset;
+	border-radius: unset;
+	filter: unset;
+	opacity: unset;
+	background-image: unset;
+}
+
+button {
+  align-items: center;
+  height: 60px;
+  font-size: 26px;
+  box-sizing:border-box;
+  box-shadow: none;
+  border: none;
+  color: white;
+  background: none;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 button {
@@ -866,4 +943,11 @@ button::after {
 .setgoal {
   display:grid;
   grid-template-columns: 80% 20%;
+}
+
+footer {
+  color:white;
+  background: black;
+  text-align: center;
+  padding: 10px;
 }
