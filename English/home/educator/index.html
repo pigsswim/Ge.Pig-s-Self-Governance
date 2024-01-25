@@ -5,12 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ge.Pig's Self-Governance</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="app.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script defer src="main.js"></script>
 </head>
 <body>
+   
     <main>
+        <section class="section-wrapper-middle" id="intro">
+            <div class="module-wrapper">
+               <h1>Set a name to generate customized questions.</h1>
+            </div>
+
+        </section>
+
         <section class="section-wrapper-top" id="setting">
+            <div class="module-wrapper">
+                <div class="unit-wrapper">
+                    <div class="content-wrapper">
+                        <div class="content">
+                            <label><p>Name</p></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit-wrapper">
+                    <div class="content-wrapper">
+                        <div class="content">
+                            <input type="text" id="name"></input>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="module-wrapper">
                 <div class="unit-wrapper">
                     <div class="content-wrapper">
@@ -63,7 +86,7 @@
                 <div class="unit-wrapper">
                     <div class="content-wrapper">
                         <div class="content">
-                            <label><p>Age (currently 6-y only)</p</label>
+                            <label><p>Age (NA)</p</label>
                         </div>
                     </div>
                 </div>
@@ -79,7 +102,7 @@
                 <div class="unit-wrapper">
                     <div class="content-wrapper">
                         <div class="content">
-                            <label><p>Country / Region</p></label>
+                            <label><p>Country / Region (NA)</p></label>
                         </div>
                     </div>
                 </div>
@@ -350,7 +373,7 @@
                 <div class="unit-wrapper">
                     <div class="content-wrapper">
                         <div class="content">
-                            <button><span>Set</span></button>
+                            <button id="set"><span>Set</span></button>
                         </div>
                     </div>
                 </div>
@@ -361,10 +384,10 @@
         <section class="section-wrapper-middle" id="story">
             <div class="module-wrapper">
                <h1>Sample</h1>
-               <p>I get up at 6 am on a school day. 
-                By 7 am, I would always be in school classroom. 
+               <p>Julie gets up at 6 am on a school day. 
+                By 7 am, Julie would always be in school classroom. 
                 The first class starts at 8 am. 
-                From Monday through Friday, I study with a total of 82 classmates.
+                From Monday through Friday, Julie studies with a total of 82 classmates.
                 In the morning, there are usually four different sessions, each lasts 45 minutes. 
                 The longgest break is 20 minutes between the third and the fourth course.  
                 The short break is always 10 minutes.
@@ -376,11 +399,11 @@
             </div>
 
         </section>
-        <section class="section-wrapper-bottom" id="worksheets">
+        <section class="section-wrapper-bottom" id="questions">
             <div class="module-wrapper">
                 <div class="unit-wrapper">
-                    <div class="unit" id="title">
-                        <p>Question 1: How many hours do I spend in school on a school day?
+                    <div class="unit" id="title1">
+                        <p>Question 1: How many hours does Julie spend in school on a school day?
                         </p>
                     </div>
                     <div class="unit" id="content">
@@ -388,8 +411,8 @@
                     </div>
                 </div>
                 <div class="unit-wrapper">
-                    <div class="unit" id="title">
-                        <p>Question 2: How many hours in total I get to rest in school on a school day?</p>
+                    <div class="unit" id="title2">
+                        <p>Question 2: How many hours in total Julie gets to rest in school on a school day?</p>
                     </div>
                     <div class="unit" id="content">
                         <p>Solution:</p>
@@ -398,16 +421,16 @@
             </div>
             <div class="module-wrapper">
                 <div class="unit-wrapper">
-                    <div class="unit" id="title">
-                        <p>Question 3: How much time do I spend on communting to school on a daily basis?</p>
+                    <div class="unit" id="title3">
+                        <p>Question 3: How much time does Julie spend on communting to school on a daily basis?</p>
                     </div>
                     <div class="unit" id="content">
                         <p>Solution:</p>
                     </div>
                 </div>
                 <div class="unit-wrapper">
-                    <div class="unit" id="title">
-                        <p>Question 4: How many more classmates do I have compared with yours?</p>
+                    <div class="unit" id="title4">
+                        <p>Question 4: How many more classmates does Julie have compared with yours?</p>
                     </div>
                     <div class="unit" id="content">
                         <p>Solution:</p>
@@ -416,16 +439,16 @@
             </div>
             <div class="module-wrapper">
                 <div class="unit-wrapper">
-                    <div class="unit" id="title">
-                        <p>Question 5: How many hours in total do I stay in school for a week?</p>
+                    <div class="unit" id="title5">
+                        <p>Question 5: How many hours in total does Julie stay in school for a week?</p>
                     </div>
                     <div class="unit" id="content">
                         <p>Solution:</p>
                     </div>
                 </div>
                 <div class="unit-wrapper">
-                    <div class="unit" id="title">
-                        <p>Question 6: Between you and I, who spends more time in school in a week?
+                    <div class="unit" id="title6">
+                        <p>Question 6: Between Julie and a kid in another country, who spends more time in school in a week?
                             How many more?
                         </p>
                     </div>
@@ -436,16 +459,16 @@
             </div>
             <div class="module-wrapper">
                 <div class="unit-wrapper">
-                    <div class="unit" id="title">
-                        <p>Question 7: How  much time do I have to have lunch?</p>
+                    <div class="unit" id="title7">
+                        <p>Question 7: How  much time does Julie have to have lunch?</p>
                     </div>
                     <div class="unit" id="content">
                         <p>Solution:</p>
                     </div>
                 </div>
                 <div class="unit-wrapper">
-                    <div class="unit" id="title">
-                        <p>Question 8: Would you also like to have 82 classmates? Why?</p>
+                    <div class="unit" id="title8">
+                        <p>Question 8: If you could choose, would you prefer to have 82 classmates? Why?</p>
                     </div>
                     <div class="unit" id="content">
                         <p>Solution:</p>
@@ -454,8 +477,8 @@
             </div>
             <div class="module-wrapper">
                 <div class="unit-wrapper">
-                    <div class="unit" id="title">
-                        <p>Question 9: Do you think I spend too much time in school? 
+                    <div class="unit" id="title9">
+                        <p>Question 9: Do you think Julie spends too much time in school? 
                             Why? Please use numbers to support your opinion.</p>
                     </div>
                     <div class="unit" id="content">
@@ -463,8 +486,8 @@
                     </div>
                 </div>
                 <div class="unit-wrapper">
-                    <div class="unit" id="title">
-                        <p>Question 10: Suppose you have spotted other issues that need to be changed during my school day, 
+                    <div class="unit" id="title10">
+                        <p>Question 10: Suppose you have spotted other issues that need to be changed during Julie's school day, 
                             Please raise the issues and provide your solution. </p>
                     </div>
                     <div class="unit" id="content">
