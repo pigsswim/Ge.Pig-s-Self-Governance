@@ -61,14 +61,7 @@ function debug() {
     let textArray = text.split('');
     let i = 0;
     textArray.forEach((english) => {
-            let y = 0;y<english.length;y++;
-            if (textArray[i] !== english[y]) {
-                y++;
-            }else {
-                newText.push(textArray[i])
-                console.log(newText);
-            }
-        })
+        
 }
 
 
