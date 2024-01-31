@@ -51,20 +51,19 @@ let dictionary = [
 let chinese = ['ai','l','a','w','y','ü'];
 let english = ['I','l',['o','ou'],['v','ve'],'y'];
 
-
-//form English phonenmes
-
-function debug() {
-    let phoeneme = '';
-    let newText = [];
-    let text = textBox.value;
-    let textArray = text.split('');
-    let i = 0;
-    textArray.forEach((english) => {
-        
+function debug () {
+    userInput();
 }
 
+//control 
+// grab user input 
 
-//find y, find ou 
-//match y with ou, 
-//push new word,into new array?
+function userInput() {
+    let userInput = textBox.value;
+    let splitUserInput = userInput.split('')
+    console.log(splitUserInput)
+    let userInputConcat = [];
+    splitUserInput.forEach(() => {
+        console.log(Array.of(userInputConcat))
+    })
+}
