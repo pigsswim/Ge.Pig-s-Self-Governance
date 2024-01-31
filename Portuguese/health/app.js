@@ -430,6 +430,7 @@ function renderGoal() {
   document.getElementById('food-counter').innerHTML = foodCount;
 }
 
+/*
 
 //change theme
 function dayTheme () {
@@ -455,3 +456,5 @@ function nightTheme() {
   const goalDays = document.getElementById('goal-days');
   goalDays.style.border = '1px solid black';
 }
+
+*/
