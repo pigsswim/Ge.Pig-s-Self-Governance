@@ -451,6 +451,7 @@ function renderGoal() {
 
 //change theme
 
+/*
 function dayTheme () {
   document.body.style.backgroundColor ='white';
   const dropdown = document.getElementById('dropdown-content');
@@ -473,4 +474,4 @@ function nightTheme() {
   currentWeight.style.border = '1px solid black';
   const goalDays = document.getElementById('goal-days');
   goalDays.style.border = '1px solid black';
-}
+}*/

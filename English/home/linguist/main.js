@@ -57,13 +57,3 @@ function debug () {
 
 //control 
 // grab user input 
-
-function userInput() {
-    let userInput = textBox.value;
-    let splitUserInput = userInput.split('')
-    console.log(splitUserInput)
-    let userInputConcat = [];
-    splitUserInput.forEach(() => {
-        console.log(Array.of(userInputConcat))
-    })
-}

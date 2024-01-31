@@ -448,3 +448,29 @@ function renderGoal() {
   document.getElementById('exercise-counter').innerHTML = exerciseCount;
   document.getElementById('food-counter').innerHTML = foodCount;
 }
+
+/*
+//change theme
+function dayTheme () {
+  document.body.style.backgroundColor ='white';
+  const dropdown = document.getElementById('dropdown-content');
+  dropdown.style.color = 'black';
+  const goalWeight = document.getElementById('goal-weight');
+  goalWeight.style.border = '1px solid black';
+  const currentWeight = document.getElementById('current-weight');
+  currentWeight.style.border = '1px solid black';
+  const goalDays = document.getElementById('goal-days');
+  goalDays.style.border = '1px solid black';
+}
+
+function nightTheme() {
+  document.body.style.backgroundColor ='black';
+  const dropdown = document.getElementById('dropdown-content');
+  dropdown.style.color = 'white';
+  const goalWeight = document.getElementById('goal-weight');
+  goalWeight.style.border = '1px solid black';
+  const currentWeight = document.getElementById('current-weight');
+  currentWeight.style.border = '1px solid black';
+  const goalDays = document.getElementById('goal-days');
+  goalDays.style.border = '1px solid black';
+}*/
