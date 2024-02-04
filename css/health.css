@@ -30,7 +30,7 @@
  font-size: 20px;
  font-weight: 600;
  border-radius: 5px;
- color:black;
+ color:white;
  min-width: 120px;
  max-width: fit-content;
  min-width: max-content;
@@ -73,7 +73,10 @@
  padding: 20px;
  background-color: white;
  opacity: 0.95;
- border: 2px solid rgba(0,0,0,0.6);
+ border-width: 5px;
+ border-style: solid;/* rgba(0,0,0,0.6);*/
+ border-image: linear-gradient(#294221,#c6ba73) 30;
+ border-radius: 20px;
 }
 
 .btm-clm-left {

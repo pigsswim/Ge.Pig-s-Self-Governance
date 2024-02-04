@@ -6,23 +6,56 @@ const night = document.getElementById('night');
   //change theme 
 
 function dayTheme () {
-    document.body.style.backgroundColor ='white';
-    document.body.style.color ='black';
+    localStorage.setItem('brightbgcolor','white');
+    localStorage.setItem('darkcolor','black');
+    document.body.style.backgroundColor = localStorage.brightbgcolor ||'white';
+    document.body.style.color = localStorage.darkcolor || 'black';
     const secT1 = document.getElementById('section-span1');
     const secT2 = document.getElementById('section-span2');
     const secT3 = document.getElementById('section-span3');
-    secT1.style.color = 'black';
-    secT2.style.color = 'black';
-    secT3.style.color = 'black';
+    secT1.style.color = localStorage.darkcolor || 'black';
+    secT2.style.color = localStorage.darkcolor || 'black';
+    secT3.style.color = localStorage.darkcolor || 'black';
 }
 
 function nightTheme() {
-    document.body.style.backgroundColor ='black';
-    document.body.style.color ='white';
+    localStorage.setItem('darkbgcolor','black');
+    localStorage.setItem('brightcolor', 'white');
+    document.body.style.backgroundColor = localStorage.darkbgcolor || 'black';
+    document.body.style.color = localStorage.brightcolor;
     const secT1 = document.getElementById('section-span1');
     const secT2 = document.getElementById('section-span2');
     const secT3 = document.getElementById('section-span3');
-    secT1.style.color = 'white';
-    secT2.style.color = 'white';
-    secT3.style.color = 'white';
+    secT1.style.color = localStorage.brightcolor;
+    secT2.style.color = localStorage.brightcolor;
+    secT3.style.color = localStorage.brightcolor;
 }
+
+window.addEventListener('load',() => {
+  if (document.body.style.backgroundColor = localStorage.brightbgcolor) {
+    const secT1 = document.getElementById('section-span1');
+    const secT2 = document.getElementById('section-span2');
+    const secT3 = document.getElementById('section-span3');
+    secT1.style.color = localStorage.darkcolor || 'black';
+    secT2.style.color = localStorage.darkcolor || 'black';
+    secT3.style.color = localStorage.darkcolor || 'black';
+  }
+  else if (document.body.style.backgroundColor = localStorage.darkbgcolor) {
+    const secT1 = document.getElementById('section-span1');
+    const secT2 = document.getElementById('section-span2');
+    const secT3 = document.getElementById('section-span3');
+    secT1.style.color = localStorage.brightcolor;
+    secT2.style.color = localStorage.brightcolor;
+    secT3.style.color = localStorage.brightcolor;
+  }
+  else {
+    return;
+  }
+})
+
+function navOpacity() {
+  const navigation = document.getElementById('nav');
+  this.scrollY > 1 ? navigation.style.opacity = .7 : navigation.style.opacity = 1;
+}
+
+window.addEventListener('scroll',navOpacity, false)

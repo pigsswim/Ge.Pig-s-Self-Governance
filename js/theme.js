@@ -1,11 +1,14 @@
 //change theme
 
 
+
+
 function dayTheme () {
-    localStorage.setItem('bgcolor','white');
-    document.body.style.backgroundColor = localStorage.bgcolor ||'white';
+    localStorage.setItem('brightbgcolor','white');
+    localStorage.setItem('darkcolor','black');
+    document.body.style.backgroundColor = localStorage.brightbgcolor ||'white';
     const dropdown = document.getElementById('dropdown-content');
-    dropdown.style.color = 'black';
+    dropdown.style.color = localStorage.darkcolor || 'black';
     const goalWeight = document.getElementById('goal-weight');
     goalWeight.style.border = '1px solid black';
     const currentWeight = document.getElementById('current-weight');
@@ -13,19 +16,13 @@ function dayTheme () {
     const goalDays = document.getElementById('goal-days');
     goalDays.style.border = '1px solid black';
   }
-
-    window.addEventListener('load',() => {
-        console.log('notok')
-        console.log(document.body.style.backgroundColor)
-
-        document.body.style.backgroundColor = localStorage.bgcolor;
-    })
-  
 
   function nightTheme() {
-    document.body.style.backgroundColor ='black';
+    localStorage.setItem('darkbgcolor','black');
+    localStorage.setItem('brightcolor', 'white');
+    document.body.style.backgroundColor = localStorage.darkbgcolor || 'black';
     const dropdown = document.getElementById('dropdown-content');
-    dropdown.style.color = 'white';
+    dropdown.style.color = localStorage.brightcolor;
     const goalWeight = document.getElementById('goal-weight');
     goalWeight.style.border = '1px solid black';
     const currentWeight = document.getElementById('current-weight');
@@ -33,3 +30,36 @@ function dayTheme () {
     const goalDays = document.getElementById('goal-days');
     goalDays.style.border = '1px solid black';
   }
+
+  window.addEventListener('load',() => {
+    if (document.body.style.backgroundColor = localStorage.brightbgcolor) {
+      const dropdown = document.getElementById('dropdown-content');
+      dropdown.style.color = localStorage.darkcolor;
+      const goalWeight = document.getElementById('goal-weight');
+      goalWeight.style.border = `1px solid ${localStorage.darkcolor}`;
+      const currentWeight = document.getElementById('current-weight');
+      currentWeight.style.border = `1px solid ${localStorage.darkcolor}`;
+      const goalDays = document.getElementById('goal-days');
+      goalDays.style.border = `1px solid ${localStorage.darkcolor}`;
+    }
+    else if (document.body.style.backgroundColor = localStorage.darkbgcolor) {
+      const dropdown = document.getElementById('dropdown-content');
+      dropdown.style.color = localStorage.brightcolor;
+      const goalWeight = document.getElementById('goal-weight');
+      goalWeight.style.border = '1px solid black';
+      const currentWeight = document.getElementById('current-weight');
+      currentWeight.style.border = '1px solid black';
+      const goalDays = document.getElementById('goal-days');
+      goalDays.style.border = '1px solid black';
+    }
+    else {
+      return;
+    }
+  })
+
+function navOpacity() {
+    const navigation = document.getElementById('nav');
+    this.scrollY > 1 ? navigation.style.opacity = .7 : navigation.style.opacity = 1;
+  }
+  
+window.addEventListener('scroll',navOpacity, false)
