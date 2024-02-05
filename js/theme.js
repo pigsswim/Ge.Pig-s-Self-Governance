@@ -32,30 +32,16 @@ function dayTheme () {
   }
 
   window.addEventListener('load',() => {
-    if (document.body.style.backgroundColor = localStorage.brightbgcolor) {
-      const dropdown = document.getElementById('dropdown-content');
-      dropdown.style.color = localStorage.darkcolor;
-      const goalWeight = document.getElementById('goal-weight');
-      goalWeight.style.border = `1px solid ${localStorage.darkcolor}`;
-      const currentWeight = document.getElementById('current-weight');
-      currentWeight.style.border = `1px solid ${localStorage.darkcolor}`;
-      const goalDays = document.getElementById('goal-days');
-      goalDays.style.border = `1px solid ${localStorage.darkcolor}`;
+    if (document.body.style.backgoundColor === localStorage.brightbgcolor) {
+      dayTheme();
+      console.log('day')
+    }else {
+      nightTheme();
+      console.log('night')
     }
-    else if (document.body.style.backgroundColor = localStorage.darkbgcolor) {
-      const dropdown = document.getElementById('dropdown-content');
-      dropdown.style.color = localStorage.brightcolor;
-      const goalWeight = document.getElementById('goal-weight');
-      goalWeight.style.border = '1px solid black';
-      const currentWeight = document.getElementById('current-weight');
-      currentWeight.style.border = '1px solid black';
-      const goalDays = document.getElementById('goal-days');
-      goalDays.style.border = '1px solid black';
+      
     }
-    else {
-      return;
-    }
-  })
+  )
 
 function navOpacity() {
     const navigation = document.getElementById('nav');

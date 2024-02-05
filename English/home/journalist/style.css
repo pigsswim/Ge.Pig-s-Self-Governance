@@ -6,17 +6,6 @@
     box-sizing: border-box;
 }
 
-body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: sans-serif;
-    background-color: #f2edd8;
-}
-
-
-
 /*  navigation style*/
 html,
 body {
@@ -28,15 +17,19 @@ body {
   gap:20px;
   margin: 0px;
   padding: 0px;
-  display: block;
   min-width: 320px;
   line-height: 1.47059;
   font-weight: 400;
   letter-spacing: -0.022em;
+  height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main {
-    margin-bottom: 500px;;
+    margin-bottom: 500px;
+    padding-top: 100px;
 }
 p {
     height:100%;
@@ -46,110 +39,6 @@ p {
     margin:0;
 }
 
-nav {
-  z-index: 99;
-  width: 100%;
-  min-width: 320px;
-  height: 48px;
-  min-height: 44px;
-  margin: 0px;
-  font-size: 18px;
-  display: block;
-  text-align: center;
-  position: fixed;
-  left: 0;
-  right: 0;
-  background-color:black;
-}
-
-.nav-content {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    box-sizing: border-box;
-    padding-top: 0;
-    padding-bottom: 0;
-    height: 100%;
-    max-height: 48px;
-    padding-inline-end: 22px;
-    padding-inline-start: 22px;
-    display: block;
-    direction: ltr;
-}
-
-ul {
-    list-style-type: none;
-    text-align: center;
-    float: none;
-    gap: 5px;
-    font-size: 18px;
-    direction: ltr;
-    padding:0;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-inline-end: -8px;
-    margin-inline-start: -8px;
-    margin-left: -8px;
-    margin-right: -8px;
-    display: flex;
-    justify-content: space-between;
-    width: auto;
-    height: 48px;
-    }
-  
-  li {
-    border-radius: 20px;
-    height: 48px;
-    padding: 0px;
-    margin: 0px;
-    transition: 0.3s;
-    display: block;
-    text-align: left;
-  }
-
-a {
-    color: white;
-    align-items: center;
-    background-size: auto;
-    cursor: pointer;
-    display: flex;
-    font-size: 18px;
-    height: 48px;
-    justify-content: center;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 8px;
-    padding-right: 8px;
-    text-align: left;
-    z-index: 1;
-    text-decoration: none;
-    float: center;
-    text-wrap: nowrap;
-  }
-
-  #nav-item-fishhead {
-    height: 48px;
-  }
-
-  nav,
-.nav-content,
-ul,
-li,
-.nav-link {
-    animation-name: navdrop;
-    animation-duration: 2s;
-}
-
-@keyframes navdrop {
-    0% {height: 0px; opacity: 0;}
-    100% {height: 48px; opacity: 1;}
-}
-
-main {
-    padding-top: 100px;;
-}
 section {
     display:flex;
     flex-direction: column;
@@ -183,10 +72,97 @@ button:hover i {
     color: #294221;
 }
 
-i {
-    color:white;
-    font-size: 4em;
+#next-btn,
+#prev-btn {
+    border: 1px solid #b8860b;
+    background-image: linear-gradient(-180deg, #e3cf9d 0%, #cdaa54 100%);
+    box-shadow: 0 0px 0px 0 rgba(191,146,35, 0.5),
+                0 -4px 20px rgb(191,146,35) inset,
+                0 12px 8px rgba(191,146,35,0.4) inset,
+                0 4px 8px 0 rgb(191,146,35) inset;
+  }
+
+  /*#next-btn {
+    border: 1px solid  #1a200ed0;
+    background-image: linear-gradient(-180deg, #556b2f 0%,#2b3618 100%);
+    box-shadow: 0 0px 0px 0 rgba(42, 58, 26, 0.5),
+                0 -4px 20px rgb(44, 59, 27) inset,
+                0 12px 8px rgba(38, 52, 23, 0.4) inset,
+                0 4px 8px 0 rgb(38, 49, 22) inset
+}*/
+
+#next-btn i,
+#prev-btn i {
+    background-image: linear-gradient(0deg, #d7a436 0%, #f2edd8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    filter: drop-shadow(0 2px 2px rgb(80, 60, 9));
 }
+
+/*
+#next-btn i {
+    background-image: linear-gradient(0deg, #36d73b3e 0%, #f2edd8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    filter: drop-shadow(0 2px 2px rgba(24, 80, 9, 0.27));
+}
+*/
+
+#next-btn::before,
+#prev-btn::before {
+    content: "";
+    display: block;
+    height: 4px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 45px);
+    background: #ffffff;
+    border-radius: 100%;
+    opacity: 0.6;
+    background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+#next-btn::after,
+#prev-btn::after {
+    content: "";
+    display: block;
+    height: 4px;
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 50px);
+    background: #fff;
+    border-radius: 100%;
+    filter: blur(1px);
+    opacity: 0.05;
+    background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+#prev-btn,
+#next-btn {
+    height: 50px;
+    width: 70px;
+    font-size: 40px;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+/*
+#next-btn:hover {
+    background: #65a765;
+  }
+*/
+
+#next-btn:hover,
+#prev-btn:hover {
+    background: #fff4ce;
+  }
 
 /* Book */
 .book {
@@ -201,6 +177,18 @@ i {
     text-shadow: 2px 2px 4px #111111;
 }
 
+.cover-img {
+    transform: translateX(-10px);
+    transform: rotate(20deg);
+    animation: grow 2s;
+}
+
+@keyframes grow {
+    0% {scale:0.5;}
+    50% {scale:1;transform: rotate(-20deg)}
+    100% {scale:0.5}
+}
+
 .paper {
     height: 100%;
     width: 100%;
@@ -212,7 +200,9 @@ i {
 
 .front {
     backface-visibility: hidden;
-    border-left: 8px solid #887928;
+    border-left-width:8px;
+    border-left-style:solid;
+    border-image: linear-gradient(grey, white,grey) 30;
 }
 
 .front, 
@@ -225,7 +215,7 @@ i {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(#c6ba73,#796b1c);
+    background-image: repeating-linear-gradient(lightgrey,grey);
     transform-origin: left;
     transition: transform 0.5s;
 }
@@ -486,14 +476,4 @@ i {
 img {
     height:100%;
     width:100%;
-}
-
-footer {
-    color:white;
-    background: black;
-    text-align: center;
-    padding: 10px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: white;
 }

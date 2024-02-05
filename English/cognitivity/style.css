@@ -450,6 +450,10 @@ main {
   grid-template-columns: 40% 60%;
   padding-left:20px;
   padding-right:20px;
+  padding-bottom:20px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-image: linear-gradient(to right,#294221,#c6ba73,#8e0c0c) 30;
 }
 
 .even-section .module-wrapper {
@@ -457,6 +461,10 @@ main {
   grid-template-columns: 60% 40%;
   padding-left:20px;
   padding-right:20px;
+  padding-bottom:20px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-image: linear-gradient(to right,#294221,#c6ba73,#8e0c0c) 30;
 }
 
 .content-wrapper {
