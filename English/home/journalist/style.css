@@ -178,15 +178,15 @@ button:hover i {
 }
 
 .cover-img {
-    transform: translateX(-10px);
-    transform: rotate(20deg);
+    transform: rotate(30deg);
     animation: grow 2s;
 }
 
 @keyframes grow {
     0% {scale:0.5;}
-    50% {scale:1;transform: rotate(-20deg)}
-    100% {scale:0.5}
+    45% {scale:1;transform: rotate(-30deg)}
+    75% {scale:0.5;}
+    100% {scale:1;}
 }
 
 .paper {
