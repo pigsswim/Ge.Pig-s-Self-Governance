@@ -5,52 +5,42 @@ const night = document.getElementById('night');
 
   //change theme 
 
-function dayTheme () {
-    localStorage.setItem('brightbgcolor','white');
-    localStorage.setItem('darkcolor','black');
-    document.body.style.backgroundColor = localStorage.brightbgcolor ||'white';
-    document.body.style.color = localStorage.darkcolor || 'black';
+  function dayTheme () {
+    localStorage.setItem('bgcolor','white');
+    localStorage.setItem('elemcolor','black');
+    document.body.style.backgroundColor = localStorage.bgcolor;
+    document.body.style.color = localStorage.elemcolor;
     const secT1 = document.getElementById('section-span1');
     const secT2 = document.getElementById('section-span2');
     const secT3 = document.getElementById('section-span3');
-    secT1.style.color = localStorage.darkcolor || 'black';
-    secT2.style.color = localStorage.darkcolor || 'black';
-    secT3.style.color = localStorage.darkcolor || 'black';
+    secT1.style.color = localStorage.elemcolor;
+    secT2.style.color = localStorage.elemcolor;
+    secT3.style.color = localStorage.elemcolor;
 }
 
-function nightTheme() {
-    localStorage.setItem('darkbgcolor','black');
-    localStorage.setItem('brightcolor', 'white');
-    document.body.style.backgroundColor = localStorage.darkbgcolor || 'black';
-    document.body.style.color = localStorage.brightcolor;
+  function nightTheme() {
+    localStorage.setItem('bgcolor','black');
+    localStorage.setItem('elemcolor', 'white');
+    document.body.style.backgroundColor = localStorage.bgcolor;
+    document.body.style.color = localStorage.elemcolor;
     const secT1 = document.getElementById('section-span1');
     const secT2 = document.getElementById('section-span2');
     const secT3 = document.getElementById('section-span3');
-    secT1.style.color = localStorage.brightcolor;
-    secT2.style.color = localStorage.brightcolor;
-    secT3.style.color = localStorage.brightcolor;
+    secT1.style.color = localStorage.elemcolor;
+    secT2.style.color = localStorage.elemcolor;
+    secT3.style.color = localStorage.elemcolor;
 }
 
 window.addEventListener('load',() => {
-  if (document.body.style.backgroundColor = localStorage.brightbgcolor) {
+  document.body.style.backgroundColor = localStorage.bgcolor;
+  document.body.style.color = localStorage.elemcolor;
     const secT1 = document.getElementById('section-span1');
     const secT2 = document.getElementById('section-span2');
     const secT3 = document.getElementById('section-span3');
-    secT1.style.color = localStorage.darkcolor || 'black';
-    secT2.style.color = localStorage.darkcolor || 'black';
-    secT3.style.color = localStorage.darkcolor || 'black';
-  }
-  else if (document.body.style.backgroundColor = localStorage.darkbgcolor) {
-    const secT1 = document.getElementById('section-span1');
-    const secT2 = document.getElementById('section-span2');
-    const secT3 = document.getElementById('section-span3');
-    secT1.style.color = localStorage.brightcolor;
-    secT2.style.color = localStorage.brightcolor;
-    secT3.style.color = localStorage.brightcolor;
-  }
-  else {
-    return;
-  }
+    secT1.style.color = localStorage.elemcolor;
+    secT2.style.color = localStorage.elemcolor;
+    secT3.style.color = localStorage.elemcolor;
+
 })
 
 function navOpacity() {
@@ -59,3 +49,6 @@ function navOpacity() {
 }
 
 window.addEventListener('scroll',navOpacity, false)
+
+
+

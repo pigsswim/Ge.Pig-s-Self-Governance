@@ -735,10 +735,3 @@ button::after {
  display:grid;
  grid-template-columns: 80% 20%;
 }
-
-footer {
- color:white;
- background: black;
- text-align: center;
- padding: 10px;
-}

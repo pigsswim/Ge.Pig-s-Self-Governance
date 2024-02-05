@@ -43,8 +43,6 @@ function dayTheme () {
     goalDays.style.border = `1px solid black`;
   })
 
-
-
 function navOpacity() {
     const navigation = document.getElementById('nav');
     this.scrollY > 1 ? navigation.style.opacity = .7 : navigation.style.opacity = 1;

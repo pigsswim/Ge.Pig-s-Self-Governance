@@ -312,7 +312,9 @@ button:hover {
     padding-top: 24px;
     padding-bottom: 24px;
     height: 100%;
-    border-bottom: 1px solid rgba(255,255,255,0.7);
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-image: linear-gradient(to right,#294221,#c6ba73,#8e0c0c) 30;
 }
 
 @media screen and (max-width: 1000px) {
@@ -381,13 +383,13 @@ button:hover {
     height: 100%;
 }
 
+.linguist,
 .fishhead {
     height: 100%;
     width: 100%;
     display: block;
     object-fit: cover;
 }
-
 .unit-copy-wrapper {
     box-sizing: border-box;
     display: flex;
