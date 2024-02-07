@@ -1,49 +1,12 @@
 
-main {
-    padding-top: 100px;;
-}
-
-#intro {
-    background-color: white;
-    color:black
-
-}
-
-.section-wrapper-top {
-    background:#414141;
+.writer-main {
+    padding-top: 100px;
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
-    gap:5px;
-    justify-content: space-between;
-    margin:10px;
-    padding: 20px;
-    border-radius: 2px;
-}
-
-@media screen and (max-width:1000px) {
-    .section-wrapper-top {
-        grid-template-columns: repeat(3,1fr);
-    }
-}
-
-footer {
-    color:white;
-    background: black;
+    grid-template-columns: 30% 70%;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 10px;
 }
-
-#intro {
-    background-color: #212121;
-    color:white;
-
-}
-
-main {
-    padding: 20px;
-    padding-top:100px;
-}
-
 
 .section-wrapper-head,
 .section-wrapper-odd {
@@ -53,30 +16,14 @@ main {
     gap:5px;
     margin:10px;
     padding: 20px;
-    padding-right:50px;
-    padding-left:50px;
     margin-left: 50px;
     margin-right:50px;
     border-radius: 2px;
-    border-width:1px;
-    border-style:solid;
-    border-image: linear-gradient(to right,#c6ba73,#294221) 30;
+    border-top-width:1px;
+    border-top-style:solid;
+    border-image: linear-gradient(to right,#294221,#c6ba73,#8f0c0c) 30;
 }
 
-@media screen  and (min-width: 1400px) {
-    main {
-        justify-content: center;
-    }
-    
-    .section-wrapper-odd {
-        width: 1180px;
-    }
-
-    .section-wrapper-head {
-        width:1320px;
-    }
-    
-}
 
 .module-wrapper-even,
 .module-wrapper-odd {
@@ -103,14 +50,6 @@ main {
 
 .unit {
     background: none;
-}
-
-
-
-@media screen and (max-width:1000px) {
-    .section-wrapper-odd {
-        grid-template-columns: repeat(3,1fr);
-    }
 }
 
 .unit-wrapper-even {

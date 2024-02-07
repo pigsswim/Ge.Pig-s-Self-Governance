@@ -1,59 +1,91 @@
-const textBox = document.getElementById('text-box')
+let textBox = document.getElementById('text-box')
 const enterButton = document.getElementById('enter-button')
-enterButton.addEventListener('click',debug)
+enterButton.addEventListener('click',reorganizeEnglish)
 let i = 0;
 let result;
 let textArray;
+let newText = [];
+let chinese = [];
 let dictionary = [
     {
-        cn: 'ai',
-        en: 'I',
-        de: 'ei',
-        pt: 'ai',
+        en:'y',
+        cn:'ü',
     },
-
     {
-        cn: 'l',
-        en: 'l',
-        de: 'l',
-        pt: 'l',
+        en:'o',
+        cn: 'a',
     },
-    
     {
-        cn: 'u',
-        en: ['o','ou'],
-        de: 'a',
-        pt: 'a',
+        en:'o',
+        cn:'a',
     },
-
     {
-        cn: 'w',
-        en: ['v', 've'],
-        de: 'w',
-        pt: 've'
+        en:'ou',
+        cn:'ü',
     },
-
     {
-        cn: 'y',
-        en: 'y',
-        de: 'ie',
-        pt: 'i',
+        en:'l',
+        cn:'l',
     },
-
     {
-        cn: 'ü',
-        en: 'ou',
-        de: 'ü',
-        pt: 'u',
+        en:'v',
+        cn:'w',
+    },
+    {
+        en:'ve',
+        cn:'w',
+    },
+    {
+        en:'I',
+        cn:"ai",
     }
 ]
 
-let chinese = ['ai','l','a','w','y','ü'];
-let english = ['I','l',['o','ou'],['v','ve'],'y'];
 
-function debug () {
-    userInput();
+//fin Chinese have problems
+function findChinese () {
+    for (let i=0;i<newText.length;i++) {
+        for (let z=0;z<dictionary.length;z++){
+            if (dictionary[z].cn === newText[i]) {
+                console.log(dictionary[z].cn)
+                z++;
+            }else {
+                console.log(newText[i])
+            }
+    }
+    }
+    
+
 }
+
+function reorganizeEnglish () {
+    let input = textBox.value;
+    let text = input.split('');
+    for (let i=0;i<text.length;i++) {
+        if (text[i] === 'v') {
+            let placeholder = 'v';
+            let compoundword = placeholder + text[i+1];
+            if (compoundword === 've') {
+                newText.push(compoundword)
+                text.splice(i+1,1)
+            }
+        }else if (text[i] === 'o') {
+            let placeholder = 'o';
+            let compoundword = placeholder + text[i+1];
+            if (compoundword === 'ou') {
+                newText.push(compoundword)
+                text.splice(i+1,1)
+            }else if (compoundword !== 'ou') {
+                newText.push(text[i])
+            }
+        }
+        else {
+            newText.push(text[i])
+        }
+    }
+    findChinese();
+}
+
 
 //control 
 // grab user input 

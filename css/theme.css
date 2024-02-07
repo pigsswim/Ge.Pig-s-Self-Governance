@@ -135,7 +135,7 @@ button {
   cursor: pointer;
 }
 
-.unit-wrapper {
+nav .unit-wrapper {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -147,7 +147,7 @@ button {
     z-index: 10;
 }
 
-.unit-link {
+nav .unit-link {
     cursor: pointer;
     display: block;
     height: 100%;
@@ -158,14 +158,14 @@ button {
     padding: 0px;
 }
 
-.unit-image-wrapper {
+nav .unit-image-wrapper {
     display: block;
     position: relative;
     text-align: center;
     padding-bottom: 100%;
 }
 
-.unit {
+nav .unit {
     display: block;
     overflow: hidden;
     text-align: center;
@@ -188,7 +188,7 @@ button {
     object-fit: cover;
 }
  
- .unit-copy-wrapper {
+nav  .unit-copy-wrapper {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -199,13 +199,13 @@ button {
     text-align: center;
  }
  
- .unit-title {
+nav  .unit-title {
     display: block;
     text-align: center;
     font-size: 18px;
  }
  
- .unit-desc {
+nav .unit-desc {
     display: block;
     text-align: center;
     font-size: 14px;

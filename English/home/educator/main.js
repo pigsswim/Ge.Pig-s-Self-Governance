@@ -16,7 +16,7 @@ function createStory() {
                 return;
         }else {
                 let newRole = role.value;
-                let story = document.getElementById('story')
+                let story = document.getElementById('sample-story')
                 let title1 = document.getElementById('title1')
                 let title2 = document.getElementById('title2')
                 let title3 = document.getElementById('title3')
@@ -27,17 +27,6 @@ function createStory() {
                 let title8 = document.getElementById('title8')
                 let title9 = document.getElementById('title9')
                 let title10 = document.getElementById('title10')
-                let p0 = document.createElement('h2');
-                let p1 = document.createElement('p');
-                let p2 = document.createElement('p');
-                let p3 = document.createElement('p');
-                let p4 = document.createElement('p');
-                let p5 = document.createElement('p');
-                let p6 = document.createElement('p');
-                let p7 = document.createElement('p');
-                let p8 = document.createElement('p');
-                let p9 = document.createElement('p');
-                let p10 = document.createElement('p');
                 let sample = `Julie gets up at 6 am on a school day. 
                 By 7 am, Julie would always be in school classroom. 
                 The first class starts at 8 am. 
@@ -72,42 +61,21 @@ function createStory() {
                 questions.push(t9);
                 questions.push(t10);
                 questions = questions.map((elem) => {
-                        return (elem.replaceAll('Julie', newRole)) ;     
+                        return (elem.replaceAll('Julie', newRole)) ;    
+                        
         })
 
-        console.log(questions)
-        story.innerHTML = '';
-        title1.innerHTML = '';
-        title2.innerHTML = '';
-        title3.innerHTML = '';
-        title4.innerHTML = '';
-        title5.innerHTML = '';
-        title6.innerHTML = '';
-        title7.innerHTML = '';
-        title8.innerHTML = '';
-        title9.innerHTML = '';
-        title10.innerHTML = '';
-        p0.innerText = questions[0];
-        p1.innerText = questions[1];
-        p2.innerText = questions[2];
-        p3.innerText = questions[3];
-        p4.innerText = questions[4];
-        p5.innerText = questions[5];
-        p6.innerText = questions[6];
-        p7.innerText = questions[7];
-        p8.innerText = questions[8];
-        p9.innerText = questions[9];
-        p10.innerText = questions[10];
-        story.appendChild(p0);
-        title1.appendChild(p1);
-        title2.appendChild(p2);
-        title3.appendChild(p3);
-        title4.appendChild(p4);
-        title5.appendChild(p5);
-        title6.appendChild(p6);
-        title8.appendChild(p8);
-        title9.appendChild(p9);
-        title10.appendChild(p10);
+        story.innerHTML = questions[0];
+        title1.innerHTML = questions[1];
+        title2.innerHTML = questions[2];
+        title3.innerHTML = questions[3];
+        title4.innerHTML = questions[4];
+        title5.innerHTML = questions[5];
+        title6.innerHTML = questions[6];
+        title7.innerHTML = questions[7];
+        title8.innerHTML = questions[8];
+        title9.innerHTML = questions[9];
+        title10.innerHTML = questions[10];
         }
 
 }

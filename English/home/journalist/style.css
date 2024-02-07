@@ -1,13 +1,4 @@
-/* General */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/*  navigation style*/
-html,
 body {
   box-sizing: border-box;
   background-color: black;
@@ -21,14 +12,12 @@ body {
   line-height: 1.47059;
   font-weight: 400;
   letter-spacing: -0.022em;
-  height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 main {
-    margin-bottom: 500px;
     padding-top: 100px;
 }
 p {
@@ -179,14 +168,14 @@ button:hover i {
 
 .cover-img {
     transform: rotate(30deg);
-    animation: grow 2s;
+    animation: grow 1.5s;
 }
 
 @keyframes grow {
-    0% {scale:0;}
-    45% {scale:0.4;transform: rotate(-30deg)}
-    75% {scale:0.7;transform: rotate(30deg)}
-    100% {scale:1;transform: rotate(-30deg)}
+    0% {scale:0;transform: rotate(60deg)}
+    45% {scale:0.4;transform: rotate(-60deg)}
+    75% {scale:0.7;transform: rotate(60deg)}
+    100% {scale:1;transform: rotate(-40deg)}
 }
 
 .paper {
