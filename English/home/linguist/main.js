@@ -9,7 +9,7 @@ let chinese = [];
 let dictionary = [
     {
         en:'y',
-        cn:'ü',
+        cn:'y',
     },
     {
         en:'o',
@@ -42,22 +42,32 @@ let dictionary = [
 ]
 
 
-//fin Chinese have problems
+//find Chinese have problems
 function findChinese () {
     for (let i=0;i<newText.length;i++) {
+        switch (newText[i]) {
+            case ' ':
+                chinese.push(newText[i]);
+                break;
+            case ',':
+                chinese.push(newText[i]);
+                break;
+            case '.':
+                chinese.push(newText[i]);
+                break;
+        }
         for (let z=0;z<dictionary.length;z++){
-            if (dictionary[z].cn === newText[i]) {
-                console.log(dictionary[z].cn)
+            if (dictionary[z].en == newText[i]) {
+                chinese.push(dictionary[z].cn)
                 z++;
-            }else {
-                console.log(newText[i])
+                console.log(chinese)
+            }
             }
     }
     }
-    
 
-}
 
+//break user input into letter.
 function reorganizeEnglish () {
     let input = textBox.value;
     let text = input.split('');
@@ -83,9 +93,23 @@ function reorganizeEnglish () {
             newText.push(text[i])
         }
     }
+
+
     findChinese();
+    //providePronounciation();
+    formWords();
 }
 
+//render results 
+//combine letters into seperated words
+function formWords() {
+    let cnText;
+    for (let i =0;i<chinese.length;i++) {
+        cnText = '' + chinese[i];
+        console.log(cnText);
+    }
+}
 
-//control 
-// grab user input 
+function renderPronounciation() {
+     
+}

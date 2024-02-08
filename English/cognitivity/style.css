@@ -227,6 +227,119 @@ main {
 }
 
 
+#enter-button:focus {
+  outline: none;
+}
+
+#enter-button {
+  height:60px;
+  width:auto;
+  font-size: 22px;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  border-radius: 20px;
+  font-weight: 600;
+  background-color: transparent;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border:none;
+  background-image: linear-gradient(#294221,#c6ba73) ;
+  box-shadow: 0 0px 0px 0 rgba(90, 191, 35, 0.5),
+              0 -4px 20px rgba(42, 157, 11, 0.43) inset,
+              0 12px 8px rgba(191, 168, 35, 0.4) inset,
+              0 4px 8px 0 rgb(191, 160, 35) inset;
+}
+
+#enter-button span {
+  background-image: linear-gradient(0deg, #a4d736 0%, #f2edd8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 2px 2px rgb(77, 78, 36));
+}
+
+#enter-button::before {
+  content: "";
+  display: block;
+  height: 4px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 45px);
+  background: #ffffff;
+  border-radius: 100%;
+  opacity: 0.6;
+  background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+#enter-button::after {
+  content: "";
+  display: block;
+  height: 4px;
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 50px);
+  background: #fff;
+  border-radius: 100%;
+  filter: blur(1px);
+  opacity: 0.05;
+  background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+#enter-button:hover {
+  background: #fff4ce;
+}
+
+.head-section {
+  display: grid;
+  grid-template-columns: 70% 20% auto;
+  justify-content:center;
+  align-items: center;
+  padding-left:20px;
+  padding-right:20px;
+  padding-bottom:40px;
+  padding-top:40px;
+}
+
+.head-section .user-input-wrapper .user-input,
+.head-section .user-input-wrapper {
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+}
+
+.input,
+.date-input,
+.date-wrapper {
+  display: flex;
+  height:80%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+}
+textarea,
+input {
+  background-color: #212121;
+  color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(to right,#294221,#c6ba73,#8e0c0c) 1;
+}
+
+input {
+  height: 100%;
+}
+
+textarea {
+  width: 90%;
+  border-image: linear-gradient(to right,#8e0c0c,#c6ba73,#294221) 1;
+}
+
 .odd-section .module-wrapper {
   display:grid;
   grid-template-columns: 40% 60%;

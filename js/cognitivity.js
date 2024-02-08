@@ -5,6 +5,9 @@ function dayTheme () {
   localStorage.setItem('wrappercolor', '#f8f8f8');
   document.body.style.backgroundColor = localStorage.bgcolor;
   document.body.style.color = localStorage.elemcolor;
+  const diaryBox = document.getElementById('text-box');
+  const diaryDate = document.getElementById('date-input');
+  const writeDiary = document.getElementById('enter-button');
   const h1 = document.getElementById('h1');
   const h2 = document.getElementById('h2');
   const h3 = document.getElementById('h3');
@@ -29,6 +32,9 @@ function dayTheme () {
   h4.style.color = localStorage.elemcolor;
   h5.style.color = localStorage.elemcolor;
   h6.style.color = localStorage.elemcolor;
+  diaryBox.style.backgroundColor = localStorage.wrappercolor;
+  diaryDate.style.backgroundColor = localStorage.wrappercolor;
+  writeDiary.style.backgroundColor = localStorage.wrappercolor;
 
   //homepage
 
@@ -68,6 +74,9 @@ function nightTheme() {
   localStorage.setItem('wrappercolor','#212121');
   document.body.style.backgroundColor = localStorage.bgcolor;
   document.body.style.color = localStorage.elemcolor;
+  const diaryBox = document.getElementById('text-box');
+  const diaryDate = document.getElementById('date-input');
+  const writeDiary = document.getElementById('enter-button');
   const h1 = document.getElementById('h1');
   const h2 = document.getElementById('h2');
   const h3 = document.getElementById('h3');
@@ -98,12 +107,18 @@ function nightTheme() {
   secT1.style.color = localStorage.elemcolor;
   secT2.style.color = localStorage.elemcolor;
   secT3.style.color = localStorage.elemcolor;
+  diaryBox.style.backgroundColor = localStorage.wrappercolor;
+  diaryDate.style.backgroundColor = localStorage.wrappercolor;
+  writeDiary.style.backgroundColor = localStorage.wrappercolor;
 
 }
 
 window.addEventListener('load',() => {
   document.body.style.backgroundColor = localStorage.bgcolor;
   document.body.style.color = localStorage.elemcolor;
+  const diaryBox = document.getElementById('text-box');
+  const diaryDate = document.getElementById('date-input');
+  const writeDiary = document.getElementById('enter-button');
   const h1 = document.getElementById('h1');
   const h2 = document.getElementById('h2');
   const h3 = document.getElementById('h3');
@@ -134,6 +149,9 @@ window.addEventListener('load',() => {
   secT1.style.color = localStorage.elemcolor;
   secT2.style.color = localStorage.elemcolor;
   secT3.style.color = localStorage.elemcolor;
+  diaryBox.style.backgroundColor = localStorage.wrappercolor;
+  diaryDate.style.backgroundColor = localStorage.wrappercolor;
+  writeDiary.style.backgroundColor = localStorage.wrappercolor;
   //homepage
 })
 

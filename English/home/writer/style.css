@@ -18,12 +18,15 @@
     padding: 20px;
     margin-left: 50px;
     margin-right:50px;
-    border-radius: 2px;
+    border-radius: 10px;
     border-top-width:1px;
     border-top-style:solid;
     border-image: linear-gradient(to right,#294221,#c6ba73,#8f0c0c) 30;
 }
 
+#intro {
+    border-radius: 10px;;
+}
 
 .module-wrapper-even,
 .module-wrapper-odd {
@@ -32,7 +35,7 @@
     gap:40px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: #294221;
+    background-image:linear-gradient(to bottom right,#294221,#c6ba73);
     align-self: start;
     border-radius: 8px;
 }
@@ -65,4 +68,5 @@
 
 h1 {
     text-align: center;
+    line-height: 28px;
 }
