@@ -41,6 +41,10 @@
 }
 
 .module-wrapper-even {
+    background-image:linear-gradient(to top right,#c6ba73,#294221);
+}
+
+.module-wrapper-even {
     background-color: #c6ba73;
     align-self: self-end;
 }
