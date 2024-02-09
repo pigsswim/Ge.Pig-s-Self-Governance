@@ -4,7 +4,7 @@ body {
   background-color: black;
   color: white;
   flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Libre Baskerville', serif;;
   gap:20px;
   margin: 0px;
   padding: 0px;
@@ -203,6 +203,7 @@ main {
     display: block;
     text-align: center;
     font-size: 14px;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 
@@ -282,6 +283,7 @@ button {
     border: none;
     color: white;
     background: none;
+    font-family: 'Libre Baskerville', serif;;
 }
 
 button:hover {
