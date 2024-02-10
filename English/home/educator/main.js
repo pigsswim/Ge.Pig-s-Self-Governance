@@ -10,7 +10,7 @@ function generateStory() {
 //view
 
 function createStory() {
-        let role = document.getElementById('name');
+        let role = document.getElementById('educator-name');
         if (role.value == '') {
                 console.log('n')
                 return;

@@ -4,13 +4,13 @@ main {
     min-width: 740px;
 }
 
-#intro {
-    background-color: #212121;
+#educator-intro {
+    background-color: #0c0c0c;
     color:white;
 }
 
 .section-wrapper-top {
-    background:#212121;
+    background:#0c0c0c;
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     gap:5px;
@@ -39,7 +39,7 @@ main {
     }
 }
 
-#intro,
+#educator-intro,
 .section-wrapper-top .module-wrapper .unit-wrapper,
 .section-wrapper-middle .module-wrapper .unit-wrapper,
 .section-wrapper-bottom .module-wrapper .unit-wrapper {
@@ -49,7 +49,7 @@ main {
 
 .section-wrapper-bottom,
 .section-wrapper-middle {
-    background:#212121;
+    background:#0c0c0c;
     color:white;
     margin:10px;
     padding: 20px;

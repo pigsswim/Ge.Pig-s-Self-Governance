@@ -10,7 +10,7 @@
 
 .section-wrapper-head,
 .section-wrapper-odd {
-    background: #212121;
+    background-color: #0c0c0c;
     display: flex;
     flex-direction: column;
     gap:5px;
@@ -24,8 +24,8 @@
     border-image: linear-gradient(to right,#294221,#c6ba73,#8f0c0c) 30;
 }
 
-#intro {
-    border-radius: 10px;;
+#writer-intro {
+    border-radius: 10px;
 }
 
 .module-wrapper-even,
@@ -45,7 +45,6 @@
 }
 
 .module-wrapper-even {
-    background-color: #c6ba73;
     align-self: self-end;
 }
 
@@ -64,7 +63,7 @@
 }
 
 .section-wrapper-head {
-    background:#294221;
+    background-color:#0c0c0c;
     margin:10px;
     padding: 20px;
     border-radius: 2px;
