@@ -4,6 +4,7 @@ function dayTheme () {
     localStorage.setItem('bgcolor','white');
     localStorage.setItem('elemcolor','black');
     localStorage.setItem('wrappercolor', '#f8f8f8');
+    localStorage.setItem('homeTextColor','black');
     document.body.style.backgroundColor = localStorage.bgcolor ||'white';
 
     //health page
@@ -42,9 +43,9 @@ function dayTheme () {
     const secT1 = document.getElementById('section-span1');
     const secT2 = document.getElementById('section-span2');
     const secT3 = document.getElementById('section-span3');
-    secT1.style.color = localStorage.elemcolor;
-    secT2.style.color = localStorage.elemcolor;
-    secT3.style.color = localStorage.elemcolor;
+    secT1.style.color = localStorage.homeTextColor;
+    secT2.style.color = localStorage.homeTextColor;
+    secT3.style.color = localStorage.homeTextColor;
 
     //cognitivity page
     const h1 = document.getElementById('h1');
@@ -78,6 +79,7 @@ function dayTheme () {
     localStorage.setItem('bgcolor','black');
     localStorage.setItem('elemcolor', 'white');
     localStorage.setItem('wrappercolor','#212121');
+    localStorage.setItem('homeTextColor','#FBFCF8');
     document.body.style.backgroundColor = localStorage.bgcolor || 'black';
     const dropdown = document.getElementById('dropdown-content');
     dropdown.style.color = localStorage.elemcolor;
@@ -112,9 +114,9 @@ function dayTheme () {
     const secT1 = document.getElementById('section-span1');
     const secT2 = document.getElementById('section-span2');
     const secT3 = document.getElementById('section-span3');
-    secT1.style.color = localStorage.elemcolor;
-    secT2.style.color = localStorage.elemcolor;
-    secT3.style.color = localStorage.elemcolor;
+    secT1.style.color = localStorage.homeTextColor;
+    secT2.style.color = localStorage.homeTextColor;
+    secT3.style.color = localStorage.homeTextColor;
 //cognitivity page
     const h1 = document.getElementById('h1');
     const h2 = document.getElementById('h2');
@@ -179,9 +181,9 @@ function dayTheme () {
     const secT1 = document.getElementById('section-span1');
     const secT2 = document.getElementById('section-span2');
     const secT3 = document.getElementById('section-span3');
-    secT1.style.color = localStorage.elemcolor;
-    secT2.style.color = localStorage.elemcolor;
-    secT3.style.color = localStorage.elemcolor;
+    secT1.style.color = localStorage.homeTextColor;
+    secT2.style.color = localStorage.homeTextColor;
+    secT3.style.color = localStorage.homeTextColor;
 //cognitivity page
     const h1 = document.getElementById('h1');
     const h2 = document.getElementById('h2');

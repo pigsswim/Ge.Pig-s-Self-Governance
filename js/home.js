@@ -71,7 +71,7 @@ const night = document.getElementById('night');
   function nightTheme() {
     localStorage.setItem('bgcolor','black');
     localStorage.setItem('elemcolor', 'white');
-    localStorage.setItem('wrappercolor','#212121');
+    localStorage.setItem('wrappercolor','#0c0c0c');
     document.body.style.backgroundColor = localStorage.bgcolor;
     document.body.style.color = localStorage.elemcolor;
     const cw1 = document.getElementById('content-wrapper1')

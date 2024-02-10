@@ -2,7 +2,7 @@ html,
 body {
   box-sizing: border-box;
   background-color: black;
-  color: white;
+  color: #FBFCF8;
   flex-direction: column;
   font-family: 'Libre Baskerville', serif;;
   gap:20px;
@@ -87,7 +87,7 @@ ul {
   }
 
 a {
-    color: white;
+    color: #FBFCF8;
     align-items: center;
     background-size: auto;
     cursor: pointer;
@@ -281,7 +281,7 @@ button {
     box-sizing:border-box;
     box-shadow: none;
     border: none;
-    color: white;
+    color: #FBFCF8;
     background: none;
     font-family: 'Libre Baskerville', serif;;
 }
@@ -304,7 +304,7 @@ button:hover {
     min-width: 260px;
     padding-left: 56px;
     padding-right: 56px;
-    padding-top: 24px;
+    padding-top: 58px;
     padding-bottom: 24px;
     height: 100%;
     border-top-width: 1px;
@@ -414,7 +414,7 @@ button:hover {
 
 
 .content-wrapper {
-    background-color:#212121;
+    background-color:#0c0c0c;
 }
 #sec-content-education-container {
     grid-template-columns: repeat(2,1fr);
@@ -475,7 +475,7 @@ video {
 }
 
 footer {
-    color:white;
+    color: #FBFCF8;
     background: black;
     text-align: center;
     padding: 10px;
