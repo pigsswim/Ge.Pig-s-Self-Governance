@@ -8,6 +8,14 @@ function dayTheme () {
     document.body.style.backgroundColor = localStorage.bgcolor;
     document.body.style.color = localStorage.elemcolor;
 
+        //writer
+    const writerH1 = document.getElementById('writer-h1');
+    writerH1.style.color = localStorage.elemcolor;
+    const writerIntro = document.getElementById('writer-intro');
+    writerIntro.style.backgroundColor = localStorage.wrappercolor;
+    const writerSetting = document.getElementById('writer-setting');
+    writerSetting.style.backgroundColor = localStorage.wrappercolor;
+
         //homepage 
         const cw1 = document.getElementById('content-wrapper1')
         const cw2 = document.getElementById('content-wrapper2')
@@ -84,13 +92,7 @@ function dayTheme () {
     h5.style.color = localStorage.elemcolor;
     h6.style.color = localStorage.elemcolor;
 
-    //writer
-    const writerH1 = document.getElementById('writer-h1');
-    writerH1.style.color = localStorage.elemcolor;
-    const writerIntro = document.getElementById('writer-intro');
-    writerIntro.style.backgroundColor = localStorage.wrappercolor;
-    const writerSetting = document.getElementById('writer-setting');
-    writerSetting.style.backgroundColor = localStorage.wrappercolor;
+
 
     //educator 
    //educator 
@@ -119,6 +121,14 @@ function dayTheme () {
     localStorage.setItem('homeTextColor','#FBFCF8');
     document.body.style.backgroundColor = localStorage.bgcolor;
     document.body.style.color = localStorage.elemcolor;
+
+  //writer
+  const writerH1 = document.getElementById('writer-h1');
+  writerH1.style.color = localStorage.elemcolor;
+  const writerIntro = document.getElementById('writer-intro');
+  writerIntro.style.backgroundColor = localStorage.wrappercolor;
+  const writerSetting = document.getElementById('writer-setting');
+  writerSetting.style.backgroundColor = localStorage.wrappercolor;
 
     //home
     const cw1 = document.getElementById('content-wrapper1')
@@ -193,14 +203,6 @@ function dayTheme () {
   diaryDate.style.backgroundColor = localStorage.wrappercolor;
   writeDiary.style.backgroundColor = localStorage.wrappercolor;
 
-        //writer
-        const writerH1 = document.getElementById('writer-h1');
-        writerH1.style.color = localStorage.elemcolor;
-        const writerIntro = document.getElementById('writer-intro');
-        writerIntro.style.backgroundColor = localStorage.wrappercolor;
-        const writerSetting = document.getElementById('writer-setting');
-        writerSetting.style.backgroundColor = localStorage.wrappercolor;
-
     
     //educator 
    //educator 
@@ -224,6 +226,14 @@ function dayTheme () {
   window.addEventListener('load',() => {
     document.body.style.backgroundColor = localStorage.bgcolor;
     document.body.style.color = localStorage.elemcolor;
+
+            //writer
+        const writerH1 = document.getElementById('writer-h1');
+        writerH1.style.color = localStorage.elemcolor;
+        const writerIntro = document.getElementById('writer-intro');
+        writerIntro.style.backgroundColor = localStorage.wrappercolor;
+        const writerSetting = document.getElementById('writer-setting');
+        writerSetting.style.backgroundColor = localStorage.wrappercolor;
 
         //home page
         const cw1 = document.getElementById('content-wrapper1')
@@ -301,13 +311,7 @@ function dayTheme () {
   diaryDate.style.backgroundColor = localStorage.wrappercolor;
   writeDiary.style.backgroundColor = localStorage.wrappercolor;
 
-        //writer
-        const writerH1 = document.getElementById('writer-h1');
-        writerH1.style.color = localStorage.elemcolor;
-        const writerIntro = document.getElementById('writer-intro');
-        writerIntro.style.backgroundColor = localStorage.wrappercolor;
-        const writerSetting = document.getElementById('writer-setting');
-        writerSetting.style.backgroundColor = localStorage.wrappercolor;
+
    //educator 
     const educatorIntro = document.getElementById('educator-intro');
     educatorIntro.style.backgroundColor =localStorage.wrappercolor;
