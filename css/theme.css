@@ -229,5 +229,5 @@ footer {
     padding: 10px;
     border-top-width: 1px;
     border-top-style: solid;
-    border-image: linear-gradient(to right,#294221,#c6ba73,#8e0c0c) 30;
+    border-image: linear-gradient(to right,#294221,#c6ba73) 30;
 }

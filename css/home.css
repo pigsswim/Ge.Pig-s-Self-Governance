@@ -164,6 +164,7 @@ main {
     position: relative;
     text-align: center;
     padding-bottom: 100%;
+    background-color: purple;
 }
 
 .unit {
@@ -175,7 +176,8 @@ main {
 }
 
 .unit-image {
-    display: block;
+    display: flex;
+    flex-direction: row;
     position: absolute;
     text-align: center;
     width: 100%;
@@ -309,7 +311,7 @@ button:hover {
     height: 100%;
     border-top-width: 1px;
     border-top-style: solid;
-    border-image: linear-gradient(to right,#294221,#c6ba73,#8e0c0c) 30;
+    border-image: linear-gradient(to right,#294221,#c6ba73) 30;
 }
 
 @media screen and (max-width: 1000px) {
@@ -329,7 +331,33 @@ button:hover {
     height: 100%;
     line-height: 25px;
     position: relative;
-    
+}
+
+#module-content-home-animation {
+    line-height:50px;
+    text-align: left;
+    align-self: left;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    justify-content: left;
+    background-color: green;
+    overflow: hidden;
+}
+
+.home-animation button {
+    height: 66px;
+    width: auto;
+    overflow: hidden;
+    max-height: 66px;
+    text-align: left;
+    text-wrap: nowrap;
+    background-color: purple;
+}
+
+.home-animation span {
+    text-align: left;
 }
 
 .unit-wrapper {
@@ -481,5 +509,5 @@ footer {
     padding: 10px;
     border-top-width: 1px;
     border-top-style: solid;
-    border-image: linear-gradient(to right,#294221,#c6ba73,#8e0c0c) 30;
+    border-image: linear-gradient(to right,#294221,#c6ba73) 30;
 }
