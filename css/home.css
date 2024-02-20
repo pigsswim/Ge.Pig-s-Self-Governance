@@ -342,7 +342,6 @@ button:hover {
     flex-direction: column;
     gap:5px;
     justify-content: left;
-    background-color: green;
     overflow: hidden;
 }
 
@@ -353,12 +352,120 @@ button:hover {
     max-height: 66px;
     text-align: left;
     text-wrap: nowrap;
-    background-color: purple;
+    background-image: linear-gradient(to right, #294221, #c6ba73);
+    animation: grow 10s infinite;
+}
+
+@keyframes grow {
+    0% {width: 0%;}
+    100% {width: 100%;}
 }
 
 .home-animation span {
     text-align: left;
 }
+
+#home-animation1 i {
+    animation: fontColor1 3s infinite;
+}
+
+#home-animation2 i {
+    animation: fontColor2 3s infinite;
+}
+
+#home-animation3 i {
+    animation: fontColor3 3s infinite;
+}
+
+#home-animation4 i {
+    animation: fontColor4 3s infinite;
+}
+
+
+@keyframes fontColor1 {
+    0% {color:#000118;}
+    10% {color:#00032d;}
+    20% {color:#000b44;}
+    30% {color:#00235c;}
+    40% {color:#003775;}
+    50% {color:#004d8f;}
+    60% {color:#003775;}
+    70% {color:#00235c;}
+    80% {color:#000b44;}
+    90% {color:#00032d;}
+    100% {color:#010221;}
+}
+
+@keyframes fontColor2 {
+    0% {color:#190000;}
+    10% {color:#330000;}
+    20% {color:#4d0000;}
+    30% {color:#5c0707;}
+    40% {color:#770909;}
+    50% {color:#850808;}
+    60% {color:#881010;}
+    70% {color:#780f0f;}
+    80% {color:#800000;}
+    90% {color:#660000;}
+    100% {color:#4d0000;}
+}
+
+@keyframes fontColor3 {
+    0% {color:#141f1b;}
+    10% {color:#1d2e28;}
+    20% {color:#18392b;}
+    30% {color:#14452f;}
+    40% {color:#0f5132;}
+    50% {color:#0a5c36;}
+    60% {color:#0f5132;}
+    70% {color:#14452f;}
+    80% {color:#18392b;}
+    90% {color:#1d2e28;}
+    100% {color:#1c2d27;}
+}
+
+@keyframes fontColor4 {
+    0% {color:#5f003f;}
+    10% {color:#870557;}
+    20% {color:#8f1263;}
+    30% {color:#8f1f5d;}
+    40% {color:#8e286a;}
+    50% {color:#90306b;}
+    60% {color:rgb(173, 98, 141);}
+    70% {color:#9c3f78;}
+    80% {color:#a43471;}
+    90% {color:#a02c71;}
+    100% {color:#a01e66;}
+}
+
+@keyframes fontColor5 {
+    0% {color:#000118;}
+    10% {color:#00032d;}
+    20% {color:#000b44;}
+    30% {color:#00235c;}
+    40% {color:#003775;}
+    50% {color:#004d8f;}
+    60% {color:#003775;}
+    70% {color:#00235c;}
+    80% {color:#000b44;}
+    90% {color:#00032d;}
+    100% {color:#010221;}
+}
+
+@keyframes fontColor6 {
+    0% {color:#000118;}
+    10% {color:#00032d;}
+    20% {color:#000b44;}
+    30% {color:#00235c;}
+    40% {color:#003775;}
+    50% {color:#004d8f;}
+    60% {color:#003775;}
+    70% {color:#00235c;}
+    80% {color:#000b44;}
+    90% {color:#00032d;}
+    100% {color:#010221;}
+}
+
 
 .unit-wrapper {
     display: flex;
