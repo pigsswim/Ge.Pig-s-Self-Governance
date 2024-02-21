@@ -345,6 +345,21 @@ button:hover {
     overflow: hidden;
 }
 
+#module-content-home-animation-right {
+    background-image: radial-gradient(#c6ba73,#294221 ) ;
+    animation: backgroundStyle 10s infinite;
+}
+
+@keyframes backgroundStyle {
+    0% {height:0;
+        border-top-left-radius:500px;
+        border-top-right-radius: 500px;
+        border-bottom-left-radius: 500px;
+        border-bottom-right-radius: 500px;}
+    100% {height:100%;border-top-left-radius:0px;}
+}
+
+
 .home-animation button {
     height: 66px;
     width: auto;
@@ -352,118 +367,187 @@ button:hover {
     max-height: 66px;
     text-align: left;
     text-wrap: nowrap;
-    background-image: linear-gradient(to right, #294221, #c6ba73);
-    animation: grow 10s infinite;
+    background-image: linear-gradient(to right, #c6ba73, #294221);
+    border-radius: 2px;
 }
 
-@keyframes grow {
-    0% {width: 0%;}
-    100% {width: 100%;}
+@keyframes grow1 {
+    0% {width: 0%;height:0%;border-radius: 20px;}
+    50% {width: 100%;height:100%;border-radius: 2px;}
+    100% {width: 100%;height:100%;border-radius: 2px;}
+}
+
+@keyframes grow2 {
+    0% {width: 0%;height:0%;border-radius: 20px;}
+    60% {width: 100%;height:100%;border-radius: 2px;}
+    100% {width: 100%;height:100%;border-radius: 2px;}
+}
+@keyframes grow3 {
+    0% {width: 0%;height:0%;border-radius: 20px;}
+    70% {width: 100%;height:100%;border-radius: 2px;}
+    100% {width: 100%;height:100%;border-radius: 2px;}
+}
+@keyframes grow4 {
+    0% {width: 0%;height:0%;border-radius: 20px;}
+    80% {width: 100%;height:100%;border-radius: 2px;}
+    100% {width: 100%;height:100%;border-radius: 2px;}
+}
+@keyframes grow5 {
+    0% {width: 0%;height:0%;border-radius: 20px;}
+    90% {width: 100%;height:100%;border-radius: 2px;}
+    100% {width: 100%;height:100%;border-radius: 2px;}
+}
+@keyframes grow6 {
+    0% {width: 0%;height:0%;border-radius: 20px;}
+    100% {width: 100%;height:100%;border-radius: 2px;}
 }
 
 .home-animation span {
     text-align: left;
+    color: #FBFCF8;
 }
 
+.home-animation-right span {
+    text-align: right;
+}
+
+#home-animation-right1 i,
 #home-animation1 i {
     animation: fontColor1 3s infinite;
 }
 
+#home-animation1 button {
+    animation: grow1 10s infinite;
+}
+
+#home-animation-right2 i,
 #home-animation2 i {
     animation: fontColor2 3s infinite;
 }
 
+#home-animation2 button {
+    animation: grow2 10s infinite;
+}
+
+#home-animation-right3 i,
 #home-animation3 i {
     animation: fontColor3 3s infinite;
 }
 
+#home-animation3 button {
+    animation: grow3 10s infinite;
+}
+
+#home-animation-right4 i,
 #home-animation4 i {
     animation: fontColor4 3s infinite;
 }
 
+#home-animation4 button {
+    animation: grow4 10s infinite;
+}
+
+#home-animation-right5 i,
+#home-animation5 i {
+    animation: fontColor5 3s infinite;
+}
+
+#home-animation5 button {
+    animation: grow5 10s infinite;
+}
+
+#home-animation-right6 i,
+#home-animation6 i {
+    animation: fontColor6 3s infinite;
+}
+
+#home-animation6 button {
+    animation: grow6 10s infinite;
+}
+
 
 @keyframes fontColor1 {
-    0% {color:#000118;}
-    10% {color:#00032d;}
-    20% {color:#000b44;}
-    30% {color:#00235c;}
-    40% {color:#003775;}
-    50% {color:#004d8f;}
-    60% {color:#003775;}
-    70% {color:#00235c;}
-    80% {color:#000b44;}
-    90% {color:#00032d;}
-    100% {color:#010221;}
+    0% {color:#180000;}
+    10% {color:#2d0000;}
+    20% {color:#440000;}
+    30% {color:#5c0000;}
+    40% {color:#750000;}
+    50% {color:#8f0000;}
+    60% {color:#750000;}
+    70% {color:#5c0000;}
+    80% {color:#440000;}
+    90% {color:#2d0000;}
+    100% {color:#210101;}
 }
 
 @keyframes fontColor2 {
-    0% {color:#190000;}
-    10% {color:#330000;}
-    20% {color:#4d0000;}
-    30% {color:#5c0707;}
-    40% {color:#770909;}
-    50% {color:#850808;}
-    60% {color:#881010;}
-    70% {color:#780f0f;}
-    80% {color:#800000;}
-    90% {color:#660000;}
-    100% {color:#4d0000;}
+    0% {color:#1c0707;}
+    10% {color:#2a0a0a;}
+    20% {color:#420f0f;}
+    30% {color:#471111;}
+    40% {color:#551313;}
+    50% {color:#611515;}
+    60% {color:#631515;}
+    70% {color:#5e1616;}
+    80% {color:#531010;}
+    90% {color:#4a0f0f;}
+    100% {color:#2e0808;}
 }
 
 @keyframes fontColor3 {
-    0% {color:#141f1b;}
-    10% {color:#1d2e28;}
-    20% {color:#18392b;}
-    30% {color:#14452f;}
-    40% {color:#0f5132;}
-    50% {color:#0a5c36;}
-    60% {color:#0f5132;}
-    70% {color:#14452f;}
-    80% {color:#18392b;}
-    90% {color:#1d2e28;}
-    100% {color:#1c2d27;}
+    0% {color:#251212;}
+    10% {color:#381a1a;}
+    20% {color:#452222;}
+    30% {color:#492323;}
+    40% {color:#602c2c;}
+    50% {color:#632e2e;}
+    60% {color:#693232;}
+    70% {color:#5d2d2d;}
+    80% {color:#401e1e;}
+    90% {color:#301616;}
+    100% {color:#261212;}
 }
 
 @keyframes fontColor4 {
-    0% {color:#5f003f;}
-    10% {color:#870557;}
-    20% {color:#8f1263;}
-    30% {color:#8f1f5d;}
-    40% {color:#8e286a;}
-    50% {color:#90306b;}
-    60% {color:rgb(173, 98, 141);}
-    70% {color:#9c3f78;}
-    80% {color:#a43471;}
-    90% {color:#a02c71;}
-    100% {color:#a01e66;}
+    0% {color:#271a1a;}
+    10% {color:#412c2c;}
+    20% {color:#6a4848;}
+    30% {color:#784f4f;}
+    40% {color:#905d5d;}
+    50% {color:#8e5b5b;}
+    60% {color:rgb(170, 104, 104);}
+    70% {color:#9e6161;}
+    80% {color:#8f5858;}
+    90% {color:#784949;}
+    100% {color:#5a3838;}
 }
 
 @keyframes fontColor5 {
-    0% {color:#000118;}
-    10% {color:#00032d;}
-    20% {color:#000b44;}
-    30% {color:#00235c;}
-    40% {color:#003775;}
-    50% {color:#004d8f;}
-    60% {color:#003775;}
-    70% {color:#00235c;}
-    80% {color:#000b44;}
-    90% {color:#00032d;}
-    100% {color:#010221;}
+    0% {color:#1c1616;}
+    10% {color:#352a2a;}
+    20% {color:#473737;}
+    30% {color:#483838;}
+    40% {color:#5a4646;}
+    50% {color:#695151;}
+    60% {color:rgb(100, 79, 79);}
+    70% {color:#4b3b3b;}
+    80% {color:#352a2a;}
+    90% {color:#221c1c;}
+    100% {color:#1a1616;}
 }
 
 @keyframes fontColor6 {
-    0% {color:#000118;}
-    10% {color:#00032d;}
-    20% {color:#000b44;}
-    30% {color:#00235c;}
-    40% {color:#003775;}
-    50% {color:#004d8f;}
-    60% {color:#003775;}
-    70% {color:#00235c;}
-    80% {color:#000b44;}
-    90% {color:#00032d;}
-    100% {color:#010221;}
+    0% {color:#000000;}
+    10% {color:#202020;}
+    20% {color:#424242;}
+    30% {color:#5c5c5c;}
+    40% {color:#676767;}
+    50% {color:#777777;}
+    60% {color:rgb(81, 81, 81);}
+    70% {color:#3d3d3d;}
+    80% {color:#343434;}
+    90% {color:#191919;}
+    100% {color:#161616;}
 }
 
 
