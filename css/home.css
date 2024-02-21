@@ -345,21 +345,6 @@ button:hover {
     overflow: hidden;
 }
 
-#module-content-home-animation-right {
-    background-image: radial-gradient(#c6ba73,#294221 ) ;
-    animation: backgroundStyle 10s infinite;
-}
-
-@keyframes backgroundStyle {
-    0% {height:0;
-        border-top-left-radius:500px;
-        border-top-right-radius: 500px;
-        border-bottom-left-radius: 500px;
-        border-bottom-right-radius: 500px;}
-    100% {height:100%;border-top-left-radius:0px;}
-}
-
-
 .home-animation button {
     height: 66px;
     width: auto;
@@ -367,38 +352,13 @@ button:hover {
     max-height: 66px;
     text-align: left;
     text-wrap: nowrap;
-    background-image: linear-gradient(to right, #c6ba73, #294221);
+    background-image: linear-gradient(to right, #c6ba73, #294221,#8e0c0c);
     border-radius: 2px;
 }
 
 @keyframes grow1 {
     0% {width: 0%;height:0%;border-radius: 20px;}
     50% {width: 100%;height:100%;border-radius: 2px;}
-    100% {width: 100%;height:100%;border-radius: 2px;}
-}
-
-@keyframes grow2 {
-    0% {width: 0%;height:0%;border-radius: 20px;}
-    60% {width: 100%;height:100%;border-radius: 2px;}
-    100% {width: 100%;height:100%;border-radius: 2px;}
-}
-@keyframes grow3 {
-    0% {width: 0%;height:0%;border-radius: 20px;}
-    70% {width: 100%;height:100%;border-radius: 2px;}
-    100% {width: 100%;height:100%;border-radius: 2px;}
-}
-@keyframes grow4 {
-    0% {width: 0%;height:0%;border-radius: 20px;}
-    80% {width: 100%;height:100%;border-radius: 2px;}
-    100% {width: 100%;height:100%;border-radius: 2px;}
-}
-@keyframes grow5 {
-    0% {width: 0%;height:0%;border-radius: 20px;}
-    90% {width: 100%;height:100%;border-radius: 2px;}
-    100% {width: 100%;height:100%;border-radius: 2px;}
-}
-@keyframes grow6 {
-    0% {width: 0%;height:0%;border-radius: 20px;}
     100% {width: 100%;height:100%;border-radius: 2px;}
 }
 
@@ -411,60 +371,10 @@ button:hover {
     text-align: right;
 }
 
-#home-animation-right1 i,
 #home-animation1 i {
     animation: fontColor1 3s infinite;
+    text-shadow: 1px 4px 6px black;
 }
-
-#home-animation1 button {
-    animation: grow1 10s infinite;
-}
-
-#home-animation-right2 i,
-#home-animation2 i {
-    animation: fontColor2 3s infinite;
-}
-
-#home-animation2 button {
-    animation: grow2 10s infinite;
-}
-
-#home-animation-right3 i,
-#home-animation3 i {
-    animation: fontColor3 3s infinite;
-}
-
-#home-animation3 button {
-    animation: grow3 10s infinite;
-}
-
-#home-animation-right4 i,
-#home-animation4 i {
-    animation: fontColor4 3s infinite;
-}
-
-#home-animation4 button {
-    animation: grow4 10s infinite;
-}
-
-#home-animation-right5 i,
-#home-animation5 i {
-    animation: fontColor5 3s infinite;
-}
-
-#home-animation5 button {
-    animation: grow5 10s infinite;
-}
-
-#home-animation-right6 i,
-#home-animation6 i {
-    animation: fontColor6 3s infinite;
-}
-
-#home-animation6 button {
-    animation: grow6 10s infinite;
-}
-
 
 @keyframes fontColor1 {
     0% {color:#180000;}
@@ -478,6 +388,35 @@ button:hover {
     80% {color:#440000;}
     90% {color:#2d0000;}
     100% {color:#210101;}
+}
+
+#home-animation-right1 i{
+   animation: fontGrow1 10s infinite;
+   text-shadow: 1px 4px 6px #414141;
+}
+
+@keyframes fontGrow1 {
+    0% {color:#180000;font-size: 0;}
+    10% {color:#2d0000;}
+    20% {color:#440000;}
+    30% {color:#5c0000;}
+    40% {color:#750000;}
+    50% {color:#8f0000;font-size: 26px;}
+    60% {color:#750000;}
+    70% {color:#5c0000;}
+    80% {color:#440000;}
+    90% {color:#2d0000;}
+    100% {color:#210101;font-size:26px;}
+}
+
+#home-animation1 button {
+    animation: grow1 10s infinite;
+}
+
+
+#home-animation2 i {
+    animation: fontColor2 3s infinite;
+    text-shadow: 1px 4px 6px black;
 }
 
 @keyframes fontColor2 {
@@ -494,6 +433,39 @@ button:hover {
     100% {color:#2e0808;}
 }
 
+#home-animation-right2 i {
+    animation: fontGrow2 10s infinite;
+    text-shadow: 1px 4px 6px#414141;
+}
+
+@keyframes fontGrow2 {
+    0% {color:#1c0707;font-size:0px;}
+    10% {color:#2a0a0a;font-size:0px;}
+    20% {color:#420f0f;}
+    30% {color:#471111;}
+    40% {color:#551313;}
+    50% {color:#611515;}
+    60% {color:#631515;}
+    70% {color:#5e1616;font-size: 26px;}
+    80% {color:#531010;}
+    90% {color:#4a0f0f;}
+    100% {color:#2e0808;}
+}
+
+#home-animation2 button {
+    animation: grow2 10s infinite;
+}
+@keyframes grow2 {
+    0% {width: 0%;height:0%;border-radius: 20px;}
+    60% {width: 100%;height:100%;border-radius: 2px;}
+    100% {width: 100%;height:100%;border-radius: 2px;}
+}
+
+#home-animation3 i {
+    animation: fontColor3 3s infinite;
+    text-shadow: 1px 4px 6px black;
+}
+
 @keyframes fontColor3 {
     0% {color:#251212;}
     10% {color:#381a1a;}
@@ -506,6 +478,40 @@ button:hover {
     80% {color:#401e1e;}
     90% {color:#301616;}
     100% {color:#261212;}
+}
+
+#home-animation-right3 i {
+    animation:fontGrow3 10s infinite;
+    text-shadow: 1px 4px 6px #414141;
+}
+
+@keyframes fontGrow3 {
+    0% {color:#251212;font-size: 0px;}
+    10% {color:#381a1a;font-size:0px;}
+    20% {color:#452222;font-size:0px;}
+    30% {color:#492323;}
+    40% {color:#602c2c;}
+    50% {color:#632e2e;}
+    60% {color:#693232;}
+    70% {color:#5d2d2d;font-size:26px;}
+    80% {color:#401e1e;}
+    90% {color:#301616;}
+    100% {color:#261212;}
+}
+
+#home-animation3 button {
+    animation: grow3 10s infinite;
+}
+
+@keyframes grow3 {
+    0% {width: 0%;height:0%;border-radius: 20px;}
+    70% {width: 100%;height:100%;border-radius: 2px;}
+    100% {width: 100%;height:100%;border-radius: 2px;}
+}
+
+#home-animation4 i {
+    animation: fontColor4 3s infinite;
+    text-shadow: 1px 4px 6px black;
 }
 
 @keyframes fontColor4 {
@@ -522,6 +528,41 @@ button:hover {
     100% {color:#5a3838;}
 }
 
+#home-animation-right4 i {
+    animation:fontGrow4 10s infinite;
+    text-shadow: 1px 4px 6px #414141;
+} 
+
+@keyframes fontGrow4 {
+    0% {color:#271a1a;font-size:0px;}
+    10% {color:#412c2c;}
+    20% {color:#6a4848;}
+    25% {font-size:0px;}
+    30% {color:#784f4f;}
+    40% {color:#905d5d;}
+    50% {color:#8e5b5b;}
+    60% {color:rgb(170, 104, 104);font-size:26px;}
+    70% {color:#9e6161;}
+    80% {color:#8f5858;}
+    90% {color:#784949;}
+    100% {color:#5a3838;font-size:26px;}
+}
+
+#home-animation4 button {
+    animation: grow4 10s infinite;
+}
+
+@keyframes grow4 {
+    0% {width: 0%;height:0%;border-radius: 20px;}
+    80% {width: 100%;height:100%;border-radius: 2px;}
+    100% {width: 100%;height:100%;border-radius: 2px;}
+}
+
+#home-animation5 i {
+    animation: fontColor5 3s infinite;
+    text-shadow: 1px 4px 6px black;
+}
+
 @keyframes fontColor5 {
     0% {color:#1c1616;}
     10% {color:#352a2a;}
@@ -534,6 +575,39 @@ button:hover {
     80% {color:#352a2a;}
     90% {color:#221c1c;}
     100% {color:#1a1616;}
+}
+
+#home-animation-right5 i {
+    animation: fontGrow5 10s infinite;
+    text-shadow: 1px 4px 6px #414141;
+}
+
+@keyframes fontGrow5 {
+    0% {color:#1c1616;font-size:0px;}
+    10% {color:#352a2a;}
+    20% {color:#473737;}
+    30% {color:#483838;font-size:0px;}
+    40% {color:#5a4646;}
+    50% {color:#695151;}
+    60% {color:rgb(100, 79, 79);font-size:26px;}
+    70% {color:#4b3b3b;}
+    80% {color:#352a2a;}
+    90% {color:#221c1c;}
+    100% {color:#1a1616;}
+}
+#home-animation5 button {
+    animation: grow5 10s infinite;
+}
+
+@keyframes grow5 {
+    0% {width: 0%;height:0%;border-radius: 20px;}
+    90% {width: 100%;height:100%;border-radius: 2px;}
+    100% {width: 100%;height:100%;border-radius: 2px;}
+}
+
+#home-animation6 i {
+    animation: fontColor6 3s infinite;
+    text-shadow: 1px 4px 6px black;
 }
 
 @keyframes fontColor6 {
@@ -550,6 +624,34 @@ button:hover {
     100% {color:#161616;}
 }
 
+#home-animation-right6 i {
+    animation:fontGrow6 10s infinite;
+    text-shadow: 1px 4px 6px #414141;
+}
+
+@keyframes fontGrow6 {
+    0% {color:#000000;font-size:0px;}
+    10% {color:#202020;}
+    20% {color:#424242;}
+    30% {color:#5c5c5c;}
+    35% {font-size:0px;}
+    40% {color:#676767;}
+    50% {color:#777777;}
+    60% {color:rgb(81, 81, 81);font-size:26px;}
+    70% {color:#3d3d3d;}
+    80% {color:#343434;}
+    90% {color:#191919;}
+    100% {color:#161616;}
+}
+
+#home-animation6 button {
+    animation: grow6 10s infinite;
+}
+
+@keyframes grow6 {
+    0% {width: 0%;height:0%;border-radius: 20px;}
+    100% {width: 100%;height:100%;border-radius: 2px;}
+}
 
 .unit-wrapper {
     display: flex;

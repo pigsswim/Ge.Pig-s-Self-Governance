@@ -1,0 +1,193 @@
+
+main {
+    padding-top: 100px;
+    min-width: 740px;
+}
+
+#educator-intro {
+    background-color: #0c0c0c;
+    color:white;
+}
+
+.section-wrapper-top {
+    background:#0c0c0c;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap:5px;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to right,#8e0c0c,#294221,#c6ba73) 30;
+}
+
+@media screen and (max-width:1300px) {
+    .section-wrapper-top {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:4px;
+        align-items:start;
+        justify-content: left;
+        text-align: left;
+    }
+
+    .section-wrapper-top .module-wrapper .unit-wrapper {
+        align-items:start;
+        justify-content: left;
+        text-align: left;
+    }
+}
+
+#educator-intro,
+.section-wrapper-top .module-wrapper .unit-wrapper,
+.section-wrapper-middle .module-wrapper .unit-wrapper,
+.section-wrapper-bottom .module-wrapper .unit-wrapper {
+    height:fit-content;
+}
+
+
+.section-wrapper-bottom,
+.section-wrapper-middle {
+    background:#0c0c0c;
+    color:white;
+    margin:10px;
+    padding: 20px;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-image: linear-gradient(to right,#294221,#c6ba73,#8e0c0c) 30;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+h1 {
+    text-align: center;
+    line-height:30px;
+}
+
+.section-wrapper-bottom {
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-wrapper-bottom .module-wrapper {
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+    gap:20px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+}
+
+
+@media screen and (max-width: 1000px){
+    .section-wrapper-bottom .module-wrapper {
+        display: flex;
+        flex-direction: column;
+        border:none;
+    }
+
+    .section-wrapper-bottom .unit-wrapper{
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: white;
+    }
+
+}
+
+
+.section-wrapper-bottom .unit-wrapper {
+    display: inline-grid;
+    grid-template-rows: auto 100px;
+    gap:5px;
+}
+
+input,
+select {
+    box-sizing: border-box;
+    height:30px;
+    width: 100%;
+    font-size: 20px;
+}
+
+.section-wrapper-bottom .module-wrapper .unit-wrapper p,
+.content p {
+    text-align: left;
+    font-size: 22px;
+}
+
+p {
+    line-height: 28px;
+}
+
+#color-font-wrapper {
+    display: flex;
+}
+
+#set:focus {
+    outline: none;
+}
+
+#set {
+    height:60px;
+    width:auto;
+    font-size: 22px;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: transparent;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border:none;
+    background-image: linear-gradient(#294221,#c6ba73) ;
+    box-shadow: 0 0px 0px 0 rgba(90, 191, 35, 0.5),
+                0 -4px 20px rgba(42, 157, 11, 0.43) inset,
+                0 12px 8px rgba(191, 168, 35, 0.4) inset,
+                0 4px 8px 0 rgb(191, 160, 35) inset;
+}
+
+#set span {
+    background-image: linear-gradient(0deg, #a4d736 0%, #f2edd8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    filter: drop-shadow(0 2px 2px rgb(77, 78, 36));
+}
+
+#set::before {
+    content: "";
+    display: block;
+    height: 4px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 45px);
+    background: #ffffff;
+    border-radius: 100%;
+    opacity: 0.6;
+    background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+#set::after {
+    content: "";
+    display: block;
+    height: 4px;
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 50px);
+    background: #fff;
+    border-radius: 100%;
+    filter: blur(1px);
+    opacity: 0.05;
+    background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+#set:hover {
+    background: #fff4ce;
+  }

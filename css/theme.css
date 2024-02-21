@@ -2,7 +2,7 @@ html,
 body {
   box-sizing: border-box;
   background-color: black;
-  color: white;
+  color: #FBFCF8;
   flex-direction: column;
   font-family: 'Libre Baskerville', serif;
   gap:20px;

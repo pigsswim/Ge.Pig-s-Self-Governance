@@ -127,8 +127,6 @@ writeDiary.style.backgroundColor = localStorage.wrappercolor;
 
 }
 
-
-
 function navOpacity() {
   const navigation = document.getElementById('nav');
   this.scrollY > 1 ? navigation.style.opacity = .7 : navigation.style.opacity = 1;
